@@ -1,0 +1,450 @@
+      <!-- ═══════════════════════════════════════════════════════════════════
+           PLANTILLA BASE · Tema 1 · Texto y énfasis
+           Catálogo de componentes de texto de Andina, leído como un curso real:
+           «Cómo se escribe un artículo académico». Cada ficha = un componente,
+           con su ventana «Cómo va en el Word» (ids cat-t1-1 … cat-t1-9).
+           ═══════════════════════════════════════════════════════════════════ -->
+
+      <header class="ova-screen__head" data-reveal>
+        <div class="ova-screen__eyebrow">Tema {{NUM}}</div>
+        <h1 class="ova-screen__title">Texto <span class="ua-suave">y</span> <span class="ua-remate">énfasis</span></h1>
+        <p class="ova-screen__lead">
+          Los componentes con los que se escribe el cuerpo de un tema: títulos, párrafos, listas, destacados, citas, cifras y código.
+        </p>
+      </header>
+
+      <p data-reveal>
+        Un artículo académico se lee con prisa y por partes: el evaluador salta al método, el lector
+        apurado se queda en el resumen y casi nadie empieza por la introducción. Por eso la claridad
+        no es un adorno sino una condición de lectura: la jerarquía tipográfica —qué es título, qué
+        es párrafo, qué está destacado— le dice al lector <strong>dónde está y qué importa</strong>
+        antes de que lea una sola frase completa. En esta pantalla se muestran los componentes de
+        texto con los que un tema construye esa jerarquía.
+      </p>
+
+
+      <!-- ════ Sección 1.1 · Títulos, párrafos y listas ════ -->
+      <section class="ua-seccion" id="titulos-parrafos-listas" data-reveal>
+        <h2 class="ua-seccion__titulo">Títulos, párrafos <span class="ua-suave">y</span> <span class="ua-remate">listas</span></h2>
+        <p class="ua-seccion__lead">La base de cualquier tema: el texto corrido, con su jerarquía y sus enumeraciones.</p>
+      </section>
+
+      <!-- Ficha 1 · Títulos y subtítulos -->
+      <div class="ua-cat-ficha" data-reveal>
+        <span class="ua-cat-rotulo">Título y subtítulo</span>
+        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> El título de la pantalla ya está arriba (es el nombre del tema). Dentro del tema, cada bloque que el Word nombra con un subtítulo lleva un rótulo pegado al texto que encabeza. La negrilla del Word se conserva como negrilla; un término del glosario se marca y muestra su definición al pasar el cursor.</p>
+        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
+        <h3 class="ua-rotulo"><strong>Qué es un artículo académico</strong></h3>
+        <p>
+          Un artículo académico es un texto que comunica los resultados de una investigación a una
+          comunidad que puede evaluarlos y replicarlos. A diferencia de un ensayo, <strong>no busca
+          persuadir con el estilo sino convencer con la evidencia</strong>; por eso la mayoría de las
+          revistas científicas le exige una estructura fija, conocida como
+          <span class="ua-termino" tabindex="0" data-def="Introducción, Método, Resultados y Discusión: la estructura estándar del artículo científico empírico. En inglés, IMRaD.">IMRyD</span>,
+          que le permite al lector encontrar cada parte donde espera encontrarla.
+        </p>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-1"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t1-1"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Título y subtítulo</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Subtítulo</span>
+<b>Qué es un artículo académico</b>
+Un artículo académico es un texto que comunica los resultados de una investigación a una comunidad que puede evaluarlos y replicarlos. A diferencia de un ensayo, <b>no busca persuadir con el estilo sino convencer con la evidencia</b>; por eso la mayoría de las revistas científicas le exige una estructura fija, conocida como IMRyD…
+<span class="gris">El subtítulo en negrilla, en su propio renglón, seguido del párrafo. Lo que va en negrilla en el Word queda en negrilla en el curso: ni más ni menos. Los términos del glosario no se marcan en el texto: se reconocen porque están en el documento Glosario_Unidad.docx.</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </div>
+
+      <!-- Ficha 2 · Listas -->
+      <div class="ua-cat-ficha" data-reveal>
+        <span class="ua-cat-rotulo">Lista numerada · Lista de viñetas</span>
+        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> La lista numerada, cuando el orden importa o cada ítem es un párrafo completo; la de viñetas, cuando son elementos breves y del mismo nivel. Si cada ítem tiene título y texto, la numerada los separa con un filete y un número grande.</p>
+        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
+        <h3 class="ua-rotulo"><strong>Los tres errores más frecuentes al redactar un resumen</strong></h3>
+        <ol class="ua-numerada">
+          <li class="ua-numerada__item">
+            <div class="ua-numerada__marca" aria-hidden="true"><span class="ua-numerada__num">01</span><iconify-icon class="ua-numerada__icono" icon="mdi:text-box-remove-outline"></iconify-icon></div>
+            <p><strong>Anunciar en lugar de informar.</strong> «Se presentan los resultados de un estudio sobre…» no dice nada que el lector pueda usar. El resumen debe contener el hallazgo principal, con su cifra si la hay, no la promesa de que más adelante aparecerá.</p>
+          </li>
+          <li class="ua-numerada__item">
+            <div class="ua-numerada__marca" aria-hidden="true"><span class="ua-numerada__num">02</span><iconify-icon class="ua-numerada__icono" icon="mdi:scale-unbalanced"></iconify-icon></div>
+            <p><strong>Desequilibrar las partes.</strong> Un resumen que dedica la mitad de sus palabras al contexto y una línea a los resultados invierte la jerarquía de interés del lector. Cada parte del IMRyD debería tener en el resumen un peso parecido al que tiene en el artículo.</p>
+          </li>
+          <li class="ua-numerada__item">
+            <div class="ua-numerada__marca" aria-hidden="true"><span class="ua-numerada__num">03</span><iconify-icon class="ua-numerada__icono" icon="mdi:link-variant-off"></iconify-icon></div>
+            <p><strong>Incluir lo que no está en el cuerpo.</strong> Citas, abreviaturas sin definir o datos que no aparecen después confunden al lector y son una de las observaciones más comunes de los revisores. El resumen se escribe al final, a partir del artículo terminado.</p>
+          </li>
+        </ol>
+        <h3 class="ua-rotulo"><strong>Lo que todo resumen estructurado debe contener</strong></h3>
+        <ul>
+          <li>El objetivo o la pregunta de investigación.</li>
+          <li>El diseño del estudio, la población y el método de análisis.</li>
+          <li>El resultado principal, con su magnitud.</li>
+          <li>La conclusión y su alcance.</li>
+        </ul>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-2"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t1-2"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Lista numerada · Lista de viñetas</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Lista numerada</span>
+<b>Título:</b> Los tres errores más frecuentes al redactar un resumen
+1. <b>Anunciar en lugar de informar.</b> «Se presentan los resultados de un estudio sobre…» no dice nada que el lector pueda usar…
+2. <b>Desequilibrar las partes.</b> Un resumen que dedica la mitad de sus palabras al contexto…
+3. <b>Incluir lo que no está en el cuerpo.</b> Citas, abreviaturas sin definir o datos que no aparecen después…
+
+<span class="rojo">Lista de viñetas</span>
+<b>Título:</b> Lo que todo resumen estructurado debe contener
+• El objetivo o la pregunta de investigación.
+• El diseño del estudio, la población y el método de análisis.
+• El resultado principal, con su magnitud.
+• La conclusión y su alcance.
+<span class="gris">Las listas del Word se respetan tal cual: la numeración o la viñeta que trae el documento es la que se usa. El título de la lista es opcional. Si un ítem empieza con una frase en negrilla, esa frase se conserva en negrilla.</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </div>
+
+      <!-- Ficha 3 · Campos -->
+      <div class="ua-cat-ficha" data-reveal>
+        <span class="ua-cat-rotulo">Campos</span>
+        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> Varios subtítulos del mismo nivel con un párrafo cada uno (los «Objetivo», «Pregunta», «Alcance» de una ficha). Van uno debajo de otro, separados por un filete, sin tarjetas; el icono es decorativo.</p>
+        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
+        <div class="ua-campos">
+          <div class="ua-campo">
+            <iconify-icon class="ua-campo__icono" icon="mdi:target" aria-hidden="true"></iconify-icon>
+            <h3 class="ua-campo__titulo">Objetivo del artículo</h3>
+            <p>Determinar si la retroalimentación escrita entre pares mejora la calidad de los resúmenes de artículos redactados por estudiantes de posgrado, en comparación con la retroalimentación del docente únicamente.</p>
+          </div>
+          <div class="ua-campo">
+            <iconify-icon class="ua-campo__icono" icon="mdi:help-circle-outline" aria-hidden="true"></iconify-icon>
+            <h3 class="ua-campo__titulo">Pregunta de investigación</h3>
+            <p>¿Qué diferencia hay en la calidad del resumen, medida con una rúbrica de cuatro criterios, entre quienes recibieron retroalimentación de pares y quienes recibieron solo la del docente?</p>
+          </div>
+        </div>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-3"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t1-3"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Campos</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Campos</span>
+<b>Objetivo del artículo</b>
+Determinar si la retroalimentación escrita entre pares mejora la calidad de los resúmenes de artículos redactados por estudiantes de posgrado…
+<b>Pregunta de investigación</b>
+¿Qué diferencia hay en la calidad del resumen, medida con una rúbrica de cuatro criterios…?
+<span class="gris">Cada campo son dos renglones: el subtítulo en negrilla y su párrafo. Todos los campos del bloque tienen el mismo nivel; si uno pesa más que los otros, no es un campo sino un bloque destacado.</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </div>
+
+
+      <!-- ════ Sección 1.2 · Bloques de texto destacado ════ -->
+      <section class="ua-seccion" id="bloques-destacados" data-reveal>
+        <h2 class="ua-seccion__titulo">Bloques de texto <span class="ua-remate">destacado</span></h2>
+        <p class="ua-seccion__lead">Lo que el lector no debería saltarse: una idea, una advertencia, una pregunta.</p>
+      </section>
+
+      <!-- Ficha 4 · Callouts -->
+      <div class="ua-cat-ficha" data-reveal>
+        <span class="ua-cat-rotulo">Texto destacado</span>
+        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> Un párrafo que el Word rotula como «Importante», «Para tener en cuenta», «Atención» o «Para reflexionar». El rótulo decide el color y el icono; el texto es el del documento. Dos destacados seguidos de rótulos distintos van en pareja.</p>
+        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
+        <div class="ova-callout">
+          <div class="ova-callout__ico"><iconify-icon icon="mdi:alert-circle-outline"></iconify-icon></div>
+          <div>
+            <span class="ova-callout__tag">Importante</span>
+            <p style="margin:8px 0 0;">El resumen es la única parte del artículo que leerán todos los que lo encuentren; para muchos será la única. <strong>Se escribe de último y se revisa de primero.</strong></p>
+          </div>
+        </div>
+        <div class="ova-grid-2" style="margin-top:20px;">
+          <div class="ova-callout ova-callout--success">
+            <div class="ova-callout__ico"><iconify-icon icon="mdi:check-circle-outline"></iconify-icon></div>
+            <div>
+              <span class="ova-callout__tag">Para tener en cuenta</span>
+              <p style="margin:8px 0 0;">Antes de enviar el manuscrito, revise las normas para autores de la revista: extensión, formato de citación y estructura del resumen cambian de una publicación a otra.</p>
+            </div>
+          </div>
+          <div class="ova-callout ova-callout--warning">
+            <div class="ova-callout__ico"><iconify-icon icon="mdi:alert-outline"></iconify-icon></div>
+            <div>
+              <span class="ova-callout__tag">Atención</span>
+              <p style="margin:8px 0 0;">Enviar el mismo manuscrito a dos revistas a la vez se considera una falta ética y es motivo de rechazo en ambas, aunque el texto sea original.</p>
+            </div>
+          </div>
+        </div>
+        <div class="ova-callout ova-callout--reflexion" style="margin-top:20px;">
+          <div class="ova-callout__ico"><iconify-icon icon="mdi:comment-question-outline"></iconify-icon></div>
+          <div>
+            <span class="ova-callout__tag">Para reflexionar</span>
+            <p style="margin:8px 0 0;">Piense en el último artículo que leyó completo. ¿Qué lo llevó a pasar del resumen al cuerpo del texto? ¿Su propio manuscrito produciría ese mismo efecto en un lector que no lo conoce?</p>
+          </div>
+        </div>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-4"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t1-4"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Texto destacado</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Texto destacado</span>
+<b>Importante</b>
+El resumen es la única parte del artículo que leerán todos los que lo encuentren; para muchos será la única. <b>Se escribe de último y se revisa de primero.</b>
+
+<span class="rojo">Texto destacado</span>
+<b>Para tener en cuenta</b>
+Antes de enviar el manuscrito, revise las normas para autores de la revista…
+
+<span class="rojo">Texto destacado</span>
+<b>Atención</b>
+Enviar el mismo manuscrito a dos revistas a la vez se considera una falta ética…
+
+<span class="rojo">Texto destacado</span>
+<b>Para reflexionar</b>
+Piense en el último artículo que leyó completo…
+<span class="gris">El nombre del componente en rojo; debajo, el rótulo en negrilla (Importante · Para tener en cuenta · Atención · Para reflexionar) y el párrafo. El rótulo es el que elige el color: no hace falta indicarlo.</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </div>
+
+      <!-- Ficha 5 · Dato curioso / nota lateral -->
+      <div class="ua-cat-ficha" data-reveal>
+        <span class="ua-cat-rotulo">Dato curioso</span>
+        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> Una lectura lateral que enriquece el tema pero no es parte del hilo: una anécdota, un origen, un dato histórico. Sin caja, con un filete a la izquierda, para que se note que es un paréntesis. Lleva su fuente si la tiene.</p>
+        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
+        <div class="ua-dato">
+          <span class="ua-dato__tag">Dato curioso</span>
+          <p>
+            La revisión por pares no nació con las revistas modernas. La <em>Philosophical Transactions</em>
+            de la Royal Society, que empezó a publicarse en 1665, es la revista científica más antigua que
+            sigue en circulación; la práctica de enviar los manuscritos a evaluadores externos se fue
+            formalizando a lo largo de los siglos siguientes y solo se generalizó en la segunda mitad del
+            siglo XX.
+          </p>
+          <p class="ua-fuente">Fuente: Royal Society. <em>Philosophical Transactions: 350 years of publishing at the Royal Society (1665-2015)</em>.</p>
+        </div>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-5"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t1-5"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Dato curioso</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Dato curioso</span>
+La revisión por pares no nació con las revistas modernas. La Philosophical Transactions de la Royal Society, que empezó a publicarse en 1665, es la revista científica más antigua que sigue en circulación…
+<b>Fuente:</b> Royal Society. Philosophical Transactions: 350 years of publishing at the Royal Society (1665-2015).
+<span class="gris">El nombre del componente en rojo y el párrafo debajo. La fuente, si la hay, en un renglón aparte con el rótulo «Fuente:». También se recibe como «Nota» o «Sabía que…»; los tres caen en esta pieza.</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </div>
+
+
+      <!-- ════ Sección 1.3 · Citas, cifras y banner ════ -->
+      <section class="ua-seccion" id="citas-cifras-banner" data-reveal>
+        <h2 class="ua-seccion__titulo">Citas, cifras <span class="ua-suave">y</span> <span class="ua-remate">banner</span></h2>
+        <p class="ua-seccion__lead">Tres formas de poner una frase o un dato a primer plano, cada una con un peso distinto.</p>
+      </section>
+
+      <!-- Ficha 6 · Cita -->
+      <div class="ua-cat-ficha" data-reveal>
+        <span class="ua-cat-rotulo">Cita</span>
+        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> Una frase de un autor, con su atribución, o un texto destacado de una sola oración. Hasta unas 40 palabras; la parte en negrilla del Word se convierte en el remate. Si la cita no es textual, se indica que es una paráfrasis.</p>
+        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
+        <blockquote class="ua-quote">
+          Una tesis se escribe para un lector que no sabe lo que usted sabe: hay que definir cada término
+          y justificar cada paso, <span class="ua-remate">como si quien la lee no fuera su director.</span>
+          <footer class="ua-quote__autor">Paráfrasis de Umberto Eco, <em>Cómo se hace una tesis</em> (1977)</footer>
+        </blockquote>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-6"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t1-6"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Cita</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Cita</span>
+Una tesis se escribe para un lector que no sabe lo que usted sabe: hay que definir cada término y justificar cada paso, <b>como si quien la lee no fuera su director.</b>
+<b>Autor:</b> Paráfrasis de Umberto Eco, Cómo se hace una tesis (1977)
+<span class="gris">El nombre en rojo; debajo, la frase y el autor en un renglón con el rótulo «Autor:». La parte en negrilla se vuelve el remate de la cita. Si es paráfrasis, se escribe así en el renglón del autor: el curso no convierte una paráfrasis en cita textual.</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </div>
+
+      <!-- Ficha 7 · Cifra destacada -->
+      <div class="ua-cat-ficha" data-reveal>
+        <span class="ua-cat-rotulo">Cifra destacada</span>
+        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> Un dato numérico que sostiene una idea del texto: la cifra grande a un lado y el párrafo que la explica al otro, con su fuente. Cuando son varias cifras del mismo nivel, van en fila y el párrafo debajo.</p>
+        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
+        <div class="ua-cifras">
+          <div class="ua-cifras__datos">
+            <div class="ua-cifra">
+              <span class="ua-cifra__valor">10 % → 80 %</span>
+              <span class="ua-cifra__label">de los artículos de revistas médicas usaban la estructura IMRyD en 1950 y en 1980, respectivamente</span>
+            </div>
+          </div>
+          <div class="ua-cifras__texto">
+            <span class="ua-cifras__tag">En cifras</span>
+            <p>
+              La estructura IMRyD no siempre fue la norma. Un estudio que revisó cincuenta años de
+              artículos en cuatro revistas médicas de referencia encontró que a comienzos de los años
+              cincuenta la usaba alrededor de un 10 % de los artículos, hacia 1980 ya la seguía cerca del
+              80 % y en la década siguiente se volvió prácticamente universal. <strong>Lo que hoy parece
+              una convención natural se impuso en treinta años.</strong>
+            </p>
+            <p class="ua-fuente">Fuente: Sollaci, L. B. y Pereira, M. G. (2004). <em>The introduction, methods, results, and discussion (IMRAD) structure: A fifty-year survey</em>. Journal of the Medical Library Association, 92(3), 364-367.</p>
+          </div>
+        </div>
+        <div class="ua-cifras ua-cifras--fila">
+          <div class="ua-cifras__datos">
+            <div class="ua-cifra">
+              <span class="ua-cifra__valor">250</span>
+              <span class="ua-cifra__label">palabras, extensión típica de un resumen</span>
+            </div>
+            <div class="ua-cifra">
+              <span class="ua-cifra__valor">4000–6000</span>
+              <span class="ua-cifra__label">palabras, extensión típica del artículo</span>
+            </div>
+            <div class="ua-cifra">
+              <span class="ua-cifra__valor">30–50</span>
+              <span class="ua-cifra__label">referencias en un artículo empírico</span>
+            </div>
+          </div>
+          <div class="ua-cifras__texto">
+            <span class="ua-cifras__tag">Extensiones orientativas</span>
+            <p>
+              Son rangos orientativos, tomados de lo que piden con más frecuencia las revistas de
+              ciencias sociales y de la salud. <strong>La extensión que manda es siempre la de las normas
+              para autores de la revista a la que usted envía.</strong>
+            </p>
+          </div>
+        </div>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-7"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t1-7"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Cifra destacada</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Cifra destacada</span>
+<b>Cifra:</b> 10 % → 80 %
+<b>Qué mide:</b> de los artículos de revistas médicas usaban la estructura IMRyD en 1950 y en 1980, respectivamente
+<b>Texto:</b> La estructura IMRyD no siempre fue la norma. Un estudio que revisó cincuenta años de artículos en cuatro revistas médicas…
+<b>Fuente:</b> Sollaci, L. B. y Pereira, M. G. (2004). The introduction, methods, results, and discussion (IMRAD) structure: A fifty-year survey. Journal of the Medical Library Association, 92(3), 364-367.
+
+<span class="rojo">Cifras destacadas</span>
+<b>Cifra 1:</b> 250 · palabras, extensión típica de un resumen
+<b>Cifra 2:</b> 4000–6000 · palabras, extensión típica del artículo
+<b>Cifra 3:</b> 30–50 · referencias en un artículo empírico
+<b>Texto:</b> Son rangos orientativos…
+<span class="gris">Cada cifra son dos datos: el valor y qué mide. Con una sola cifra, el texto va al lado; con dos o tres, van en fila y el texto debajo. La fuente es obligatoria cuando la cifra viene de un estudio.</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </div>
+
+      <!-- Ficha 8 · Banner destacado -->
+      <div class="ua-cat-ficha" data-reveal>
+        <span class="ua-cat-rotulo">Banner destacado</span>
+        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> La frase que resume una sección, a primer plano y en fondo oscuro. Una sola oración; el remate del Word en negrilla se enciende en celeste. No más de uno o dos por pantalla: si todo se destaca, nada se destaca.</p>
+        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
+        <div class="ua-respiro">
+          <p>Un artículo no se termina cuando el autor no tiene nada más que decir, sino cuando el lector <strong>no necesita nada más para entenderlo</strong>.</p>
+        </div>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-8"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t1-8"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Banner destacado</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Banner destacado</span>
+Un artículo no se termina cuando el autor no tiene nada más que decir, sino cuando el lector <b>no necesita nada más para entenderlo</b>.
+<span class="gris">El nombre en rojo y la frase debajo, de una sola oración. La parte en negrilla es la que se enciende en el banner. Sin autor: si la frase es de alguien, es una Cita.</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </div>
+
+
+      <!-- ════ Sección 1.4 · Bloque de código ════ -->
+      <section class="ua-seccion" id="bloque-de-codigo" data-reveal>
+        <h2 class="ua-seccion__titulo">Bloque <span class="ua-suave">de</span> <span class="ua-remate">código</span></h2>
+        <p class="ua-seccion__lead">Para los temas que enseñan a programar o a analizar datos: el código tal cual, en tipografía mono y con el lenguaje rotulado.</p>
+      </section>
+
+      <!-- Ficha 9 · Código -->
+      <div class="ua-cat-ficha" data-reveal>
+        <span class="ua-cat-rotulo">Bloque de código</span>
+        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> Cuando el texto incluye instrucciones de un lenguaje de programación que el estudiante debe leer o copiar. Se respetan los saltos de línea y la sangría del original; la cabecera dice el lenguaje. El código se puede seleccionar y copiar.</p>
+        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
+        <h3 class="ua-rotulo"><strong>Contar las palabras de un resumen</strong></h3>
+        <figure class="ua-codigo">
+          <figcaption>Python</figcaption>
+          <pre><code><span class="c"># Cuenta las palabras del resumen y avisa si supera el límite de la revista</span>
+<span class="k">with</span> open(<span class="s">"resumen.txt"</span>, encoding=<span class="s">"utf-8"</span>) <span class="k">as</span> archivo:
+    resumen = archivo.read()
+
+palabras = len(resumen.split())
+print(<span class="s">f"El resumen tiene {palabras} palabras"</span>)
+
+<span class="k">if</span> palabras &gt; <span class="n">250</span>:
+    print(<span class="s">"Supera el límite: recorte antes de enviar"</span>)</code></pre>
+        </figure>
+        <h3 class="ua-rotulo"><strong>Leer los datos y calcular una media</strong></h3>
+        <figure class="ua-codigo">
+          <figcaption>R</figcaption>
+          <pre><code>datos &lt;- read.csv(<span class="s">"encuesta.csv"</span>)          <span class="c"># lee el archivo de datos</span>
+mean(datos$puntaje, na.rm = <span class="k">TRUE</span>)         <span class="c"># media del puntaje, sin los vacíos</span></code></pre>
+        </figure>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-9"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t1-9"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Bloque de código</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Bloque de código</span>
+<b>Lenguaje:</b> Python
+<b>Título:</b> Contar las palabras de un resumen
+<span class="celda"># Cuenta las palabras del resumen y avisa si supera el límite de la revista
+with open("resumen.txt", encoding="utf-8") as archivo:
+    resumen = archivo.read()
+
+palabras = len(resumen.split())
+print(f"El resumen tiene {palabras} palabras")
+
+if palabras &gt; 250:
+    print("Supera el límite: recorte antes de enviar")</span>
+<span class="gris">El nombre en rojo; debajo, el lenguaje y el título si lo tiene. El código va en una celda de tabla de una sola columna, en fuente mono (Consolas o Courier New), para que el Word no le cambie las comillas ni la sangría. El coloreado de palabras clave, cadenas, números y comentarios lo pone el curso.</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </div>
+
+<!-- ova:extras -->
+<style>
+  /* Cita con atribución: el autor en un renglón aparte, en cuerpo de texto y gris, dentro de la
+     misma caja de la cita. La piel (.ua-quote) no trae este renglón; se define aquí hasta que suba
+     al skin por decisión explícita. */
+  .ua-quote__autor {
+    display: block;
+    margin-top: 14px;
+    font-family: var(--font-body);
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text-mut);
+  }
+  .ua-quote__autor::before { content: '— '; }
+</style>
