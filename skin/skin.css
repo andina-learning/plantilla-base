@@ -1643,13 +1643,28 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
   padding-top: 20px;
   border-top: 1px solid var(--border-c);
 }
+/* Icono a un lado del texto (la misma regla Z de Panamericana, 2026-10-18): el icono
+   ocupa su columna a la izquierda, alineado con el título; título y texto en la segunda.
+   Deja el azul al 55 % (≈ 2,4:1) y pasa al azul medio (--c-info, 3,4:1 sobre el fondo; es
+   decorativo, el subtítulo dice lo que es cada campo). */
+.ua-campo {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  column-gap: 20px;
+  align-items: start;
+}
+.ua-campo > :not(.ua-campo__icono) { grid-column: 2; }
 .ua-campo__icono {
+  grid-column: 1; grid-row: 1 / span 3;
   display: block;
-  width: 28px;
-  height: 28px;
-  margin: 0 0 12px;
-  font-size: 28px;
-  color: color-mix(in srgb, var(--c-acento) 55%, transparent);
+  width: 34px; height: 34px;
+  margin: 0;
+  font-size: 34px;
+  color: var(--c-info);
+}
+@media (max-width: 560px) {
+  .ua-campo { grid-template-columns: 28px minmax(0, 1fr); column-gap: 14px; }
+  .ua-campo__icono { width: 28px; height: 28px; font-size: 28px; }
 }
 .ua-campo__titulo {
   margin: 0 0 6px;
