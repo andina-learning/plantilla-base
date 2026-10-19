@@ -6,7 +6,7 @@
 
       <p data-reveal>A continuación se listan los componentes de este tema:</p>
       <ul data-reveal>
-        <li>Tarjetas con icono - izquierda, Tarjetas con icono - centrado, Tarjetas conectadas, Tarjetas con foto, Tarjetas con foto y descripción, Tarjetas que giran, Tarjeta con botón</li>
+        <li>Tarjetas con icono - izquierda, Tarjetas con icono - centrado, Tarjetas conectadas - clara, Tarjetas conectadas - oscura, Tarjetas con foto, Tarjetas con foto y descripción, Tarjetas que giran, Tarjeta con botón</li>
       </ul>
 
       <!-- ════ Tarjetas ════ -->
@@ -222,9 +222,111 @@ Novelista y periodista. Desde La casa de los espíritus, su primera novela, une 
         </div></div>
       </section>
 
-      <!-- Ficha 4 · Tarjetas conectadas -->
-      <section class="ua-seccion ua-seccion--variante" id="tarjetas-conectadas" data-reveal>
-        <h2 class="ua-seccion__titulo">Tarjetas conectadas</h2>
+      <!-- Ficha 4 · Tarjetas conectadas - clara (componente base, textos genéricos) -->
+      <section class="ua-seccion" id="tarjetas-conectadas" data-reveal>
+        <h2 class="ua-seccion__titulo">Tarjetas conectadas - clara</h2>
+        <h3 class="ua-rotulo"><strong>Título del tema</strong></h3>
+        <div class="ua-tarjetas ua-tarjetas--conectadas ua-tarjetas--claras">
+          <div class="ua-tarjeta">
+            <div class="ua-tarjeta__cuerpo">
+              <div class="ua-tarjeta__avatar ua-tarjeta__avatar--icono"><iconify-icon icon="mdi:lightbulb-outline"></iconify-icon></div>
+              <h4>Ítem 1</h4>
+              <p>Descripción del ítem 1: un texto breve que explica el concepto y lo relaciona con los otros dos.</p>
+            </div>
+          </div>
+          <div class="ua-tarjeta">
+            <div class="ua-tarjeta__cuerpo">
+              <div class="ua-tarjeta__avatar ua-tarjeta__avatar--icono"><iconify-icon icon="mdi:format-list-text"></iconify-icon></div>
+              <h4>Ítem 2</h4>
+              <p>Descripción del ítem 2: un texto breve que explica el concepto y lo relaciona con los otros dos.</p>
+            </div>
+          </div>
+          <div class="ua-tarjeta">
+            <div class="ua-tarjeta__cuerpo">
+              <div class="ua-tarjeta__avatar ua-tarjeta__avatar--icono"><iconify-icon icon="mdi:flag-checkered"></iconify-icon></div>
+              <h4>Ítem 3</h4>
+              <p>Descripción del ítem 3: un texto breve que explica el concepto y lo relaciona con los otros dos.</p>
+            </div>
+          </div>
+        </div>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-conectadas-clara"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t5-conectadas-clara"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Tarjetas conectadas - clara</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Tarjetas conectadas - clara</span>
+<b>Título:</b> Título del tema
+<b>Tarjeta 1</b>
+<b>Ítem 1</b>
+Descripción del ítem 1: un texto breve que explica el concepto y lo relaciona con los otros dos.
+<b>Tarjeta 2</b>
+<b>Ítem 2</b>
+Descripción del ítem 2: un texto breve que explica el concepto y lo relaciona con los otros dos.
+<b>Tarjeta 3</b>
+<b>Ítem 3</b>
+Descripción del ítem 3: un texto breve que explica el concepto y lo relaciona con los otros dos.
+<span class="gris">Tres tarjetas, cada una en tres líneas: «Tarjeta N», el nombre del ítem en negrilla y su descripción. El icono lo propone el equipo de producción; si el instruccional quiere uno en particular, lo anota entre corchetes: [icono: bandera].</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </section>
+
+      <!-- Tarjetas conectadas - oscura (componente base, textos genéricos) -->
+      <section class="ua-seccion ua-seccion--variante" id="tarjetas-conectadas-oscura" data-reveal>
+        <h2 class="ua-seccion__titulo">Tarjetas conectadas - oscura</h2>
+        <h3 class="ua-rotulo"><strong>Título del tema</strong></h3>
+        <div class="ua-tarjetas ua-tarjetas--conectadas">
+          <div class="ua-tarjeta">
+            <div class="ua-tarjeta__cuerpo">
+              <div class="ua-tarjeta__avatar ua-tarjeta__avatar--icono"><iconify-icon icon="mdi:lightbulb-outline"></iconify-icon></div>
+              <h4>Ítem 1</h4>
+              <p>Descripción del ítem 1: un texto breve que explica el concepto y lo relaciona con los otros dos.</p>
+            </div>
+          </div>
+          <div class="ua-tarjeta">
+            <div class="ua-tarjeta__cuerpo">
+              <div class="ua-tarjeta__avatar ua-tarjeta__avatar--icono"><iconify-icon icon="mdi:format-list-text"></iconify-icon></div>
+              <h4>Ítem 2</h4>
+              <p>Descripción del ítem 2: un texto breve que explica el concepto y lo relaciona con los otros dos.</p>
+            </div>
+          </div>
+          <div class="ua-tarjeta">
+            <div class="ua-tarjeta__cuerpo">
+              <div class="ua-tarjeta__avatar ua-tarjeta__avatar--icono"><iconify-icon icon="mdi:flag-checkered"></iconify-icon></div>
+              <h4>Ítem 3</h4>
+              <p>Descripción del ítem 3: un texto breve que explica el concepto y lo relaciona con los otros dos.</p>
+            </div>
+          </div>
+        </div>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-conectadas-oscura"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t5-conectadas-oscura"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Tarjetas conectadas - oscura</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Tarjetas conectadas - oscura</span>
+<b>Título:</b> Título del tema
+<b>Tarjeta 1</b>
+<b>Ítem 1</b>
+Descripción del ítem 1: un texto breve que explica el concepto y lo relaciona con los otros dos.
+<b>Tarjeta 2</b>
+<b>Ítem 2</b>
+Descripción del ítem 2: un texto breve que explica el concepto y lo relaciona con los otros dos.
+<b>Tarjeta 3</b>
+<b>Ítem 3</b>
+Descripción del ítem 3: un texto breve que explica el concepto y lo relaciona con los otros dos.
+<span class="gris">Tres tarjetas, cada una en tres líneas: «Tarjeta N», el nombre del ítem en negrilla y su descripción. El icono lo propone el equipo de producción; si el instruccional quiere uno en particular, lo anota entre corchetes: [icono: bandera].</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </section>
+
+      <!-- Ejemplo de uso de tarjetas conectadas: imagen en lugar del icono y una línea «Ejemplo:» -->
+      <section class="ua-seccion ua-seccion--variante" id="ejemplo-tarjetas-conectadas" data-reveal>
+        <h2 class="ua-seccion__titulo">Ejemplo de uso de tarjetas conectadas</h2>
         <p class="ua-cat-desc">Las tres tarjetas permiten presentar conceptos relacionados, cada uno con su explicación y un ejemplo práctico.</p>
         <h3 class="ua-rotulo"><strong>Las 3R del cuidado del ambiente</strong></h3>
         <div class="ua-tarjetas ua-tarjetas--conectadas">

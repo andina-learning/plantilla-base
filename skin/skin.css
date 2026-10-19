@@ -1977,6 +1977,13 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 .ua-tarjetas--conectadas .ua-tarjeta__cuerpo strong { color: inherit; }
 .ua-tarjetas--conectadas .ua-tarjeta__avatar { background: rgba(255,255,255,.16); color: #fff; }
 .ua-tarjetas--conectadas .ua-tarjeta:nth-child(3) .ua-tarjeta__avatar { background: rgba(19,43,65,.14); color: var(--c-deep); }
+/* conectadas - clara: la misma progresión en tonos claros (hielo → celeste suave → celeste), texto abismo;
+   círculo blanco con icono azul marino (regla de color de iconos) */
+.ua-tarjetas--conectadas.ua-tarjetas--claras .ua-tarjeta { background: var(--c-hielo); color: var(--c-deep); }
+.ua-tarjetas--conectadas.ua-tarjetas--claras .ua-tarjeta:nth-child(2) { background: #D6EAF8; }
+.ua-tarjetas--conectadas.ua-tarjetas--claras .ua-tarjeta:nth-child(3) { background: #BFE3F6; }
+.ua-tarjetas--conectadas.ua-tarjetas--claras .ua-tarjeta__avatar,
+.ua-tarjetas--conectadas.ua-tarjetas--claras .ua-tarjeta:nth-child(3) .ua-tarjeta__avatar { background: #fff; color: var(--c-acento); }
 /* conectadas con figura: columnas con aire, todo centrado y la imagen redonda arriba */
 .ua-tarjetas--conectadas .ua-tarjeta__cuerpo:has(> .ua-tarjeta__figura) {
   display: flex; flex-direction: column; align-items: center; text-align: center;
