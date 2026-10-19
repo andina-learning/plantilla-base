@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="Papel y cartón organizados junto al símbolo de reciclaje.">
+  <defs><clipPath id="c"><circle cx="80" cy="80" r="80"/></clipPath></defs>
+  <g clip-path="url(#c)">
+  <rect width="160" height="160" fill="#E8F6FD"/>
+  <ellipse cx="80" cy="140" rx="54" ry="8" fill="#00417B" opacity=".12"/>
+  <rect x="34" y="62" width="44" height="16" rx="2" fill="#FFFFFF" stroke="#00417B" stroke-width="3" transform="rotate(4 56 70)"/>
+  <rect x="30" y="76" width="48" height="16" rx="2" fill="#FFFFFF" stroke="#00417B" stroke-width="3" transform="rotate(-5 54 84)"/>
+  <path d="M26 98l8-10h44l8 10" fill="#F7CD72" stroke="#00417B" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M26 98h60v38H26z" fill="#F0B443" stroke="#00417B" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M48 98v10h16V98" fill="none" stroke="#00417B" stroke-width="3"/>
+  <g transform="translate(114 92)"><circle r="28" fill="#FFFFFF"/><path d="M4.4 -16.4A17 17 0 0 1 15.4 7.2" stroke="#3A93D0" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M12.0 14.4L21.8 10.1L9.1 4.2z" fill="#00417B"/><path d="M12.0 12.0A17 17 0 0 1 -13.9 9.8" stroke="#3A93D0" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M-18.5 3.2L-19.7 13.8L-8.2 5.7z" fill="#00417B"/><path d="M-16.4 4.4A17 17 0 0 1 -1.5 -16.9" stroke="#3A93D0" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M6.5 -17.6L-2.1 -23.9L-0.9 -10.0z" fill="#00417B"/></g>
+  </g>
+</svg>

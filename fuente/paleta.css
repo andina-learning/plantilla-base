@@ -101,6 +101,7 @@ html:root:not([data-version="oscura"]) {
   font-family:var(--font-display); font-weight:700; font-size:.7rem; letter-spacing:.16em; text-transform:uppercase; color:var(--c-acento);
 }
 .ua-cat-ejemplo::after{ content:''; flex:1; height:1px; background:var(--border-c); }
+.ua-cat-desc{ margin:0 0 28px; max-width:72ch; color:var(--text-mut); }
 .ua-cat-acciones{ display:flex; justify-content:flex-end; margin:18px 0 0; }
 .ua-cat-modal__cab{
   display:flex; align-items:center; gap:10px; margin:0 0 10px;
@@ -116,3 +117,9 @@ html:root:not([data-version="oscura"]) {
 .ua-cat-word .rojo{ color:#D62828; font-weight:700; }
 .ua-cat-word .rotulo{ color:var(--text-pri); font-weight:600; }
 .ua-cat-word .celda{ display:block; margin:8px 0; padding:8px 10px; border:1px solid var(--border-c); border-radius:3px; }
+
+/* Catálogo simple: título del componente (o de su variante) y el ejemplo debajo.
+   La variante no repite la divisoria ni el aire grande de la sección. */
+.ua-seccion--variante{ margin:48px 0 36px; padding-top:0; border-top:0; }
+.ua-seccion__titulo + .ua-cta{ margin-top:16px; }
+.ua-titulo--variante{ margin-top:48px; }

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 360" role="img" aria-labelledby="t">
+  <title id="t">Silueta de una persona: lugar reservado para la foto silueteada</title>
+  <g fill="#0E2A44" opacity=".82">
+    <circle cx="150" cy="96" r="62"/>
+    <path d="M150 170 c-70 0 -118 46 -126 120 l0 70 h252 l0 -70 c-8 -74 -56 -120 -126 -120 z"/>
+  </g>
+</svg>

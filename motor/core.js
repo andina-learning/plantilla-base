@@ -685,7 +685,26 @@
     const burger = document.querySelector('[data-ova-burger]');
     const sidebar = document.querySelector('[data-ova-sidebar]');
     if (!burger || !sidebar) return;
+    // Abierto, el botón se corre fuera del panel y pasa a ✕ (no tapa el rótulo del menú).
+    // Se sincroniza con un observador porque el menú también se cierra al cambiar de pantalla.
+    const icono = burger.querySelector('iconify-icon');
+    const sync = () => {
+      const abierto = sidebar.classList.contains('is-open');
+      burger.classList.toggle('is-open', abierto);
+      document.body.classList.toggle('ova-menu-abierto', abierto);
+      burger.setAttribute('aria-expanded', String(abierto));
+      burger.setAttribute('aria-label', abierto ? 'Cerrar el menú' : 'Abrir el menú');
+      if (icono) icono.setAttribute('icon', abierto ? 'mdi:close' : 'mdi:menu');
+    };
     burger.addEventListener('click', () => sidebar.classList.toggle('is-open'));
+    // Tocar fuera del panel lo cierra
+    document.addEventListener('click', e => {
+      if (!sidebar.classList.contains('is-open')) return;
+      if (sidebar.contains(e.target) || burger.contains(e.target)) return;
+      sidebar.classList.remove('is-open');
+    });
+    new MutationObserver(sync).observe(sidebar, { attributes: true, attributeFilter: ['class'] });
+    sync();
   }
 
   // Reveal on scroll

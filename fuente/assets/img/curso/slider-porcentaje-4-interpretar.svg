@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" width="560" height="400" role="img" aria-label="Cuarenta figuras de estudiantes en cuatro filas de diez; la primera fila, diez figuras, resaltada en amarillo: una cuarta parte.">
+  <!-- Plantilla base · Slider de pasos · paso 4. Imagen sugerida: 40 figuras de estudiantes con 10 resaltadas en otro color. Las 10 forman una de las cuatro filas: se ve la cuarta parte. Único amarillo: las 10.
+       Familia: fondo celeste degradado, piezas blancas con sombra, trazo azul, un solo amarillo. -->
+  <defs>
+    <linearGradient id="sp4-fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E6F3FA"/><stop offset="55%" stop-color="#E8EDF5"/><stop offset="100%" stop-color="#F5F8FB"/>
+    </linearGradient>
+    <filter id="sp4-sombra" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#132B41" flood-opacity="0.14"/>
+    </filter>
+    <g id="sp4-persona"><circle cx="0" cy="-11" r="7"/><path d="M-12 12 a12 12 0 0 1 24 0 v3 h-24z"/></g>
+  </defs>
+  <rect width="560" height="400" rx="20" fill="url(#sp4-fondo)"/>
+  <g fill="#3FC0F0" opacity=".9"><rect x="500" y="24" width="14" height="14" rx="2"/><rect x="516" y="40" width="14" height="14" rx="2" fill="#00417B"/></g>
+  <rect x="40" y="52" width="480" height="296" rx="20" fill="#FFFFFF" filter="url(#sp4-sombra)"/>
+  <rect x="62" y="74" width="436" height="62" rx="14" fill="#FDF3DF"/>
+  <use href="#sp4-persona" x="94" y="114" fill="#F0B443"/>
+  <use href="#sp4-persona" x="135" y="114" fill="#F0B443"/>
+  <use href="#sp4-persona" x="176" y="114" fill="#F0B443"/>
+  <use href="#sp4-persona" x="217" y="114" fill="#F0B443"/>
+  <use href="#sp4-persona" x="258" y="114" fill="#F0B443"/>
+  <use href="#sp4-persona" x="299" y="114" fill="#F0B443"/>
+  <use href="#sp4-persona" x="340" y="114" fill="#F0B443"/>
+  <use href="#sp4-persona" x="381" y="114" fill="#F0B443"/>
+  <use href="#sp4-persona" x="422" y="114" fill="#F0B443"/>
+  <use href="#sp4-persona" x="463" y="114" fill="#F0B443"/>
+  <use href="#sp4-persona" x="94" y="178" fill="#9DB4CC"/>
+  <use href="#sp4-persona" x="135" y="178" fill="#9DB4CC"/>
+  <use href="#sp4-persona" x="176" y="178" fill="#9DB4CC"/>
+  <use href="#sp4-persona" x="217" y="178" fill="#9DB4CC"/>
+  <use href="#sp4-persona" x="258" y="178" fill="#9DB4CC"/>
+  <use href="#sp4-persona" x="299" y="178" fill="#9DB4CC"/>
+  <use href="#sp4-persona" x="340" y="178" fill="#9DB4CC"/>
+  <use href="#sp4-persona" x="381" y="178" fill="#9DB4CC"/>
+  <use href="#sp4-persona" x="422" y="178" fill="#9DB4CC"/>
+  <use href="#sp4-persona" x="463" y="178" fill="#9DB4CC"/>
+  <use href="#sp4-persona" x="94" y="242" fill="#9DB4CC"/>
+  <use href="#sp4-persona" x="135" y="242" fill="#9DB4CC"/>
+  <use href="#sp4-persona" x="176" y="242" fill="#9DB4CC"/>
+  <use href="#sp4-persona" x="217" y="242" fill="#9DB4CC"/>
+  <use href="#sp4-persona" x="258" y="242" fill="#9DB4CC"/>
+  <use href="#sp4-persona" x="299" y="242" fill="#9DB4CC"/>
+  <use href="#sp4-persona" x="340" y="242" fill="#9DB4CC"/>
+  <use href="#sp4-persona" x="381" y="242" fill="#9DB4CC"/>
+  <use href="#sp4-persona" x="422" y="242" fill="#9DB4CC"/>
+  <use href="#sp4-persona" x="463" y="242" fill="#9DB4CC"/>
+  <use href="#sp4-persona" x="94" y="306" fill="#9DB4CC"/>
+  <use href="#sp4-persona" x="135" y="306" fill="#9DB4CC"/>
+  <use href="#sp4-persona" x="176" y="306" fill="#9DB4CC"/>
+  <use href="#sp4-persona" x="217" y="306" fill="#9DB4CC"/>
+  <use href="#sp4-persona" x="258" y="306" fill="#9DB4CC"/>
+  <use href="#sp4-persona" x="299" y="306" fill="#9DB4CC"/>
+  <use href="#sp4-persona" x="340" y="306" fill="#9DB4CC"/>
+  <use href="#sp4-persona" x="381" y="306" fill="#9DB4CC"/>
+  <use href="#sp4-persona" x="422" y="306" fill="#9DB4CC"/>
+  <use href="#sp4-persona" x="463" y="306" fill="#9DB4CC"/>
+  <text x="280" y="384" font-family="Manrope, system-ui, sans-serif" font-size="18" font-weight="700" fill="#00417B" text-anchor="middle">10 de 40 · una cuarta parte</text>
+</svg>

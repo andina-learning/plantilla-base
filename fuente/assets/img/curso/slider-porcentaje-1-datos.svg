@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" width="560" height="400" role="img" aria-label="Un grupo de ocho estudiantes en una tarjeta blanca y, debajo, dos rótulos: Total: 40 y Porcentaje: 25 %.">
+  <!-- Plantilla base · Slider de pasos · paso 1. Imagen sugerida: un grupo de estudiantes con los rótulos «Total: 40» y «Porcentaje: 25 %». Único amarillo: el rótulo del porcentaje, el dato que se va a aplicar.
+       Familia: fondo celeste degradado, piezas blancas con sombra, trazo azul, un solo amarillo. -->
+  <defs>
+    <linearGradient id="sp1-fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E6F3FA"/><stop offset="55%" stop-color="#E8EDF5"/><stop offset="100%" stop-color="#F5F8FB"/>
+    </linearGradient>
+    <filter id="sp1-sombra" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#132B41" flood-opacity="0.14"/>
+    </filter>
+    <g id="sp1-persona"><circle cx="0" cy="-11" r="7"/><path d="M-12 12 a12 12 0 0 1 24 0 v3 h-24z"/></g>
+  </defs>
+  <rect width="560" height="400" rx="20" fill="url(#sp1-fondo)"/>
+  <g fill="#3FC0F0" opacity=".9"><rect x="500" y="24" width="14" height="14" rx="2"/><rect x="516" y="40" width="14" height="14" rx="2" fill="#00417B"/></g>
+  <rect x="90" y="56" width="380" height="176" rx="18" fill="#FFFFFF" filter="url(#sp1-sombra)"/>
+  <use href="#sp1-persona" x="170" y="124" fill="#00417B"/>
+  <use href="#sp1-persona" x="225" y="124" fill="#3A93D0"/>
+  <use href="#sp1-persona" x="280" y="124" fill="#00417B"/>
+  <use href="#sp1-persona" x="335" y="124" fill="#3A93D0"/>
+  <use href="#sp1-persona" x="390" y="124" fill="#00417B"/>
+  <use href="#sp1-persona" x="170" y="186" fill="#3A93D0"/>
+  <use href="#sp1-persona" x="225" y="186" fill="#00417B"/>
+  <use href="#sp1-persona" x="280" y="186" fill="#3A93D0"/>
+  <use href="#sp1-persona" x="335" y="186" fill="#00417B"/>
+  <use href="#sp1-persona" x="390" y="186" fill="#3A93D0"/>
+  <rect x="70" y="264" width="196" height="64" rx="32" fill="#FFFFFF" stroke="#00417B" stroke-width="2.5" filter="url(#sp1-sombra)"/>
+  <text x="168" y="305" font-family="Manrope, system-ui, sans-serif" font-size="24" font-weight="700" fill="#132B41" text-anchor="middle">Total: 40</text>
+  <rect x="290" y="264" width="216" height="64" rx="32" fill="#FFFFFF" stroke="#F0B443" stroke-width="3.5" filter="url(#sp1-sombra)"/>
+  <text x="398" y="305" font-family="Manrope, system-ui, sans-serif" font-size="24" font-weight="700" fill="#132B41" text-anchor="middle">Porcentaje: 25 %</text>
+</svg>

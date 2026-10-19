@@ -8,359 +8,811 @@
       <header class="ova-screen__head" data-reveal>
         <div class="ova-screen__eyebrow">Tema {{NUM}}</div>
         <h1 class="ova-screen__title">Texto <span class="ua-suave">y</span> <span class="ua-remate">énfasis</span></h1>
-        <p class="ova-screen__lead">
-          Los componentes con los que se escribe el cuerpo de un tema: títulos, párrafos, listas, destacados, citas, cifras y código.
-        </p>
+        <p class="ova-screen__lead">Componentes para escribir el cuerpo de un tema: subtítulos, listas, tablas, bloques de texto, citas, banner y código.</p>
       </header>
 
-      <p data-reveal>
-        Un artículo académico se lee con prisa y por partes: el evaluador salta al método, el lector
-        apurado se queda en el resumen y casi nadie empieza por la introducción. Por eso la claridad
-        no es un adorno sino una condición de lectura: la jerarquía tipográfica —qué es título, qué
-        es párrafo, qué está destacado— le dice al lector <strong>dónde está y qué importa</strong>
-        antes de que lea una sola frase completa. En esta pantalla se muestran los componentes de
-        texto con los que un tema construye esa jerarquía.
-      </p>
+      <p data-reveal>A continuación se listan los componentes de este tema:</p>
+      <ul data-reveal>
+        <li>Subtítulos, Listas</li>
+        <li>Tabla simple, Tabla con celdas combinadas</li>
+        <li>Bloque destacado, Descarga, Recursos y enlaces</li>
+        <li>Citas, Banner destacado, Comparativo</li>
+        <li>Bloque de código</li>
+      </ul>
 
+      <!-- ════ Subtítulos ════ -->
+      <section class="ua-seccion" id="subtitulos" data-reveal>
+        <h2 class="ua-seccion__titulo">Subtítulos</h2>
 
-      <!-- ════ Sección 1.1 · Títulos, párrafos y listas ════ -->
-      <section class="ua-seccion" id="titulos-parrafos-listas" data-reveal>
-        <h2 class="ua-seccion__titulo">Títulos, párrafos <span class="ua-suave">y</span> <span class="ua-remate">listas</span></h2>
-        <p class="ua-seccion__lead">La base de cualquier tema: el texto corrido, con su jerarquía y sus enumeraciones.</p>
-      </section>
+        <h2 class="ua-sub ua-sub--1"><span class="ua-sub__num">1.1</span>Subtítulo numerado nivel 1</h2>
+        <p>Tamaño 1,6 rem, peso 800. Del subtítulo a lo que sigue: 36 px. Del párrafo anterior al subtítulo: 48 px.</p>
 
-      <!-- Ficha 1 · Títulos y subtítulos -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Título y subtítulo</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> El título de la pantalla ya está arriba (es el nombre del tema). Dentro del tema, cada bloque que el Word nombra con un subtítulo lleva un rótulo pegado al texto que encabeza. La negrilla del Word se conserva como negrilla; un término del glosario se marca y muestra su definición al pasar el cursor.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <h3 class="ua-rotulo"><strong>Qué es un artículo académico</strong></h3>
-        <p>
-          Un artículo académico es un texto que comunica los resultados de una investigación a una
-          comunidad que puede evaluarlos y replicarlos. A diferencia de un ensayo, <strong>no busca
-          persuadir con el estilo sino convencer con la evidencia</strong>; por eso la mayoría de las
-          revistas científicas le exige una estructura fija, conocida como
-          <span class="ua-termino" tabindex="0" data-def="Introducción, Método, Resultados y Discusión: la estructura estándar del artículo científico empírico. En inglés, IMRaD.">IMRyD</span>,
-          que le permite al lector encontrar cada parte donde espera encontrarla.
-        </p>
+        <h3 class="ua-sub ua-sub--2"><span class="ua-sub__num">1.1.1</span>Subtítulo numerado nivel 2</h3>
+        <p>Tamaño 1,3 rem, peso 700. Del subtítulo a lo que sigue: 28 px. Del párrafo anterior al subtítulo: 36 px.</p>
+
+        <h4 class="ua-sub ua-sub--3">Subtítulo nivel 3</h4>
+        <p>Tamaño 1,1 rem, peso 700, sin número. Del subtítulo a lo que sigue: 24 px. Del párrafo anterior al subtítulo: 28 px.</p>
+
+        <h2 class="ua-sub ua-sub--1 ua-sub--vineta">Subtítulo con viñeta nivel 1</h2>
+        <p>Las mismas medidas del nivel 1, con la viñeta de Andina en lugar del número.</p>
+
+        <h3 class="ua-sub ua-sub--2 ua-sub--vineta">Subtítulo con viñeta nivel 2</h3>
+        <p>Las mismas medidas del nivel 2, con un cuadro celeste en lugar del número.</p>
+
         <div class="ua-cat-acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-1"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
         </div>
         <div class="ova-modal" id="cat-t1-1"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Título y subtítulo</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__head"><h3>Subtítulos</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
           <div class="ova-modal__body">
             <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
-            <div class="ua-cat-word"><span class="rojo">Subtítulo</span>
-<b>Qué es un artículo académico</b>
-Un artículo académico es un texto que comunica los resultados de una investigación a una comunidad que puede evaluarlos y replicarlos. A diferencia de un ensayo, <b>no busca persuadir con el estilo sino convencer con la evidencia</b>; por eso la mayoría de las revistas científicas le exige una estructura fija, conocida como IMRyD…
-<span class="gris">El subtítulo en negrilla, en su propio renglón, seguido del párrafo. Lo que va en negrilla en el Word queda en negrilla en el curso: ni más ni menos. Los términos del glosario no se marcan en el texto: se reconocen porque están en el documento Glosario_Unidad.docx.</span></div>
+            <div class="ua-cat-word"><b>1.1 Subtítulo numerado nivel 1</b>
+Texto del párrafo.
+<b>1.1.1 Subtítulo numerado nivel 2</b>
+Texto del párrafo.
+<b>Subtítulo nivel 3</b>
+Texto del párrafo.
+<span class="gris">El nivel lo da el número del Word (1.1, 1.1.1) o el estilo de título que use la plantilla de DI. Si el Word no numera, el subtítulo sale con viñeta. El título del tema es uno solo y no se repite como subtítulo.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
-      </div>
+      </section>
 
-      <!-- Ficha 2 · Listas -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Lista numerada · Lista de viñetas</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> La lista numerada, cuando el orden importa o cada ítem es un párrafo completo; la de viñetas, cuando son elementos breves y del mismo nivel. Si cada ítem tiene título y texto, la numerada los separa con un filete y un número grande.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <h3 class="ua-rotulo"><strong>Los tres errores más frecuentes al redactar un resumen</strong></h3>
-        <ol class="ua-numerada">
-          <li class="ua-numerada__item">
-            <div class="ua-numerada__marca" aria-hidden="true"><span class="ua-numerada__num">01</span><iconify-icon class="ua-numerada__icono" icon="mdi:text-box-remove-outline"></iconify-icon></div>
-            <p><strong>Anunciar en lugar de informar.</strong> «Se presentan los resultados de un estudio sobre…» no dice nada que el lector pueda usar. El resumen debe contener el hallazgo principal, con su cifra si la hay, no la promesa de que más adelante aparecerá.</p>
-          </li>
-          <li class="ua-numerada__item">
-            <div class="ua-numerada__marca" aria-hidden="true"><span class="ua-numerada__num">02</span><iconify-icon class="ua-numerada__icono" icon="mdi:scale-unbalanced"></iconify-icon></div>
-            <p><strong>Desequilibrar las partes.</strong> Un resumen que dedica la mitad de sus palabras al contexto y una línea a los resultados invierte la jerarquía de interés del lector. Cada parte del IMRyD debería tener en el resumen un peso parecido al que tiene en el artículo.</p>
-          </li>
-          <li class="ua-numerada__item">
-            <div class="ua-numerada__marca" aria-hidden="true"><span class="ua-numerada__num">03</span><iconify-icon class="ua-numerada__icono" icon="mdi:link-variant-off"></iconify-icon></div>
-            <p><strong>Incluir lo que no está en el cuerpo.</strong> Citas, abreviaturas sin definir o datos que no aparecen después confunden al lector y son una de las observaciones más comunes de los revisores. El resumen se escribe al final, a partir del artículo terminado.</p>
-          </li>
-        </ol>
-        <h3 class="ua-rotulo"><strong>Lo que todo resumen estructurado debe contener</strong></h3>
-        <ul>
-          <li>El objetivo o la pregunta de investigación.</li>
-          <li>El diseño del estudio, la población y el método de análisis.</li>
-          <li>El resultado principal, con su magnitud.</li>
-          <li>La conclusión y su alcance.</li>
-        </ul>
+      <!-- ════ Listas ════ -->
+      <section class="ua-seccion" id="listas" data-reveal>
+        <h2 class="ua-seccion__titulo">Listas</h2>
+
+        <div class="ua-bloque">
+          <h3 class="ua-sub ua-sub--2">Lista de viñetas</h3>
+          <ul class="ua-vinetas">
+            <li>El objetivo o la pregunta de investigación.</li>
+            <li>El diseño del estudio, la población y el método de análisis.</li>
+            <li>El resultado principal, con su magnitud.</li>
+            <li>La conclusión y su alcance.</li>
+          </ul>
+        </div>
+
+        <div class="ua-bloque">
+          <h3 class="ua-sub ua-sub--2">Lista de viñetas con cuadro</h3>
+          <ul class="ua-vinetas ua-vinetas--cuadro">
+            <li>Título del artículo.</li>
+            <li>Resumen y palabras clave.</li>
+            <li>Cuerpo del artículo.</li>
+            <li>Referencias.</li>
+          </ul>
+        </div>
+
+        <div class="ua-bloque">
+          <h3 class="ua-sub ua-sub--2">Lista numerada básica</h3>
+          <ol class="ua-lista-basica">
+            <li>Introducción</li>
+            <li>Métodos
+              <ol>
+                <li>Diseño del estudio</li>
+                <li>Participantes y muestra</li>
+              </ol>
+            </li>
+            <li>Resultados</li>
+            <li>Discusión</li>
+          </ol>
+        </div>
+
+        <div class="ua-bloque">
+          <h3 class="ua-sub ua-sub--2">Lista numerada con cuadro</h3>
+          <ol class="ua-lista-cuadro">
+            <li>Leer las instrucciones para autores de la revista.</li>
+            <li>Escribir el borrador completo.</li>
+            <li>Pedir a un colega que lo revise.</li>
+            <li>Enviar el manuscrito por la plataforma.</li>
+          </ol>
+        </div>
+
+        <div class="ua-bloque">
+          <h3 class="ua-sub ua-sub--2">Lista numerada con icono</h3>
+          <ol class="ua-numerada">
+            <li class="ua-numerada__item">
+              <div class="ua-numerada__marca" aria-hidden="true"><span class="ua-numerada__num">01</span><iconify-icon class="ua-numerada__icono" icon="mdi:text-box-remove-outline"></iconify-icon></div>
+              <p><strong>Anunciar en lugar de informar.</strong> «Se presentan los resultados de un estudio sobre…» no dice nada que el lector pueda usar. El resumen debe contener el hallazgo principal.</p>
+            </li>
+            <li class="ua-numerada__item">
+              <div class="ua-numerada__marca" aria-hidden="true"><span class="ua-numerada__num">02</span><iconify-icon class="ua-numerada__icono" icon="mdi:scale-unbalanced"></iconify-icon></div>
+              <p><strong>Desequilibrar las partes.</strong> Cada parte del IMRyD debería tener en el resumen un peso parecido al que tiene en el artículo.</p>
+            </li>
+            <li class="ua-numerada__item">
+              <div class="ua-numerada__marca" aria-hidden="true"><span class="ua-numerada__num">03</span><iconify-icon class="ua-numerada__icono" icon="mdi:link-variant-off"></iconify-icon></div>
+              <p><strong>Incluir lo que no está en el cuerpo.</strong> Citas, abreviaturas sin definir o datos que no aparecen después confunden al lector.</p>
+            </li>
+          </ol>
+        </div>
+
         <div class="ua-cat-acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-2"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
         </div>
         <div class="ova-modal" id="cat-t1-2"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Lista numerada · Lista de viñetas</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__head"><h3>Listas</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
           <div class="ova-modal__body">
             <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
             <div class="ua-cat-word"><span class="rojo">Lista numerada</span>
-<b>Título:</b> Los tres errores más frecuentes al redactar un resumen
-1. <b>Anunciar en lugar de informar.</b> «Se presentan los resultados de un estudio sobre…» no dice nada que el lector pueda usar…
-2. <b>Desequilibrar las partes.</b> Un resumen que dedica la mitad de sus palabras al contexto…
-3. <b>Incluir lo que no está en el cuerpo.</b> Citas, abreviaturas sin definir o datos que no aparecen después…
+1. Introducción
+2. Métodos
+   a. Diseño del estudio
+   b. Participantes y muestra
+3. Resultados
 
 <span class="rojo">Lista de viñetas</span>
-<b>Título:</b> Lo que todo resumen estructurado debe contener
 • El objetivo o la pregunta de investigación.
 • El diseño del estudio, la población y el método de análisis.
-• El resultado principal, con su magnitud.
-• La conclusión y su alcance.
-<span class="gris">Las listas del Word se respetan tal cual: la numeración o la viñeta que trae el documento es la que se usa. El título de la lista es opcional. Si un ítem empieza con una frase en negrilla, esa frase se conserva en negrilla.</span></div>
+<span class="gris">La numeración o la viñeta del Word es la que se usa. El estilo lo elige producción: viñeta con punto o con cuadro; numerada básica para ítems cortos, con cuadro para pasos, con icono para ítems de un párrafo. Si un ítem empieza con una frase en negrilla, se conserva en negrilla.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
-      </div>
-
-      <!-- Ficha 3 · Campos -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Campos</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> Varios subtítulos del mismo nivel con un párrafo cada uno (los «Objetivo», «Pregunta», «Alcance» de una ficha). Van uno debajo de otro, separados por un filete, sin tarjetas; el icono es decorativo.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <div class="ua-campos">
-          <div class="ua-campo">
-            <iconify-icon class="ua-campo__icono" icon="mdi:target" aria-hidden="true"></iconify-icon>
-            <h3 class="ua-campo__titulo">Objetivo del artículo</h3>
-            <p>Determinar si la retroalimentación escrita entre pares mejora la calidad de los resúmenes de artículos redactados por estudiantes de posgrado, en comparación con la retroalimentación del docente únicamente.</p>
-          </div>
-          <div class="ua-campo">
-            <iconify-icon class="ua-campo__icono" icon="mdi:help-circle-outline" aria-hidden="true"></iconify-icon>
-            <h3 class="ua-campo__titulo">Pregunta de investigación</h3>
-            <p>¿Qué diferencia hay en la calidad del resumen, medida con una rúbrica de cuatro criterios, entre quienes recibieron retroalimentación de pares y quienes recibieron solo la del docente?</p>
-          </div>
-        </div>
-        <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-3"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
-        </div>
-        <div class="ova-modal" id="cat-t1-3"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Campos</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
-          <div class="ova-modal__body">
-            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
-            <div class="ua-cat-word"><span class="rojo">Campos</span>
-<b>Objetivo del artículo</b>
-Determinar si la retroalimentación escrita entre pares mejora la calidad de los resúmenes de artículos redactados por estudiantes de posgrado…
-<b>Pregunta de investigación</b>
-¿Qué diferencia hay en la calidad del resumen, medida con una rúbrica de cuatro criterios…?
-<span class="gris">Cada campo son dos renglones: el subtítulo en negrilla y su párrafo. Todos los campos del bloque tienen el mismo nivel; si uno pesa más que los otros, no es un campo sino un bloque destacado.</span></div>
-          </div>
-          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
-        </div></div>
-      </div>
-
-
-      <!-- ════ Sección 1.2 · Bloques de texto destacado ════ -->
-      <section class="ua-seccion" id="bloques-destacados" data-reveal>
-        <h2 class="ua-seccion__titulo">Bloques de texto <span class="ua-remate">destacado</span></h2>
-        <p class="ua-seccion__lead">Lo que el lector no debería saltarse: una idea, una advertencia, una pregunta.</p>
       </section>
 
-      <!-- Ficha 4 · Callouts -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Texto destacado</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> Un párrafo que el Word rotula como «Importante», «Para tener en cuenta», «Atención» o «Para reflexionar». El rótulo decide el color y el icono; el texto es el del documento. Dos destacados seguidos de rótulos distintos van en pareja.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <div class="ova-callout">
-          <div class="ova-callout__ico"><iconify-icon icon="mdi:alert-circle-outline"></iconify-icon></div>
-          <div>
-            <span class="ova-callout__tag">Importante</span>
-            <p style="margin:8px 0 0;">El resumen es la única parte del artículo que leerán todos los que lo encuentren; para muchos será la única. <strong>Se escribe de último y se revisa de primero.</strong></p>
-          </div>
-        </div>
-        <div class="ova-grid-2" style="margin-top:20px;">
-          <div class="ova-callout ova-callout--success">
-            <div class="ova-callout__ico"><iconify-icon icon="mdi:check-circle-outline"></iconify-icon></div>
-            <div>
-              <span class="ova-callout__tag">Para tener en cuenta</span>
-              <p style="margin:8px 0 0;">Antes de enviar el manuscrito, revise las normas para autores de la revista: extensión, formato de citación y estructura del resumen cambian de una publicación a otra.</p>
-            </div>
-          </div>
-          <div class="ova-callout ova-callout--warning">
-            <div class="ova-callout__ico"><iconify-icon icon="mdi:alert-outline"></iconify-icon></div>
-            <div>
-              <span class="ova-callout__tag">Atención</span>
-              <p style="margin:8px 0 0;">Enviar el mismo manuscrito a dos revistas a la vez se considera una falta ética y es motivo de rechazo en ambas, aunque el texto sea original.</p>
-            </div>
-          </div>
-        </div>
-        <div class="ova-callout ova-callout--reflexion" style="margin-top:20px;">
-          <div class="ova-callout__ico"><iconify-icon icon="mdi:comment-question-outline"></iconify-icon></div>
-          <div>
-            <span class="ova-callout__tag">Para reflexionar</span>
-            <p style="margin:8px 0 0;">Piense en el último artículo que leyó completo. ¿Qué lo llevó a pasar del resumen al cuerpo del texto? ¿Su propio manuscrito produciría ese mismo efecto en un lector que no lo conoce?</p>
-          </div>
-        </div>
-        <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-4"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
-        </div>
-        <div class="ova-modal" id="cat-t1-4"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Texto destacado</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
-          <div class="ova-modal__body">
-            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
-            <div class="ua-cat-word"><span class="rojo">Texto destacado</span>
-<b>Importante</b>
-El resumen es la única parte del artículo que leerán todos los que lo encuentren; para muchos será la única. <b>Se escribe de último y se revisa de primero.</b>
+      <!-- ════ Tablas ════ -->
+      <section class="ua-seccion" id="tablas" data-reveal>
+        <h2 class="ua-seccion__titulo">Tablas</h2>
 
-<span class="rojo">Texto destacado</span>
+        <div class="ua-bloque">
+          <h3 class="ua-sub ua-sub--2">Tabla simple</h3>
+          <figure class="ua-tabla-apa">
+            <figcaption>
+              <span class="ua-tabla-apa__num"><strong>Tabla 1</strong></span>
+              <span class="ua-tabla-apa__titulo">Tipos de artículo académico, propósito y extensión habitual</span>
+            </figcaption>
+            <div class="ova-tabla"><table>
+              <thead><tr><th>Tipo de artículo</th><th>Propósito</th><th>Extensión habitual</th></tr></thead>
+              <tbody>
+                <tr><td>Artículo de investigación</td><td>Presenta los resultados originales de un estudio.</td><td>5.000 a 8.000 palabras</td></tr>
+                <tr><td>Artículo de revisión</td><td>Analiza y sintetiza lo publicado sobre un tema.</td><td>6.000 a 10.000 palabras</td></tr>
+                <tr><td>Artículo de reflexión</td><td>Expone la postura argumentada del autor sobre un problema.</td><td>4.000 a 7.000 palabras</td></tr>
+                <tr><td>Reporte de caso</td><td>Describe un caso particular y lo que enseña.</td><td>2.000 a 4.000 palabras</td></tr>
+              </tbody>
+            </table></div>
+            <p class="ua-tabla-apa__nota">Nota. Las extensiones son orientativas; cada revista fija las suyas en sus normas para autores.</p>
+          </figure>
+        </div>
+
+        <div class="ua-bloque">
+          <h3 class="ua-sub ua-sub--2">Tabla con celdas combinadas</h3>
+          <figure class="ua-tabla-apa">
+            <figcaption>
+              <span class="ua-tabla-apa__num"><strong>Tabla 2</strong></span>
+              <span class="ua-tabla-apa__titulo">Rúbrica para evaluar un artículo antes de enviarlo a la revista</span>
+            </figcaption>
+            <div class="ova-tabla ua-tabla-combinada"><table>
+              <thead>
+                <tr><th rowspan="2">Dimensión</th><th rowspan="2">Criterio</th><th colspan="3">Nivel de desempeño</th></tr>
+                <tr><th>Alto</th><th>Medio</th><th>Bajo</th></tr>
+              </thead>
+              <tbody>
+                <tr><td rowspan="2">Contenido</td><td>Pregunta de investigación</td><td>Clara y delimitada</td><td>Clara, pero muy amplia</td><td>No se identifica</td></tr>
+                <tr><td>Coherencia entre objetivos y conclusiones</td><td>Las conclusiones responden todos los objetivos</td><td>Responden algunos objetivos</td><td>No se relacionan con los objetivos</td></tr>
+                <tr><td rowspan="2">Forma</td><td>Redacción</td><td>Precisa y sin errores</td><td>Errores que no impiden entender</td><td>Errores que dificultan la lectura</td></tr>
+                <tr><td>Citas y referencias</td><td>Completas y en APA 7</td><td>Errores menores de formato</td><td>Faltan citas o referencias</td></tr>
+              </tbody>
+            </table></div>
+            <p class="ua-tabla-apa__nota">Nota. Un criterio en nivel bajo indica que el manuscrito todavía no está listo para enviarse.</p>
+          </figure>
+          <div class="ua-cat-acciones">
+            <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-10"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          </div>
+          <div class="ova-modal" id="cat-t1-10"><div class="ova-modal__dialog">
+            <div class="ova-modal__head"><h3>Tablas</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+            <div class="ova-modal__body">
+              <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+              <div class="ua-cat-word"><b>Tabla 2</b>
+Rúbrica para evaluar un artículo antes de enviarlo a la revista
+<span class="celda">Dimensión | Criterio | Nivel de desempeño (celdas combinadas)
+                            | Alto | Medio | Bajo
+Contenido (celdas combinadas) | Pregunta de investigación | Clara y delimitada | […]
+                              | Coherencia entre objetivos y conclusiones | […]</span>Nota. Un criterio en nivel bajo indica […]
+<span class="gris">Como en APA: «Tabla N» en negrilla, el título en la línea siguiente, la tabla real de Word con sus encabezados, y debajo la nota y la fuente si las tiene. Las celdas combinadas del Word se respetan: un encabezado que agrupa columnas o una celda que agrupa filas sale igual en pantalla. Celdas de hasta 25 palabras.</span></div>
+            </div>
+            <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+          </div></div>
+        </div>
+      </section>
+
+      <!-- ════ Bloque destacado ════ -->
+      <section class="ua-seccion" id="bloques-de-texto" data-reveal>
+        <h2 class="ua-seccion__titulo">Bloque destacado</h2>
+
+        <div class="ua-bloque">
+          <h3 class="ua-sub ua-sub--2">Bloque destacado - simple <span class="ua-sub__nota">(título + texto, sin icono)</span></h3>
+          <div class="ua-destacado ua-destacado--sin-icono">
+            <div>
+              <h4 class="ua-destacado__titulo">Idea clave</h4>
+              <p>La IA generativa democratizó la producción de análisis. No democratizó el criterio para usarlos bien. Ese es exactamente el espacio que ocupa esta unidad.</p>
+            </div>
+          </div>
+          <div class="ua-cat-acciones">
+            <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-bd-simple"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          </div>
+          <div class="ova-modal" id="cat-t1-bd-simple"><div class="ova-modal__dialog">
+            <div class="ova-modal__head"><h3>Bloque destacado - simple</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+            <div class="ova-modal__body">
+              <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+              <div class="ua-cat-word"><span class="rojo">Bloque destacado - simple</span>
+<b>Idea clave</b>
+La IA generativa democratizó la producción de análisis. No democratizó el criterio para usarlos bien…
+<span class="gris">El nombre del componente en rojo; debajo, el título en negrilla y el texto. Sin icono.</span></div>
+            </div>
+            <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+          </div></div>
+        </div>
+
+        <div class="ua-bloque">
+          <h3 class="ua-sub ua-sub--2">Con icono <span class="ua-sub__nota">(icono + título + texto, con fondo o sin fondo)</span></h3>
+
+          <div class="ua-bloque">
+            <h4 class="ua-sub ua-sub--3">Bloque destacado - sin fondo</h4>
+            <div class="ua-campos">
+              <div class="ua-campo">
+                <iconify-icon class="ua-campo__icono" icon="mdi:account-group-outline" aria-hidden="true"></iconify-icon>
+                <h4 class="ua-campo__titulo">Público objetivo</h4>
+                <p>Profesionales del área de Ingeniería de Sistemas con Mención de Ingeniería de Software, en el contexto peruano.</p>
+              </div>
+              <div class="ua-campo">
+                <iconify-icon class="ua-campo__icono" icon="mdi:school-outline" aria-hidden="true"></iconify-icon>
+                <h4 class="ua-campo__titulo">¿Qué va a aprender?</h4>
+                <p>Gestiona datos y persistencia en sistemas complejos diseñando esquemas eficientes, optimizando performance y aplicando principios de gobierno de datos en entornos relacionales y no relacionales.</p>
+              </div>
+              <div class="ua-campo">
+                <iconify-icon class="ua-campo__icono" icon="mdi:file-check-outline" aria-hidden="true"></iconify-icon>
+                <h4 class="ua-campo__titulo">Evidencia de la unidad</h4>
+                <p>Esquema de gobierno de datos para un escenario empresarial, con clasificación de los datos, reglas de calidad, responsables y roles, metadatos y trazabilidad, mecanismos de protección, obligaciones normativas aplicables y controles técnicos implementables con su evidencia de verificación.</p>
+              </div>
+            </div>
+            <div class="ua-cat-acciones">
+              <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-bd-sin"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+            </div>
+            <div class="ova-modal" id="cat-t1-bd-sin"><div class="ova-modal__dialog">
+              <div class="ova-modal__head"><h3>Bloque destacado - sin fondo</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+              <div class="ova-modal__body">
+                <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+                <div class="ua-cat-word"><span class="rojo">Bloque destacado - sin fondo</span>
+<span class="gris">Nota para el agente: icono sugerido, grupo de personas.</span>
+<b>Público objetivo</b>
+Profesionales del área de Ingeniería de Sistemas con Mención de Ingeniería de Software, en el contexto peruano.
+<span class="gris">Un bloque por cada título. Debajo del nombre va la nota para el agente con el icono sugerido; es opcional: si no viene, el icono lo propone producción. Luego, el título en negrilla y el texto.</span></div>
+              </div>
+              <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+            </div></div>
+          </div>
+
+          <div class="ua-bloque">
+            <h4 class="ua-sub ua-sub--3">Bloque destacado - fondo claro</h4>
+            <div class="ua-destacados">
+              <div class="ua-destacado">
+                <span class="ua-destacado__icono" aria-hidden="true"><iconify-icon icon="mdi:key-outline"></iconify-icon></span>
+                <div>
+                  <h4 class="ua-destacado__titulo">Idea clave</h4>
+                  <p>Auditar no es desconfiar de todo lo que la IA produce; es verificar antes de actuar. La desconfianza total paraliza; la auditoría sistemática protege.</p>
+                </div>
+              </div>
+              <div class="ua-destacado">
+                <span class="ua-destacado__icono" aria-hidden="true"><iconify-icon icon="mdi:target"></iconify-icon></span>
+                <div>
+                  <h4 class="ua-destacado__titulo">Volviendo al reto de la unidad</h4>
+                  <p>Para Red Salud Wari, el modelo federado resuelve un problema concreto. La definición de “atención” no puede fijarla el área de tecnología ni cada clínica por separado; debe fijarla el dominio clínico, dentro de un marco que establezca que toda métrica publicada tiene una definición escrita, un responsable y una versión.</p>
+                </div>
+              </div>
+              <div class="ua-destacado">
+                <span class="ua-destacado__icono" aria-hidden="true"><iconify-icon icon="mdi:chart-bar"></iconify-icon></span>
+                <div>
+                  <h4 class="ua-destacado__titulo">Dato con evidencia</h4>
+                  <p>Durante 2025, la Autoridad Nacional de Protección de Datos Personales realizó 760 fiscalizaciones, un incremento del 67 % respecto de las 454 del año anterior, inició 136 procedimientos sancionadores e impuso multas por más de S/ 11 millones.</p>
+                  <p class="ua-fuente">Fuente: LexLatin (2026).</p>
+                </div>
+              </div>
+            </div>
+            <div class="ua-cat-acciones">
+              <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-bd-claro"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+            </div>
+            <div class="ova-modal" id="cat-t1-bd-claro"><div class="ova-modal__dialog">
+              <div class="ova-modal__head"><h3>Bloque destacado - fondo claro</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+              <div class="ova-modal__body">
+                <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+                <div class="ua-cat-word"><span class="rojo">Bloque destacado - fondo claro</span>
+<span class="gris">Nota para el agente: icono sugerido, llave.</span>
+<b>Idea clave</b>
+Auditar no es desconfiar de todo lo que la IA produce; es verificar antes de actuar…
+<span class="gris">Si el bloque trae fuente, va en un renglón aparte con el rótulo «Fuente:».</span></div>
+              </div>
+              <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+            </div></div>
+          </div>
+
+          <div class="ua-bloque">
+            <h4 class="ua-sub ua-sub--3">Bloque destacado - fondo oscuro</h4>
+            <div class="ua-destacados ua-destacados--oscuro ua-destacados--marca">
+              <div class="ua-destacado">
+                <span class="ua-destacado__icono" aria-hidden="true"><iconify-icon icon="mdi:lightbulb-on-outline"></iconify-icon></span>
+                <div>
+                  <h4 class="ua-destacado__titulo">Dato curioso</h4>
+                  <p>El sesgo de automatización no nació con la inteligencia artificial: se describió en la investigación de factores humanos de los años noventa, al estudiar por qué los operadores de sistemas automatizados aceptaban sus indicaciones sin verificarlas, sobre todo cuando hacerlo les reducía la carga de trabajo.</p>
+                  <p class="ua-fuente">Fuente: Parasuraman, R. y Riley, V. (1997). Humans and automation: Use, misuse, disuse, abuse. <em>Human Factors, 39</em>(2), 230-253.</p>
+                </div>
+              </div>
+            </div>
+            <div class="ua-cat-acciones">
+              <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-bd-oscuro"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+            </div>
+            <div class="ova-modal" id="cat-t1-bd-oscuro"><div class="ova-modal__dialog">
+              <div class="ova-modal__head"><h3>Bloque destacado - fondo oscuro</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+              <div class="ova-modal__body">
+                <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+                <div class="ua-cat-word"><span class="rojo">Bloque destacado - fondo oscuro</span>
+<span class="gris">Nota para el agente: icono sugerido, bombillo.</span>
+<b>Dato curioso</b>
+El sesgo de automatización no nació con la inteligencia artificial…
+<b>Fuente:</b> Parasuraman, R. y Riley, V. (1997)…
+<span class="gris">Un bloque por cada título, con su nota de icono debajo del nombre.</span></div>
+              </div>
+              <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+            </div></div>
+            <h5 class="ua-sub ua-sub--4">Bloque destacado - fondo oscuro · tres por fila</h5>
+            <div class="ua-destacados ua-destacados--3 ua-destacados--oscuro ua-destacados--marca">
+              <div class="ua-destacado">
+                <span class="ua-destacado__icono" aria-hidden="true"><iconify-icon icon="mdi:key-outline"></iconify-icon></span>
+                <div>
+                  <h4 class="ua-destacado__titulo">Idea clave</h4>
+                  <p>La IA generativa democratizó la producción de análisis. No democratizó el criterio para usarlos bien.</p>
+                </div>
+              </div>
+              <div class="ua-destacado">
+                <span class="ua-destacado__icono" aria-hidden="true"><iconify-icon icon="mdi:numeric"></iconify-icon></span>
+                <div>
+                  <h4 class="ua-destacado__titulo">Dato curioso en cifras</h4>
+                  <p>En la tarea clásica 2-4-6 de Wason, solo 6 de 29 participantes (20,7 %) llegaron a la regla correcta sin haber formulado antes una conclusión errónea.</p>
+                </div>
+              </div>
+              <div class="ua-destacado">
+                <span class="ua-destacado__icono" aria-hidden="true"><iconify-icon icon="mdi:lightbulb-on-outline"></iconify-icon></span>
+                <div>
+                  <h4 class="ua-destacado__titulo">Dato curioso</h4>
+                  <p>La revisión de Nickerson, publicada en 1998, consolidó el estudio del sesgo de confirmación en la psicología.</p>
+                </div>
+              </div>
+            </div>
+            <div class="ua-cat-acciones">
+              <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-bd-tres"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+            </div>
+            <div class="ova-modal" id="cat-t1-bd-tres"><div class="ova-modal__dialog">
+              <div class="ova-modal__head"><h3>Bloque destacado - fondo oscuro</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+              <div class="ova-modal__body">
+                <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+                <div class="ua-cat-word"><span class="rojo">Bloque destacado - fondo oscuro</span>
+<span class="gris">Nota para el agente: tres por fila.</span>
+<span class="gris">Nota para el agente: icono sugerido, llave.</span>
+<b>Idea clave</b>
+La IA generativa democratizó la producción de análisis…
+<span class="rojo">Bloque destacado - fondo oscuro</span>
+<span class="gris">Nota para el agente: icono sugerido, números.</span>
+<b>Dato curioso en cifras</b>
+En la tarea clásica 2-4-6 de Wason…
+[…]
+<span class="gris">Para varios bloques en fila, se escriben seguidos y el primero lleva, debajo del nombre, «Nota para el agente: tres por fila» (o dos por fila). Los siguientes llevan solo su nombre y su icono.</span></div>
+              </div>
+              <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+            </div></div>
+          </div>
+
+          <div class="ua-bloque">
+            <h4 class="ua-sub ua-sub--3">Bloque destacado - fondo de color</h4>
+            <div class="ua-destacados ua-destacados--color">
+              <div class="ua-destacado ua-destacado--importante">
+                <span class="ua-destacado__icono" aria-hidden="true"><iconify-icon icon="mdi:alert-circle-outline"></iconify-icon></span>
+                <div>
+                  <h4 class="ua-destacado__titulo">Importante</h4>
+                  <p>La confusión más costosa en este terreno consiste en encargar el gobierno de datos al área de tecnología.</p>
+                </div>
+              </div>
+              <div class="ua-destacado ua-destacado--exito">
+                <span class="ua-destacado__icono" aria-hidden="true"><iconify-icon icon="mdi:thumb-up-outline"></iconify-icon></span>
+                <div>
+                  <h4 class="ua-destacado__titulo">Buena práctica</h4>
+                  <p>Registrar las condiciones de consignación y las verificaciones realizadas, de acuerdo con el procedimiento de la organización, antes de autorizar la intervención.</p>
+                </div>
+              </div>
+              <div class="ua-destacado ua-destacado--alerta">
+                <span class="ua-destacado__icono" aria-hidden="true"><iconify-icon icon="mdi:alert-outline"></iconify-icon></span>
+                <div>
+                  <h4 class="ua-destacado__titulo">Para tener en cuenta</h4>
+                  <p>Al iniciar un programa de gobierno, empiece por las decisiones y no por la herramienta.</p>
+                </div>
+              </div>
+              <div class="ua-destacado ua-destacado--error">
+                <span class="ua-destacado__icono" aria-hidden="true"><iconify-icon icon="mdi:close-circle-outline"></iconify-icon></span>
+                <div>
+                  <h4 class="ua-destacado__titulo">Error frecuente</h4>
+                  <p>Aceptar una cifra bien presentada sin contrastarla, porque venía acompañada de nombres y referencias que le daban apariencia de certeza.</p>
+                </div>
+              </div>
+              <div class="ua-destacado ua-destacado--reflexion">
+                <span class="ua-destacado__icono" aria-hidden="true"><iconify-icon icon="mdi:comment-question-outline"></iconify-icon></span>
+                <div>
+                  <h4 class="ua-destacado__titulo">Para reflexionar</h4>
+                  <p>¿Alguna vez tomó una decisión y solo después construyó el argumento de por qué era correcta? ¿Qué hubiera cambiado si hubiera escrito su criterio antes de ver la información disponible?</p>
+                </div>
+              </div>
+            </div>
+            <div class="ua-cat-acciones">
+              <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-bd-color"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+            </div>
+            <div class="ova-modal" id="cat-t1-bd-color"><div class="ova-modal__dialog">
+              <div class="ova-modal__head"><h3>Bloque destacado - fondo de color</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+              <div class="ova-modal__body">
+                <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+                <div class="ua-cat-word"><span class="rojo">Bloque destacado - fondo de color</span>
+<span class="gris">Nota para el agente: icono sugerido, alerta.</span>
 <b>Para tener en cuenta</b>
-Antes de enviar el manuscrito, revise las normas para autores de la revista…
-
-<span class="rojo">Texto destacado</span>
-<b>Atención</b>
-Enviar el mismo manuscrito a dos revistas a la vez se considera una falta ética…
-
-<span class="rojo">Texto destacado</span>
-<b>Para reflexionar</b>
-Piense en el último artículo que leyó completo…
-<span class="gris">El nombre del componente en rojo; debajo, el rótulo en negrilla (Importante · Para tener en cuenta · Atención · Para reflexionar) y el párrafo. El rótulo es el que elige el color: no hace falta indicarlo.</span></div>
+Al iniciar un programa de gobierno, empiece por las decisiones y no por la herramienta.
+<span class="gris">El color lo pone el título: Importante (azul), Buena práctica (verde), Para tener en cuenta (amarillo), Error frecuente (rosado), Para reflexionar (dorado). Con otro título, el color se pide en la nota: «Nota para el agente: fondo verde pastel».</span></div>
+              </div>
+              <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+            </div></div>
+            <h5 class="ua-sub ua-sub--4">Bloque destacado - fondo de color · dos por fila</h5>
+            <div class="ua-destacados ua-destacados--2 ua-destacados--color">
+              <div class="ua-destacado ua-destacado--importante">
+                <span class="ua-destacado__icono" aria-hidden="true"><iconify-icon icon="mdi:alert-circle-outline"></iconify-icon></span>
+                <div>
+                  <h4 class="ua-destacado__titulo">Importante</h4>
+                  <p>La confusión más costosa en este terreno consiste en encargar el gobierno de datos al área de tecnología.</p>
+                </div>
+              </div>
+              <div class="ua-destacado ua-destacado--exito">
+                <span class="ua-destacado__icono" aria-hidden="true"><iconify-icon icon="mdi:thumb-up-outline"></iconify-icon></span>
+                <div>
+                  <h4 class="ua-destacado__titulo">Buena práctica</h4>
+                  <p>Registrar las condiciones de consignación y las verificaciones realizadas, de acuerdo con el procedimiento de la organización, antes de autorizar la intervención.</p>
+                </div>
+              </div>
+              <div class="ua-destacado ua-destacado--alerta">
+                <span class="ua-destacado__icono" aria-hidden="true"><iconify-icon icon="mdi:alert-outline"></iconify-icon></span>
+                <div>
+                  <h4 class="ua-destacado__titulo">Para tener en cuenta</h4>
+                  <p>Al iniciar un programa de gobierno, empiece por las decisiones y no por la herramienta.</p>
+                </div>
+              </div>
+              <div class="ua-destacado ua-destacado--error">
+                <span class="ua-destacado__icono" aria-hidden="true"><iconify-icon icon="mdi:close-circle-outline"></iconify-icon></span>
+                <div>
+                  <h4 class="ua-destacado__titulo">Error frecuente</h4>
+                  <p>Aceptar una cifra bien presentada sin contrastarla, porque venía acompañada de nombres y referencias que le daban apariencia de certeza.</p>
+                </div>
+              </div>
+            </div>
+            <div class="ua-cat-acciones">
+              <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-bd-dos"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+            </div>
+            <div class="ova-modal" id="cat-t1-bd-dos"><div class="ova-modal__dialog">
+              <div class="ova-modal__head"><h3>Bloque destacado - fondo de color</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+              <div class="ova-modal__body">
+                <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+                <div class="ua-cat-word"><span class="rojo">Bloque destacado - fondo de color</span>
+<span class="gris">Nota para el agente: dos por fila.</span>
+<span class="gris">Nota para el agente: icono sugerido, signo de admiración.</span>
+<b>Importante</b>
+La confusión más costosa en este terreno…
+<span class="rojo">Bloque destacado - fondo de color</span>
+<span class="gris">Nota para el agente: icono sugerido, pulgar arriba.</span>
+<b>Buena práctica</b>
+Registrar las condiciones de consignación…
+[…]
+<span class="gris">La nota de la fila va solo en el primer bloque del grupo.</span></div>
+              </div>
+              <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+            </div></div>
           </div>
-          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
-        </div></div>
-      </div>
-
-      <!-- Ficha 5 · Dato curioso / nota lateral -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Dato curioso</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> Una lectura lateral que enriquece el tema pero no es parte del hilo: una anécdota, un origen, un dato histórico. Sin caja, con un filete a la izquierda, para que se note que es un paréntesis. Lleva su fuente si la tiene.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <div class="ua-dato">
-          <span class="ua-dato__tag">Dato curioso</span>
-          <p>
-            La revisión por pares no nació con las revistas modernas. La <em>Philosophical Transactions</em>
-            de la Royal Society, que empezó a publicarse en 1665, es la revista científica más antigua que
-            sigue en circulación; la práctica de enviar los manuscritos a evaluadores externos se fue
-            formalizando a lo largo de los siglos siguientes y solo se generalizó en la segunda mitad del
-            siglo XX.
-          </p>
-          <p class="ua-fuente">Fuente: Royal Society. <em>Philosophical Transactions: 350 years of publishing at the Royal Society (1665-2015)</em>.</p>
         </div>
-        <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-5"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
-        </div>
-        <div class="ova-modal" id="cat-t1-5"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Dato curioso</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
-          <div class="ova-modal__body">
-            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
-            <div class="ua-cat-word"><span class="rojo">Dato curioso</span>
-La revisión por pares no nació con las revistas modernas. La Philosophical Transactions de la Royal Society, que empezó a publicarse en 1665, es la revista científica más antigua que sigue en circulación…
-<b>Fuente:</b> Royal Society. Philosophical Transactions: 350 years of publishing at the Royal Society (1665-2015).
-<span class="gris">El nombre del componente en rojo y el párrafo debajo. La fuente, si la hay, en un renglón aparte con el rótulo «Fuente:». También se recibe como «Nota» o «Sabía que…»; los tres caen en esta pieza.</span></div>
-          </div>
-          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
-        </div></div>
-      </div>
-
-
-      <!-- ════ Sección 1.3 · Citas, cifras y banner ════ -->
-      <section class="ua-seccion" id="citas-cifras-banner" data-reveal>
-        <h2 class="ua-seccion__titulo">Citas, cifras <span class="ua-suave">y</span> <span class="ua-remate">banner</span></h2>
-        <p class="ua-seccion__lead">Tres formas de poner una frase o un dato a primer plano, cada una con un peso distinto.</p>
       </section>
 
-      <!-- Ficha 6 · Cita -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Cita</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> Una frase de un autor, con su atribución, o un texto destacado de una sola oración. Hasta unas 40 palabras; la parte en negrilla del Word se convierte en el remate. Si la cita no es textual, se indica que es una paráfrasis.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <blockquote class="ua-quote">
-          Una tesis se escribe para un lector que no sabe lo que usted sabe: hay que definir cada término
-          y justificar cada paso, <span class="ua-remate">como si quien la lee no fuera su director.</span>
-          <footer class="ua-quote__autor">Paráfrasis de Umberto Eco, <em>Cómo se hace una tesis</em> (1977)</footer>
-        </blockquote>
-        <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-6"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+      <!-- ════ Descarga ════ -->
+      <section class="ua-seccion" id="descarga" data-reveal>
+        <h2 class="ua-seccion__titulo">Descarga <span class="ua-sub__nota">(un archivo para descargar o un sitio web)</span></h2>
+
+        <div class="ua-bloque">
+          <h3 class="ua-sub ua-sub--2">Descarga - simple <span class="ua-sub__nota">(título + texto + botón)</span></h3>
+          <h4 class="ua-sub ua-sub--3">Archivo</h4>
+          <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Haga clic en el botón para descargar el documento.</p>
+          <div class="ua-descarga">
+            <div class="ua-descarga__info"><b>Guía de estudio de la unidad</b><span>Descargue la guía con los conceptos clave, las actividades y las lecturas recomendadas para consultarla sin conexión.</span></div>
+            <a class="ova-btn ova-btn--primary" href="assets/descargas/guia-de-estudio-prueba.pdf" target="_blank" rel="noopener" download aria-label="Descargar Guía de estudio de la unidad en PDF"><iconify-icon icon="mdi:download"></iconify-icon> Descargar PDF</a>
+          </div>
+          <h4 class="ua-sub ua-sub--3">Sitio web</h4>
+          <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Haga clic en el botón para abrir el sitio en una pestaña nueva.</p>
+          <div class="ua-descarga">
+            <div class="ua-descarga__info"><b>Google Académico</b><span>Busque artículos científicos, tesis y libros para ampliar los temas de la unidad.</span></div>
+            <a class="ova-btn ova-btn--primary" href="https://scholar.google.com/" target="_blank" rel="noopener" aria-label="Visitar Google Académico (se abre en una pestaña nueva)"><iconify-icon icon="mdi:open-in-new"></iconify-icon> Visitar sitio</a>
+          </div>
+          <div class="ua-cat-acciones">
+            <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-desc-simple"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          </div>
+          <div class="ova-modal" id="cat-t1-desc-simple"><div class="ova-modal__dialog">
+            <div class="ova-modal__head"><h3>Descarga - simple</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+            <div class="ova-modal__body">
+              <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+              <div class="ua-cat-word"><span class="rojo">Descarga - simple</span>
+<b>Guía de estudio de la unidad</b>
+Descargue la guía con los conceptos clave, las actividades y las lecturas recomendadas para consultarla sin conexión.
+<b>Botón:</b> Descargar PDF
+<span class="rojo">Vincular PDF1</span>
+<span class="gris">Título en negrilla, texto y el texto del botón con «Botón:». Para un archivo, «Vincular PDF1» (o DOC, XLS, PPT, ZIP), y el archivo va en la carpeta de insumos con ese nombre. Para un sitio web, «Vincular URL:» con la dirección; se abre en una pestaña nueva.</span></div>
+            </div>
+            <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+          </div></div>
         </div>
-        <div class="ova-modal" id="cat-t1-6"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Cita</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+
+        <div class="ua-bloque">
+          <h3 class="ua-sub ua-sub--2">Descarga - con icono <span class="ua-sub__nota">(icono + título + texto + botón)</span></h3>
+          <h4 class="ua-sub ua-sub--3">Descarga - con icono · fondo claro</h4>
+          <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Haga clic en el botón para descargar el documento.</p>
+          <div class="ua-destacados">
+            <div class="ua-destacado ua-destacado--boton">
+              <span class="ua-destacado__icono" aria-hidden="true"><iconify-icon icon="mdi:file-pdf-box"></iconify-icon></span>
+              <div>
+                <h4 class="ua-destacado__titulo">Guía de estudio de la unidad</h4>
+                <p>Descargue la guía con los conceptos clave, las actividades y las lecturas recomendadas para consultarla sin conexión.</p>
+              </div>
+              <a class="ova-btn ova-btn--primary ua-destacado__boton" href="assets/descargas/guia-de-estudio-prueba.pdf" target="_blank" rel="noopener" download aria-label="Descargar Guía de estudio de la unidad en PDF"><iconify-icon icon="mdi:download"></iconify-icon> Descargar PDF</a>
+            </div>
+          </div>
+          <h4 class="ua-sub ua-sub--3">Descarga - con icono · fondo oscuro</h4>
+          <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Haga clic en el botón para abrir el sitio en una pestaña nueva.</p>
+          <div class="ua-destacados ua-destacados--oscuro ua-destacados--marca">
+            <div class="ua-destacado ua-destacado--boton">
+              <span class="ua-destacado__icono" aria-hidden="true"><iconify-icon icon="mdi:web"></iconify-icon></span>
+              <div>
+                <h4 class="ua-destacado__titulo">Google Académico</h4>
+                <p>Busque artículos científicos, tesis y libros para ampliar los temas de la unidad.</p>
+              </div>
+              <a class="ova-btn ua-btn--cian ua-destacado__boton" href="https://scholar.google.com/" target="_blank" rel="noopener" aria-label="Visitar Google Académico (se abre en una pestaña nueva)"><iconify-icon icon="mdi:open-in-new"></iconify-icon> Visitar sitio</a>
+            </div>
+          </div>
+          <div class="ua-cat-acciones">
+            <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-desc-icono"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          </div>
+          <div class="ova-modal" id="cat-t1-desc-icono"><div class="ova-modal__dialog">
+            <div class="ova-modal__head"><h3>Descarga - con icono</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+            <div class="ova-modal__body">
+              <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+              <div class="ua-cat-word"><span class="rojo">Descarga - con icono</span>
+<span class="gris">Nota para el agente: fondo oscuro.</span>
+<span class="gris">Nota para el agente: icono sugerido, globo terráqueo.</span>
+<b>Google Académico</b>
+Busque artículos científicos, tesis y libros para ampliar los temas de la unidad.
+<b>Botón:</b> Visitar sitio
+<span class="rojo">Vincular URL: https://scholar.google.com/</span>
+<span class="gris">Las notas para el agente son opcionales: fondo claro u oscuro e icono sugerido. Título en negrilla, texto y el texto del botón con «Botón:». Para un archivo, «Vincular PDF1» (o DOC, XLS, PPT, ZIP), y el archivo va en la carpeta de insumos con ese nombre. Para un sitio web, «Vincular URL:» con la dirección; se abre en una pestaña nueva.</span></div>
+            </div>
+            <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+          </div></div>
+        </div>
+
+        <div class="ua-bloque">
+          <h3 class="ua-sub ua-sub--2">Descarga - con imagen <span class="ua-sub__nota">(imagen grande + título + texto + botón)</span></h3>
+          <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Haga clic en el botón para descargar el documento.</p>
+          <div class="ua-destacados">
+            <div class="ua-descarga-ilus">
+              <img class="ua-descarga-ilus__img" src="assets/img/curso/ilustracion-descarga.svg" alt="" />
+              <div class="ua-descarga-ilus__cuerpo">
+                <h4 class="ua-descarga-ilus__titulo">Guía de estudio de la unidad</h4>
+                <p>Descargue la guía con los conceptos clave, las actividades y las lecturas recomendadas para consultarla sin conexión.</p>
+                <a class="ova-btn ova-btn--primary" href="assets/descargas/guia-de-estudio-prueba.pdf" target="_blank" rel="noopener" download aria-label="Descargar Guía de estudio de la unidad en PDF"><iconify-icon icon="mdi:download"></iconify-icon> Descargar PDF</a>
+              </div>
+            </div>
+          </div>
+          <div class="ua-cat-acciones">
+            <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-desc-imagen"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          </div>
+          <div class="ova-modal" id="cat-t1-desc-imagen"><div class="ova-modal__dialog">
+            <div class="ova-modal__head"><h3>Descarga - con imagen</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+            <div class="ova-modal__body">
+              <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+              <div class="ua-cat-word"><span class="rojo">Descarga - con imagen</span>
+<span class="rojo">Vincular Imagen-N</span>
+<b>Guía de estudio de la unidad</b>
+Descargue la guía con los conceptos clave, las actividades y las lecturas recomendadas para consultarla sin conexión.
+<b>Botón:</b> Descargar PDF
+<span class="rojo">Vincular PDF1</span>
+<span class="gris">La imagen (una ilustración o la portada del documento) con «Vincular Imagen-N»; va grande a la izquierda y el texto con el botón a la derecha. Si no llega, producción usa la primera página del PDF. Título en negrilla, texto y el texto del botón con «Botón:». Para un archivo, «Vincular PDF1» (o DOC, XLS, PPT, ZIP), y el archivo va en la carpeta de insumos con ese nombre. Para un sitio web, «Vincular URL:» con la dirección; se abre en una pestaña nueva.</span></div>
+            </div>
+            <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+          </div></div>
+        </div>
+      </section>
+
+      <!-- ════ Recursos y enlaces ════ -->
+      <section class="ua-seccion" id="recursos-y-enlaces" data-reveal>
+        <h2 class="ua-seccion__titulo">Recursos y enlaces <span class="ua-sub__nota">(tipo + título + descripción; archivo o enlace)</span></h2>
+
+        <div class="ua-bloque">
+          <h3 class="ua-sub ua-sub--2">Recursos - uno por fila</h3>
+          <div class="ua-recursos ua-recursos--uno">
+          <a class="ua-recurso" data-tipo="pdf" href="https://www.icmje.org/icmje-recommendations.pdf" target="_blank" rel="noopener">
+            <span class="ua-recurso__tipo">PDF</span>
+            <span class="ua-recurso__info"><strong>Recomendaciones del ICMJE</strong><span>Criterios de autoría y conducta en la publicación científica · icmje.org</span></span>
+            <iconify-icon class="ua-recurso__ir" icon="mdi:arrow-right" aria-hidden="true"></iconify-icon>
+          </a>
+          </div>
+        </div>
+
+        <div class="ua-bloque">
+          <h3 class="ua-sub ua-sub--2">Recursos - dos por fila</h3>
+          <div class="ua-recursos ua-recursos--dos">
+          <a class="ua-recurso" data-tipo="doc" href="assets/descargas/plantilla-articulo.docx" target="_blank" rel="noopener">
+            <span class="ua-recurso__tipo">DOC</span>
+            <span class="ua-recurso__info"><strong>Plantilla de artículo IMRyD</strong><span>Documento de Word con las secciones y los estilos de encabezado</span></span>
+            <iconify-icon class="ua-recurso__ir" icon="mdi:arrow-right" aria-hidden="true"></iconify-icon>
+          </a>
+          <a class="ua-recurso" data-tipo="xls" href="assets/descargas/matriz-referencias.xlsx" target="_blank" rel="noopener">
+            <span class="ua-recurso__tipo">XLS</span>
+            <span class="ua-recurso__info"><strong>Matriz de referencias</strong><span>Hoja para registrar cada fuente con su cita en el texto y su entrada APA</span></span>
+            <iconify-icon class="ua-recurso__ir" icon="mdi:arrow-right" aria-hidden="true"></iconify-icon>
+          </a>
+          </div>
+        </div>
+
+        <div class="ua-bloque">
+          <h3 class="ua-sub ua-sub--2">Recursos - tres por fila</h3>
+          <div class="ua-recursos ua-recursos--tres">
+          <a class="ua-recurso" data-tipo="ppt" href="assets/descargas/presentacion-resultados.pptx" target="_blank" rel="noopener">
+            <span class="ua-recurso__tipo">PPT</span>
+            <span class="ua-recurso__info"><strong>Presentación de resultados</strong><span>Plantilla de diapositivas para exponer el artículo en un seminario</span></span>
+            <iconify-icon class="ua-recurso__ir" icon="mdi:arrow-right" aria-hidden="true"></iconify-icon>
+          </a>
+          <a class="ua-recurso" data-tipo="zip" href="assets/descargas/figuras-y-tablas.zip" target="_blank" rel="noopener">
+            <span class="ua-recurso__tipo">ZIP</span>
+            <span class="ua-recurso__info"><strong>Figuras y tablas de ejemplo</strong><span>Archivos editables de las figuras y tablas usadas en la unidad</span></span>
+            <iconify-icon class="ua-recurso__ir" icon="mdi:arrow-right" aria-hidden="true"></iconify-icon>
+          </a>
+          <a class="ua-recurso" data-tipo="url" href="https://apastyle.apa.org/" target="_blank" rel="noopener">
+            <span class="ua-recurso__tipo"><iconify-icon icon="mdi:link-variant" aria-hidden="true"></iconify-icon></span>
+            <span class="ua-recurso__info"><strong>APA Style</strong><span>Sitio oficial de las normas APA, séptima edición · apastyle.apa.org</span></span>
+            <iconify-icon class="ua-recurso__ir" icon="mdi:arrow-right" aria-hidden="true"></iconify-icon>
+          </a>
+          </div>
+          <div class="ua-cat-acciones">
+            <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-recursos"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          </div>
+        <div class="ova-modal" id="cat-t1-recursos"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Recursos y enlaces externos</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
           <div class="ova-modal__body">
             <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
-            <div class="ua-cat-word"><span class="rojo">Cita</span>
-Una tesis se escribe para un lector que no sabe lo que usted sabe: hay que definir cada término y justificar cada paso, <b>como si quien la lee no fuera su director.</b>
-<b>Autor:</b> Paráfrasis de Umberto Eco, Cómo se hace una tesis (1977)
-<span class="gris">El nombre en rojo; debajo, la frase y el autor en un renglón con el rótulo «Autor:». La parte en negrilla se vuelve el remate de la cita. Si es paráfrasis, se escribe así en el renglón del autor: el curso no convierte una paráfrasis en cita textual.</span></div>
+            <div class="ua-cat-word"><span class="rojo">Recursos</span>
+<span class="gris">Nota para el agente: tres por fila.</span>
+<b>Título:</b> Recursos del tema
+<b>Recurso 1</b> · PDF · https://www.icmje.org/icmje-recommendations.pdf
+<b>Recomendaciones del ICMJE</b>
+Criterios de autoría y conducta en la publicación científica.
+<b>Recurso 2</b> · DOC · Vincular DOC1
+<b>Plantilla de artículo IMRyD</b>
+Documento de Word con las secciones y los estilos de encabezado.
+<b>Recurso 6</b> · URL · https://apastyle.apa.org/
+<b>APA Style</b>
+Sitio oficial de las normas APA, séptima edición.
+<span class="gris">El nombre del componente, la nota de cuántos van por fila (uno, dos o tres; sin nota, tres) y el título del bloque. Por recurso: la línea «Recurso N» con el tipo (PDF, DOC, XLS, PPT, ZIP o URL) y el enlace o el archivo vinculado; el nombre en negrilla y una línea de descripción. Los archivos van en la carpeta de insumos con su número; los enlaces se abren en una pestaña nueva y se revisan antes de cada entrega.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
-      </div>
+        </div>
+      </section>
 
-      <!-- Ficha 7 · Cifra destacada -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Cifra destacada</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> Un dato numérico que sostiene una idea del texto: la cifra grande a un lado y el párrafo que la explica al otro, con su fuente. Cuando son varias cifras del mismo nivel, van en fila y el párrafo debajo.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <div class="ua-cifras">
-          <div class="ua-cifras__datos">
-            <div class="ua-cifra">
-              <span class="ua-cifra__valor">10 % → 80 %</span>
-              <span class="ua-cifra__label">de los artículos de revistas médicas usaban la estructura IMRyD en 1950 y en 1980, respectivamente</span>
-            </div>
-          </div>
-          <div class="ua-cifras__texto">
-            <span class="ua-cifras__tag">En cifras</span>
-            <p>
-              La estructura IMRyD no siempre fue la norma. Un estudio que revisó cincuenta años de
-              artículos en cuatro revistas médicas de referencia encontró que a comienzos de los años
-              cincuenta la usaba alrededor de un 10 % de los artículos, hacia 1980 ya la seguía cerca del
-              80 % y en la década siguiente se volvió prácticamente universal. <strong>Lo que hoy parece
-              una convención natural se impuso en treinta años.</strong>
-            </p>
-            <p class="ua-fuente">Fuente: Sollaci, L. B. y Pereira, M. G. (2004). <em>The introduction, methods, results, and discussion (IMRAD) structure: A fifty-year survey</em>. Journal of the Medical Library Association, 92(3), 364-367.</p>
-          </div>
-        </div>
-        <div class="ua-cifras ua-cifras--fila">
-          <div class="ua-cifras__datos">
-            <div class="ua-cifra">
-              <span class="ua-cifra__valor">250</span>
-              <span class="ua-cifra__label">palabras, extensión típica de un resumen</span>
-            </div>
-            <div class="ua-cifra">
-              <span class="ua-cifra__valor">4000–6000</span>
-              <span class="ua-cifra__label">palabras, extensión típica del artículo</span>
-            </div>
-            <div class="ua-cifra">
-              <span class="ua-cifra__valor">30–50</span>
-              <span class="ua-cifra__label">referencias en un artículo empírico</span>
-            </div>
-          </div>
-          <div class="ua-cifras__texto">
-            <span class="ua-cifras__tag">Extensiones orientativas</span>
-            <p>
-              Son rangos orientativos, tomados de lo que piden con más frecuencia las revistas de
-              ciencias sociales y de la salud. <strong>La extensión que manda es siempre la de las normas
-              para autores de la revista a la que usted envía.</strong>
-            </p>
-          </div>
-        </div>
-        <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-7"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
-        </div>
-        <div class="ova-modal" id="cat-t1-7"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Cifra destacada</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
-          <div class="ova-modal__body">
-            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
-            <div class="ua-cat-word"><span class="rojo">Cifra destacada</span>
-<b>Cifra:</b> 10 % → 80 %
-<b>Qué mide:</b> de los artículos de revistas médicas usaban la estructura IMRyD en 1950 y en 1980, respectivamente
-<b>Texto:</b> La estructura IMRyD no siempre fue la norma. Un estudio que revisó cincuenta años de artículos en cuatro revistas médicas…
-<b>Fuente:</b> Sollaci, L. B. y Pereira, M. G. (2004). The introduction, methods, results, and discussion (IMRAD) structure: A fifty-year survey. Journal of the Medical Library Association, 92(3), 364-367.
+      <!-- ════ Citas ════ -->
+      <section class="ua-seccion" id="citas" data-reveal>
+        <h2 class="ua-seccion__titulo">Citas</h2>
 
-<span class="rojo">Cifras destacadas</span>
-<b>Cifra 1:</b> 250 · palabras, extensión típica de un resumen
-<b>Cifra 2:</b> 4000–6000 · palabras, extensión típica del artículo
-<b>Cifra 3:</b> 30–50 · referencias en un artículo empírico
-<b>Texto:</b> Son rangos orientativos…
-<span class="gris">Cada cifra son dos datos: el valor y qué mide. Con una sola cifra, el texto va al lado; con dos o tres, van en fila y el texto debajo. La fuente es obligatoria cuando la cifra viene de un estudio.</span></div>
+        <div class="ua-bloque">
+          <h3 class="ua-sub ua-sub--2">Cita tipo 1 <span class="ua-sub__nota">(con foto del autor)</span></h3>
+          <h4 class="ua-sub ua-sub--3">Cita tipo 1 - fondo claro</h4>
+          <figure class="ua-cita1">
+            <blockquote><p>Una tesis se escribe para un lector que no sabe lo que usted sabe: hay que definir cada término y justificar cada paso, como si quien la lee no fuera su director.</p></blockquote>
+            <figcaption><strong>Paráfrasis de Umberto Eco</strong><span><em>Cómo se hace una tesis</em> (1977)</span></figcaption>
+            <img class="ua-cita1__foto" src="assets/img/curso/portada-persona.webp" alt="" />
+          </figure>
+          <h4 class="ua-sub ua-sub--3">Cita tipo 1 - fondo neutro</h4>
+          <figure class="ua-cita1 ua-cita--neutra">
+            <blockquote><p>Una tesis se escribe para un lector que no sabe lo que usted sabe: hay que definir cada término y justificar cada paso, como si quien la lee no fuera su director.</p></blockquote>
+            <figcaption><strong>Paráfrasis de Umberto Eco</strong><span><em>Cómo se hace una tesis</em> (1977)</span></figcaption>
+            <img class="ua-cita1__foto" src="assets/img/curso/portada-persona.webp" alt="" />
+          </figure>
+          <h4 class="ua-sub ua-sub--3">Cita tipo 1 - fondo oscuro</h4>
+          <figure class="ua-cita1 ua-cita--oscura">
+            <blockquote><p>Una tesis se escribe para un lector que no sabe lo que usted sabe: hay que definir cada término y justificar cada paso, como si quien la lee no fuera su director.</p></blockquote>
+            <figcaption><strong>Paráfrasis de Umberto Eco</strong><span><em>Cómo se hace una tesis</em> (1977)</span></figcaption>
+            <img class="ua-cita1__foto" src="assets/img/curso/portada-persona.webp" alt="" />
+          </figure>
+          <div class="ua-cat-acciones">
+            <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-cita1"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
           </div>
-          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
-        </div></div>
-      </div>
+          <div class="ova-modal" id="cat-t1-cita1"><div class="ova-modal__dialog">
+            <div class="ova-modal__head"><h3>Cita tipo 1</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+            <div class="ova-modal__body">
+              <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+              <div class="ua-cat-word"><span class="rojo">Cita tipo 1</span>
+<span class="gris">Nota para el agente: fondo claro.</span>
+Una tesis se escribe para un lector que no sabe lo que usted sabe…
+<b>Autor:</b> Paráfrasis de Umberto Eco
+<b>Obra:</b> Cómo se hace una tesis (1977)
+<span class="rojo">DISEÑO GRÁFICO</span> Foto del autor.
+<span class="gris">Para citas con foto del autor. La frase, el autor con el rótulo «Autor:» y, si la hay, la obra con «Obra:». La foto va con el bloque «DISEÑO GRÁFICO». Debajo del nombre, la nota para el agente con el fondo: claro, neutro u oscuro. Si no viene, el fondo lo elige producción. Si es paráfrasis, se escribe así en el renglón del autor.</span></div>
+            </div>
+            <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+          </div></div>
+        </div>
+
+        <div class="ua-bloque">
+          <h3 class="ua-sub ua-sub--2">Cita tipo 2 <span class="ua-sub__nota">(frase corta en caja)</span></h3>
+          <h4 class="ua-sub ua-sub--3">Cita tipo 2 - fondo claro</h4>
+          <figure class="ua-cita2">
+            <blockquote><p>El resumen es lo primero que lee el revisor y lo último que escribe el autor.</p></blockquote>
+            <figcaption>— Docente autor de la unidad</figcaption>
+          </figure>
+          <h4 class="ua-sub ua-sub--3">Cita tipo 2 - fondo neutro</h4>
+          <figure class="ua-cita2 ua-cita--neutra">
+            <blockquote><p>El resumen es lo primero que lee el revisor y lo último que escribe el autor.</p></blockquote>
+            <figcaption>— Docente autor de la unidad</figcaption>
+          </figure>
+          <h4 class="ua-sub ua-sub--3">Cita tipo 2 - fondo oscuro</h4>
+          <figure class="ua-cita2 ua-cita--oscura">
+            <blockquote><p>El resumen es lo primero que lee el revisor y lo último que escribe el autor.</p></blockquote>
+            <figcaption>— Docente autor de la unidad</figcaption>
+          </figure>
+          <div class="ua-cat-acciones">
+            <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-cita2"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          </div>
+          <div class="ova-modal" id="cat-t1-cita2"><div class="ova-modal__dialog">
+            <div class="ova-modal__head"><h3>Cita tipo 2</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+            <div class="ova-modal__body">
+              <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+              <div class="ua-cat-word"><span class="rojo">Cita tipo 2</span>
+<span class="gris">Nota para el agente: fondo oscuro.</span>
+El resumen es lo primero que lee el revisor y lo último que escribe el autor.
+<b>Autor:</b> Docente autor de la unidad
+<span class="gris">Para frases cortas, de una o dos líneas, en caja. La frase y el autor con el rótulo «Autor:». Debajo del nombre, la nota para el agente con el fondo: claro, neutro u oscuro. Si no viene, el fondo lo elige producción.</span></div>
+            </div>
+            <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+          </div></div>
+        </div>
+
+        <div class="ua-bloque">
+          <h3 class="ua-sub ua-sub--2">Cita tipo 3 <span class="ua-sub__nota">(frase destacada, sin caja)</span></h3>
+          <figure class="ua-cita3">
+            <blockquote><p>Escribir con claridad es una forma de respeto por el lector.</p></blockquote>
+            <figcaption>— Docente autor de la unidad</figcaption>
+          </figure>
+          <div class="ua-cat-acciones">
+            <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-cita3"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          </div>
+          <div class="ova-modal" id="cat-t1-cita3"><div class="ova-modal__dialog">
+            <div class="ova-modal__head"><h3>Cita tipo 3</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+            <div class="ova-modal__body">
+              <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+              <div class="ua-cat-word"><span class="rojo">Cita tipo 3</span>
+Escribir con claridad es una forma de respeto por el lector.
+<b>Autor:</b> Docente autor de la unidad
+<span class="gris">Para una frase corta destacada, sin caja. La frase y el autor con el rótulo «Autor:». No lleva fondo.</span></div>
+            </div>
+            <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+          </div></div>
+        </div>
+      </section>
 
       <!-- Ficha 8 · Banner destacado -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Banner destacado</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> La frase que resume una sección, a primer plano y en fondo oscuro. Una sola oración; el remate del Word en negrilla se enciende en celeste. No más de uno o dos por pantalla: si todo se destaca, nada se destaca.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <div class="ua-respiro">
-          <p>Un artículo no se termina cuando el autor no tiene nada más que decir, sino cuando el lector <strong>no necesita nada más para entenderlo</strong>.</p>
+      <section class="ua-seccion" id="banner-destacado" data-reveal>
+        <h2 class="ua-seccion__titulo">Banner destacado</h2>
+        <div class="ua-bloque">
+          <h3 class="ua-sub ua-sub--2">Banner · fondo oscuro</h3>
+          <div class="ua-respiro">
+            <p>Un artículo no se termina cuando el autor no tiene nada más que decir, sino cuando el lector <strong>no necesita nada más para entenderlo</strong>.</p>
+          </div>
         </div>
+        <div class="ua-bloque">
+          <h3 class="ua-sub ua-sub--2">Banner · fondo claro</h3>
+          <div class="ua-respiro ua-respiro--claro">
+            <p>Un artículo no se termina cuando el autor no tiene nada más que decir, sino cuando el lector <strong>no necesita nada más para entenderlo</strong>.</p>
+          </div>
         <div class="ua-cat-acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-8"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
         </div>
@@ -374,22 +826,78 @@ Un artículo no se termina cuando el autor no tiene nada más que decir, sino cu
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
-      </div>
-
-
-      <!-- ════ Sección 1.4 · Bloque de código ════ -->
-      <section class="ua-seccion" id="bloque-de-codigo" data-reveal>
-        <h2 class="ua-seccion__titulo">Bloque <span class="ua-suave">de</span> <span class="ua-remate">código</span></h2>
-        <p class="ua-seccion__lead">Para los temas que enseñan a programar o a analizar datos: el código tal cual, en tipografía mono y con el lenguaje rotulado.</p>
+        </div>
       </section>
 
+
+      <!-- ════ Comparativo ════ -->
+      <section class="ua-seccion" id="comparativo" data-reveal>
+        <h2 class="ua-seccion__titulo">Comparativo</h2>
+        <div class="ua-bloque">
+        <h3 class="ua-sub ua-sub--2">Comparativo</h3>
+        <div class="ova-vs">
+          <div class="ova-vs__card">
+            <span class="ova-vs__card-tag"><strong>Resumen estructurado</strong></span>
+            <p>Lleva subtítulos explícitos (Objetivo, Métodos, Resultados, Conclusiones) y suele limitarse a 250 palabras. Lo exigen la mayoría de las revistas de ciencias de la salud y facilita la lectura rápida y la indexación.</p>
+          </div>
+          <div class="ova-vs__divider">VS</div>
+          <div class="ova-vs__card ova-vs__card--alt">
+            <span class="ova-vs__card-tag"><strong>Resumen narrativo</strong></span>
+            <p>Un solo párrafo sin subtítulos, entre 150 y 250 palabras, que recorre el mismo orden: problema, método, hallazgos y conclusión. Es el habitual en ciencias sociales y humanidades y el que pide el manual APA.</p>
+          </div>
+        </div>
+
+        </div>
+        <div class="ua-bloque">
+        <h3 class="ua-sub ua-sub--2">Comparativo - error y acierto</h3>
+        <div class="ova-vs ua-vs--error-ok">
+          <div class="ova-vs__card">
+            <span class="ova-vs__card-tag">Oración recargada</span>
+            <p>«Se procedió a la realización de un análisis de los datos que fueron obtenidos por parte de los investigadores, los cuales fueron posteriormente analizados con el fin de poder determinar la existencia de diferencias».</p>
+          </div>
+          <div class="ova-vs__divider">VS</div>
+          <div class="ova-vs__card ova-vs__card--alt">
+            <span class="ova-vs__card-tag">Oración corregida</span>
+            <p>«Los investigadores analizaron los datos para determinar si había diferencias». Treinta y tres palabras se vuelven once: desaparecen la nominalización («realización de un análisis»), la redundancia («analizados… analizaron») y la pasiva innecesaria.</p>
+          </div>
+        </div>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t2-11"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t2-11"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Comparativo</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word · lados neutros</p>
+            <div class="ua-cat-word"><span class="rojo">Comparativo</span>
+<b>Título:</b> Dos formas de escribir el resumen
+<b>Resumen estructurado</b>
+Lleva subtítulos explícitos […]
+<b>Resumen narrativo</b>
+Un solo párrafo sin subtítulos […]
+<span class="gris">Dos lados: el título de cada uno en negrilla y su texto (hasta 80 palabras). Con títulos neutros salen dos tarjetas iguales.</span></div>
+            <p class="ua-cat-modal__cab ua-cat-modal__cab--sig">Así se recibe en el Word · error y acierto</p>
+            <div class="ua-cat-word"><span class="rojo">Comparativo</span>
+<b>Título:</b> La misma oración, antes y después de corregirla
+<b>Oración recargada</b>
+«Se procedió a la realización de un análisis […]»
+<b>Oración corregida</b>
+«Los investigadores analizaron los datos […]»
+<span class="gris">El mismo rótulo. Cuando el título de un lado nombra un error («Error frecuente», «Oración recargada», «No aplique») y el otro el acierto, el componente pone el color y el signo; los títulos siguen siendo los del Word.</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        </div>
+      </section>
+
+      <!-- ════ Sección 1.4 · Bloque de código ════ -->
+
       <!-- Ficha 9 · Código -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Bloque de código</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> Cuando el texto incluye instrucciones de un lenguaje de programación que el estudiante debe leer o copiar. Se respetan los saltos de línea y la sangría del original; la cabecera dice el lenguaje. El código se puede seleccionar y copiar.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <h3 class="ua-rotulo"><strong>Contar las palabras de un resumen</strong></h3>
-        <figure class="ua-codigo">
+      <section class="ua-seccion" id="bloque-de-codigo" data-reveal>
+        <h2 class="ua-seccion__titulo">Bloque de código</h2>
+        <div class="ua-bloque">
+        <h3 class="ua-sub ua-sub--2">Bloque de código con línea resaltada</h3>
+        <h4 class="ua-rotulo"><strong>Contar las palabras de un resumen</strong></h4>
+        <figure class="ua-codigo" data-resaltar="5,8">
           <figcaption>Python</figcaption>
           <pre><code><span class="c"># Cuenta las palabras del resumen y avisa si supera el límite de la revista</span>
 <span class="k">with</span> open(<span class="s">"resumen.txt"</span>, encoding=<span class="s">"utf-8"</span>) <span class="k">as</span> archivo:
@@ -401,12 +909,17 @@ print(<span class="s">f"El resumen tiene {palabras} palabras"</span>)
 <span class="k">if</span> palabras &gt; <span class="n">250</span>:
     print(<span class="s">"Supera el límite: recorte antes de enviar"</span>)</code></pre>
         </figure>
-        <h3 class="ua-rotulo"><strong>Leer los datos y calcular una media</strong></h3>
+        <p>La <strong>línea 5</strong> cuenta las palabras del resumen y la <strong>línea 8</strong> las compara con el límite de la revista.</p>
+        </div>
+        <div class="ua-bloque">
+        <h3 class="ua-sub ua-sub--2">Bloque de código</h3>
+        <h4 class="ua-rotulo"><strong>Leer los datos y calcular una media</strong></h4>
         <figure class="ua-codigo">
           <figcaption>R</figcaption>
           <pre><code>datos &lt;- read.csv(<span class="s">"encuesta.csv"</span>)          <span class="c"># lee el archivo de datos</span>
 mean(datos$puntaje, na.rm = <span class="k">TRUE</span>)         <span class="c"># media del puntaje, sin los vacíos</span></code></pre>
         </figure>
+        </div>
         <div class="ua-cat-acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t1-9"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
         </div>
@@ -417,6 +930,7 @@ mean(datos$puntaje, na.rm = <span class="k">TRUE</span>)         <span class="c"
             <div class="ua-cat-word"><span class="rojo">Bloque de código</span>
 <b>Lenguaje:</b> Python
 <b>Título:</b> Contar las palabras de un resumen
+<b>Resaltar:</b> 5, 8
 <span class="celda"># Cuenta las palabras del resumen y avisa si supera el límite de la revista
 with open("resumen.txt", encoding="utf-8") as archivo:
     resumen = archivo.read()
@@ -426,11 +940,11 @@ print(f"El resumen tiene {palabras} palabras")
 
 if palabras &gt; 250:
     print("Supera el límite: recorte antes de enviar")</span>
-<span class="gris">El nombre en rojo; debajo, el lenguaje y el título si lo tiene. El código va en una celda de tabla de una sola columna, en fuente mono (Consolas o Courier New), para que el Word no le cambie las comillas ni la sangría. El coloreado de palabras clave, cadenas, números y comentarios lo pone el curso.</span></div>
+<span class="gris">El nombre en rojo; debajo, el lenguaje, el título si lo tiene y, si el texto remite a líneas del código, «Resaltar:» con sus números. Las líneas se numeran solas, empezando en 1. El código va en una celda de tabla de una sola columna, en fuente mono (Consolas o Courier New), para que el Word no le cambie las comillas ni la sangría. El coloreado de palabras clave, cadenas, números y comentarios lo pone el curso.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
-      </div>
+      </section>
 
 <!-- ova:extras -->
 <style>

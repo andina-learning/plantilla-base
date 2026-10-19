@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 440" width="1200" height="440" role="img"
+     aria-label="Dos tarjetas lado a lado, unidas por una flecha. A la izquierda, una herramienta de IA con su barra de pregunta y un cronómetro que apenas avanzó; de ella salen cuatro análisis idénticos, con su título y sus barras, uno para cada una de cuatro personas. Debajo, su nombre: la producción de análisis. A la derecha, la única tarjeta contorneada en amarillo, con una sola persona en tres momentos: con un globo de pregunta, decide qué preguntar; frente a tres análisis iguales, señala el que está mal; y, con una hoja en alto, sostiene su recomendación frente a otra persona que la cuestiona. Debajo, su nombre: el criterio para usarlos bien.">
+  <!-- Ilustración de marca · Universidad Andina Virtual · Unidad 4 · introducción (apertura)
+       Concepto (DI, Idea clave): «La IA generativa democratizó la producción de análisis. No
+       democratizó el criterio para usarlos bien.» A la izquierda, lo democratizado: «cualquier
+       persona con acceso a una herramienta de IA generativa puede producir un análisis en
+       segundos» (la herramienta, el cronómetro, cuatro personas con el mismo análisis). A la
+       derecha, lo que «se volvió escaso»: «decidir qué preguntar», «reconocer cuándo un análisis
+       está mal, aunque se vea convincente» (la hoja marcada es idéntica a las otras) y «sostener
+       una recomendación frente a alguien que va a cuestionarla». Una persona, no cuatro: lo escaso.
+       Rótulos: fragmentos literales del DI.
+       Único amarillo: el contorno de la tarjeta del criterio, lo que la IA no democratizó.
+       Familia: fondo, sombra, trazos y paleta de demo-unidad-3 (ilustracion-cadena.svg). -->
+  <defs>
+    <linearGradient id="ilu-criterio-fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#E6F3FA"/>
+      <stop offset="55%"  stop-color="#E8EDF5"/>
+      <stop offset="100%" stop-color="#F5F8FB"/>
+    </linearGradient>
+    <filter id="ilu-criterio-sombra" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#132B41" flood-opacity="0.16"/>
+    </filter>
+    <!-- Un análisis: título, una línea y unas barras que suben. Se ve convincente. -->
+    <g id="ilu-criterio-hoja">
+      <rect x="0" y="0" width="64" height="82" rx="8" fill="#FFFFFF" stroke="#00417B" stroke-width="2.5"/>
+      <rect x="10" y="12" width="30" height="6" rx="3" fill="#132B41" opacity=".8"/>
+      <rect x="10" y="24" width="44" height="4" rx="2" fill="#132B41" opacity=".2"/>
+      <rect x="12" y="52" width="8" height="16" rx="2" fill="#00417B" opacity=".4"/>
+      <rect x="24" y="44" width="8" height="24" rx="2" fill="#00417B" opacity=".6"/>
+      <rect x="36" y="36" width="8" height="32" rx="2" fill="#00417B" opacity=".85"/>
+      <rect x="10" y="68" width="44" height="2" rx="1" fill="#132B41" opacity=".2"/>
+    </g>
+  </defs>
+
+  <rect width="1200" height="440" rx="18" fill="url(#ilu-criterio-fondo)"/>
+
+  <!-- Las dos tarjetas -->
+  <g filter="url(#ilu-criterio-sombra)" fill="#FFFFFF">
+    <rect x="40"  y="36" width="480" height="310" rx="16"/>
+    <rect x="600" y="36" width="560" height="310" rx="16"/>
+  </g>
+
+  <!-- ══ Izquierda · la producción de análisis ══ -->
+  <!-- la herramienta de IA generativa: respuesta y barra de pregunta -->
+  <rect x="200" y="58" width="160" height="96" rx="12" fill="#E8EDF5"/>
+  <path d="M200 70 a12 12 0 0 1 12 -12 h136 a12 12 0 0 1 12 12 v6 h-160 z" fill="#00417B"/>
+  <g fill="#FFFFFF" opacity=".8">
+    <circle cx="214" cy="67" r="3"/>
+    <circle cx="226" cy="67" r="3"/>
+    <circle cx="238" cy="67" r="3"/>
+  </g>
+  <g fill="#132B41" opacity=".2">
+    <rect x="214" y="88"  width="110" height="6" rx="3"/>
+    <rect x="214" y="100" width="84"  height="6" rx="3"/>
+  </g>
+  <rect x="212" y="120" width="136" height="22" rx="11" fill="#FFFFFF" stroke="#00417B" stroke-width="2"/>
+  <rect x="223" y="125" width="2.5" height="12" rx="1.25" fill="#132B41" opacity=".6"/>
+  <path d="M330 125 l10 6 -10 6 z" fill="#00417B"/>
+  <!-- en segundos: el cronómetro apenas avanzó -->
+  <rect x="405" y="76" width="10" height="7" rx="2" fill="#132B41" opacity=".75"/>
+  <circle cx="410" cy="104" r="20" fill="#FFFFFF" stroke="#132B41" stroke-width="3" opacity=".75"/>
+  <path d="M410 104 L410 88 A16 16 0 0 1 421.3 92.7 Z" fill="#00417B" opacity=".3"/>
+  <path d="M410 104 L418 95" stroke="#00417B" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- de la herramienta, un análisis para cada quien -->
+  <g fill="none" stroke="#00417B" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="5 6" opacity=".5">
+    <path d="M226 158 C 190 166, 120 166, 100 180"/>
+    <path d="M262 158 C 250 166, 226 170, 220 180"/>
+    <path d="M298 158 C 310 166, 334 170, 340 180"/>
+    <path d="M334 158 C 370 166, 440 166, 460 180"/>
+  </g>
+  <use href="#ilu-criterio-hoja" xlink:href="#ilu-criterio-hoja" x="68"  y="186"/>
+  <use href="#ilu-criterio-hoja" xlink:href="#ilu-criterio-hoja" x="188" y="186"/>
+  <use href="#ilu-criterio-hoja" xlink:href="#ilu-criterio-hoja" x="308" y="186"/>
+  <use href="#ilu-criterio-hoja" xlink:href="#ilu-criterio-hoja" x="428" y="186"/>
+  <!-- cualquier persona -->
+  <g fill="none" stroke="#132B41" stroke-width="3.5" stroke-linecap="round" opacity=".55">
+    <circle cx="100" cy="294" r="10"/><path d="M82 334 a18 13 0 0 1 36 0"/>
+    <circle cx="220" cy="294" r="10"/><path d="M202 334 a18 13 0 0 1 36 0"/>
+    <circle cx="340" cy="294" r="10"/><path d="M322 334 a18 13 0 0 1 36 0"/>
+    <circle cx="460" cy="294" r="10"/><path d="M442 334 a18 13 0 0 1 36 0"/>
+  </g>
+
+  <!-- Los análisis llegan a quien tiene que usarlos -->
+  <g fill="none" stroke="#00417B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".75">
+    <line x1="534" y1="191" x2="586" y2="191"/>
+    <path d="M580 183 l8 8 -8 8"/>
+  </g>
+
+  <!-- ══ Derecha · el criterio para usarlos bien: una persona, tres momentos ══ -->
+
+  <!-- 1 · decidir qué preguntar -->
+  <rect x="664" y="76" width="104" height="92" rx="18" fill="#E6F3FA" stroke="#00417B" stroke-width="3"/>
+  <path d="M686 164 L682 196 L706 164 Z" fill="#E6F3FA"/>
+  <path d="M686.5 168 L682 196 L703.5 168" fill="none" stroke="#00417B" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M704 108 C704 94 728 94 728 108 C728 118 716 119 716 130" fill="none" stroke="#00417B"
+        stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="716" cy="146" r="4.5" fill="#00417B"/>
+  <g fill="none" stroke="#00417B" stroke-width="4" stroke-linecap="round">
+    <circle cx="676" cy="226" r="13"/>
+    <path d="M652 270 a24 17 0 0 1 48 0"/>
+  </g>
+
+  <!-- 2 · reconocer cuándo un análisis está mal, aunque se vea convincente -->
+  <use href="#ilu-criterio-hoja" xlink:href="#ilu-criterio-hoja" transform="translate(820 96) scale(.7)"/>
+  <use href="#ilu-criterio-hoja" xlink:href="#ilu-criterio-hoja" transform="translate(872 96) scale(.7)"/>
+  <use href="#ilu-criterio-hoja" xlink:href="#ilu-criterio-hoja" transform="translate(924 96) scale(.7)"/>
+  <!-- el mismo análisis, señalado: está mal -->
+  <circle cx="966" cy="100" r="13" fill="#132B41"/>
+  <path d="M960 94 L972 106 M972 94 L960 106" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  <g fill="none" stroke="#00417B" stroke-width="4" stroke-linecap="round">
+    <circle cx="880" cy="226" r="13"/>
+    <path d="M856 270 a24 17 0 0 1 48 0"/>
+    <path d="M898 259 L942 168"/>
+  </g>
+
+  <!-- 3 · sostener una recomendación frente a alguien que va a cuestionarla -->
+  <use href="#ilu-criterio-hoja" xlink:href="#ilu-criterio-hoja" transform="translate(1052 132) scale(.7)"/>
+  <g fill="none" stroke="#00417B" stroke-width="4" stroke-linecap="round">
+    <circle cx="1036" cy="226" r="13"/>
+    <path d="M1012 270 a24 17 0 0 1 48 0"/>
+    <path d="M1054 259 L1068 193"/>
+  </g>
+  <!-- quien la cuestiona -->
+  <rect x="1092" y="70" width="52" height="48" rx="14" fill="#E8EDF5" stroke="#132B41" stroke-width="2.5" stroke-opacity=".6"/>
+  <path d="M1108 114 L1112 138 L1124 114 Z" fill="#E8EDF5"/>
+  <path d="M1108.6 118 L1112 138 L1122 118" fill="none" stroke="#132B41" stroke-width="2.5" stroke-opacity=".6" stroke-linejoin="round"/>
+  <path d="M1110 86 C1110 77 1126 77 1126 86 C1126 92 1118 93 1118 100" fill="none" stroke="#132B41"
+        stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" opacity=".7"/>
+  <circle cx="1118" cy="109" r="3" fill="#132B41" opacity=".7"/>
+  <g fill="none" stroke="#132B41" stroke-width="4" stroke-linecap="round" opacity=".6">
+    <circle cx="1118" cy="226" r="13"/>
+    <path d="M1094 270 a24 17 0 0 1 48 0"/>
+  </g>
+
+  <!-- ÚNICO AMARILLO: el criterio, lo que la IA no democratizó -->
+  <rect x="600" y="36" width="560" height="310" rx="16" fill="none" stroke="#F0B443" stroke-width="4"/>
+
+  <!-- Los tres momentos, literales del DI -->
+  <g font-family="Manrope, system-ui, sans-serif" font-size="16" font-weight="600" fill="#132B41" text-anchor="middle">
+    <text x="700"  y="302">decidir</text>
+    <text x="700"  y="322">qué preguntar</text>
+    <text x="892"  y="302">reconocer cuándo</text>
+    <text x="892"  y="322">un análisis está mal</text>
+    <text x="1078" y="302">sostener una</text>
+    <text x="1078" y="322">recomendación</text>
+  </g>
+
+  <!-- Los nombres de las dos tarjetas, literales de la Idea clave -->
+  <g font-family="Manrope, system-ui, sans-serif" font-size="17" font-weight="600" fill="#132B41" text-anchor="middle">
+    <text x="280" y="392">la producción de análisis</text>
+    <text x="880" y="392">el criterio para usarlos bien</text>
+  </g>
+</svg>

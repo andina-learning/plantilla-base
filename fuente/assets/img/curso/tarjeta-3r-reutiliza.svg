@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="Frasco de vidrio reutilizado como portalápices.">
+  <defs><clipPath id="c"><circle cx="80" cy="80" r="80"/></clipPath></defs>
+  <g clip-path="url(#c)">
+  <rect width="160" height="160" fill="#E8F6FD"/>
+  <ellipse cx="80" cy="140" rx="54" ry="8" fill="#00417B" opacity=".12"/>
+  <g transform="rotate(-14 66 70)"><rect x="60" y="34" width="12" height="62" rx="2" fill="#3A93D0"/><path d="M60 34l6-12 6 12z" fill="#FFFFFF" stroke="#00417B" stroke-width="2" stroke-linejoin="round"/><path d="M64 26l2-4 2 4z" fill="#00417B"/></g>
+  <g><rect x="74" y="26" width="12" height="70" rx="2" fill="#F0B443"/><path d="M74 26l6-12 6 12z" fill="#FFFFFF" stroke="#00417B" stroke-width="2" stroke-linejoin="round"/><path d="M78 18l2-4 2 4z" fill="#00417B"/></g>
+  <g transform="rotate(14 94 70)"><rect x="88" y="34" width="12" height="62" rx="2" fill="#1C4578"/><path d="M88 34l6-12 6 12z" fill="#FFFFFF" stroke="#00417B" stroke-width="2" stroke-linejoin="round"/><path d="M92 26l2-4 2 4z" fill="#00417B"/></g>
+  <rect x="52" y="60" width="56" height="10" rx="4" fill="#00417B"/>
+  <path d="M54 70h52v56a10 10 0 0 1-10 10H64a10 10 0 0 1-10-10z" fill="#3FC0F0" fill-opacity=".28" stroke="#00417B" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M64 82v38" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" opacity=".85"/>
+  </g>
+</svg>

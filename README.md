@@ -1,4 +1,4 @@
-# Curso: Cómo se escribe un artículo académico
+# Curso: Catálogo de componentes
 
 Curso OVA en HTML estático. Este proyecto es **autocontenido**: trae la fuente editable, el
 compilador y todo lo necesario para verlo, modificarlo y publicarlo. No tiene dependencias
@@ -20,12 +20,12 @@ Abre `http://localhost:8000/spa/`. Ese es el curso tal como lo ve el estudiante.
 | Comando | Qué hace |
 |---|---|
 | `npm run dev` | Compila y sirve el curso en `http://localhost:8000/spa/` |
-| `npm run build` | Compila `fuente/` → `dist/` (11 pantallas, en dos formatos) |
+| `npm run build` | Compila `fuente/` → `dist/` (13 pantallas, en dos formatos) |
 | `npm start` | Solo sirve `dist/` (sin recompilar). `--port 9000` cambia el puerto |
 | `npm test` | Compila y verifica que salieron todas las pantallas |
 | `npm run zip` | Compila y comprime `dist/spa` para el LMS (`npm run zip -- --multipagina` añade `dist/multipagina`) |
 
-Verás `✔ 11/11 pantallas → dist/multipagina/ + dist/spa/index.html` al compilar.
+Verás `✔ 13/13 pantallas → dist/multipagina/ + dist/spa/index.html` al compilar.
 
 > Los videos de YouTube solo cargan cuando el curso se sirve por http (LMS o `npm run dev`).
 > Abierto con doble clic desde el disco, el curso muestra en su lugar la miniatura del video
@@ -103,7 +103,7 @@ curso y publica `dist/spa/` en GitHub Pages. Para activarlo, una sola vez:
 2. Sube el contenido de esta carpeta:
 
 ```bash
-git init -b main && git add . && git commit -m "Curso Cómo se escribe un artículo académico"
+git init -b main && git add . && git commit -m "Curso Catálogo de componentes"
 git remote add origin https://github.com/<organizacion>/<repositorio>.git
 git push -u origin main
 ```

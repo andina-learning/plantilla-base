@@ -1,7 +1,7 @@
 {
   "name": "plantilla-base",
   "version": "1.0.0",
-  "description": "Curso OVA: Cómo se escribe un artículo académico",
+  "description": "Curso OVA: Catálogo de componentes",
   "private": true,
   "engines": { "node": ">=18" },
   "scripts": {

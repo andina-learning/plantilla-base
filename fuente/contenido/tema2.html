@@ -1,687 +1,233 @@
       <header class="ova-screen__head" data-reveal>
-        <div class="ova-screen__eyebrow">Tema 2</div>
-        <h1 class="ova-screen__title">Estructura <span class="ua-suave">del</span> <span class="ua-remate">contenido</span></h1>
-        <!-- Lead · en una unidad real es el «Propósito del tema», literal del Word -->
-        <p class="ova-screen__lead">
-          Reconocer los componentes que muestran lo que tiene partes, orden o comparación,
-          y saber con qué rótulo se piden en el Word.
-        </p>
+        <div class="ova-screen__eyebrow">Tema {{NUM}}</div>
+        <h1 class="ova-screen__title">Figuras, video <span class="ua-suave">y</span> <span class="ua-remate">podcast</span></h1>
+        <p class="ova-screen__lead">Componentes para figuras, video y podcast.</p>
       </header>
 
-      <p data-reveal>
-        Un artículo académico no se escribe en el orden en que se lee. La estructura
-        <strong>IMRyD</strong> (Introducción, Métodos, Resultados y Discusión) ordena primero el
-        pensamiento y después el texto: obliga a declarar qué pregunta se hizo, cómo se
-        respondió, qué se encontró y qué significa. Cada sección responde una sola pregunta,
-        y esa disciplina es la que permite que un lector, un revisor o un editor encuentren
-        en segundos lo que buscan. Los componentes de este tema hacen lo mismo con el
-        contenido de una pantalla: le dan partes, orden y contraste sin que el autor del
-        Word tenga que pensar en diseño.
-      </p>
+      <p data-reveal>A continuación se listan los componentes de este tema:</p>
+      <ul data-reveal>
+        <li>Imagen con leyenda, Figura pendiente, Foto decorativa</li>
+        <li>Ilustración explicativa</li>
+        <li>Video</li>
+        <li>Pódcast · con foto</li>
+      </ul>
 
-      <!-- ════ Sección · Acordeones ════ -->
-      <section class="ua-seccion" id="acordeones" data-reveal>
-        <h2 class="ua-seccion__titulo">Acordeones <span class="ua-suave">para lo que tiene</span> <span class="ua-remate">partes</span></h2>
-        <p class="ua-seccion__lead">Paneles que se abren por título. Muestran un conjunto de ítems del mismo nivel sin alargar la pantalla.</p>
-      </section>
+      <!-- ════ Imágenes y figuras ════ -->
 
-      <!-- Ficha 1 · Acordeón sencillo -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Acordeón</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> De 3 a 8 conceptos, preguntas o definiciones del mismo nivel. Nunca para esconder lo que debe leerse sí o sí.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <h3 class="ua-rotulo"><strong>Las cuatro secciones IMRyD y la pregunta que responde cada una</strong></h3>
-        <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Haga clic en cada franja para ver la información.</p>
-        <div class="ova-acordeon">
-          <div class="ova-acordeon__item is-open">
-            <button class="ova-acordeon__head"><span><strong>Introducción</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
-            <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Responde <strong>¿qué problema se estudió y por qué importa?</strong> Presenta el contexto, el vacío que la literatura no ha resuelto y la pregunta u objetivo del trabajo. Va de lo general a lo particular y termina en lo que el artículo se propone.</div></div>
+      <!-- Ficha 1 · Imagen con leyenda -->
+      <section class="ua-seccion" id="imagenes-y-figuras" data-reveal>
+        <h2 class="ua-seccion__titulo">Imagen con leyenda</h2>
+        <figure class="ova-figura ova-figura--plana">
+          <div class="ova-figura__hero">
+            <img src="assets/img/curso/foto-podcast.webp"
+                 alt="Una estudiante sonríe con una carpeta verde abierta en las manos; detrás, tres compañeros conversan en una mesa de picnic con un portátil, en el patio de una universidad." />
           </div>
-          <div class="ova-acordeon__item">
-            <button class="ova-acordeon__head"><span><strong>Métodos</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
-            <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Responde <strong>¿cómo se estudió?</strong> Describe el diseño, los participantes o materiales, los instrumentos, el procedimiento y el análisis con el detalle suficiente para que otro investigador pueda repetir el estudio.</div></div>
-          </div>
-          <div class="ova-acordeon__item">
-            <button class="ova-acordeon__head"><span><strong>Resultados</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
-            <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Responde <strong>¿qué se encontró?</strong> Presenta los hallazgos en el orden de los objetivos, con tablas y figuras que no repiten el texto. Aquí no se interpreta: se informa.</div></div>
-          </div>
-          <div class="ova-acordeon__item">
-            <button class="ova-acordeon__head"><span><strong>Discusión</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
-            <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Responde <strong>¿qué significan los hallazgos?</strong> Los contrasta con la literatura, reconoce las limitaciones del estudio y señala sus implicaciones. Va de lo particular a lo general: el camino inverso de la introducción.</div></div>
-          </div>
-        </div>
-        <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t2-1"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
-        </div>
-        <div class="ova-modal" id="cat-t2-1"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Acordeón</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
-          <div class="ova-modal__body">
-            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
-            <div class="ua-cat-word"><span class="rojo">Acordeón</span>
-<b>Título:</b> Las cuatro secciones IMRyD y la pregunta que responde cada una
-Ítem 1
-<b>Introducción</b>
-Responde ¿qué problema se estudió y por qué importa? […]
-Ítem 2
-<b>Métodos</b>
-Responde ¿cómo se estudió? […]
-Ítem 3
-<b>Resultados</b>
-[…]
-Ítem 4
-<b>Discusión</b>
-[…]
-<span class="gris">El nombre del componente en rojo; debajo «Título:» si el bloque lo tiene. Por ítem: la línea «Ítem N», el título en negrilla (hasta 8 palabras) y la descripción (hasta 80). La numeración de las franjas es opcional: si el Word la pide, el componente la pone.</span></div>
-          </div>
-          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
-        </div></div>
-      </div>
-
-      <!-- Ficha 2 · Acordeón con imagen y numeración visible -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Acordeón con imagen</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> El mismo acordeón, cuando un ítem trae una figura del diseñador o una foto con licencia. La imagen va dentro de la franja, con su leyenda, y los ítems se numeran.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <h3 class="ua-rotulo"><strong>Tres fuentes para construir la introducción</strong></h3>
-        <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Haga clic en cada franja para ver la información.</p>
-        <div class="ova-acordeon">
-          <div class="ova-acordeon__item is-open">
-            <button class="ova-acordeon__head"><span><span class="num">01</span> <strong>La literatura publicada</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
-            <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">
-              <p>Los artículos de los últimos cinco a diez años sobre el problema, leídos para encontrar el vacío que su trabajo llena. La introducción no resume todo lo leído: selecciona lo que justifica la pregunta.</p>
-              <figure class="ova-figura ova-figura--plana">
-                <div class="ova-figura__hero">
-                  <img src="assets/img/curso/foto-podcast.webp" alt="Una persona con audífonos habla frente a un micrófono de estudio, con una libreta de notas al lado." />
-                </div>
-                <figcaption class="ova-figura__leyenda">
-                  <b>Figura 1.</b> La lectura crítica de la literatura también ocurre en conversación: las entrevistas y los pódcast académicos son una vía de entrada a un campo, no una fuente citable.
-                </figcaption>
-              </figure>
-            </div></div>
-          </div>
-          <div class="ova-acordeon__item">
-            <button class="ova-acordeon__head"><span><span class="num">02</span> <strong>Los datos propios del estudio</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
-            <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">La introducción se escribe cuando ya se conocen los resultados. Saber qué se encontró permite plantear la pregunta con precisión y evitar prometer lo que el estudio no responde.</div></div>
-          </div>
-          <div class="ova-acordeon__item">
-            <button class="ova-acordeon__head"><span><span class="num">03</span> <strong>Las normas de la revista</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
-            <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Cada revista fija la extensión, el estilo de citación y la estructura que espera. Leer las instrucciones para autores antes de escribir ahorra una ronda completa de correcciones.</div></div>
-          </div>
-        </div>
-        <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t2-2"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
-        </div>
-        <div class="ova-modal" id="cat-t2-2"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Acordeón con imagen</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
-          <div class="ova-modal__body">
-            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
-            <div class="ua-cat-word"><span class="rojo">Acordeón</span>
-<b>Título:</b> Tres fuentes para construir la introducción
-Ítem 1
-<b>La literatura publicada</b>
-Los artículos de los últimos cinco a diez años […]
-<span class="rojo">DISEÑO GRÁFICO</span> Figura 1. Fotografía de una entrevista académica.
-<b>Leyenda:</b> La lectura crítica de la literatura también ocurre en conversación […]
-Ítem 2
-<b>Los datos propios del estudio</b>
-[…]
-<span class="gris">Igual que el acordeón. Dentro del ítem que lleva imagen, el bloque «DISEÑO GRÁFICO» ubica la figura del diseñador con su número y, si la tiene, su leyenda. El bloque ubica una figura; no se maqueta ni se ilustra.</span></div>
-          </div>
-          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
-        </div></div>
-      </div>
-
-      <!-- ════ Sección · Pestañas ════ -->
-      <section class="ua-seccion" id="pestanas" data-reveal>
-        <h2 class="ua-seccion__titulo">Pestañas <span class="ua-suave">para vistas</span> <span class="ua-remate">paralelas</span></h2>
-        <p class="ua-seccion__lead">Varias vistas del mismo asunto en un solo panel, alternadas por su etiqueta. Si las vistas son secuenciales, van Pasos.</p>
-      </section>
-
-      <!-- Ficha 3 · Pestañas horizontales -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Pestañas</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> De 2 a 6 vistas paralelas: tipos, niveles, casos. El rótulo de cada pestaña es corto; el contenido, hasta 140 palabras.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <h3 class="ua-rotulo"><strong>Cuatro tipos de artículo que publican las revistas</strong></h3>
-        <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Haga clic en cada pestaña para ver la información.</p>
-        <div class="ova-tabs">
-          <div class="ova-tabs__nav">
-            <button class="ova-tabs__btn is-active">Original</button>
-            <button class="ova-tabs__btn">Revisión</button>
-            <button class="ova-tabs__btn">Caso</button>
-            <button class="ova-tabs__btn">Carta al editor</button>
-          </div>
-          <div class="ova-tabs__panels">
-            <div class="ova-tabs__panel is-active"><h4><strong>Artículo original</strong></h4><p>Presenta resultados inéditos de una investigación propia. Sigue la estructura IMRyD completa y es el tipo de artículo que más peso tiene en la evaluación académica. Su aporte es el dato nuevo.</p></div>
-            <div class="ova-tabs__panel"><h4><strong>Artículo de revisión</strong></h4><p>Sintetiza y analiza críticamente lo publicado sobre un tema. Puede ser narrativo o sistemático; en el segundo caso declara la estrategia de búsqueda, los criterios de inclusión y la forma de evaluar la calidad de los estudios. Su aporte es el mapa del campo.</p></div>
-            <div class="ova-tabs__panel"><h4><strong>Reporte de caso</strong></h4><p>Describe una situación poco frecuente o instructiva: un paciente, una organización, una experiencia docente. No generaliza; documenta con detalle y discute qué enseña el caso. Su aporte es la observación cuidadosa.</p></div>
-            <div class="ova-tabs__panel"><h4><strong>Carta al editor</strong></h4><p>Texto breve que comenta, discute o complementa un artículo ya publicado en la misma revista. Suele limitarse a unas pocas referencias y a un número reducido de palabras. Su aporte es el diálogo académico.</p></div>
-          </div>
-        </div>
-        <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t2-3"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
-        </div>
-        <div class="ova-modal" id="cat-t2-3"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Pestañas</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
-          <div class="ova-modal__body">
-            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
-            <div class="ua-cat-word"><span class="rojo">Pestañas</span>
-<b>Título:</b> Cuatro tipos de artículo que publican las revistas
-Pestaña 1
-<b>Original</b>
-<b>Artículo original</b>
-Presenta resultados inéditos de una investigación propia […]
-Pestaña 2
-<b>Revisión</b>
-<b>Artículo de revisión</b>
-[…]
-<span class="gris">Por pestaña: la línea «Pestaña N», el rótulo de la pestaña en negrilla (hasta 4 palabras), el título del panel en negrilla si es distinto del rótulo, y el contenido (hasta 140 palabras).</span></div>
-          </div>
-          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
-        </div></div>
-      </div>
-
-      <!-- Ficha 4 · Pestañas con icono -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Pestañas con icono</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> Las mismas pestañas, cuando el rótulo gana con un icono que lo anticipa. El icono lo elige producción; el rótulo, el Word.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <h3 class="ua-rotulo"><strong>Tres maneras de incorporar una fuente en el texto</strong></h3>
-        <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Haga clic en cada pestaña para ver la información.</p>
-        <div class="ova-tabs">
-          <div class="ova-tabs__nav">
-            <button class="ova-tabs__btn is-active"><iconify-icon icon="mdi:format-quote-close"></iconify-icon> Citar</button>
-            <button class="ova-tabs__btn"><iconify-icon icon="mdi:pencil-outline"></iconify-icon> Parafrasear</button>
-            <button class="ova-tabs__btn"><iconify-icon icon="mdi:text-short"></iconify-icon> Resumir</button>
-          </div>
-          <div class="ova-tabs__panels">
-            <div class="ova-tabs__panel is-active"><h4><strong>Cita textual</strong></h4><p>Reproduce las palabras exactas del autor entre comillas (o en bloque aparte si supera las 40 palabras) e indica autor, año y página. Se reserva para definiciones, fórmulas o frases cuya redacción importa tanto como su idea.</p></div>
-            <div class="ova-tabs__panel"><h4><strong>Paráfrasis</strong></h4><p>Expresa la idea de otro con palabras propias y la atribuye con autor y año. Es la forma más frecuente en un artículo: muestra que usted comprendió la fuente y la integra en su argumento. Cambiar dos palabras no es parafrasear.</p></div>
-            <div class="ova-tabs__panel"><h4><strong>Resumen</strong></h4><p>Condensa en pocas líneas el planteamiento o los hallazgos de un trabajo completo, con su atribución. Sirve para situar al lector en el estado del campo sin detenerse en cada estudio.</p></div>
-          </div>
-        </div>
-        <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t2-4"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
-        </div>
-        <div class="ova-modal" id="cat-t2-4"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Pestañas con icono</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
-          <div class="ova-modal__body">
-            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
-            <div class="ua-cat-word"><span class="rojo">Pestañas</span>
-<b>Título:</b> Tres maneras de incorporar una fuente en el texto
-Pestaña 1
-<b>Citar</b>
-<b>Cita textual</b>
-Reproduce las palabras exactas del autor […]
-Pestaña 2
-<b>Parafrasear</b>
-[…]
-<span class="gris">Se pide igual que las pestañas; nada cambia en el Word. El icono de cada pestaña lo propone producción a partir del rótulo. Si el instruccional quiere uno en particular, lo anota entre corchetes después del rótulo: «Citar [comillas]».</span></div>
-          </div>
-          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
-        </div></div>
-      </div>
-
-      <!-- Ficha 5 · Pestañas verticales -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Pestañas verticales</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> Cuando los rótulos son largos o los paneles traen varios párrafos: la columna de la izquierda hace de índice y el panel conserva el ancho de lectura.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <h3 class="ua-rotulo"><strong>Lo que el autor hace en cada momento de la revisión por pares</strong></h3>
-        <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Haga clic en cada pestaña para ver la información.</p>
-        <div class="ova-tabs ua-tabs-vertical">
-          <div class="ova-tabs__nav">
-            <button class="ova-tabs__btn is-active">Antes de enviar</button>
-            <button class="ova-tabs__btn">Durante la revisión</button>
-            <button class="ova-tabs__btn">Después del dictamen</button>
-          </div>
-          <div class="ova-tabs__panels">
-            <div class="ova-tabs__panel is-active">
-              <h4><strong>Antes de enviar</strong></h4>
-              <p>Verifique que el manuscrito cumple las instrucciones para autores de la revista: extensión, estructura, formato de citas, anonimización si la revisión es a doble ciego. Prepare la carta de presentación, en la que explica en un párrafo por qué el trabajo interesa a esa revista.</p>
-              <p>Confirme que todas las personas listadas como autoras cumplen los criterios de autoría y que se declararon los conflictos de interés y las fuentes de financiación.</p>
-            </div>
-            <div class="ova-tabs__panel">
-              <h4><strong>Durante la revisión</strong></h4>
-              <p>El manuscrito está en manos del editor y de los revisores. El autor no interviene: espera, atiende las solicitudes de la plataforma y no envía el mismo trabajo a otra revista mientras dura el proceso. Enviar en paralelo es una falta ética.</p>
-              <p>Si pasan más de tres meses sin noticias, es legítimo escribir al editor para consultar el estado del proceso.</p>
-            </div>
-            <div class="ova-tabs__panel">
-              <h4><strong>Después del dictamen</strong></h4>
-              <p>Lea los comentarios completos antes de responder. Prepare una carta de respuesta que atienda cada observación, una por una, indicando qué cambió y dónde, o por qué no se acogió la sugerencia. El tono es cordial aunque el comentario no lo haya sido.</p>
-              <p>Si el dictamen es un rechazo, revise si las razones son de fondo o de ajuste a la revista; en el segundo caso, el trabajo puede enviarse a otra revista después de corregirlo.</p>
-            </div>
-          </div>
-        </div>
-        <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t2-5"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
-        </div>
-        <div class="ova-modal" id="cat-t2-5"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Pestañas verticales</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
-          <div class="ova-modal__body">
-            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
-            <div class="ua-cat-word"><span class="rojo">Pestañas verticales</span>
-<b>Título:</b> Lo que el autor hace en cada momento de la revisión por pares
-Pestaña 1
-<b>Antes de enviar</b>
-Verifique que el manuscrito cumple las instrucciones para autores […]
-Confirme que todas las personas listadas como autoras […]
-Pestaña 2
-<b>Durante la revisión</b>
-[…]
-<span class="gris">Igual que las pestañas, con la palabra «verticales» en el rótulo rojo. Admite varios párrafos por panel (hasta 200 palabras). Si el Word dice solo «Pestañas» y los paneles son largos, producción propone la vertical y lo anota como capa editorial.</span></div>
-          </div>
-          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
-        </div></div>
-      </div>
-
-      <!-- ════ Sección · Pasos y ciclos ════ -->
-      <section class="ua-seccion" id="pasos-y-ciclos" data-reveal>
-        <h2 class="ua-seccion__titulo">Pasos <span class="ua-suave">y</span> <span class="ua-remate">ciclos</span></h2>
-        <p class="ua-seccion__lead">Un proceso en orden, con número, título y descripción. El número lo pone el componente; el título y el texto, el Word.</p>
-      </section>
-
-      <!-- Ficha 6 · Pasos -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Pasos</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> De 3 a 6 pasos en orden, todos visibles a la vez. Columna compacta: sirve de protocolo de apoyo al texto.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <h3 class="ua-rotulo"><strong>El proceso de escritura en cuatro pasos</strong></h3>
-        <div class="ova-stepper">
-          <div class="ova-step"><div class="ova-step__num"><span>01</span></div><div class="ova-step__card"><h3><strong>Planear</strong></h3><p>Formule la pregunta en una oración, defina la revista destino y arme un esquema con los títulos de las secciones y una línea sobre lo que dirá cada una. Sin esquema, el borrador se escribe dos veces.</p></div></div>
-          <div class="ova-step"><div class="ova-step__num"><span>02</span></div><div class="ova-step__card"><h3><strong>Redactar el borrador</strong></h3><p>Empiece por Métodos y Resultados, que son las secciones más concretas; siga con la Discusión y deje la Introducción y el resumen para el final, cuando ya sabe exactamente qué promete el artículo.</p></div></div>
-          <div class="ova-step"><div class="ova-step__num"><span>03</span></div><div class="ova-step__card"><h3><strong>Revisar el contenido</strong></h3><p>Deje reposar el texto al menos dos días y vuelva a leerlo como revisor: ¿cada sección responde su pregunta?, ¿los resultados sostienen las conclusiones?, ¿las tablas dicen algo que el texto no repite?</p></div></div>
-          <div class="ova-step"><div class="ova-step__num"><span>04</span></div><div class="ova-step__card"><h3><strong>Corregir la forma</strong></h3><p>Solo al final, pula la redacción: oraciones cortas, voz activa, un término por concepto, citas y referencias en el estilo de la revista. Corregir la forma antes de cerrar el contenido es trabajo perdido.</p></div></div>
-        </div>
-        <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t2-6"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
-        </div>
-        <div class="ova-modal" id="cat-t2-6"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Pasos</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
-          <div class="ova-modal__body">
-            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
-            <div class="ua-cat-word"><span class="rojo">Pasos</span>
-<b>Título:</b> El proceso de escritura en cuatro pasos
-Paso 1
-<b>Planear</b>
-Formule la pregunta en una oración […]
-Paso 2
-<b>Redactar el borrador</b>
-Empiece por Métodos y Resultados […]
-Paso 3
-<b>Revisar el contenido</b>
-[…]
-<span class="gris">Por paso: la línea «Paso N», el título en negrilla (hasta 8 palabras) y el texto (hasta 80). La línea «Paso N» sirve para leer el Word; en el curso el número lo pone el componente y la palabra «Paso» no aparece.</span></div>
-          </div>
-          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
-        </div></div>
-      </div>
-
-      <!-- Ficha 7 · Pasos con detalle -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Pasos con detalle</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> De 4 a 8 pasos con una descripción que no cabe en una tarjeta. Se toca cada paso y aparece su detalle; con 3 o menos, Pasos.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <h3 class="ua-rotulo"><strong>Cómo se envía un artículo a una revista</strong></h3>
-        <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Haga clic en cada paso para ver la información.</p>
-        <div class="ova-timeline-h" data-ova-timeline>
-          <script type="application/json" data-ova-steps>[
-            {"tag":"Revista","icon":"mdi:book-search-outline","title":"Elegir la revista","desc":"Busque la revista en la que se publican los trabajos que usted cita: ese es el público que entiende su pregunta. Verifique que esté indexada, que su alcance coincida con el tema y que no cobre por publicar sin declararlo.","tip":"Desconfíe de las invitaciones por correo que prometen publicar en días."},
-            {"tag":"Manuscrito","icon":"mdi:file-document-edit-outline","title":"Preparar el manuscrito según las normas","desc":"Ajuste el texto a las instrucciones para autores: extensión, estructura, formato de tablas y figuras, estilo de citas. Si la revisión es a doble ciego, retire del archivo los nombres, las afiliaciones y los agradecimientos que identifiquen a los autores.","tip":"Las figuras van en archivos aparte y en la resolución que la revista pide."},
-            {"tag":"Envío","icon":"mdi:send-outline","title":"Enviar por la plataforma","desc":"Cargue el manuscrito, las figuras, la carta de presentación y las declaraciones (autoría, conflictos de interés, financiación, aprobación ética cuando aplica). La carta explica en un párrafo qué aporta el trabajo y por qué interesa a esa revista.","tip":"Guarde el número de identificación del envío: con él se consulta el estado del proceso."},
-            {"tag":"Dictamen","icon":"mdi:comment-check-outline","title":"Responder al dictamen","desc":"El editor comunica una de cuatro decisiones: aceptar, aceptar con cambios menores, pedir cambios mayores o rechazar. En los dos casos intermedios, prepare la versión corregida y una carta de respuesta que atienda cada comentario de los revisores, uno por uno.","tip":"Marque los cambios en el manuscrito: el editor agradece poder verlos sin buscar."}
-          ]</script>
-          <div class="ova-timeline-h__track">
-            <button class="ova-step-card is-active" data-step="0"><span class="ova-step-card__num">01</span><span class="ova-step-card__label"><strong>Elegir la revista</strong></span></button>
-            <button class="ova-step-card" data-step="1"><span class="ova-step-card__num">02</span><span class="ova-step-card__label"><strong>Preparar el manuscrito</strong></span></button>
-            <button class="ova-step-card" data-step="2"><span class="ova-step-card__num">03</span><span class="ova-step-card__label"><strong>Enviar por la plataforma</strong></span></button>
-            <button class="ova-step-card" data-step="3"><span class="ova-step-card__num">04</span><span class="ova-step-card__label"><strong>Responder al dictamen</strong></span></button>
-          </div>
-          <div class="ova-step-detail" data-ova-detail></div>
-        </div>
-        <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t2-7"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
-        </div>
-        <div class="ova-modal" id="cat-t2-7"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Pasos con detalle</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
-          <div class="ova-modal__body">
-            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
-            <div class="ua-cat-word"><span class="rojo">Pasos con detalle</span>
-<b>Título:</b> Cómo se envía un artículo a una revista
-Paso 1
-<b>Elegir la revista</b>
-Busque la revista en la que se publican los trabajos que usted cita […]
-<b>Tip:</b> Desconfíe de las invitaciones por correo que prometen publicar en días.
-Paso 2
-<b>Preparar el manuscrito según las normas</b>
-Ajuste el texto a las instrucciones para autores […]
-<b>Tip:</b> Las figuras van en archivos aparte […]
-<span class="gris">Por paso: la línea «Paso N», el título en negrilla, la descripción (hasta 80 palabras) y, si lo hay, «Tip:» con una línea. El tip va aparte, nunca pegado con un guion. El rótulo corto de la tarjeta y el icono los propone producción a partir del título.</span></div>
-          </div>
-          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
-        </div></div>
-      </div>
-
-      <!-- Ficha 8 · Escenas y Ciclo -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Pasos (escenas) · Ciclo</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> Escenas, cuando el proceso es el protagonista de la pantalla y cada paso merece espacio. Ciclo, cuando el último paso vuelve al primero: la escalera de cuadros de la marca hace de imagen y los pasos quedan visibles a la vez.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo · escenas</p>
-        <h3 class="ua-rotulo"><strong>Tres momentos de la revisión por pares</strong></h3>
-        <div class="ua-escenas">
-          <div class="ua-escena">
-            <div class="ua-escena__marca"><span class="ua-escena__num">01</span><span class="ua-escena__icono"><iconify-icon icon="mdi:filter-outline"></iconify-icon></span></div>
-            <div><h3 class="ua-escena__titulo">El editor hace el cribado</h3><p class="ua-escena__texto">Antes de buscar revisores, el editor comprueba que el manuscrito entra en el alcance de la revista, cumple las normas y tiene un mínimo de calidad. Una parte importante de los rechazos ocurre aquí, en días, <strong>sin que el trabajo llegue a revisión</strong>.</p></div>
-          </div>
-          <div class="ua-escena">
-            <div class="ua-escena__marca"><span class="ua-escena__num">02</span><span class="ua-escena__icono"><iconify-icon icon="mdi:account-search-outline"></iconify-icon></span></div>
-            <div><h3 class="ua-escena__titulo">Los revisores evalúan</h3><p class="ua-escena__texto">Dos o tres especialistas, que no reciben pago, leen el manuscrito y responden por escrito: ¿la pregunta es relevante?, ¿el método la responde?, ¿los datos sostienen las conclusiones?, ¿qué falta? Su informe recomienda una decisión, pero <strong>quien decide es el editor</strong>.</p></div>
-          </div>
-          <div class="ua-escena">
-            <div class="ua-escena__marca"><span class="ua-escena__num">03</span><span class="ua-escena__icono"><iconify-icon icon="mdi:reply-outline"></iconify-icon></span></div>
-            <div><h3 class="ua-escena__titulo">El autor responde</h3><p class="ua-escena__texto">Con el dictamen en mano, el autor corrige el manuscrito y escribe una carta de respuesta punto por punto. Un comentario con el que no está de acuerdo se discute con argumentos y evidencia; <strong>ignorarlo no es una opción</strong>.</p></div>
-          </div>
-        </div>
-
-        <p class="ua-cat-ejemplo">Ejemplo vivo · ciclo</p>
-        <h3 class="ua-rotulo"><strong>El ciclo de un manuscrito hasta su publicación</strong></h3>
-        <div class="ua-ciclo">
-          <svg class="ua-ciclo__escalera" viewBox="0 0 420 420" role="img"
-               aria-label="Ciclo de cuatro pasos dibujado como una escalera de cuadros: escribir, revisar, recibir el dictamen y corregir. El cuarto peldaño vuelve al primero.">
-            <g class="ua-peldano"><rect x="36" y="318" width="74" height="74" fill="#C5DCEB"/><text x="73" y="362" text-anchor="middle" font-size="22" font-weight="800" fill="#00417B">01</text></g>
-            <g class="ua-peldano"><rect x="118" y="318" width="74" height="74" fill="#E3EDF5"/><rect x="118" y="236" width="74" height="74" fill="#3A93D0"/><text x="155" y="280" text-anchor="middle" font-size="22" font-weight="800" fill="#FFFFFF">02</text></g>
-            <g class="ua-peldano"><rect x="200" y="318" width="74" height="74" fill="#E3EDF5"/><rect x="200" y="236" width="74" height="74" fill="#E3EDF5"/><rect x="200" y="154" width="74" height="74" fill="#00417B"/><text x="237" y="198" text-anchor="middle" font-size="22" font-weight="800" fill="#FFFFFF">03</text></g>
-            <g class="ua-peldano"><rect x="282" y="318" width="74" height="74" fill="#F7D58F"/><rect x="282" y="236" width="74" height="74" fill="#F7D58F"/><rect x="282" y="154" width="74" height="74" fill="#F7D58F"/><rect x="282" y="72" width="74" height="74" fill="#F0B443"/><text x="319" y="116" text-anchor="middle" font-size="22" font-weight="800" fill="#132B41">04</text></g>
-            <g stroke="#F0B443" stroke-width="3" stroke-linecap="round"><line x1="328.0" y1="34.0" x2="341.0" y2="34.0"/><line x1="327.3" y1="37.4" x2="334.7" y2="40.5"/><line x1="325.4" y1="40.4" x2="334.6" y2="49.6"/><line x1="322.4" y1="42.3" x2="325.5" y2="49.7"/><line x1="319.0" y1="43.0" x2="319.0" y2="56.0"/><line x1="315.6" y1="42.3" x2="312.5" y2="49.7"/><line x1="312.6" y1="40.4" x2="303.4" y2="49.6"/><line x1="310.7" y1="37.4" x2="303.3" y2="40.5"/><line x1="310.0" y1="34.0" x2="297.0" y2="34.0"/><line x1="310.7" y1="30.6" x2="303.3" y2="27.5"/><line x1="312.6" y1="27.6" x2="303.4" y2="18.4"/><line x1="315.6" y1="25.7" x2="312.5" y2="18.3"/><line x1="319.0" y1="25.0" x2="319.0" y2="12.0"/><line x1="322.4" y1="25.7" x2="325.5" y2="18.3"/><line x1="325.4" y1="27.6" x2="334.6" y2="18.4"/><line x1="327.3" y1="30.6" x2="334.7" y2="27.5"/></g>
-            <text x="36" y="72" font-size="21" font-weight="800" fill="#0E2A44">4 pasos</text>
-            <text x="36" y="98" font-size="16" font-weight="300" fill="#0E2A44" opacity=".75">hasta la publicación</text>
-          </svg>
-          <div class="ua-ciclo__pasos">
-            <div class="ua-paso" style="--tinte:#3A93D0;">
-              <div class="ua-paso__num">PASO 01</div>
-              <h3 class="ua-paso__titulo"><iconify-icon icon="mdi:pencil-outline"></iconify-icon>Escribir</h3>
-              <p class="ua-paso__desc">Redactar el manuscrito completo siguiendo la estructura IMRyD y las normas de la revista elegida.</p>
-            </div>
-            <div class="ua-paso" style="--tinte:#3A93D0;">
-              <div class="ua-paso__num">PASO 02</div>
-              <h3 class="ua-paso__titulo"><iconify-icon icon="mdi:magnify"></iconify-icon>Revisar</h3>
-              <p class="ua-paso__desc">Releer como revisor, pedir lectura a un colega y enviar solo cuando el texto resiste esa mirada.</p>
-            </div>
-            <div class="ua-paso" style="--tinte:#00417B;">
-              <div class="ua-paso__num">PASO 03</div>
-              <h3 class="ua-paso__titulo"><iconify-icon icon="mdi:email-open-outline"></iconify-icon>Recibir el dictamen</h3>
-              <p class="ua-paso__desc">Leer completos los comentarios del editor y de los revisores antes de decidir cómo responder.</p>
-            </div>
-            <div class="ua-paso" style="--tinte:#F0B443;">
-              <div class="ua-paso__num" style="color:#8A6100;">PASO 04</div>
-              <h3 class="ua-paso__titulo"><iconify-icon icon="mdi:refresh" style="color:#A06A00;"></iconify-icon>Corregir</h3>
-              <p class="ua-paso__desc">Atender cada observación y volver a escribir: el manuscrito corregido reinicia el ciclo hasta la aceptación.</p>
-            </div>
-          </div>
-        </div>
-        <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t2-8"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
-        </div>
-        <div class="ova-modal" id="cat-t2-8"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Pasos (escenas) y Ciclo</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
-          <div class="ova-modal__body">
-            <p class="ua-cat-modal__cab">Así se recibe en el Word · escenas</p>
-            <div class="ua-cat-word"><span class="rojo">Pasos</span>
-<b>Título:</b> Tres momentos de la revisión por pares
-Paso 1
-<b>El editor hace el cribado</b>
-Antes de buscar revisores, el editor comprueba […]
-Paso 2
-<b>Los revisores evalúan</b>
-[…]
-<span class="gris">Se pide como Pasos. Que salgan como escenas grandes o como columna compacta lo decide producción con el largo del texto y el peso del proceso en la pantalla.</span></div>
-            <p class="ua-cat-modal__cab" style="margin-top:22px;">Así se recibe en el Word · ciclo</p>
-            <div class="ua-cat-word"><span class="rojo">Ciclo</span>
-<b>Título:</b> El ciclo de un manuscrito hasta su publicación
-Paso 1
-<b>Escribir</b>
-Redactar el manuscrito completo […]
-Paso 2
-<b>Revisar</b>
-[…]
-<span class="gris">De 3 a 5 pasos, con título en negrilla (hasta 6 palabras) y texto (hasta 60). Igual que Pasos; la palabra «Ciclo» dice que el último paso vuelve al primero. Nunca en carrusel: el punto de un ciclo es verlo completo.</span></div>
-          </div>
-          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
-        </div></div>
-      </div>
-
-      <!-- ════ Sección · Líneas de tiempo ════ -->
-      <section class="ua-seccion" id="lineas-de-tiempo" data-reveal>
-        <h2 class="ua-seccion__titulo">Líneas <span class="ua-suave">de</span> <span class="ua-remate">tiempo</span></h2>
-        <p class="ua-seccion__lead">Hitos en orden cronológico con su marca temporal. Los pasos de un proceso no van aquí: eso son Pasos.</p>
-      </section>
-
-      <!-- Ficha 9 · Línea de tiempo de eje central -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Línea de tiempo</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> Historia o evolución de algo, de 3 a 6 hitos con fecha. Las tarjetas alternan a los dos lados de un eje central.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <h3 class="ua-rotulo"><strong>Cuatro hitos de la publicación científica</strong></h3>
-        <div class="ova-timeline">
-          <div class="ova-timeline__item"><div class="ova-timeline__marker">1665</div><div class="ova-timeline__card"><h4><strong>Nacen las primeras revistas científicas</strong></h4><p>En enero aparece en París el <em>Journal des sçavans</em> y en marzo, en Londres, las <em>Philosophical Transactions</em> de la Royal Society. Por primera vez un hallazgo se comunica en un medio periódico y fechado, no en cartas ni en libros.</p></div></div>
-          <div class="ova-timeline__item"><div class="ova-timeline__marker">1731</div><div class="ova-timeline__card"><h4><strong>Primera revisión por pares documentada</strong></h4><p>La sociedad médica de Edimburgo que después sería la Royal Society of Edinburgh publica <em>Medical Essays and Observations</em> y declara en su prefacio que cada texto se envía a quien más sabe del asunto antes de imprimirlo. Es el primer registro de un dictamen de pares como procedimiento editorial.</p></div></div>
-          <div class="ova-timeline__item"><div class="ova-timeline__marker">1978</div><div class="ova-timeline__card"><h4><strong>Nace el ICMJE, el grupo de Vancouver</strong></h4><p>Un grupo de editores de revistas médicas se reúne en Vancouver para unificar los requisitos de los manuscritos. De ahí salen las normas de autoría, de conflicto de interés y el estilo de referencias que hoy se conocen como normas Vancouver.</p></div></div>
-          <div class="ova-timeline__item"><div class="ova-timeline__marker">2020</div><div class="ova-timeline__card"><h4><strong>Séptima edición del manual APA</strong></h4><p>La edición que se cita como APA (2020) simplifica las citas, incorpora el formato para fuentes digitales y pide lenguaje inclusivo y libre de sesgos. Es la vigente en las ciencias sociales y de la educación.</p></div></div>
-        </div>
-        <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t2-9"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
-        </div>
-        <div class="ova-modal" id="cat-t2-9"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Línea de tiempo</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
-          <div class="ova-modal__body">
-            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
-            <div class="ua-cat-word"><span class="rojo">Línea de tiempo</span>
-<b>Título:</b> Cuatro hitos de la publicación científica
-Hito 1
-<b>1665 · Nacen las primeras revistas científicas</b>
-En enero aparece en París el Journal des sçavans […]
-Hito 2
-<b>1731 · Primera revisión por pares documentada</b>
-[…]
-<span class="gris">Por hito: la línea «Hito N», la fecha o periodo con el título en negrilla, y la descripción (hasta 60 palabras). La fecha es la marca del eje; el título va en la tarjeta.</span></div>
-          </div>
-          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
-        </div></div>
-      </div>
-
-      <!-- Ficha 10 · Cronología vertical de una columna -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Cronología</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> Hitos con fecha relativa o con una línea de contexto bajo la fecha (Semana 1, Día 0, Mes 3). Una sola columna: se lee de arriba abajo sin alternar.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <h3 class="ua-rotulo"><strong>El recorrido de un artículo, semana a semana</strong></h3>
-        <ol class="ua-cronologia">
-          <li class="ua-cronologia__item">
-            <div class="ua-cronologia__fecha"><strong>Semana 1</strong><span>Envío</span></div>
-            <div class="ua-cronologia__cuerpo"><h4><strong>El manuscrito entra a la plataforma</strong></h4><p>Usted carga el texto, las figuras, la carta de presentación y las declaraciones. La revista confirma la recepción con un número de identificación y el editor inicia el cribado.</p></div>
-          </li>
-          <li class="ua-cronologia__item">
-            <div class="ua-cronologia__fecha"><strong>Semana 4</strong><span>Dictamen</span></div>
-            <div class="ua-cronologia__cuerpo"><h4><strong>Llegan los comentarios de los revisores</strong></h4><p>El editor comunica la decisión: cambios mayores. Dos revisores piden precisar el tamaño de la muestra y discutir una limitación que el texto no mencionaba. Usted dispone de cuatro semanas para responder.</p></div>
-          </li>
-          <li class="ua-cronologia__item">
-            <div class="ua-cronologia__fecha"><strong>Semana 8</strong><span>Versión corregida</span></div>
-            <div class="ua-cronologia__cuerpo"><h4><strong>Se envía la respuesta punto por punto</strong></h4><p>Cada comentario tiene su respuesta y cada cambio está marcado en el manuscrito. El editor puede aceptar directamente o devolverlo a los revisores para una segunda ronda.</p></div>
-          </li>
-        </ol>
-        <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t2-10"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
-        </div>
-        <div class="ova-modal" id="cat-t2-10"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Cronología</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
-          <div class="ova-modal__body">
-            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
-            <div class="ua-cat-word"><span class="rojo">Cronología</span>
-<b>Título:</b> El recorrido de un artículo, semana a semana
-Hito 1
-<b>Semana 1 · Envío</b>
-<b>El manuscrito entra a la plataforma</b>
-Usted carga el texto, las figuras […]
-Hito 2
-<b>Semana 4 · Dictamen</b>
-<b>Llegan los comentarios de los revisores</b>
-[…]
-<span class="gris">Por hito: la línea «Hito N», la fecha con su contexto breve en negrilla (separados por un punto medio), el título del hito en negrilla y la descripción (hasta 60 palabras). Si el Word dice «Línea de tiempo» y las fechas son relativas, producción propone la cronología y lo anota.</span></div>
-          </div>
-          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
-        </div></div>
-      </div>
-
-      <!-- ════ Sección · Comparativos y tablas ════ -->
-      <section class="ua-seccion" id="comparativos-y-tablas" data-reveal>
-        <h2 class="ua-seccion__titulo">Comparativos <span class="ua-suave">y</span> <span class="ua-remate">tablas</span></h2>
-        <p class="ua-seccion__lead">Dos caminos frente a frente, o tres o más ítems contra dos o más criterios.</p>
-      </section>
-
-      <!-- Ficha 11 · Comparativo neutro y comparativo error/ok -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Comparativo</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> Dos conceptos o caminos frente a frente. Si los lados son neutros, salen como dos tarjetas iguales; si uno es el error y el otro el acierto, con su color. Con tres o más opciones, tabla.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo · lados neutros</p>
-        <h3 class="ua-rotulo"><strong>Dos formas de escribir el resumen</strong></h3>
-        <div class="ova-vs">
-          <div class="ova-vs__card">
-            <span class="ova-vs__card-tag"><strong>Resumen estructurado</strong></span>
-            <p style="margin-top:14px;">Lleva subtítulos explícitos (Objetivo, Métodos, Resultados, Conclusiones) y suele limitarse a 250 palabras. Lo exigen la mayoría de las revistas de ciencias de la salud y facilita la lectura rápida y la indexación.</p>
-          </div>
-          <div class="ova-vs__divider">VS</div>
-          <div class="ova-vs__card ova-vs__card--alt">
-            <span class="ova-vs__card-tag"><strong>Resumen narrativo</strong></span>
-            <p style="margin-top:14px;">Un solo párrafo sin subtítulos, entre 150 y 250 palabras, que recorre el mismo orden: problema, método, hallazgos y conclusión. Es el habitual en ciencias sociales y humanidades y el que pide el manual APA.</p>
-          </div>
-        </div>
-
-        <p class="ua-cat-ejemplo">Ejemplo vivo · error y acierto</p>
-        <h3 class="ua-rotulo"><strong>La misma oración, antes y después de corregirla</strong></h3>
-        <div class="ova-vs ua-vs--error-ok">
-          <div class="ova-vs__card">
-            <span class="ova-vs__card-tag">Oración recargada</span>
-            <p style="margin-top:14px;">«Se procedió a la realización de un análisis de los datos que fueron obtenidos por parte de los investigadores, los cuales fueron posteriormente analizados con el fin de poder determinar la existencia de diferencias».</p>
-          </div>
-          <div class="ova-vs__divider">VS</div>
-          <div class="ova-vs__card ova-vs__card--alt">
-            <span class="ova-vs__card-tag">Oración corregida</span>
-            <p style="margin-top:14px;">«Los investigadores analizaron los datos para determinar si había diferencias». Treinta y tres palabras se vuelven once: desaparecen la nominalización («realización de un análisis»), la redundancia («analizados… analizaron») y la pasiva innecesaria.</p>
-          </div>
-        </div>
-        <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t2-11"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
-        </div>
-        <div class="ova-modal" id="cat-t2-11"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Comparativo</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
-          <div class="ova-modal__body">
-            <p class="ua-cat-modal__cab">Así se recibe en el Word · lados neutros</p>
-            <div class="ua-cat-word"><span class="rojo">Comparativo</span>
-<b>Título:</b> Dos formas de escribir el resumen
-<b>Resumen estructurado</b>
-Lleva subtítulos explícitos […]
-<b>Resumen narrativo</b>
-Un solo párrafo sin subtítulos […]
-<span class="gris">Dos lados: el título de cada uno en negrilla y su texto (hasta 80 palabras). Con títulos neutros salen dos tarjetas iguales.</span></div>
-            <p class="ua-cat-modal__cab" style="margin-top:22px;">Así se recibe en el Word · error y acierto</p>
-            <div class="ua-cat-word"><span class="rojo">Comparativo</span>
-<b>Título:</b> La misma oración, antes y después de corregirla
-<b>Oración recargada</b>
-«Se procedió a la realización de un análisis […]»
-<b>Oración corregida</b>
-«Los investigadores analizaron los datos […]»
-<span class="gris">El mismo rótulo. Cuando el título de un lado nombra un error («Error frecuente», «Oración recargada», «No aplique») y el otro el acierto, el componente pone el color y el signo; los títulos siguen siendo los del Word.</span></div>
-          </div>
-          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
-        </div></div>
-      </div>
-
-      <!-- Ficha 12 · Tabla APA y tabla simple -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Tabla</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> Tres o más ítems comparados contra dos o más criterios. Si el Word la trae con número, título, nota y fuente, sale en formato APA; si es una tabla de apoyo sin rótulo, sale sola. Una tabla de Word con un rótulo encima («Idea clave») no es una tabla: es la marca de otro componente.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo · tabla en formato APA</p>
-        <figure class="ua-tabla-apa">
-          <figcaption>
-            <span class="ua-tabla-apa__num"><strong>Tabla 1</strong></span>
-            <span class="ua-tabla-apa__titulo">Secciones del artículo, pregunta que responden y extensión sugerida</span>
+          <figcaption class="ova-figura__leyenda">
+            <b>Figura 1.</b> Sesión de trabajo de un equipo de investigación durante la revisión del
+            borrador. Nota. Fotografía de archivo con licencia de uso; en un artículo, la nota indica la
+            fuente de la imagen y el permiso de reproducción cuando no es propia.
           </figcaption>
-          <div class="ova-tabla"><table>
-            <thead><tr><th>Sección</th><th>Pregunta que responde</th><th>Extensión sugerida</th><th>Tiempo verbal predominante</th></tr></thead>
-            <tbody>
-              <tr><td>Introducción</td><td>¿Qué problema se estudió y por qué importa?</td><td>10 a 15 % del texto</td><td>Presente (lo que se sabe) y pasado (lo que otros hicieron)</td></tr>
-              <tr><td>Métodos</td><td>¿Cómo se estudió?</td><td>20 a 25 % del texto</td><td>Pasado</td></tr>
-              <tr><td>Resultados</td><td>¿Qué se encontró?</td><td>25 a 30 % del texto</td><td>Pasado</td></tr>
-              <tr><td>Discusión</td><td>¿Qué significan los hallazgos?</td><td>25 a 30 % del texto</td><td>Presente, con el pasado para los hallazgos propios</td></tr>
-            </tbody>
-          </table></div>
-          <p class="ua-tabla-apa__nota">Nota. Los porcentajes son orientativos y varían según la revista y el tipo de estudio; el resumen, las referencias y los anexos no se cuentan en la extensión del cuerpo.</p>
-          <p class="ua-tabla-apa__fuente">Fuente: elaboración propia a partir de Day y Gastel (2008) y de las Recomendaciones del ICMJE (2024).</p>
         </figure>
-
-        <p class="ua-cat-ejemplo">Ejemplo vivo · tabla de apoyo</p>
-        <h3 class="ua-rotulo"><strong>Las cuatro decisiones editoriales y lo que exigen del autor</strong></h3>
-        <div class="ova-tabla"><table>
-          <thead><tr><th>Decisión del editor</th><th>Qué significa</th><th>Qué hace el autor</th></tr></thead>
-          <tbody>
-            <tr><td>Aceptado</td><td>El manuscrito se publica tal como está o con correcciones de estilo.</td><td>Revisa las pruebas de imprenta y firma la cesión o licencia de publicación.</td></tr>
-            <tr><td>Cambios menores</td><td>Los revisores piden precisiones que no alteran el fondo.</td><td>Corrige y responde punto por punto, normalmente en dos a cuatro semanas.</td></tr>
-            <tr><td>Cambios mayores</td><td>Hay objeciones de fondo: método, análisis o interpretación.</td><td>Reescribe las secciones afectadas y justifica con evidencia lo que no acoge.</td></tr>
-            <tr><td>Rechazado</td><td>El trabajo no se ajusta a la revista o no supera la revisión.</td><td>Lee las razones, corrige lo que proceda y envía a otra revista, nunca a la vez a dos.</td></tr>
-          </tbody>
-        </table></div>
         <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t2-12"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t4-1"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
         </div>
-        <div class="ova-modal" id="cat-t2-12"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Tabla</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+        <div class="ova-modal" id="cat-t4-1"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Imagen con leyenda</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
           <div class="ova-modal__body">
-            <p class="ua-cat-modal__cab">Así se recibe en el Word · tabla en formato APA</p>
-            <div class="ua-cat-word"><b>Tabla 1</b>
-Secciones del artículo, pregunta que responden y extensión sugerida
-<span class="celda">Sección | Pregunta que responde | Extensión sugerida | Tiempo verbal predominante
-Introducción | ¿Qué problema se estudió y por qué importa? | 10 a 15 % del texto | Presente […]
-Métodos | ¿Cómo se estudió? | 20 a 25 % del texto | Pasado</span>Nota. Los porcentajes son orientativos […]
-Fuente: elaboración propia a partir de Day y Gastel (2008) […]
-<span class="gris">Como en APA: «Tabla N» en negrilla, el título en la línea siguiente, la tabla real de Word con sus encabezados, y debajo la nota y la fuente si las tiene. Celdas de hasta 25 palabras.</span></div>
-            <p class="ua-cat-modal__cab" style="margin-top:22px;">Así se recibe en el Word · tabla de apoyo</p>
-            <div class="ua-cat-word"><span class="rojo">Tabla</span>
-<b>Título:</b> Las cuatro decisiones editoriales y lo que exigen del autor
-<span class="celda">Decisión del editor | Qué significa | Qué hace el autor
-Aceptado | El manuscrito se publica tal como está […] | Revisa las pruebas de imprenta […]
-Cambios menores | […] | […]</span>
-<span class="gris">Sin número ni nota: el rótulo «Tabla» en rojo, el título si lo tiene y la tabla real de Word. Sale como tabla sola, sin el encabezado APA.</span></div>
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Vincular Imagen-01</span>
+<b>Leyenda:</b> Figura 1. Sesión de trabajo de un equipo de investigación durante la revisión del borrador. Nota. Fotografía de archivo con licencia de uso.
+<span class="gris">Una línea en rojo en el sitio exacto donde va la imagen, con su número. El archivo llega aparte en la carpeta Imagenes, con el mismo número: Imagen-01.png o .jpg. La leyenda es opcional y sale literal bajo la imagen; si sigue el formato APA (número, título y nota), el curso la respeta tal cual.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
-      </div>
+      </section>
 
-      <!-- Respiro de cierre · el remate del párrafo de entrada, a primer plano -->
-      <div class="ua-respiro" data-reveal>
-        <p>Lo que tiene partes se muestra completo. <strong>El número lo pone el componente; el título y la descripción, el Word.</strong></p>
-      </div>
+      <!-- Ficha 2 · Figura del diseñador pendiente + foto decorativa -->
+      <section class="ua-seccion ua-seccion--variante" id="figura-pendiente" data-reveal>
+        <h2 class="ua-seccion__titulo">Figura pendiente</h2>
+        <div class="ua-pendiente">
+          <div class="ua-pendiente__marco"><iconify-icon icon="mdi:image-outline"></iconify-icon></div>
+          <span class="ua-pendiente__tag">Figura pendiente</span>
+          <p class="ua-pendiente__desc">Diagrama de flujo del proceso editorial: envío, revisión, dictamen, corrección, publicación.</p>
+        </div>
+
+        <h2 class="ua-seccion__titulo ua-titulo--variante">Foto decorativa <span class="ua-sub__nota">(foto de contexto que acompaña el texto; no explica nada)</span></h2>
+        <figure class="ua-foto-ancha">
+          <img src="assets/img/curso/portada-persona.webp"
+               alt="Una investigadora lee en una tableta, de noche, iluminada por la pantalla; al fondo, una oficina en penumbra." />
+          <figcaption>La revisión del propio manuscrito se hace mejor con distancia: unos días después de escribirlo y, si es posible, en otro soporte.</figcaption>
+        </figure>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t4-2"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t4-2"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Figura pendiente y foto decorativa</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">PARA DISEÑO GRÁFICO</span>
+<span class="celda"><b>Figura 2.</b> Diagrama de flujo del proceso editorial: envío, revisión, dictamen, corrección, publicación. Cinco cajas en fila unidas por flechas; del dictamen sale una flecha de regreso a corrección cuando se piden cambios.</span>
+<span class="gris">Una caja con la descripción de lo que el diseñador debe dibujar. Mientras la figura está en producción, el curso muestra el hueco con ese texto; cuando llega el archivo, la caja se cambia por «Vincular Imagen-02» y el hueco desaparece. Nunca se dibuja en el curso una pieza propia de lo que la figura del diseñador va a mostrar.</span>
+<span class="rojo">Foto decorativa</span>
+<span class="rojo">Vincular Imagen-03</span>
+<b>Pie:</b> La revisión del propio manuscrito se hace mejor con distancia…
+<span class="gris">El nombre del componente en rojo y la imagen con «Vincular Imagen-N». Es una foto de contexto, que acompaña el texto pero no explica nada: va a todo el ancho, recortada a una franja horizontal y con los decorativos de la marca; sin número ni leyenda APA. Si la imagen explica algo (un diagrama, un gráfico, un caso), no es foto decorativa sino figura con leyenda. El pie es opcional, con el rótulo «Pie:». Si la foto es de banco se anota su licencia en la carpeta de insumos.</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </section>
+
+      <!-- Ficha 3 · Ilustración explicativa (muestra del agente ilustrador) -->
+      <section class="ua-seccion" id="ilustracion-explicativa" data-reveal>
+        <h2 class="ua-seccion__titulo">Ilustración explicativa <span class="ua-sub__nota">(la dibuja el agente ilustrador; muestra de la familia gráfica)</span></h2>
+        <figure class="ua-ilustracion">
+          <img src="assets/img/curso/muestra-ilustracion-criterio.svg"
+               alt="Dos tarjetas unidas por una flecha. A la izquierda, una herramienta de IA entrega el mismo análisis a cuatro personas. A la derecha, con el contorno en amarillo, una sola persona pregunta, señala el análisis que está mal y sostiene su recomendación." />
+          <figcaption>Dos tarjetas en contraste: lo que se volvió abundante y lo que se volvió escaso. Un solo elemento en amarillo marca la idea central.</figcaption>
+        </figure>
+        <figure class="ua-ilustracion">
+          <img src="assets/img/curso/muestra-ilustracion-abanico.svg"
+               alt="Una primera respuesta se abre en tres preguntas: dame otra opción, argumenta en contra, dime qué te falta. Las tres llegan a una persona que decide, con el contorno de la alternativa elegida en amarillo." />
+          <figcaption>Un proceso que se abre y se cierra: la respuesta, las tres preguntas y quien decide. Los rótulos son literales del texto.</figcaption>
+        </figure>
+        <figure class="ua-ilustracion">
+          <img src="assets/img/curso/muestra-ilustracion-cadena.svg"
+               alt="Cinco tarjetas en fila unidas por flechas: obligación, decisión de gobierno, control técnico, evidencia y verificación periódica. La evidencia lleva el contorno en amarillo y una flecha vuelve de la verificación a la evidencia." />
+          <figcaption>Una cadena de cinco pasos con una vuelta atrás. Piezas blancas con sombra suave, trazo azul y fondo celeste degradado.</figcaption>
+        </figure>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t4-3"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t4-3"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Ilustración explicativa</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="gris">No se pide en el Word. El agente ilustrador lee el texto del tema y dibuja el concepto central en la apertura de cada tema y de la introducción. Solo dibuja lo que el texto afirma; los rótulos son frases literales del Word. Es capa editorial: se lista para que el cliente la valide. Si el Word trae una caja <span class="rojo">PARA DISEÑO GRÁFICO</span> para ese contenido, la figura la hace el diseñador y no se ilustra.</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </section>
+
+      <!-- ════ Video ════ -->
+
+      <!-- Ficha 6 · Video embebido -->
+      <section class="ua-seccion" id="video" data-reveal>
+        <h2 class="ua-seccion__titulo">Video</h2>
+        <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Haga clic en el botón de reproducir para visualizar el video.</p>
+        <figure class="ova-figura ova-figura--plana">
+          <div class="ova-video">
+            <div class="ova-video__frame" style="position:relative; padding-top:56.25%; border-radius:var(--r-lg); overflow:hidden; background:#000;">
+              <iframe src="https://player.vimeo.com/video/1231822833" title="Video bienvenida, de UANDINA VIRTUAL" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute; inset:0; width:100%; height:100%;"></iframe>
+            </div>
+          </div>
+          <figcaption class="ova-figura__leyenda">
+            <b>Video 1.</b> Video bienvenida. UANDINA VIRTUAL (Vimeo).
+          </figcaption>
+        </figure>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t4-6"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t4-6"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Video embebido</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word">Antes de redactar la discusión, vea cómo un editor explica qué espera encontrar en ella.
+<span class="rojo">Vincular video https://player.vimeo.com/video/1231822833</span>
+<b>Leyenda:</b> Video 1. Video bienvenida. UANDINA VIRTUAL (Vimeo).
+<span class="gris">La frase que lo presenta va suelta, como contenido; debajo, la línea en rojo con el enlace de Vimeo o YouTube. Si el video es propio, el archivo MP4 va en la carpeta de insumos y la línea dice su nombre. La leyenda numerada es opcional.</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </section>
+
+      <section class="ua-seccion" id="podcast" data-reveal>
+
+        <h2 class="ua-seccion__titulo">Pódcast · con foto</h2>
+        <section class="ua-podcast">
+          <div class="ua-podcast__cabecera">
+            <div class="ua-podcast__portada"><img src="assets/img/curso/foto-podcast.webp" alt=""></div>
+            <div><span class="ua-podcast__eyebrow">Pódcast</span><h3 class="ua-podcast__titulo">Qué lee primero un revisor</h3><p class="ua-podcast__conductor">Con Nombre Apellido · 8 min 20 s</p></div>
+          </div>
+          <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Haga clic en el botón de reproducir para escuchar el audio.</p>
+          <audio data-ua-plyr preload="metadata"><source src="assets/audio/podcast-ejemplo.mp3" type="audio/mpeg"></audio>
+          <details class="ua-podcast__transcripcion"><summary>Leer transcripción del pódcast</summary><div class="ua-podcast__texto">
+            <p><strong>Conductora:</strong> Cuando un manuscrito llega a sus manos, ¿por dónde empieza? Muchos autores creen que el revisor lee de principio a fin, y no es así.</p>
+            <p><strong>Invitado:</strong> Empiezo por el resumen y voy directo a las figuras. Si el resumen me dice qué se hizo, cómo y qué se encontró, y las figuras sostienen eso sin que yo tenga que leer el texto, ya sé que el artículo está bien pensado. Después leo la introducción buscando la pregunta y salto a la discusión para ver si la responde.</p>
+            <p><strong>Conductora:</strong> Es decir, el método y los resultados vienen después. <strong>Invitado:</strong> Vienen después, pero son donde se decide el dictamen. Ahí compruebo si lo que la discusión afirma cabe en lo que los datos muestran. La mayoría de los cambios mayores que pido nacen de esa distancia.</p>
+            <p><em>Transcripción de muestra. La transcripción real del episodio llega en el Word, bajo el rótulo «Transcripción:», con las voces en negrilla.</em></p>
+          </div></details>
+        </section>
+
+        <h2 class="ua-seccion__titulo ua-titulo--variante">Pódcast · portada por defecto</h2>
+        <section class="ua-podcast">
+          <div class="ua-podcast__cabecera">
+            <div class="ua-podcast__portada"><iconify-icon icon="mdi:microphone-outline" aria-hidden="true"></iconify-icon></div>
+            <div><span class="ua-podcast__eyebrow">Pódcast</span><h3 class="ua-podcast__titulo">Qué lee primero un revisor</h3><p class="ua-podcast__conductor">Con Nombre Apellido · 8 min 20 s</p></div>
+          </div>
+          <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Haga clic en el botón de reproducir para escuchar el audio.</p>
+          <audio data-ua-plyr preload="metadata"><source src="assets/audio/podcast-ejemplo.mp3" type="audio/mpeg"></audio>
+          <details class="ua-podcast__transcripcion"><summary>Leer transcripción del pódcast</summary><div class="ua-podcast__texto">
+            <p><strong>Conductora:</strong> Cuando un manuscrito llega a sus manos, ¿por dónde empieza? Muchos autores creen que el revisor lee de principio a fin, y no es así.</p>
+            <p><strong>Invitado:</strong> Empiezo por el resumen y voy directo a las figuras. Si el resumen me dice qué se hizo, cómo y qué se encontró, y las figuras sostienen eso sin que yo tenga que leer el texto, ya sé que el artículo está bien pensado. Después leo la introducción buscando la pregunta y salto a la discusión para ver si la responde.</p>
+            <p><strong>Conductora:</strong> Es decir, el método y los resultados vienen después. <strong>Invitado:</strong> Vienen después, pero son donde se decide el dictamen. Ahí compruebo si lo que la discusión afirma cabe en lo que los datos muestran. La mayoría de los cambios mayores que pido nacen de esa distancia.</p>
+            <p><em>Transcripción de muestra. La transcripción real del episodio llega en el Word, bajo el rótulo «Transcripción:», con las voces en negrilla.</em></p>
+          </div></details>
+        </section>
+
+        <h2 class="ua-seccion__titulo ua-titulo--variante">Pódcast · con control de volumen</h2>
+        <section class="ua-podcast">
+          <div class="ua-podcast__cabecera">
+            <div class="ua-podcast__portada"><img src="assets/img/curso/foto-podcast.webp" alt=""></div>
+            <div><span class="ua-podcast__eyebrow">Pódcast</span><h3 class="ua-podcast__titulo">Qué lee primero un revisor</h3><p class="ua-podcast__conductor">Con Nombre Apellido · 8 min 20 s</p></div>
+          </div>
+          <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Haga clic en el botón de reproducir para escuchar el audio.</p>
+          <audio data-ua-plyr="volumen" preload="metadata"><source src="assets/audio/podcast-ejemplo.mp3" type="audio/mpeg"></audio>
+          <details class="ua-podcast__transcripcion"><summary>Leer transcripción del pódcast</summary><div class="ua-podcast__texto">
+            <p><strong>Conductora:</strong> Cuando un manuscrito llega a sus manos, ¿por dónde empieza? Muchos autores creen que el revisor lee de principio a fin, y no es así.</p>
+            <p><strong>Invitado:</strong> Empiezo por el resumen y voy directo a las figuras. Si el resumen me dice qué se hizo, cómo y qué se encontró, y las figuras sostienen eso sin que yo tenga que leer el texto, ya sé que el artículo está bien pensado. Después leo la introducción buscando la pregunta y salto a la discusión para ver si la responde.</p>
+            <p><strong>Conductora:</strong> Es decir, el método y los resultados vienen después. <strong>Invitado:</strong> Vienen después, pero son donde se decide el dictamen. Ahí compruebo si lo que la discusión afirma cabe en lo que los datos muestran. La mayoría de los cambios mayores que pido nacen de esa distancia.</p>
+            <p><em>Transcripción de muestra. La transcripción real del episodio llega en el Word, bajo el rótulo «Transcripción:», con las voces en negrilla.</em></p>
+          </div></details>
+        </section>
+
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t4-7"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t4-7"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Pódcast</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Vincular audio que-lee-primero-un-revisor.mp3</span>
+<b>Título:</b> Qué lee primero un revisor
+<b>Conductor:</b> Nombre Apellido · 8 min 20 s
+<b>Foto:</b> Vincular Imagen-08 (opcional; sin foto, el curso pone la portada por defecto)
+<b>Volumen:</b> sí (opcional; por defecto el reproductor no lo muestra)
+<b>Transcripción:</b>
+<b>Conductora:</b> Cuando un manuscrito llega a sus manos, ¿por dónde empieza?…
+<b>Invitado:</b> Empiezo por el resumen y voy directo a las figuras…
+<span class="gris">La línea en rojo con el nombre del archivo MP3, que va en la carpeta de insumos; el título y el conductor que se leen en la cabecera; la foto y el volumen solo si se quieren; y la transcripción completa, con cada voz en negrilla al inicio de su intervención. Un solo pódcast suena a la vez, se puede adelantar y retroceder 15 segundos y cambiar la velocidad. El pódcast de la unidad va en la conclusión y se lista como capa editorial si el Word no lo pide.</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </section>
 
 <!-- ova:extras -->
 <style>
-  /* Tabla en formato APA: el DI las entrega con número, título, nota y fuente, y así
-     deben leerse en pantalla. */
-  .ua-tabla-apa{ margin:44px 0 0; }
-  .ua-tabla-apa figcaption{ margin-bottom:12px; }
-  .ua-tabla-apa__num{
-    display:block; font-weight:700; color:var(--text-head);
-    font-size:.95rem; margin-bottom:2px;
+  /* Puntos de interés sobre una figura (copiado de demo-unidad-3/tema1.html): la figura se centra y
+     en móvil conserva 720 px de ancho deslizándose dentro de su caja; los puntos se mueven con ella
+     y la caja deja 24 px más abajo para el globo que se abre hacia abajo. */
+  .ua-hotspots-figura{ margin-inline:auto; }
+  @media (max-width: 720px){
+    .ua-hotspots-figura{ overflow-x:auto; padding-bottom:40px; }
+    .ua-hotspots-figura .ova-hotspots__img{ min-width:720px; }
   }
-  .ua-tabla-apa__titulo{ display:block; font-style:italic; line-height:1.5; }
-  .ua-tabla-apa__nota,
-  .ua-tabla-apa__fuente{
-    margin:10px 0 0; font-size:.85rem; font-style:italic; color:var(--text-mut); line-height:1.55;
-  }
-  .ua-tabla-apa__fuente{ margin-top:4px; }
-  /* Móvil (INSTITUCION §4, principio 14): las tablas de cuatro columnas no se encogen ni empujan la
-     página; se deslizan dentro de su contenedor. */
-  .ua-tabla-apa .ova-tabla{ overflow-x:auto; }
-  .ua-tabla-apa .ova-tabla table{ min-width:620px; }
-  /* «Pasos con detalle»: el motor rotula el detalle «Paso 01 · <tag>», y el tag repetía el
-     título. Queda solo «Paso 01», que es el rótulo del Word. */
-  .ova-timeline-h .ova-step-detail__tag span:nth-child(n+2){ display:none; }
+  /* Infografía con ventanas: el punto es un botón (data-ova-modal-open) con el mismo dibujo que el
+     punto del motor; se le quita el borde y el relleno del botón nativo. El pulso no debe
+     interceptar el clic. */
+  .ua-hotspots-ventanas button.ova-hotspot__dot{ border:0; padding:0; font:inherit; font-family:var(--font-mono); font-weight:700; }
+  .ua-hotspots-ventanas button.ova-hotspot__dot:focus-visible{ outline:3px solid var(--c-info); outline-offset:3px; }
+  .ua-hotspots-ventanas .ova-hotspot__pulse{ pointer-events:none; }
+  /* El video dentro de la figura plana ocupa el ancho completo; la leyenda queda alineada a la izquierda. */
+  .ova-figura--plana .ova-video{ text-align:left; }
+  .ova-figura--plana, .ova-video, .ova-hotspots, .ova-beforeafter{ margin-top: 8px; }
 </style>

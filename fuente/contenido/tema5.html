@@ -1,319 +1,555 @@
       <header class="ova-screen__head" data-reveal>
-        <div class="ova-screen__eyebrow">Tema 5</div>
-        <h1 class="ova-screen__title">Actividades <span class="ua-suave">para</span> <span class="ua-remate">practicar</span></h1>
-        <p class="ova-screen__lead">
-          Seis formas de poner a prueba lo aprendido dentro del tema, sin nota y con
-          retroalimentación inmediata, y una pregunta que no necesita pantalla interactiva.
-        </p>
+        <div class="ova-screen__eyebrow">Tema {{NUM}}</div>
+        <h1 class="ova-screen__title"><span class="ua-remate">Tarjetas</span></h1>
+        <p class="ova-screen__lead">Tarjetas para repartir el contenido en piezas del mismo peso.</p>
       </header>
 
-      <p data-reveal>
-        Leer sobre la estructura de un artículo no es lo mismo que decidir, con un borrador
-        enfrente, en qué sección va cada cosa. Las actividades de este tema ponen al estudiante
-        en esa situación: responde, relaciona, ordena o clasifica y recibe en el acto una
-        <strong>retroalimentación que explica por qué</strong>, acierte o no. Ninguna genera
-        calificación; su valor está en que el error se corrige en el momento en que ocurre y no
-        semanas después, en la evaluación de la unidad.
-      </p>
+      <p data-reveal>A continuación se listan los componentes de este tema:</p>
+      <ul data-reveal>
+        <li>Tarjetas con icono - izquierda, Tarjetas con icono - centrado, Tarjetas conectadas, Tarjetas con foto, Tarjetas con foto y descripción, Tarjetas que giran, Tarjeta con botón</li>
+      </ul>
 
-      <!-- ════ 5.1 · Pregunta de selección ════ -->
-      <section class="ua-seccion" id="pregunta" data-reveal>
-        <h2 class="ua-seccion__titulo">Pregunta <span class="ua-suave">de</span> <span class="ua-remate">selección</span></h2>
-        <p class="ua-seccion__lead">Un enunciado, de dos a cuatro opciones y una retroalimentación distinta para el acierto y para el error.</p>
+      <!-- ════ Tarjetas ════ -->
+
+      <!-- Ficha 1 · Tarjetas con icono - izquierda -->
+      <section class="ua-seccion" id="tarjetas-con-icono-izquierda" data-reveal>
+        <h2 class="ua-seccion__titulo">Tarjetas con icono - izquierda</h2>
+        <div class="ua-tarjetas">
+          <div class="ua-tarjeta">
+            <div class="ua-tarjeta__cuerpo">
+              <div class="ua-tarjeta__avatar ua-tarjeta__avatar--icono"><iconify-icon icon="mdi:lightbulb-outline"></iconify-icon></div>
+              <h4>Claridad</h4>
+              <p>Cada oración tiene un sujeto reconocible y un verbo que actúa. Si el lector debe releer para saber quién hace qué, la oración se reescribe.</p>
+            </div>
+          </div>
+          <div class="ua-tarjeta">
+            <div class="ua-tarjeta__cuerpo">
+              <div class="ua-tarjeta__avatar ua-tarjeta__avatar--icono"><iconify-icon icon="mdi:target"></iconify-icon></div>
+              <h4>Precisión</h4>
+              <p>Se nombra lo que se midió y cómo: «una muestra de 42 docentes», no «varios docentes». Los términos técnicos se usan siempre con el mismo sentido.</p>
+            </div>
+          </div>
+          <div class="ua-tarjeta">
+            <div class="ua-tarjeta__cuerpo">
+              <div class="ua-tarjeta__avatar ua-tarjeta__avatar--icono"><iconify-icon icon="mdi:content-cut"></iconify-icon></div>
+              <h4>Concisión</h4>
+              <p>Se elimina lo que no aporta información: muletillas, adjetivos de relleno y la repetición de lo que la tabla ya muestra.</p>
+            </div>
+          </div>
+        </div>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-izquierda"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t5-izquierda"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Tarjetas con icono - izquierda</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Tarjetas con icono - izquierda</span>
+<b>Título:</b> Tres cualidades de la prosa académica
+<b>Tarjeta 1</b>
+<b>Claridad</b>
+Cada oración tiene un sujeto reconocible y un verbo que actúa…
+<b>Tarjeta 2</b>
+<b>Precisión</b>
+Se nombra lo que se midió y cómo…
+<span class="gris">El nombre del componente en rojo; debajo el título del bloque si lo tiene; cada tarjeta en tres líneas: «Tarjeta N», el nombre en negrilla y su texto (hasta 40 palabras). El icono lo propone el equipo de producción; si el instruccional quiere uno en particular, lo anota entre corchetes: [icono: bombillo].</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
       </section>
 
-      <!-- Ficha 1 · pregunta con contexto -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Pregunta</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarla.</strong> Una pausa activa después de un bloque denso, cuando hay una sola respuesta correcta y vale la pena explicar por qué las otras no lo son. El contexto es opcional: se usa cuando la pregunta necesita una situación concreta.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <h3 class="ua-rotulo"><strong>Dónde va la limitación del estudio</strong></h3>
-        <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Seleccione la opción correcta.</p>
-        <div class="ova-quiz">
-          <p class="ua-eval__contexto">Un investigador encuestó a 42 docentes de una sola universidad y sabe que ese número no le permite generalizar los resultados a otras instituciones. Quiere decirlo con claridad en el artículo.</p>
-          <h3 class="ova-quiz__question">¿En qué sección del artículo debe presentar esa limitación?</h3>
-          <div class="ova-quiz__opts">
-            <button class="ova-quiz__opt" data-correct="false"><strong>A.</strong> En la introducción, para que el lector la conozca desde el principio.</button>
-            <button class="ova-quiz__opt" data-correct="false"><strong>B.</strong> En el método, junto con la descripción de la muestra.</button>
-            <button class="ova-quiz__opt" data-correct="true"><strong>C.</strong> En la discusión, después de interpretar los resultados.</button>
-            <button class="ova-quiz__opt" data-correct="false"><strong>D.</strong> En el resumen, para no ocupar espacio en el cuerpo del texto.</button>
+      <!-- Ejemplo de uso de tarjetas con icono - izquierda: una cifra en el lugar del icono -->
+      <section class="ua-seccion ua-seccion--variante" id="ejemplo-tarjetas-con-icono-izquierda" data-reveal>
+        <h2 class="ua-seccion__titulo">Ejemplo de uso de tarjetas con icono - izquierda</h2>
+        <div class="ua-tarjetas">
+          <div class="ua-tarjeta">
+            <div class="ua-tarjeta__cuerpo">
+              <div class="ua-tarjeta__cifra">60<span>%</span></div>
+              <h4>Costo de ventas típico</h4>
+              <p>En manufactura discreta, el rango 55-65% es la banda usual.</p>
+            </div>
           </div>
-          <div class="ova-quiz__feedback"
-               data-correct="Las limitaciones se presentan en la discusión: ahí el autor ya interpretó los hallazgos y puede decir hasta dónde llegan y qué no permiten afirmar. Los estándares de reporte de APA 7 (JARS) las ubican en esa sección, junto con las implicaciones y las líneas de investigación futura. El método describe la muestra tal como fue; juzgar su alcance es tarea de la discusión."
-               data-wrong="El método solo describe cómo se hizo el estudio y a quiénes se encuestó; no valora si eso alcanza o no. La introducción plantea el problema y el resumen condensa el artículo entero. El lugar de las limitaciones es la discusión, después de interpretar los resultados: ahí el autor dice hasta dónde llegan sus hallazgos y qué no permiten afirmar (APA 7, estándares JARS)."></div>
+          <div class="ua-tarjeta">
+            <div class="ua-tarjeta__cuerpo">
+              <div class="ua-tarjeta__cifra">1<span>pp</span></div>
+              <h4>Cada punto porcentual</h4>
+              <p>Que baje el costo de ventas mueve un punto entero al margen operativo.</p>
+            </div>
+          </div>
+          <div class="ua-tarjeta">
+            <div class="ua-tarjeta__cuerpo">
+              <div class="ua-tarjeta__cifra">×3</div>
+              <h4>Comparabilidad</h4>
+              <p>Un formato vertical permite comparar empresas de tamaños muy distintos.</p>
+            </div>
+          </div>
         </div>
         <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-1"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-izquierda-cifras"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
         </div>
-        <div class="ova-modal" id="cat-t5-1"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Pregunta de selección</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+        <div class="ova-modal" id="cat-t5-izquierda-cifras"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Tarjetas con icono - izquierda</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
           <div class="ova-modal__body">
             <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
-            <div class="ua-cat-word"><span class="rojo">Pregunta</span>
-<b>Título:</b> Dónde va la limitación del estudio
-<b>Contexto:</b> Un investigador encuestó a 42 docentes de una sola universidad […]
-<b>Enunciado:</b> ¿En qué sección del artículo debe presentar esa limitación?
-<b>A.</b> En la introducción, para que el lector la conozca desde el principio.
-<b>B.</b> En el método, junto con la descripción de la muestra.
-<b>C.</b> En la discusión, después de interpretar los resultados. <b>(correcta)</b>
-<b>D.</b> En el resumen, para no ocupar espacio en el cuerpo del texto.
-<b>Acierto:</b> Las limitaciones se presentan en la discusión: ahí el autor ya interpretó […]
-<b>Error:</b> El método solo describe cómo se hizo el estudio […]
-<span class="gris">El nombre del componente en rojo. Contexto opcional, de hasta 60 palabras; enunciado de hasta 35; de 2 a 4 opciones de hasta 25 palabras, con la correcta marcada entre paréntesis; dos retroalimentaciones, «Acierto» y «Error», de hasta 80 palabras cada una. La letra de cada opción la pone el componente.</span></div>
+            <div class="ua-cat-word"><span class="rojo">Tarjetas con icono - izquierda</span>
+<b>Tarjeta 1</b>
+<b>Cifra:</b> 60 %
+<b>Costo de ventas típico</b>
+En manufactura discreta, el rango 55-65% es la banda usual.
+<b>Tarjeta 2</b>
+<b>Cifra:</b> 1 pp
+<b>Cada punto porcentual</b>
+Que baje el costo de ventas mueve un punto entero al margen operativo.
+<b>Tarjeta 3</b>
+<b>Cifra:</b> ×3
+<b>Comparabilidad</b>
+Un formato vertical permite comparar empresas de tamaños muy distintos.
+<span class="gris">Es el mismo componente con una cifra en lugar del icono. La línea «Cifra:» lleva el número y, si la tiene, su unidad (%, pp, años), que sale más pequeña junto al número.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
-      </div>
-
-      <!-- Ficha 2 · verdadero o falso, sin contexto -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Pregunta · Verdadero o falso</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarla.</strong> Para desmontar una creencia frecuente con una sola afirmación. Es la misma pieza que la anterior, con dos opciones y sin contexto; la retroalimentación es la que hace el trabajo.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <h3 class="ua-rotulo"><strong>Reutilizar lo propio</strong></h3>
-        <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Seleccione si la afirmación es verdadera o falsa.</p>
-        <div class="ova-quiz">
-          <h3 class="ova-quiz__question">Copiar varios párrafos de un artículo propio ya publicado en un artículo nuevo, sin citarlo, no es un problema ético porque el autor es el mismo.</h3>
-          <div class="ova-quiz__opts">
-            <button class="ova-quiz__opt" data-correct="false"><strong>A.</strong> Verdadero</button>
-            <button class="ova-quiz__opt" data-correct="true"><strong>B.</strong> Falso</button>
-          </div>
-          <div class="ova-quiz__feedback"
-               data-correct="Es falso. Presentar como nuevo un texto que ya se publicó es autoplagio, aunque el autor sea el mismo: el lector y la revista asumen que reciben trabajo original. APA 7 (sección 1.17) admite reutilizar pasajes breves, por ejemplo la descripción de un instrumento, siempre que se cite la publicación anterior y se respeten los derechos de la editorial que la publicó."
-               data-wrong="La afirmación es falsa. Que el autor sea el mismo no cambia lo que el lector y la revista asumen: que el artículo es trabajo original. Publicar de nuevo texto ya publicado sin decirlo es autoplagio. APA 7 (sección 1.17) permite reutilizar pasajes breves, como la descripción de un instrumento, pero siempre citando la publicación anterior y con permiso de la editorial si hace falta."></div>
-        </div>
-        <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-2"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
-        </div>
-        <div class="ova-modal" id="cat-t5-2"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Pregunta · Verdadero o falso</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
-          <div class="ova-modal__body">
-            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
-            <div class="ua-cat-word"><span class="rojo">Pregunta</span>
-<b>Título:</b> Reutilizar lo propio
-<b>Enunciado:</b> Copiar varios párrafos de un artículo propio ya publicado en un artículo nuevo, sin citarlo, no es un problema ético porque el autor es el mismo.
-<b>A.</b> Verdadero
-<b>B.</b> Falso <b>(correcta)</b>
-<b>Acierto:</b> Es falso. Presentar como nuevo un texto que ya se publicó es autoplagio […]
-<b>Error:</b> La afirmación es falsa. Que el autor sea el mismo no cambia […]
-<span class="gris">Mismo formato que la pregunta de selección, sin la línea de contexto y con dos opciones. El enunciado es la afirmación que se juzga, no una pregunta. Las dos retroalimentaciones siguen siendo obligatorias y distintas: la de error le dice a quien marcó «Verdadero» por qué no.</span></div>
-          </div>
-          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
-        </div></div>
-      </div>
-
-      <!-- ════ 5.2 · Relacionar términos ════ -->
-      <section class="ua-seccion" id="relacionar" data-reveal>
-        <h2 class="ua-seccion__titulo">Relacionar <span class="ua-remate">términos</span></h2>
-        <p class="ua-seccion__lead">Dos columnas: se toca un término y después el ejemplo o la definición que le corresponde.</p>
       </section>
 
-      <!-- Ficha 3 · relacionar -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Relacionar</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> De 3 a 6 pares entre un concepto y su definición, su ejemplo o su caso. Sirve para fijar vocabulario que el estudiante confunde con facilidad, como los tipos de cita.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <h3 class="ua-rotulo"><strong>Cuatro formas de citar en APA 7</strong></h3>
-        <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Haga clic en un tipo de cita y después en el ejemplo que le corresponde.</p>
-        <div class="ova-empar">
-          <div class="ova-empar__col">
-            <button class="ova-empar__item" data-ova-match="A">Cita textual corta</button>
-            <button class="ova-empar__item" data-ova-match="B">Cita textual larga</button>
-            <button class="ova-empar__item" data-ova-match="C">Paráfrasis</button>
-            <button class="ova-empar__item" data-ova-match="D">Cita de cita</button>
+      <!-- Ficha 2 · Tarjetas con icono - centrado (con cuatro tarjetas van dos por fila) -->
+      <section class="ua-seccion ua-seccion--variante" id="tarjetas-con-icono-centrado" data-reveal>
+        <h2 class="ua-seccion__titulo">Tarjetas con icono - centrado</h2>
+        <div class="ua-tarjetas">
+          <div class="ua-tarjeta ua-tarjeta--avatar">
+            <div class="ua-tarjeta__avatar ua-tarjeta__avatar--azul"><iconify-icon icon="mdi:account-edit-outline"></iconify-icon></div>
+            <div class="ua-tarjeta__cuerpo">
+              <h4>Autor</h4>
+              <p>Diseña el estudio, redacta el manuscrito y responde por cada dato y cada cita. Declara los conflictos de interés y la contribución de cada coautor.</p>
+            </div>
           </div>
-          <div class="ova-empar__col">
-            <button class="ova-empar__item" data-ova-match="C">Cassany (2007) sostiene que escribir obliga a ordenar el pensamiento antes de comunicarlo.</button>
-            <button class="ova-empar__item" data-ova-match="A">«Escribir es una forma de pensar» (Cassany, 2007, p. 23).</button>
-            <button class="ova-empar__item" data-ova-match="D">(Swales, 1990, como se citó en Cassany, 2007)</button>
-            <button class="ova-empar__item" data-ova-match="B">Un pasaje de 40 palabras o más, en bloque aparte con sangría de 1,27 cm, sin comillas y con la cita al final, después del punto.</button>
+          <div class="ua-tarjeta ua-tarjeta--avatar">
+            <div class="ua-tarjeta__avatar"><iconify-icon icon="mdi:account-tie-outline"></iconify-icon></div>
+            <div class="ua-tarjeta__cuerpo">
+              <h4>Editor</h4>
+              <p>Decide si el manuscrito entra al proceso, elige a los revisores y toma la decisión final: aceptar, pedir cambios o rechazar.</p>
+            </div>
+          </div>
+          <div class="ua-tarjeta ua-tarjeta--avatar">
+            <div class="ua-tarjeta__avatar"><iconify-icon icon="mdi:account-search-outline"></iconify-icon></div>
+            <div class="ua-tarjeta__cuerpo">
+              <h4>Revisor par</h4>
+              <p>Evalúa el rigor del método, la solidez de los resultados y la pertinencia de las conclusiones. No corrige el estilo: señala lo que no se sostiene.</p>
+            </div>
+          </div>
+          <div class="ua-tarjeta ua-tarjeta--avatar">
+            <div class="ua-tarjeta__avatar"><iconify-icon icon="mdi:account-outline"></iconify-icon></div>
+            <div class="ua-tarjeta__cuerpo">
+              <h4>Lector</h4>
+              <p>Llega por el título y el resumen, y decide en un minuto si sigue. Escribir para él es escribir para alguien que tiene poco tiempo y muchas opciones.</p>
+            </div>
           </div>
         </div>
         <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-3"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-centrado"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
         </div>
-        <div class="ova-modal" id="cat-t5-3"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Relacionar términos</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+        <div class="ova-modal" id="cat-t5-centrado"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Tarjetas con icono - centrado</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
           <div class="ova-modal__body">
             <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
-            <div class="ua-cat-word"><span class="rojo">Relacionar</span>
-<b>Título:</b> Cuatro formas de citar en APA 7
-Cita textual corta — «Escribir es una forma de pensar» (Cassany, 2007, p. 23).
-Cita textual larga — Un pasaje de 40 palabras o más, en bloque aparte con sangría de 1,27 cm, sin comillas y con la cita al final, después del punto.
-Paráfrasis — Cassany (2007) sostiene que escribir obliga a ordenar el pensamiento antes de comunicarlo.
-Cita de cita — (Swales, 1990, como se citó en Cassany, 2007)
-<span class="gris">Cada par en una línea: el término, una raya y su ejemplo o definición. Términos de hasta 5 palabras; ejemplos de hasta 30. El Word los trae en orden; el desorden de la segunda columna lo pone el componente al maquetar.</span></div>
+            <div class="ua-cat-word"><span class="rojo">Tarjetas con icono - centrado</span>
+<b>Título:</b> Quiénes intervienen en la publicación de un artículo
+<b>Tarjeta 1</b>
+<b>Autor</b> [destacada]
+Diseña el estudio, redacta el manuscrito…
+<b>Tarjeta 2</b>
+<b>Editor</b>
+Decide si el manuscrito entra al proceso…
+<span class="gris">Igual que las tarjetas con icono - izquierda, con el icono, el nombre y el texto centrados. Para destacar una tarjeta (icono sobre azul), anota [destacada] después de su nombre. Con cuatro tarjetas van dos por fila.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
-      </div>
-
-      <!-- ════ 5.3 · Ordenar y clasificar ════ -->
-      <section class="ua-seccion" id="ordenar-y-clasificar" data-reveal>
-        <h2 class="ua-seccion__titulo">Ordenar <span class="ua-suave">y</span> <span class="ua-remate">clasificar</span></h2>
-        <p class="ua-seccion__lead">Dos actividades de arrastre: poner los pasos de un proceso en su orden, o llevar cada elemento a la categoría que le corresponde.</p>
       </section>
 
-      <!-- Ficha 4 · ordenar -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Ordenar</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> Un procedimiento con un solo orden válido, de 4 a 6 pasos. El estudiante arrastra, verifica y ve en verde o en rojo cada posición; puede corregir y volver a verificar.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <h3 class="ua-rotulo"><strong>El camino de un manuscrito hasta su publicación</strong></h3>
-        <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Arrastre los pasos hasta dejarlos en orden y después haga clic en «Verificar orden».</p>
-        <ul class="ova-orden">
-          <li class="ova-orden__item" data-ova-order="3"><span class="ova-orden__num">1</span> La revista envía el manuscrito a evaluadores anónimos (revisión por pares).</li>
-          <li class="ova-orden__item" data-ova-order="1"><span class="ova-orden__num">2</span> El autor elige la revista y lee sus normas para autores.</li>
-          <li class="ova-orden__item" data-ova-order="5"><span class="ova-orden__num">3</span> El editor acepta el artículo, el autor corrige las pruebas de imprenta y la revista lo publica.</li>
-          <li class="ova-orden__item" data-ova-order="2"><span class="ova-orden__num">4</span> El autor ajusta el manuscrito a esas normas y lo envía por la plataforma de la revista.</li>
-          <li class="ova-orden__item" data-ova-order="4"><span class="ova-orden__num">5</span> El autor responde punto por punto a los evaluadores y entrega la versión corregida.</li>
-        </ul>
-        <button class="ova-btn ova-btn--primary" data-ova-orden-check style="margin-top:14px;"><iconify-icon icon="mdi:check-bold"></iconify-icon> Verificar orden</button>
-        <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-4"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
-        </div>
-        <div class="ova-modal" id="cat-t5-4"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Ordenar</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
-          <div class="ova-modal__body">
-            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
-            <div class="ua-cat-word"><span class="rojo">Ordenar</span>
-<b>Título:</b> El camino de un manuscrito hasta su publicación
-1. El autor elige la revista y lee sus normas para autores.
-2. El autor ajusta el manuscrito a esas normas y lo envía por la plataforma de la revista.
-3. La revista envía el manuscrito a evaluadores anónimos (revisión por pares).
-4. El autor responde punto por punto a los evaluadores y entrega la versión corregida.
-5. El editor acepta el artículo, el autor corrige las pruebas de imprenta y la revista lo publica.
-<span class="gris">Los pasos se escriben en su orden correcto, numerados, de hasta 20 palabras cada uno. El desorden con que aparecen en pantalla lo pone el componente. No hace falta escribir retroalimentación: el color de cada posición ya dice cuál está bien y cuál no.</span></div>
+      <!-- Ejemplo de uso de tarjetas con icono: la foto de la persona en el lugar del icono -->
+      <section class="ua-seccion ua-seccion--variante" id="ejemplo-tarjetas-con-icono" data-reveal>
+        <h2 class="ua-seccion__titulo">Ejemplo de uso de tarjetas con icono</h2>
+        <h3 class="ua-rotulo"><strong>Dos voces de la literatura en español</strong></h3>
+        <div class="ua-tarjetas">
+          <div class="ua-tarjeta ua-tarjeta--avatar">
+            <div class="ua-tarjeta__avatar ua-tarjeta__avatar--foto"><img src="assets/img/curso/avatar-borges.webp" alt="Retrato de Jorge Luis Borges en 1951." /></div>
+            <div class="ua-tarjeta__cuerpo">
+              <h4>Jorge Luis Borges</h4>
+              <span class="ua-tarjeta__rol">Escritor argentino · 1899-1986</span>
+              <p>Cuentista, poeta y ensayista. En Ficciones y El Aleph convirtió laberintos, espejos y bibliotecas infinitas en preguntas sobre el tiempo y la identidad.</p>
+            </div>
           </div>
-          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
-        </div></div>
-      </div>
-
-      <!-- Ficha 5 · clasificar -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Clasificar</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> De 6 a 9 elementos que se reparten en 2 o 3 categorías sin zona gris. Cada elemento se colorea al soltarlo, así que el estudiante aprende caso por caso. El arrastre se prueba en un teléfono real, no solo con el ratón.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <h3 class="ua-rotulo"><strong>¿Resultados o discusión?</strong></h3>
-        <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Arrastre cada elemento a la sección del artículo donde va.</p>
-        <div class="ova-dnd">
-          <div class="ova-dnd__bank">
-            <div class="ova-dnd__bank-title">Banco</div>
-            <div class="ova-dnd__item" data-ova-correct="resultados">La tabla con las medias y las desviaciones de cada grupo</div>
-            <div class="ova-dnd__item" data-ova-correct="discusion">Por qué los hallazgos contradicen un estudio anterior</div>
-            <div class="ova-dnd__item" data-ova-correct="resultados">El valor p de la prueba estadística aplicada</div>
-            <div class="ova-dnd__item" data-ova-correct="discusion">Las limitaciones del tamaño de la muestra</div>
-            <div class="ova-dnd__item" data-ova-correct="resultados">Cuántos participantes completaron el estudio</div>
-            <div class="ova-dnd__item" data-ova-correct="discusion">Las implicaciones para la práctica profesional</div>
-          </div>
-          <div class="ova-dnd__zones">
-            <div class="ova-dnd__zone" data-ova-target="resultados"><h4><iconify-icon icon="mdi:chart-box-outline" style="color:var(--c-acento);"></iconify-icon> Va en Resultados</h4><div class="ova-dnd__items"></div></div>
-            <div class="ova-dnd__zone" data-ova-target="discusion"><h4><iconify-icon icon="mdi:comment-text-multiple-outline" style="color:var(--c-info);"></iconify-icon> Va en Discusión</h4><div class="ova-dnd__items"></div></div>
+          <div class="ua-tarjeta ua-tarjeta--avatar">
+            <div class="ua-tarjeta__avatar ua-tarjeta__avatar--foto"><img src="assets/img/curso/avatar-allende.webp" alt="Retrato de Isabel Allende en 2008." /></div>
+            <div class="ua-tarjeta__cuerpo">
+              <h4>Isabel Allende</h4>
+              <span class="ua-tarjeta__rol">Escritora chilena · 1942</span>
+              <p>Novelista y periodista. Desde La casa de los espíritus, su primera novela, une la saga de una familia con la memoria política de Chile.</p>
+            </div>
           </div>
         </div>
         <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-5"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-avatar"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
         </div>
-        <div class="ova-modal" id="cat-t5-5"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Clasificar</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+        <div class="ova-modal" id="cat-t5-avatar"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Tarjetas con icono - centrado</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
           <div class="ova-modal__body">
             <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
-            <div class="ua-cat-word"><span class="rojo">Clasificar</span>
-<b>Título:</b> ¿Resultados o discusión?
-<b>Va en Resultados:</b> La tabla con las medias y las desviaciones de cada grupo · El valor p de la prueba estadística aplicada · Cuántos participantes completaron el estudio
-<b>Va en Discusión:</b> Por qué los hallazgos contradicen un estudio anterior · Las limitaciones del tamaño de la muestra · Las implicaciones para la práctica profesional
-<span class="gris">Cada categoría en negrilla, con el nombre que verá el estudiante en la zona, y a continuación sus elementos separados por un punto medio. Elementos de hasta 12 palabras. El banco mezclado lo arma el componente.</span></div>
+            <div class="ua-cat-word"><span class="rojo">Tarjetas con icono - centrado</span>
+<b>Título:</b> Dos voces de la literatura en español
+<b>Tarjeta 1</b>
+<b>Jorge Luis Borges</b>
+<b>Rol:</b> Escritor argentino · 1899-1986
+<span class="rojo">Vincular Imagen-1</span>
+Cuentista, poeta y ensayista. En Ficciones y El Aleph…
+<b>Tarjeta 2</b>
+<b>Isabel Allende</b>
+<b>Rol:</b> Escritora chilena · 1942
+<span class="rojo">Vincular Imagen-2</span>
+Novelista y periodista. Desde La casa de los espíritus…
+<span class="gris">Es el mismo componente, Tarjetas con icono - centrado, con una foto vinculada en lugar del icono. Cada tarjeta lleva el nombre en negrilla, la línea «Rol:» si la tiene, la foto y un texto de extensión parecida en todas, para que las tarjetas queden del mismo alto. La foto se recorta en círculo centrada en la cara; conviene un retrato de frente, con la cabeza completa.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
-      </div>
-
-      <!-- ════ 5.4 · Lista de verificación ════ -->
-      <section class="ua-seccion" id="lista-de-verificacion" data-reveal>
-        <h2 class="ua-seccion__titulo">Lista <span class="ua-suave">de</span> <span class="ua-remate">verificación</span></h2>
-        <p class="ua-seccion__lead">Puntos que el estudiante marca como hechos. Autoevaluación, sin nota: el contador solo le dice cuánto lleva.</p>
       </section>
 
-      <!-- Ficha 6 · lista de verificación -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Lista de verificación</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarla.</strong> Un protocolo que el estudiante se llevará a su práctica y repetirá cada vez: la revisión final de un manuscrito es el caso típico. De 4 a 10 puntos, cada uno verificable con un sí o un no.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <h3 class="ua-rotulo"><strong>Antes de enviar el artículo</strong></h3>
-        <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Marque cada punto que ya haya revisado en su manuscrito.</p>
-        <div class="ova-checklist">
-          <div class="ova-checklist__head"><h3 style="margin:0; font-size:1.1rem;">Revisión final del manuscrito</h3><div class="ova-checklist__count"><strong>0</strong> / 6</div></div>
-          <ul class="ova-checklist__list">
-            <li class="ova-checklist__item"><span class="ova-checklist__box"><iconify-icon icon="mdi:check"></iconify-icon></span><span class="ova-checklist__text">El título describe el estudio en 12 palabras o menos y el resumen no supera las 250.</span></li>
-            <li class="ova-checklist__item"><span class="ova-checklist__box"><iconify-icon icon="mdi:check"></iconify-icon></span><span class="ova-checklist__text">Toda afirmación tomada de otro autor tiene su cita en el texto, con autor y año.</span></li>
-            <li class="ova-checklist__item"><span class="ova-checklist__box"><iconify-icon icon="mdi:check"></iconify-icon></span><span class="ova-checklist__text">Cada cita del texto aparece en la lista de referencias, y cada referencia se cita en el texto.</span></li>
-            <li class="ova-checklist__item"><span class="ova-checklist__box"><iconify-icon icon="mdi:check"></iconify-icon></span><span class="ova-checklist__text">Las tablas y las figuras están numeradas, tienen título y se mencionan en el texto antes de aparecer.</span></li>
-            <li class="ova-checklist__item"><span class="ova-checklist__box"><iconify-icon icon="mdi:check"></iconify-icon></span><span class="ova-checklist__text">Los resultados solo presentan lo que se encontró; la interpretación quedó en la discusión.</span></li>
-            <li class="ova-checklist__item"><span class="ova-checklist__box"><iconify-icon icon="mdi:check"></iconify-icon></span><span class="ova-checklist__text">El manuscrito cumple las normas para autores de la revista: extensión, formato de referencias y anonimato.</span></li>
-          </ul>
-        </div>
-        <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-6"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
-        </div>
-        <div class="ova-modal" id="cat-t5-6"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Lista de verificación</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
-          <div class="ova-modal__body">
-            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
-            <div class="ua-cat-word"><span class="rojo">Lista de verificación</span>
-<b>Título:</b> Revisión final del manuscrito
-□ El título describe el estudio en 12 palabras o menos y el resumen no supera las 250.
-□ Toda afirmación tomada de otro autor tiene su cita en el texto, con autor y año.
-□ Cada cita del texto aparece en la lista de referencias, y cada referencia se cita en el texto.
-□ Las tablas y las figuras están numeradas, tienen título y se mencionan en el texto antes de aparecer.
-□ Los resultados solo presentan lo que se encontró; la interpretación quedó en la discusión.
-□ El manuscrito cumple las normas para autores de la revista: extensión, formato de referencias y anonimato.
-<span class="gris">El título del bloque y, debajo, de 4 a 10 puntos de hasta 20 palabras, uno por línea, precedidos por una casilla. Cada punto debe poder responderse con sí o no. No lleva retroalimentación: el contador es la única respuesta.</span></div>
+      <!-- Ficha 4 · Tarjetas conectadas -->
+      <section class="ua-seccion ua-seccion--variante" id="tarjetas-conectadas" data-reveal>
+        <h2 class="ua-seccion__titulo">Tarjetas conectadas</h2>
+        <p class="ua-cat-desc">Las tres tarjetas permiten presentar conceptos relacionados, cada uno con su explicación y un ejemplo práctico.</p>
+        <h3 class="ua-rotulo"><strong>Las 3R del cuidado del ambiente</strong></h3>
+        <div class="ua-tarjetas ua-tarjetas--conectadas">
+          <div class="ua-tarjeta">
+            <div class="ua-tarjeta__cuerpo">
+              <img class="ua-tarjeta__figura" src="assets/img/curso/tarjeta-3r-reduce.svg" alt="Bolsa de tela con alimentos." />
+              <h4>Reduce</h4>
+              <p>Disminuye la cantidad de residuos que generas. Antes de comprar, piensa si realmente necesitas el producto y elige opciones con menos empaques.</p>
+              <p><strong>Ejemplo:</strong> Lleva una bolsa reutilizable para evitar bolsas desechables.</p>
+            </div>
           </div>
-          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
-        </div></div>
-      </div>
-
-      <!-- Ficha 7 · pregunta abierta, sin interacción -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Para reflexionar</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> Cuando la pregunta no tiene una sola respuesta correcta y lo que importa es que el estudiante la piense con su propio caso. No es un interactivo: es un bloque de texto y, por eso, no lleva llamado a la acción ni retroalimentación.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <div class="ova-callout ova-callout--reflexion" data-reveal>
-          <div class="ova-callout__ico"><iconify-icon icon="mdi:comment-question-outline"></iconify-icon></div>
-          <div>
-            <span class="ova-callout__tag">Para reflexionar</span>
-            <p style="margin:8px 0 0;">
-              Piense en el último texto académico que escribió. Si un lector que no conoce su
-              campo leyera solo la introducción, ¿podría decir con sus palabras qué problema
-              estudió usted y por qué valía la pena estudiarlo? Si la respuesta es no, ¿qué
-              párrafo tendría que reescribir primero?
-            </p>
+          <div class="ua-tarjeta">
+            <div class="ua-tarjeta__cuerpo">
+              <img class="ua-tarjeta__figura" src="assets/img/curso/tarjeta-3r-reutiliza.svg" alt="Frasco de vidrio reutilizado como portalápices." />
+              <h4>Reutiliza</h4>
+              <p>Aprovecha los objetos varias veces antes de desecharlos. Puedes conservar su función original o darles un nuevo uso.</p>
+              <p><strong>Ejemplo:</strong> Convierte un frasco de vidrio vacío en un recipiente para guardar lápices.</p>
+            </div>
+          </div>
+          <div class="ua-tarjeta">
+            <div class="ua-tarjeta__cuerpo">
+              <img class="ua-tarjeta__figura" src="assets/img/curso/tarjeta-3r-recicla.svg" alt="Papel y cartón organizados junto al símbolo de reciclaje." />
+              <h4>Recicla</h4>
+              <p>Separa los residuos aprovechables para que puedan transformarse en nuevos materiales. Sigue las indicaciones de recolección de tu localidad.</p>
+              <p><strong>Ejemplo:</strong> Separa el papel y el cartón limpios y secos para entregarlos a la recolección de reciclaje.</p>
+            </div>
           </div>
         </div>
         <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-7"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-conectadas"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
         </div>
-        <div class="ova-modal" id="cat-t5-7"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Para reflexionar</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+        <div class="ova-modal" id="cat-t5-conectadas"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Tarjetas conectadas</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
           <div class="ova-modal__body">
             <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
-            <div class="ua-cat-word"><span class="rojo">Para reflexionar</span>
-Piense en el último texto académico que escribió. Si un lector que no conoce su campo leyera solo la introducción, ¿podría decir con sus palabras qué problema estudió usted y por qué valía la pena estudiarlo? Si la respuesta es no, ¿qué párrafo tendría que reescribir primero?
-<span class="gris">El nombre del componente en rojo y, debajo, la pregunta abierta, de hasta 80 palabras. Sin opciones, sin respuesta correcta y sin retroalimentación: el estudiante no escribe nada en pantalla. Si el docente quiere recoger la respuesta, eso se hace en el foro o en la tarea de la plataforma, no en el curso.</span></div>
+            <div class="ua-cat-word"><span class="rojo">Tarjetas conectadas</span>
+<b>Tema:</b> Las 3R del cuidado del ambiente
+Las tres tarjetas permiten presentar conceptos relacionados, cada uno con su explicación y un ejemplo práctico.
+<b>Tarjeta 1 · Reduce</b>
+Disminuye la cantidad de residuos que generas. Antes de comprar, piensa si realmente necesitas el producto y elige opciones con menos empaques.
+<b>Ejemplo:</b> Lleva una bolsa reutilizable para evitar bolsas desechables.
+<b>Imagen sugerida:</b> Bolsa de tela con alimentos.
+<b>Tarjeta 2 · Reutiliza</b>
+Aprovecha los objetos varias veces antes de desecharlos. Puedes conservar su función original o darles un nuevo uso.
+<b>Ejemplo:</b> Convierte un frasco de vidrio vacío en un recipiente para guardar lápices.
+<b>Imagen sugerida:</b> Frasco reutilizado como portalápices.
+<b>Tarjeta 3 · Recicla</b>
+Separa los residuos aprovechables para que puedan transformarse en nuevos materiales. Sigue las indicaciones de recolección de tu localidad.
+<b>Ejemplo:</b> Separa el papel y el cartón limpios y secos para entregarlos a la recolección de reciclaje.
+<b>Imagen sugerida:</b> Papel y cartón organizados junto al símbolo de reciclaje.</div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
-      </div>
+      </section>
 
-      <!-- Cierre · remite a la evaluación de la unidad -->
-      <div class="ova-callout" style="margin-top:32px;" data-reveal>
-        <div class="ova-callout__ico"><iconify-icon icon="mdi:clipboard-check-outline"></iconify-icon></div>
-        <div>
-          <span class="ova-callout__tag">Lo que sigue</span>
-          <p style="margin:8px 0 0;">
-            Estas actividades viven dentro de los temas y no generan nota. Las preguntas del
-            banco, con su barra de progreso y su cierre, están en la siguiente sección:
-            <strong>Evaluación de la unidad</strong>.
-          </p>
+      <!-- Ficha 4 · Tarjetas con foto -->
+      <section class="ua-seccion ua-seccion--variante" id="tarjetas-con-foto" data-reveal>
+        <h2 class="ua-seccion__titulo">Tarjetas con foto</h2>
+        <h3 class="ua-rotulo"><strong>Fuentes de energía renovable</strong></h3>
+        <div class="ua-tarjetas-imagen">
+          <figure class="ua-tarjeta-imagen">
+            <img src="assets/img/curso/foto-energia-solar.webp" alt="Paneles solares al aire libre en un día soleado." />
+            <figcaption>
+              <h4>Energía solar</h4>
+              <p>«La luz del sol se transforma en electricidad».</p>
+            </figcaption>
+          </figure>
+          <figure class="ua-tarjeta-imagen">
+            <img src="assets/img/curso/foto-energia-eolica.webp" alt="Aerogeneradores en un paisaje abierto." />
+            <figcaption>
+              <h4>Energía eólica</h4>
+              <p>«La fuerza del viento genera electricidad».</p>
+            </figcaption>
+          </figure>
+          <figure class="ua-tarjeta-imagen">
+            <img src="assets/img/curso/foto-energia-hidro.webp" alt="Una central hidroeléctrica con agua fluyendo por la represa." />
+            <figcaption>
+              <h4>Energía hidroeléctrica</h4>
+              <p>«El movimiento del agua permite producir electricidad».</p>
+            </figcaption>
+          </figure>
         </div>
-      </div>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-foto"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t5-foto"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Tarjetas con foto</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Tarjetas con foto</span>
+<b>Tema:</b> Fuentes de energía renovable
+<b>Tarjeta 1 · Energía solar</b>
+<b>Imagen:</b> Paneles solares al aire libre en un día soleado.
+<b>Texto al pie:</b> «La luz del sol se transforma en electricidad».
+<b>Tarjeta 2 · Energía eólica</b>
+<b>Imagen:</b> Aerogeneradores en un paisaje abierto.
+<b>Texto al pie:</b> «La fuerza del viento genera electricidad».
+<b>Tarjeta 3 · Energía hidroeléctrica</b>
+<b>Imagen:</b> Una central hidroeléctrica con agua fluyendo por la represa.
+<b>Texto al pie:</b> «El movimiento del agua permite producir electricidad».</div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </section>
+
+      <!-- Tarjetas con foto y descripción: foto arriba, título y texto debajo -->
+      <section class="ua-seccion ua-seccion--variante" id="tarjetas-con-foto-y-descripcion" data-reveal>
+        <h2 class="ua-seccion__titulo">Tarjetas con foto y descripción</h2>
+        <h3 class="ua-rotulo"><strong>Fuentes de energía renovable</strong></h3>
+        <div class="ua-tarjetas">
+          <div class="ua-tarjeta ua-tarjeta--foto">
+            <img src="assets/img/curso/foto-energia-solar-ancha.webp" alt="Planta de paneles solares al aire libre en un día soleado." />
+            <div class="ua-tarjeta__cuerpo">
+              <h4>Energía solar</h4>
+              <p>Los paneles solares fotovoltaicos convierten la luz del sol en electricidad. Esta energía puede utilizarse para iluminar espacios y alimentar aparatos eléctricos. Su producción depende de la radiación solar disponible.</p>
+            </div>
+          </div>
+          <div class="ua-tarjeta ua-tarjeta--foto">
+            <img src="assets/img/curso/foto-energia-eolica-ancha.webp" alt="Aerogeneradores en un campo abierto, con sus aspas visibles." />
+            <div class="ua-tarjeta__cuerpo">
+              <h4>Energía eólica</h4>
+              <p>La energía eólica aprovecha la fuerza del viento para producir electricidad. El viento mueve las aspas de los aerogeneradores, que accionan un generador eléctrico. Por eso, se instalan en lugares con vientos frecuentes y adecuados.</p>
+            </div>
+          </div>
+          <div class="ua-tarjeta ua-tarjeta--foto">
+            <img src="assets/img/curso/foto-energia-hidro-ancha.webp" alt="Vista de una represa y su central hidroeléctrica, con el agua y la infraestructura visibles." />
+            <div class="ua-tarjeta__cuerpo">
+              <h4>Energía hidroeléctrica</h4>
+              <p>La energía hidroeléctrica aprovecha el movimiento del agua para generar electricidad. Al pasar por las turbinas, el agua las hace girar y acciona un generador. Su producción depende del caudal y del desnivel disponible.</p>
+            </div>
+          </div>
+        </div>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-foto-descripcion"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t5-foto-descripcion"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Tarjetas con foto y descripción</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Tarjetas con foto y descripción</span>
+<b>Tema:</b> Fuentes de energía renovable
+<b>Tarjeta 1 · Energía solar</b>
+<b>Imagen sugerida:</b> Paneles solares instalados en el techo de una vivienda durante un día soleado.
+<b>Descripción:</b> Los paneles solares fotovoltaicos convierten la luz del sol en electricidad. Esta energía puede utilizarse para iluminar espacios y alimentar aparatos eléctricos. Su producción depende de la radiación solar disponible.
+<b>Tarjeta 2 · Energía eólica</b>
+<b>Imagen sugerida:</b> Aerogeneradores en un campo abierto, con sus aspas visibles.
+<b>Descripción:</b> La energía eólica aprovecha la fuerza del viento para producir electricidad. El viento mueve las aspas de los aerogeneradores, que accionan un generador eléctrico. Por eso, se instalan en lugares con vientos frecuentes y adecuados.
+<b>Tarjeta 3 · Energía hidroeléctrica</b>
+<b>Imagen sugerida:</b> Vista de una represa y su central hidroeléctrica, con el agua y la infraestructura visibles.
+<b>Descripción:</b> La energía hidroeléctrica aprovecha el movimiento del agua para generar electricidad. Al pasar por las turbinas, el agua las hace girar y acciona un generador. Su producción depende del caudal y del desnivel disponible.</div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </section>
+
+      <!-- Tarjetas que giran: el frente lleva número y título; al tocarla, el reverso muestra la respuesta -->
+      <section class="ua-seccion ua-seccion--variante" id="tarjetas-que-giran" data-reveal>
+        <h2 class="ua-seccion__titulo">Tarjetas que giran</h2>
+        <p class="ua-giro-etiqueta"><iconify-icon icon="mdi:rotate-3d-variant"></iconify-icon> Las tres lentes</p>
+        <h3 class="ua-rotulo"><strong>Las tres lentes, en un vistazo</strong></h3>
+        <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Toca cada card para descubrir qué pregunta responde cada lente.</p>
+        <div class="ua-giros">
+          <button type="button" class="ua-giro" aria-pressed="false">
+            <span class="ua-giro__cara ua-giro__frente">
+              <span class="ua-giro__num">01</span>
+              <span class="ua-giro__titulo">Análisis vertical</span>
+              <span class="ua-giro__pista"><iconify-icon icon="mdi:rotate-3d-variant"></iconify-icon> Toca para girar</span>
+            </span>
+            <span class="ua-giro__cara ua-giro__dorso">
+              <span class="ua-giro__etiqueta">Responde a</span>
+              <span class="ua-giro__pregunta">¿Cómo está compuesta hoy la empresa?</span>
+              <span class="ua-giro__texto">Lee un solo periodo. Cada partida como porcentaje de un total de referencia. Revela concentraciones y pesos anormales.</span>
+            </span>
+          </button>
+          <button type="button" class="ua-giro" aria-pressed="false">
+            <span class="ua-giro__cara ua-giro__frente">
+              <span class="ua-giro__num">02</span>
+              <span class="ua-giro__titulo">Análisis horizontal</span>
+              <span class="ua-giro__pista"><iconify-icon icon="mdi:rotate-3d-variant"></iconify-icon> Toca para girar</span>
+            </span>
+            <span class="ua-giro__cara ua-giro__dorso">
+              <span class="ua-giro__etiqueta">Responde a</span>
+              <span class="ua-giro__pregunta">¿Hacia dónde se mueve la empresa?</span>
+              <span class="ua-giro__texto">Compara la misma partida entre periodos. Variación absoluta, relativa o índice. Muestra tendencias y quiebres.</span>
+            </span>
+          </button>
+          <button type="button" class="ua-giro" aria-pressed="false">
+            <span class="ua-giro__cara ua-giro__frente">
+              <span class="ua-giro__num">03</span>
+              <span class="ua-giro__titulo">Integración</span>
+              <span class="ua-giro__pista"><iconify-icon icon="mdi:rotate-3d-variant"></iconify-icon> Toca para girar</span>
+            </span>
+            <span class="ua-giro__cara ua-giro__dorso">
+              <span class="ua-giro__etiqueta">Responde a</span>
+              <span class="ua-giro__pregunta">¿Qué diagnóstico se sostiene?</span>
+              <span class="ua-giro__texto">Combina composición y trayectoria contra el sector. Es donde aparece la interpretación defendible que exige un analista.</span>
+            </span>
+          </button>
+        </div>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-giran"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t5-giran"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Tarjetas que giran</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Tarjetas que giran</span>
+<b>Etiqueta:</b> Las tres lentes
+<b>Título:</b> Las tres lentes, en un vistazo
+<b>Instrucción:</b> Toca cada card para descubrir qué pregunta responde cada lente.
+<b>Tarjeta 1</b>
+<b>Frente:</b> Análisis vertical
+<b>Responde a:</b> ¿Cómo está compuesta hoy la empresa?
+<b>Reverso:</b> Lee un solo periodo. Cada partida como porcentaje de un total de referencia. Revela concentraciones y pesos anormales.
+<b>Tarjeta 2</b>
+<b>Frente:</b> Análisis horizontal
+<b>Responde a:</b> ¿Hacia dónde se mueve la empresa?
+<b>Reverso:</b> Compara la misma partida entre periodos. Variación absoluta, relativa o índice. Muestra tendencias y quiebres.
+<b>Tarjeta 3</b>
+<b>Frente:</b> Integración
+<b>Responde a:</b> ¿Qué diagnóstico se sostiene?
+<b>Reverso:</b> Combina composición y trayectoria contra el sector. Es donde aparece la interpretación defendible que exige un analista.
+<span class="gris">El número de cada tarjeta y el aviso «Toca para girar» los pone el componente. Conviene que los reversos tengan una extensión parecida, para que las tarjetas queden del mismo alto.</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </section>
+
+      <!-- Tarjeta con botón: el botón abre un enlace externo en otra pestaña -->
+      <section class="ua-seccion ua-seccion--variante" id="tarjeta-con-boton" data-reveal>
+        <h2 class="ua-seccion__titulo">Tarjeta con botón</h2>
+        <div class="ua-tarjetas">
+          <div class="ua-tarjeta">
+            <div class="ua-tarjeta__cuerpo">
+              <div class="ua-tarjeta__avatar ua-tarjeta__avatar--icono"><iconify-icon icon="mdi:map-marker-path"></iconify-icon></div>
+              <h4>Encuentra la ruta a tu destino</h4>
+              <p>Utiliza Google Maps para buscar un lugar y consultar cómo llegar. Como práctica, encuentra la ruta desde tu casa hasta una biblioteca o un parque cercano.</p>
+              <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Haz clic en el botón para abrir el mapa y explorar tu recorrido.</p>
+              <a class="ova-btn ova-btn--outline" href="https://www.google.com/maps" target="_blank" rel="noopener"><iconify-icon icon="mdi:open-in-new"></iconify-icon> Abrir Google Maps</a>
+            </div>
+          </div>
+        </div>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-boton"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t5-boton"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Tarjeta con botón</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Tarjeta con botón</span>
+<b>Título:</b> Encuentra la ruta a tu destino
+<b>Descripción:</b> Utiliza Google Maps para buscar un lugar y consultar cómo llegar. Como práctica, encuentra la ruta desde tu casa hasta una biblioteca o un parque cercano.
+<b>Instrucción:</b> Haz clic en el botón para abrir el mapa y explorar tu recorrido.
+<b>Botón:</b> Abrir Google Maps
+<span class="rojo">Vincular: https://www.google.com/maps</span>
+<span class="gris">El botón abre el enlace en una pestaña nueva. El icono de la tarjeta lo propone el equipo de producción; si el instruccional quiere uno en particular, lo anota entre corchetes: [icono: mapa].</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </section>
+
+<!-- ova:extras -->
+<style>
+  /* Tarjetas con icono: el avatar de la piel, más pequeño, alineado a la izquierda del cuerpo
+     (círculo claro + icono azul marino; en las conectadas hereda el color de su columna). */
+  .ua-tarjeta__avatar--icono{ width:56px; height:56px; font-size:1.6rem; margin:0 0 14px; }
+
+  /* Carrusel de tarjetas: icono, título y texto sin estilos en línea. */
+  .ua-carrusel-tarjetas .ova-carrusel__slide > iconify-icon{ font-size:2.4rem; color:var(--c-acento); display:block; }
+  .ua-carrusel-tarjetas .ova-carrusel__slide h4{ margin:12px 0 6px; color:var(--text-head); }
+  .ua-carrusel-tarjetas .ova-carrusel__slide p{ margin:0; color:var(--text-mut); font-size:.95rem; line-height:1.6; }
+
+  /* Slide: el mismo carrusel con una tarjeta por pantalla (texto + figura). */
+  .ua-slide .ova-carrusel__slide{
+    flex:0 0 100%; display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);
+    gap:24px; align-items:center; padding:28px;
+  }
+  .ua-slide .ua-slide__texto h4{ margin:0 0 10px; color:var(--text-head); }
+  .ua-slide .ua-slide__texto p{ margin:0 0 10px; line-height:1.6; }
+  .ua-slide .ua-slide__texto p:last-child{ margin-bottom:0; }
+  .ua-slide .ova-figura{ margin:0; }
+  .ua-slide .ova-figura__hero img{ max-width:100%; max-height:none; }
+  @media (max-width: 760px){ .ua-slide .ova-carrusel__slide{ grid-template-columns:1fr; padding:20px; } }
+
+  /* Tarjeta con ventana: el llamado y el botón cierran el cuerpo de la tarjeta. */
+  .ua-tarjeta__cuerpo .ua-cta{ margin:14px 0 10px; }
+  .ua-tarjeta__cuerpo .ova-btn{ align-self:flex-start; }
+
+  /* Huecos de figura dentro de tarjeta con foto, paso con foto y galería: ocupan el lugar de la imagen. */
+  .ua-tarjeta--foto > .ua-pendiente{ aspect-ratio:16 / 10; margin:0; border-radius:0; border-width:0 0 1px; }
+  .ua-tf__media > .ua-pendiente{ position:absolute; inset:0; margin:0; border-radius:0; }
+  .ua-galeria__item > .ua-pendiente{ position:absolute; inset:0; margin:0; border-radius:0; }
+</style>
+<script>
+  /* El slide usa el carrusel del motor, que a 1440 px cuenta tres tarjetas visibles. Con una
+     tarjeta por pantalla, aquí se recalcula la navegación: una lámina por paso. Los botones se
+     clonan para soltar los oyentes del motor. */
+  (function () {
+    'use strict';
+    function armar(c) {
+      if (c.dataset.uaSlide) return;
+      c.dataset.uaSlide = '1';
+      var track = c.querySelector('.ova-carrusel__track');
+      var slides = c.querySelectorAll('.ova-carrusel__slide');
+      var dots = c.querySelector('.ova-carrusel__dots');
+      if (!track || !slides.length) return;
+      var idx = 0;
+      var go = function (i) {
+        idx = Math.max(0, Math.min(slides.length - 1, i));
+        track.style.transform = 'translateX(' + (-idx * (slides[0].offsetWidth + 16)) + 'px)';
+        if (dots) [].forEach.call(dots.children, function (d, k) { d.classList.toggle('is-active', k === idx); });
+      };
+      var cambiar = function (sel, paso) {
+        var b = c.querySelector(sel); if (!b) return;
+        var n = b.cloneNode(true); b.replaceWith(n);
+        n.addEventListener('click', function () { go(idx + paso); });
+      };
+      cambiar('[data-ova-carrusel-prev]', -1);
+      cambiar('[data-ova-carrusel-next]', 1);
+      if (dots) {
+        dots.innerHTML = '';
+        [].forEach.call(slides, function (_, i) {
+          var d = document.createElement('button');
+          d.type = 'button'; d.className = 'ova-carrusel__dot' + (i === 0 ? ' is-active' : '');
+          d.setAttribute('aria-label', 'Lámina ' + (i + 1) + ' de ' + slides.length);
+          d.addEventListener('click', function () { go(i); });
+          dots.appendChild(d);
+        });
+      }
+      window.addEventListener('resize', function () { go(idx); });
+    }
+    var iniciar = function () {
+      document.querySelectorAll('.ova-carrusel.ua-slide').forEach(armar);
+      new MutationObserver(function () { document.querySelectorAll('.ova-carrusel.ua-slide').forEach(armar); })
+        .observe(document.body, { childList: true, subtree: true });
+    };
+    document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', iniciar) : iniciar();
+  })();
+</script>

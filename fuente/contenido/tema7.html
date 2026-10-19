@@ -1,0 +1,266 @@
+      <header class="ova-screen__head" data-reveal>
+        <div class="ova-screen__eyebrow">Tema {{NUM}}</div>
+        <h1 class="ova-screen__title">Actividades <span class="ua-suave">para</span> <span class="ua-remate">practicar</span></h1>
+        <p class="ova-screen__lead">Actividades con retroalimentación inmediata, sin calificación.</p>
+      </header>
+
+      <p data-reveal>A continuación se listan los componentes de este tema:</p>
+      <ul data-reveal>
+        <li>Pregunta, Verdadero o falso</li>
+        <li>Relacionar</li>
+        <li>Ordenar, Clasificar</li>
+        <li>Lista de verificación, Para reflexionar</li>
+      </ul>
+
+      <!-- ════ 5.1 · Pregunta de selección ════ -->
+
+      <!-- Ficha 1 · pregunta con contexto -->
+      <section class="ua-seccion" id="pregunta" data-reveal>
+        <h2 class="ua-seccion__titulo">Pregunta</h2>
+        <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Seleccione la opción correcta.</p>
+        <div class="ova-quiz">
+          <p class="ua-eval__contexto">Un investigador encuestó a 42 docentes de una sola universidad y sabe que ese número no le permite generalizar los resultados a otras instituciones. Quiere decirlo con claridad en el artículo.</p>
+          <h3 class="ova-quiz__question">¿En qué sección del artículo debe presentar esa limitación?</h3>
+          <div class="ova-quiz__opts">
+            <button class="ova-quiz__opt" data-correct="false"><strong>A.</strong> En la introducción, para que el lector la conozca desde el principio.</button>
+            <button class="ova-quiz__opt" data-correct="false"><strong>B.</strong> En el método, junto con la descripción de la muestra.</button>
+            <button class="ova-quiz__opt" data-correct="true"><strong>C.</strong> En la discusión, después de interpretar los resultados.</button>
+            <button class="ova-quiz__opt" data-correct="false"><strong>D.</strong> En el resumen, para no ocupar espacio en el cuerpo del texto.</button>
+          </div>
+          <div class="ova-quiz__feedback"
+               data-correct="Las limitaciones se presentan en la discusión: ahí el autor ya interpretó los hallazgos y puede decir hasta dónde llegan y qué no permiten afirmar. Los estándares de reporte de APA 7 (JARS) las ubican en esa sección, junto con las implicaciones y las líneas de investigación futura. El método describe la muestra tal como fue; juzgar su alcance es tarea de la discusión."
+               data-wrong="El método solo describe cómo se hizo el estudio y a quiénes se encuestó; no valora si eso alcanza o no. La introducción plantea el problema y el resumen condensa el artículo entero. El lugar de las limitaciones es la discusión, después de interpretar los resultados: ahí el autor dice hasta dónde llegan sus hallazgos y qué no permiten afirmar (APA 7, estándares JARS)."></div>
+        </div>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-1"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t5-1"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Pregunta de selección</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Pregunta</span>
+<b>Título:</b> Dónde va la limitación del estudio
+<b>Contexto:</b> Un investigador encuestó a 42 docentes de una sola universidad […]
+<b>Enunciado:</b> ¿En qué sección del artículo debe presentar esa limitación?
+<b>A.</b> En la introducción, para que el lector la conozca desde el principio.
+<b>B.</b> En el método, junto con la descripción de la muestra.
+<b>C.</b> En la discusión, después de interpretar los resultados. <b>(correcta)</b>
+<b>D.</b> En el resumen, para no ocupar espacio en el cuerpo del texto.
+<b>Acierto:</b> Las limitaciones se presentan en la discusión: ahí el autor ya interpretó […]
+<b>Error:</b> El método solo describe cómo se hizo el estudio […]
+<span class="gris">El nombre del componente en rojo. Contexto opcional, de hasta 60 palabras; enunciado de hasta 35; de 2 a 4 opciones de hasta 25 palabras, con la correcta marcada entre paréntesis; dos retroalimentaciones, «Acierto» y «Error», de hasta 80 palabras cada una. La letra de cada opción la pone el componente.</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </section>
+
+      <!-- Ficha 2 · verdadero o falso, sin contexto -->
+      <section class="ua-seccion ua-seccion--variante" id="verdadero-o-falso" data-reveal>
+        <h2 class="ua-seccion__titulo">Verdadero o falso</h2>
+        <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Seleccione si la afirmación es verdadera o falsa.</p>
+        <div class="ova-quiz">
+          <h3 class="ova-quiz__question">Copiar varios párrafos de un artículo propio ya publicado en un artículo nuevo, sin citarlo, no es un problema ético porque el autor es el mismo.</h3>
+          <div class="ova-quiz__opts">
+            <button class="ova-quiz__opt" data-correct="false"><strong>A.</strong> Verdadero</button>
+            <button class="ova-quiz__opt" data-correct="true"><strong>B.</strong> Falso</button>
+          </div>
+          <div class="ova-quiz__feedback"
+               data-correct="Es falso. Presentar como nuevo un texto que ya se publicó es autoplagio, aunque el autor sea el mismo: el lector y la revista asumen que reciben trabajo original. APA 7 (sección 1.17) admite reutilizar pasajes breves, por ejemplo la descripción de un instrumento, siempre que se cite la publicación anterior y se respeten los derechos de la editorial que la publicó."
+               data-wrong="La afirmación es falsa. Que el autor sea el mismo no cambia lo que el lector y la revista asumen: que el artículo es trabajo original. Publicar de nuevo texto ya publicado sin decirlo es autoplagio. APA 7 (sección 1.17) permite reutilizar pasajes breves, como la descripción de un instrumento, pero siempre citando la publicación anterior y con permiso de la editorial si hace falta."></div>
+        </div>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-2"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t5-2"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Pregunta · Verdadero o falso</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Pregunta</span>
+<b>Título:</b> Reutilizar lo propio
+<b>Enunciado:</b> Copiar varios párrafos de un artículo propio ya publicado en un artículo nuevo, sin citarlo, no es un problema ético porque el autor es el mismo.
+<b>A.</b> Verdadero
+<b>B.</b> Falso <b>(correcta)</b>
+<b>Acierto:</b> Es falso. Presentar como nuevo un texto que ya se publicó es autoplagio […]
+<b>Error:</b> La afirmación es falsa. Que el autor sea el mismo no cambia […]
+<span class="gris">Mismo formato que la pregunta de selección, sin la línea de contexto y con dos opciones. El enunciado es la afirmación que se juzga, no una pregunta. Las dos retroalimentaciones siguen siendo obligatorias y distintas: la de error le dice a quien marcó «Verdadero» por qué no.</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </section>
+
+      <!-- ════ 5.2 · Relacionar términos ════ -->
+
+      <!-- Ficha 3 · relacionar -->
+      <section class="ua-seccion" id="relacionar" data-reveal>
+        <h2 class="ua-seccion__titulo">Relacionar</h2>
+        <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Haga clic en un tipo de cita y después en el ejemplo que le corresponde.</p>
+        <div class="ova-empar">
+          <div class="ova-empar__col">
+            <button class="ova-empar__item" data-ova-match="A">Cita textual corta</button>
+            <button class="ova-empar__item" data-ova-match="B">Cita textual larga</button>
+            <button class="ova-empar__item" data-ova-match="C">Paráfrasis</button>
+            <button class="ova-empar__item" data-ova-match="D">Cita de cita</button>
+          </div>
+          <div class="ova-empar__col">
+            <button class="ova-empar__item" data-ova-match="C">Cassany (2007) sostiene que escribir obliga a ordenar el pensamiento antes de comunicarlo.</button>
+            <button class="ova-empar__item" data-ova-match="A">«Escribir es una forma de pensar» (Cassany, 2007, p. 23).</button>
+            <button class="ova-empar__item" data-ova-match="D">(Swales, 1990, como se citó en Cassany, 2007)</button>
+            <button class="ova-empar__item" data-ova-match="B">Un pasaje de 40 palabras o más, en bloque aparte con sangría de 1,27 cm, sin comillas y con la cita al final, después del punto.</button>
+          </div>
+        </div>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-3"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t5-3"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Relacionar términos</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Relacionar</span>
+<b>Título:</b> Cuatro formas de citar en APA 7
+Cita textual corta — «Escribir es una forma de pensar» (Cassany, 2007, p. 23).
+Cita textual larga — Un pasaje de 40 palabras o más, en bloque aparte con sangría de 1,27 cm, sin comillas y con la cita al final, después del punto.
+Paráfrasis — Cassany (2007) sostiene que escribir obliga a ordenar el pensamiento antes de comunicarlo.
+Cita de cita — (Swales, 1990, como se citó en Cassany, 2007)
+<span class="gris">Cada par en una línea: el término, una raya y su ejemplo o definición. Términos de hasta 5 palabras; ejemplos de hasta 30. El Word los trae en orden; el desorden de la segunda columna lo pone el componente al maquetar.</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </section>
+
+      <!-- ════ 5.3 · Ordenar y clasificar ════ -->
+
+      <!-- Ficha 4 · ordenar -->
+      <section class="ua-seccion" id="ordenar-y-clasificar" data-reveal>
+        <h2 class="ua-seccion__titulo">Ordenar</h2>
+        <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Arrastre los pasos hasta dejarlos en orden y después haga clic en «Verificar orden».</p>
+        <ul class="ova-orden">
+          <li class="ova-orden__item" data-ova-order="3"><span class="ova-orden__num">1</span> La revista envía el manuscrito a evaluadores anónimos (revisión por pares).</li>
+          <li class="ova-orden__item" data-ova-order="1"><span class="ova-orden__num">2</span> El autor elige la revista y lee sus normas para autores.</li>
+          <li class="ova-orden__item" data-ova-order="5"><span class="ova-orden__num">3</span> El editor acepta el artículo, el autor corrige las pruebas de imprenta y la revista lo publica.</li>
+          <li class="ova-orden__item" data-ova-order="2"><span class="ova-orden__num">4</span> El autor ajusta el manuscrito a esas normas y lo envía por la plataforma de la revista.</li>
+          <li class="ova-orden__item" data-ova-order="4"><span class="ova-orden__num">5</span> El autor responde punto por punto a los evaluadores y entrega la versión corregida.</li>
+        </ul>
+        <button class="ova-btn ova-btn--primary" data-ova-orden-check style="margin-top:14px;"><iconify-icon icon="mdi:check-bold"></iconify-icon> Verificar orden</button>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-4"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t5-4"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Ordenar</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Ordenar</span>
+<b>Título:</b> El camino de un manuscrito hasta su publicación
+1. El autor elige la revista y lee sus normas para autores.
+2. El autor ajusta el manuscrito a esas normas y lo envía por la plataforma de la revista.
+3. La revista envía el manuscrito a evaluadores anónimos (revisión por pares).
+4. El autor responde punto por punto a los evaluadores y entrega la versión corregida.
+5. El editor acepta el artículo, el autor corrige las pruebas de imprenta y la revista lo publica.
+<span class="gris">Los pasos se escriben en su orden correcto, numerados, de hasta 20 palabras cada uno. El desorden con que aparecen en pantalla lo pone el componente. No hace falta escribir retroalimentación: el color de cada posición ya dice cuál está bien y cuál no.</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </section>
+
+      <!-- Ficha 5 · clasificar -->
+      <section class="ua-seccion ua-seccion--variante" id="clasificar" data-reveal>
+        <h2 class="ua-seccion__titulo">Clasificar</h2>
+        <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Arrastre cada elemento a la sección del artículo donde va.</p>
+        <div class="ova-dnd">
+          <div class="ova-dnd__bank">
+            <div class="ova-dnd__bank-title">Banco</div>
+            <div class="ova-dnd__item" data-ova-correct="resultados">La tabla con las medias y las desviaciones de cada grupo</div>
+            <div class="ova-dnd__item" data-ova-correct="discusion">Por qué los hallazgos contradicen un estudio anterior</div>
+            <div class="ova-dnd__item" data-ova-correct="resultados">El valor p de la prueba estadística aplicada</div>
+            <div class="ova-dnd__item" data-ova-correct="discusion">Las limitaciones del tamaño de la muestra</div>
+            <div class="ova-dnd__item" data-ova-correct="resultados">Cuántos participantes completaron el estudio</div>
+            <div class="ova-dnd__item" data-ova-correct="discusion">Las implicaciones para la práctica profesional</div>
+          </div>
+          <div class="ova-dnd__zones">
+            <div class="ova-dnd__zone" data-ova-target="resultados"><h4><iconify-icon icon="mdi:chart-box-outline" style="color:var(--c-acento);"></iconify-icon> Va en Resultados</h4><div class="ova-dnd__items"></div></div>
+            <div class="ova-dnd__zone" data-ova-target="discusion"><h4><iconify-icon icon="mdi:comment-text-multiple-outline" style="color:var(--c-info);"></iconify-icon> Va en Discusión</h4><div class="ova-dnd__items"></div></div>
+          </div>
+        </div>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-5"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t5-5"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Clasificar</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Clasificar</span>
+<b>Título:</b> ¿Resultados o discusión?
+<b>Va en Resultados:</b> La tabla con las medias y las desviaciones de cada grupo · El valor p de la prueba estadística aplicada · Cuántos participantes completaron el estudio
+<b>Va en Discusión:</b> Por qué los hallazgos contradicen un estudio anterior · Las limitaciones del tamaño de la muestra · Las implicaciones para la práctica profesional
+<span class="gris">Cada categoría en negrilla, con el nombre que verá el estudiante en la zona, y a continuación sus elementos separados por un punto medio. Elementos de hasta 12 palabras. El banco mezclado lo arma el componente.</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </section>
+
+      <!-- ════ 5.4 · Lista de verificación ════ -->
+
+      <!-- Ficha 6 · lista de verificación -->
+      <section class="ua-seccion" id="lista-de-verificacion" data-reveal>
+        <h2 class="ua-seccion__titulo">Lista de verificación</h2>
+        <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Marque cada punto que ya haya revisado en su manuscrito.</p>
+        <div class="ova-checklist">
+          <div class="ova-checklist__head"><h3 style="margin:0; font-size:1.1rem;">Revisión final del manuscrito</h3><div class="ova-checklist__count"><strong>0</strong> / 6</div></div>
+          <ul class="ova-checklist__list">
+            <li class="ova-checklist__item"><span class="ova-checklist__box"><iconify-icon icon="mdi:check"></iconify-icon></span><span class="ova-checklist__text">El título describe el estudio en 12 palabras o menos y el resumen no supera las 250.</span></li>
+            <li class="ova-checklist__item"><span class="ova-checklist__box"><iconify-icon icon="mdi:check"></iconify-icon></span><span class="ova-checklist__text">Toda afirmación tomada de otro autor tiene su cita en el texto, con autor y año.</span></li>
+            <li class="ova-checklist__item"><span class="ova-checklist__box"><iconify-icon icon="mdi:check"></iconify-icon></span><span class="ova-checklist__text">Cada cita del texto aparece en la lista de referencias, y cada referencia se cita en el texto.</span></li>
+            <li class="ova-checklist__item"><span class="ova-checklist__box"><iconify-icon icon="mdi:check"></iconify-icon></span><span class="ova-checklist__text">Las tablas y las figuras están numeradas, tienen título y se mencionan en el texto antes de aparecer.</span></li>
+            <li class="ova-checklist__item"><span class="ova-checklist__box"><iconify-icon icon="mdi:check"></iconify-icon></span><span class="ova-checklist__text">Los resultados solo presentan lo que se encontró; la interpretación quedó en la discusión.</span></li>
+            <li class="ova-checklist__item"><span class="ova-checklist__box"><iconify-icon icon="mdi:check"></iconify-icon></span><span class="ova-checklist__text">El manuscrito cumple las normas para autores de la revista: extensión, formato de referencias y anonimato.</span></li>
+          </ul>
+        </div>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-6"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t5-6"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Lista de verificación</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Lista de verificación</span>
+<b>Título:</b> Revisión final del manuscrito
+□ El título describe el estudio en 12 palabras o menos y el resumen no supera las 250.
+□ Toda afirmación tomada de otro autor tiene su cita en el texto, con autor y año.
+□ Cada cita del texto aparece en la lista de referencias, y cada referencia se cita en el texto.
+□ Las tablas y las figuras están numeradas, tienen título y se mencionan en el texto antes de aparecer.
+□ Los resultados solo presentan lo que se encontró; la interpretación quedó en la discusión.
+□ El manuscrito cumple las normas para autores de la revista: extensión, formato de referencias y anonimato.
+<span class="gris">El título del bloque y, debajo, de 4 a 10 puntos de hasta 20 palabras, uno por línea, precedidos por una casilla. Cada punto debe poder responderse con sí o no. No lleva retroalimentación: el contador es la única respuesta.</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </section>
+
+      <!-- Ficha 7 · pregunta abierta, sin interacción -->
+      <section class="ua-seccion ua-seccion--variante" id="para-reflexionar" data-reveal>
+        <h2 class="ua-seccion__titulo">Para reflexionar</h2>
+        <div class="ova-callout ova-callout--reflexion" data-reveal>
+          <div class="ova-callout__ico"><iconify-icon icon="mdi:comment-question-outline"></iconify-icon></div>
+          <div>
+            <span class="ova-callout__tag">Para reflexionar</span>
+            <p style="margin:8px 0 0;">
+              Piense en el último texto académico que escribió. Si un lector que no conoce su
+              campo leyera solo la introducción, ¿podría decir con sus palabras qué problema
+              estudió usted y por qué valía la pena estudiarlo? Si la respuesta es no, ¿qué
+              párrafo tendría que reescribir primero?
+            </p>
+          </div>
+        </div>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-7"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t5-7"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Para reflexionar</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Para reflexionar</span>
+Piense en el último texto académico que escribió. Si un lector que no conoce su campo leyera solo la introducción, ¿podría decir con sus palabras qué problema estudió usted y por qué valía la pena estudiarlo? Si la respuesta es no, ¿qué párrafo tendría que reescribir primero?
+<span class="gris">El nombre del componente en rojo y, debajo, la pregunta abierta, de hasta 80 palabras. Sin opciones, sin respuesta correcta y sin retroalimentación: el estudiante no escribe nada en pantalla. Si el docente quiere recoger la respuesta, eso se hace en el foro o en la tarea de la plataforma, no en el curso.</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </section>

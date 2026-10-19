@@ -1,355 +1,95 @@
       <header class="ova-screen__head" data-reveal>
-        <div class="ova-screen__eyebrow">Tema 3</div>
-        <h1 class="ova-screen__title">Tarjetas <span class="ua-suave">y</span> <span class="ua-remate">galerías</span></h1>
-        <p class="ova-screen__lead">
-          Piezas que reparten el contenido en unidades del mismo peso: tarjetas que se ven
-          todas a la vez, carruseles que se recorren de a una y galerías de imágenes con pie.
-        </p>
+        <div class="ova-screen__eyebrow">Tema {{NUM}}</div>
+        <h1 class="ova-screen__title">Componentes <span class="ua-remate">básicos</span></h1>
+        <p class="ova-screen__lead">Componentes interactivos de uso general.</p>
       </header>
 
-      <p data-reveal>
-        Fragmentar en tarjetas conviene cuando el texto ya es una lista de elementos
-        equivalentes: los roles que intervienen en una publicación, las cualidades de la
-        prosa académica, las preguntas que se hace un revisor. Cada tarjeta recibe un
-        título y dos o tres líneas, y el lector las compara de un vistazo. <strong>No
-        conviene</strong> cuando el texto es un razonamiento continuo: un argumento que
-        avanza de una premisa a una conclusión pierde el hilo si se corta en recuadros.
-        En ese caso el párrafo, el acordeón o los pasos del Tema 2 sirven mejor.
-      </p>
+      <p data-reveal>A continuación se listan los componentes de este tema:</p>
+      <ul data-reveal>
+        <li>Acordeón</li>
+        <li>Carrusel, Carrusel de fotos, Slide</li>
+        <li>Pestañas, Pestañas - línea, Pestañas verticales</li>
+      </ul>
 
-      <!-- ════ Sección 3.1 · Tarjetas ════ -->
-      <section class="ua-seccion" id="tarjetas" data-reveal>
-        <h2 class="ua-seccion__titulo">Tarjetas <span class="ua-remate">a la vista</span></h2>
-        <p class="ua-seccion__lead">Elementos equivalentes que se leen todos a la vez, con icono, avatar, color o foto.</p>
+      <!-- ════ Sección · Acordeones ════ -->
+      <section class="ua-seccion" id="acordeones" data-reveal>
+        <h2 class="ua-seccion__titulo">Acordeón</h2>
+        <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Haga clic en cada franja para ver la información.</p>
+        <div class="ova-acordeon">
+          <div class="ova-acordeon__item is-open">
+            <button class="ova-acordeon__head"><span><strong>Introducción</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+            <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Responde <strong>¿qué problema se estudió y por qué importa?</strong> Presenta el contexto, el vacío que la literatura no ha resuelto y la pregunta u objetivo del trabajo. Va de lo general a lo particular y termina en lo que el artículo se propone.</div></div>
+          </div>
+          <div class="ova-acordeon__item">
+            <button class="ova-acordeon__head"><span><strong>Ítem con foto</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+            <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">
+              <p>Responde <strong>¿cómo se estudió?</strong> Describe el diseño, los participantes o materiales, los instrumentos, el procedimiento y el análisis con el detalle suficiente para que otro investigador pueda repetir el estudio.</p>
+              <figure class="ova-figura ova-figura--plana">
+                <div class="ova-figura__hero">
+                  <img src="assets/img/curso/foto-podcast.webp" alt="Imagen de ejemplo." />
+                </div>
+                <figcaption class="ova-figura__leyenda"><b>Figura 1.</b> Leyenda de ejemplo: lorem ipsum dolor sit amet, consectetur adipiscing elit.</figcaption>
+              </figure>
+            </div></div>
+          </div>
+          <div class="ova-acordeon__item">
+            <button class="ova-acordeon__head"><span><strong>Ítem con foto lateral</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+            <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">
+              <div class="ua-media-lado">
+                <div>
+                  <p>Responde <strong>¿qué se encontró?</strong> Presenta los hallazgos en el orden de los objetivos, con tablas y figuras que no repiten el texto.</p>
+                  <p>Aquí no se interpreta: se informa.</p>
+                </div>
+                <figure class="ova-figura ova-figura--plana">
+                  <div class="ova-figura__hero">
+                    <!-- foto-lectura.webp: copia de demo-unidad-2/tema3-verificada.webp, puesta el 2026-10-18 para no repetir la foto de la portada. Licencia sin documentar: no reutilizar en otras pantallas; si no se confirma, volver a portada-persona.webp o al hueco .ua-pendiente. -->
+                    <img src="assets/img/curso/foto-lectura.webp" alt="Imagen de ejemplo." />
+                  </div>
+                  <figcaption class="ova-figura__leyenda"><b>Figura 2.</b> Leyenda de ejemplo.</figcaption>
+                </figure>
+              </div>
+            </div></div>
+          </div>
+          <div class="ova-acordeon__item">
+            <button class="ova-acordeon__head"><span><strong>Discusión</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+            <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Responde <strong>¿qué significan los hallazgos?</strong> Los contrasta con la literatura, reconoce las limitaciones del estudio y señala sus implicaciones. Va de lo particular a lo general: el camino inverso de la introducción.</div></div>
+          </div>
+        </div>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t2-1"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t2-1"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Acordeón</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Acordeón</span>
+<b>Título:</b> Las cuatro secciones IMRyD y la pregunta que responde cada una
+Ítem 1
+<b>Introducción</b>
+Responde ¿qué problema se estudió y por qué importa? […]
+Ítem 2
+<b>Ítem con foto</b>
+Responde ¿cómo se estudió? […]
+<span class="rojo">DISEÑO GRÁFICO</span> Figura 1. […]
+<b>Leyenda:</b> […]
+Ítem 3
+<b>Ítem con foto lateral</b>
+[…]
+<span class="rojo">DISEÑO GRÁFICO</span> Imagen al lado. Figura 2. […]
+Ítem 4
+<b>Discusión</b>
+[…]
+<span class="gris">El nombre del componente en rojo; debajo «Título:» si el bloque lo tiene. Por ítem: la línea «Ítem N», el título en negrilla (hasta 8 palabras) y la descripción (hasta 80). La numeración de las franjas es opcional: si el Word la pide, el componente la pone. Un ítem puede llevar imagen: el bloque «DISEÑO GRÁFICO» ubica la figura del diseñador con su número y, si la tiene, su leyenda. Va debajo del texto, a todo el ancho; si el Word dice «Imagen al lado», va a la derecha, en un tercio del ancho. El bloque ubica una figura; no se maqueta ni se ilustra.</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
       </section>
-
-      <!-- Ficha 1 · Tarjetas con icono -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Tarjetas con icono</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlas.</strong> De dos a cuatro conceptos del mismo nivel, cada uno con nombre y una definición breve. El icono resume la idea; el círculo claro lleva el icono en azul marino.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <h3 class="ua-rotulo"><strong>Tres cualidades de la prosa académica</strong></h3>
-        <div class="ua-tarjetas">
-          <div class="ua-tarjeta">
-            <div class="ua-tarjeta__cuerpo">
-              <div class="ua-tarjeta__avatar ua-tarjeta__avatar--icono"><iconify-icon icon="mdi:lightbulb-outline"></iconify-icon></div>
-              <h4>Claridad</h4>
-              <p>Cada oración tiene un sujeto reconocible y un verbo que actúa. Si el lector debe releer para saber quién hace qué, la oración se reescribe.</p>
-            </div>
-          </div>
-          <div class="ua-tarjeta">
-            <div class="ua-tarjeta__cuerpo">
-              <div class="ua-tarjeta__avatar ua-tarjeta__avatar--icono"><iconify-icon icon="mdi:target"></iconify-icon></div>
-              <h4>Precisión</h4>
-              <p>Se nombra lo que se midió y cómo: «una muestra de 42 docentes», no «varios docentes». Los términos técnicos se usan siempre con el mismo sentido.</p>
-            </div>
-          </div>
-          <div class="ua-tarjeta">
-            <div class="ua-tarjeta__cuerpo">
-              <div class="ua-tarjeta__avatar ua-tarjeta__avatar--icono"><iconify-icon icon="mdi:content-cut"></iconify-icon></div>
-              <h4>Concisión</h4>
-              <p>Se elimina lo que no aporta información: muletillas, adjetivos de relleno y la repetición de lo que la tabla ya muestra.</p>
-            </div>
-          </div>
-        </div>
-        <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t3-1"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
-        </div>
-        <div class="ova-modal" id="cat-t3-1"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Tarjetas con icono</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
-          <div class="ova-modal__body">
-            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
-            <div class="ua-cat-word"><span class="rojo">Tarjetas con icono</span>
-<b>Título:</b> Tres cualidades de la prosa académica
-<b>Tarjeta 1</b>
-<b>Claridad</b>
-Cada oración tiene un sujeto reconocible y un verbo que actúa…
-<b>Tarjeta 2</b>
-<b>Precisión</b>
-Se nombra lo que se midió y cómo…
-<span class="gris">El nombre del componente en rojo; debajo el título del bloque si lo tiene; cada tarjeta en tres líneas: «Tarjeta N», el nombre en negrilla y su texto (hasta 40 palabras). El icono lo propone el equipo de producción; si el instruccional quiere uno en particular, lo anota entre corchetes: [icono: bombillo].</span></div>
-          </div>
-          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
-        </div></div>
-      </div>
-
-      <!-- Ficha 2 · Tarjetas con avatar (tipo 1: roles · tipo 2: voz en primera persona) -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Tarjetas con avatar</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlas.</strong> Personas o roles: quién hace qué en un proceso, o testimonios cortos. El avatar es un icono de persona o una foto redonda. Dos reglas de color: círculo claro con icono azul marino; círculo azul con icono blanco, para destacar uno.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo · tipo 1, roles</p>
-        <h3 class="ua-rotulo"><strong>Quiénes intervienen en la publicación de un artículo</strong></h3>
-        <div class="ua-tarjetas">
-          <div class="ua-tarjeta ua-tarjeta--avatar">
-            <div class="ua-tarjeta__avatar ua-tarjeta__avatar--azul"><iconify-icon icon="mdi:account-edit-outline"></iconify-icon></div>
-            <div class="ua-tarjeta__cuerpo">
-              <h4>Autor</h4>
-              <p>Diseña el estudio, redacta el manuscrito y responde por cada dato y cada cita. Declara los conflictos de interés y la contribución de cada coautor.</p>
-            </div>
-          </div>
-          <div class="ua-tarjeta ua-tarjeta--avatar">
-            <div class="ua-tarjeta__avatar"><iconify-icon icon="mdi:account-tie-outline"></iconify-icon></div>
-            <div class="ua-tarjeta__cuerpo">
-              <h4>Editor</h4>
-              <p>Decide si el manuscrito entra al proceso, elige a los revisores y toma la decisión final: aceptar, pedir cambios o rechazar.</p>
-            </div>
-          </div>
-          <div class="ua-tarjeta ua-tarjeta--avatar">
-            <div class="ua-tarjeta__avatar"><iconify-icon icon="mdi:account-search-outline"></iconify-icon></div>
-            <div class="ua-tarjeta__cuerpo">
-              <h4>Revisor par</h4>
-              <p>Evalúa el rigor del método, la solidez de los resultados y la pertinencia de las conclusiones. No corrige el estilo: señala lo que no se sostiene.</p>
-            </div>
-          </div>
-          <div class="ua-tarjeta ua-tarjeta--avatar">
-            <div class="ua-tarjeta__avatar"><iconify-icon icon="mdi:account-outline"></iconify-icon></div>
-            <div class="ua-tarjeta__cuerpo">
-              <h4>Lector</h4>
-              <p>Llega por el título y el resumen, y decide en un minuto si sigue. Escribir para él es escribir para alguien que tiene poco tiempo y muchas opciones.</p>
-            </div>
-          </div>
-        </div>
-
-        <p class="ua-cat-ejemplo">Ejemplo vivo · tipo 2, con rol y voz en primera persona</p>
-        <div class="ua-tarjetas">
-          <div class="ua-tarjeta ua-tarjeta--avatar">
-            <div class="ua-tarjeta__avatar"><iconify-icon icon="mdi:account-outline"></iconify-icon></div>
-            <div class="ua-tarjeta__cuerpo">
-              <h4>Autora</h4>
-              <span class="ua-tarjeta__rol">Primer artículo, tesis de maestría</span>
-              <p>«Creía que el problema era mi inglés. El problema era que mi introducción tenía cuatro páginas y la pregunta de investigación aparecía en la última».</p>
-            </div>
-          </div>
-          <div class="ua-tarjeta ua-tarjeta--avatar">
-            <div class="ua-tarjeta__avatar"><iconify-icon icon="mdi:account-outline"></iconify-icon></div>
-            <div class="ua-tarjeta__cuerpo">
-              <h4>Revisora par</h4>
-              <span class="ua-tarjeta__rol">Doce años evaluando manuscritos</span>
-              <p>«Lo primero que leo es la tabla de resultados. Si no entiendo qué se midió sin leer el texto, ya sé que el método está mal descrito».</p>
-            </div>
-          </div>
-        </div>
-        <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t3-2"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
-        </div>
-        <div class="ova-modal" id="cat-t3-2"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Tarjetas con avatar</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
-          <div class="ova-modal__body">
-            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
-            <div class="ua-cat-word"><span class="rojo">Tarjetas con avatar</span>
-<b>Título:</b> Quiénes intervienen en la publicación de un artículo
-<b>Tarjeta 1</b>
-<b>Autor</b>
-Diseña el estudio, redacta el manuscrito…
-<b>Tarjeta 2</b>
-<b>Editor</b>
-Decide si el manuscrito entra al proceso…
-<span class="gris">Cada tarjeta en tres líneas: «Tarjeta N», el nombre del rol o de la persona en negrilla y su texto. Para el tipo 2 se agrega una línea «Rol:» después del nombre y el texto va entre comillas, porque es una voz. Si hay foto de la persona, el instruccional anota [foto: nombre del archivo]; si no, va el icono de persona. Para destacar una tarjeta, anota [destacada] al final de su nombre.</span></div>
-          </div>
-          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
-        </div></div>
-      </div>
-
-      <!-- Ficha 3 · Tarjetas conectadas -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Tarjetas conectadas</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlas.</strong> Exactamente tres ideas que forman un conjunto cerrado: tres preguntas, tres condiciones, tres partes. Van pegadas, en los tres azules de la paleta, para que se lean como una sola pieza.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <h3 class="ua-rotulo"><strong>Las tres preguntas que se hace un revisor</strong></h3>
-        <div class="ua-tarjetas ua-tarjetas--conectadas">
-          <div class="ua-tarjeta">
-            <div class="ua-tarjeta__cuerpo">
-              <div class="ua-tarjeta__avatar ua-tarjeta__avatar--icono"><iconify-icon icon="mdi:help-circle-outline"></iconify-icon></div>
-              <h4>¿Es nuevo?</h4>
-              <p>Qué agrega este artículo a lo que ya se sabía. Si la respuesta está en la revisión de literatura de otro, no hay aporte.</p>
-            </div>
-          </div>
-          <div class="ua-tarjeta">
-            <div class="ua-tarjeta__cuerpo">
-              <div class="ua-tarjeta__avatar ua-tarjeta__avatar--icono"><iconify-icon icon="mdi:scale-balance"></iconify-icon></div>
-              <h4>¿Es cierto?</h4>
-              <p>Si el método permite llegar a esos resultados y si los resultados sostienen esas conclusiones, sin saltos.</p>
-            </div>
-          </div>
-          <div class="ua-tarjeta">
-            <div class="ua-tarjeta__cuerpo">
-              <div class="ua-tarjeta__avatar ua-tarjeta__avatar--icono"><iconify-icon icon="mdi:account-group-outline"></iconify-icon></div>
-              <h4>¿Importa?</h4>
-              <p>A quién le sirve saber esto y para qué. Un hallazgo correcto pero irrelevante para el campo se publica en otra parte.</p>
-            </div>
-          </div>
-        </div>
-        <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t3-3"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
-        </div>
-        <div class="ova-modal" id="cat-t3-3"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Tarjetas conectadas</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
-          <div class="ova-modal__body">
-            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
-            <div class="ua-cat-word"><span class="rojo">Tarjetas conectadas</span>
-<b>Título:</b> Las tres preguntas que se hace un revisor
-<b>Tarjeta 1</b>
-<b>¿Es nuevo?</b>
-Qué agrega este artículo a lo que ya se sabía…
-<b>Tarjeta 2</b>
-<b>¿Es cierto?</b>
-Si el método permite llegar a esos resultados…
-<b>Tarjeta 3</b>
-<b>¿Importa?</b>
-A quién le sirve saber esto y para qué…
-<span class="gris">Siempre tres tarjetas, en el mismo formato de las tarjetas con icono. Si el contenido tiene dos o cuatro, se piden tarjetas con icono: el color de las conectadas está pensado para tres.</span></div>
-          </div>
-          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
-        </div></div>
-      </div>
-
-      <!-- Ficha 4 · Tarjetas con foto · Tarjetas con foto sobre pasos -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Tarjetas con foto</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlas.</strong> Cuando cada elemento tiene una imagen propia que lo identifica: escenarios, lugares, momentos de un proceso. Si además los elementos tienen orden, la misma pieza va sobre los pasos y cada foto lleva su número.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo · tarjetas con foto</p>
-        <h3 class="ua-rotulo"><strong>Dónde se escribe un artículo</strong></h3>
-        <div class="ua-tarjetas">
-          <div class="ua-tarjeta ua-tarjeta--foto">
-            <img src="assets/img/curso/foto-podcast.webp" alt="Estudiante de pie en un patio universitario, con una carpeta abierta en las manos; al fondo, tres compañeros trabajan en una mesa con un computador portátil.">
-            <div class="ua-tarjeta__cuerpo">
-              <h4>En el seminario</h4>
-              <p>La primera versión del problema se discute en voz alta. Las objeciones de los compañeros son la primera revisión por pares, y la más barata.</p>
-            </div>
-          </div>
-          <div class="ua-tarjeta ua-tarjeta--foto">
-            <div class="ua-pendiente"><div class="ua-pendiente__marco"><iconify-icon icon="mdi:image-outline"></iconify-icon></div><span class="ua-pendiente__tag">Foto pendiente</span><p class="ua-pendiente__desc">Mesa de biblioteca con artículos impresos, subrayados y apilados por tema; un cuaderno con la matriz de lectura a medio llenar.</p></div>
-            <div class="ua-tarjeta__cuerpo">
-              <h4>En la biblioteca</h4>
-              <p>La revisión de literatura se construye con una matriz: autor, año, pregunta, método, hallazgo. Sin matriz, la revisión se vuelve un resumen de lecturas sueltas.</p>
-            </div>
-          </div>
-          <div class="ua-tarjeta ua-tarjeta--foto">
-            <div class="ua-pendiente"><div class="ua-pendiente__marco"><iconify-icon icon="mdi:image-outline"></iconify-icon></div><span class="ua-pendiente__tag">Foto pendiente</span><p class="ua-pendiente__desc">Escritorio con dos pantallas: a la izquierda, el gestor de referencias; a la derecha, el manuscrito con los comentarios del director de tesis.</p></div>
-            <div class="ua-tarjeta__cuerpo">
-              <h4>En el escritorio</h4>
-              <p>La redacción final se hace con el gestor de referencias abierto. Cada cita que entra al texto entra al mismo tiempo a la lista, con su DOI.</p>
-            </div>
-          </div>
-        </div>
-
-        <p class="ua-cat-ejemplo">Ejemplo vivo · tarjetas con foto sobre pasos</p>
-        <h3 class="ua-rotulo"><strong>Tres momentos del envío a una revista</strong></h3>
-        <div class="ova-stepper ua-tarjetas-foto">
-          <div class="ova-step">
-            <div class="ova-step__num"><span>01</span></div>
-            <div class="ova-step__card">
-              <figure class="ua-tf__media">
-                <img src="assets/img/curso/foto-podcast.webp" alt="Estudiante sonriente con una carpeta verde abierta, de pie frente a una mesa donde otros compañeros conversan.">
-                <h3>Elegir la revista</h3>
-              </figure>
-              <p>Antes de escribir la versión final se lee la guía para autores: extensión, formato de citas, tipo de artículo que publica. Escribir primero y buscar revista después obliga a reescribir.</p>
-            </div>
-          </div>
-          <div class="ova-step">
-            <div class="ova-step__num"><span>02</span></div>
-            <div class="ova-step__card">
-              <figure class="ua-tf__media">
-                <img src="assets/img/curso/portada-persona.webp" alt="Mujer joven de camisa blanca sostiene una tableta en un espacio de trabajo con poca luz; la pantalla le ilumina el rostro.">
-                <h3>Enviar por la plataforma</h3>
-              </figure>
-              <p>El manuscrito se sube anonimizado, con la carta al editor y la declaración de autoría. La plataforma asigna un número de seguimiento que se usa en toda la correspondencia.</p>
-            </div>
-          </div>
-          <div class="ova-step">
-            <div class="ova-step__num"><span>03</span></div>
-            <div class="ova-step__card">
-              <figure class="ua-tf__media">
-                <div class="ua-pendiente"><div class="ua-pendiente__marco"><iconify-icon icon="mdi:image-outline"></iconify-icon></div><span class="ua-pendiente__tag">Foto pendiente</span><p class="ua-pendiente__desc">Pantalla de correo con el mensaje del editor y, al lado, una tabla de dos columnas: comentario del revisor y respuesta del autor.</p></div>
-                <h3>Responder a los revisores</h3>
-              </figure>
-              <p>Cada comentario se responde en una tabla: qué dijo el revisor, qué se cambió y en qué página. Si no se acepta una sugerencia, se explica por qué, con respeto y con evidencia.</p>
-            </div>
-          </div>
-        </div>
-        <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t3-4"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
-        </div>
-        <div class="ova-modal" id="cat-t3-4"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Tarjetas con foto</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
-          <div class="ova-modal__body">
-            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
-            <div class="ua-cat-word"><span class="rojo">Tarjetas con foto</span>
-<b>Título:</b> Dónde se escribe un artículo
-<b>Tarjeta 1</b>
-<b>En el seminario</b>
-[Foto: estudiantes discutiendo alrededor de una mesa]
-La primera versión del problema se discute en voz alta…
-<b>Tarjeta 2</b>
-<b>En la biblioteca</b>
-[Foto: mesa con artículos subrayados y una matriz de lectura]
-La revisión de literatura se construye con una matriz…
-<span class="gris">Igual que las tarjetas con icono, con una línea [Foto: descripción] después del nombre. La descripción es la que recibe el diseñador para buscar o producir la imagen. Si las tarjetas tienen orden, el rótulo cambia a «Pasos con foto» y las líneas pasan a ser «Paso N»: salen con el número sobre la foto.</span></div>
-          </div>
-          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
-        </div></div>
-      </div>
-
-      <!-- Ficha 5 · Tarjeta que abre una ventana -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Tarjeta con ventana</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarla.</strong> Una tarjeta presenta la idea en pocas líneas y el detalle largo (una norma completa, un ejemplo extenso) espera en una ventana que el lector abre si lo necesita. Evita que un bloque secundario interrumpa la lectura principal.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <div class="ua-tarjetas">
-          <div class="ua-tarjeta">
-            <div class="ua-tarjeta__cuerpo">
-              <div class="ua-tarjeta__avatar ua-tarjeta__avatar--icono"><iconify-icon icon="mdi:format-quote-close"></iconify-icon></div>
-              <h4>Citar en APA, séptima edición</h4>
-              <p>La cita en el texto lleva apellido y año; si es textual, también la página. La lista de referencias se ordena alfabéticamente y cada entrada responde a cuatro preguntas: quién, cuándo, qué y dónde.</p>
-              <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Haga clic en el botón para abrir la ventana.</p>
-              <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t3-5-ventana"><iconify-icon icon="mdi:open-in-new"></iconify-icon> Ver los cuatro elementos</button>
-            </div>
-          </div>
-        </div>
-        <div class="ova-modal" id="cat-t3-5-ventana"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Los cuatro elementos de una referencia APA</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
-          <div class="ova-modal__body">
-            <p><strong>Autor.</strong> Apellido e iniciales de cada autor, separados por coma, con «&amp;» antes del último. Hasta veinte autores se listan todos.</p>
-            <p><strong>Fecha.</strong> El año entre paréntesis. Para artículos de prensa o publicaciones periódicas sin volumen, el año, el mes y el día.</p>
-            <p><strong>Título.</strong> El del artículo, en redonda y solo con mayúscula inicial. El de la revista, en cursiva y con mayúsculas en cada palabra significativa, seguido del volumen en cursiva y el número entre paréntesis.</p>
-            <p><strong>Fuente.</strong> Las páginas y el DOI en forma de enlace (https://doi.org/…). Si el documento no tiene DOI y se consultó en línea, la URL. No se escribe «Recuperado de» ni la fecha de consulta, salvo que el contenido cambie con el tiempo.</p>
-            <p>Un error frecuente en los manuscritos de posgrado es que la cita en el texto y la entrada en la lista no coinciden: un autor citado que no está en las referencias, o una referencia que nadie cita. Antes de enviar, se cruzan las dos listas.</p>
-          </div>
-          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
-        </div></div>
-        <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t3-5"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
-        </div>
-        <div class="ova-modal" id="cat-t3-5"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Tarjeta con ventana</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
-          <div class="ova-modal__body">
-            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
-            <div class="ua-cat-word"><span class="rojo">Tarjeta con ventana</span>
-<b>Citar en APA, séptima edición</b>
-La cita en el texto lleva apellido y año…
-<b>Botón:</b> Ver los cuatro elementos
-<span class="rojo">Ventana</span>
-<b>Título:</b> Los cuatro elementos de una referencia APA
-<b>Autor.</b> Apellido e iniciales de cada autor…
-<b>Fecha.</b> El año entre paréntesis…
-<span class="gris">La tarjeta lleva su nombre en negrilla, el texto corto y la línea «Botón:» con el texto del botón. Debajo, el rótulo «Ventana» en rojo, su título y todo el texto que se abre. El llamado a la acción lo pone la producción con el texto fijo.</span></div>
-          </div>
-          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
-        </div></div>
-      </div>
 
       <!-- ════ Sección 3.2 · Carrusel y slide ════ -->
-      <section class="ua-seccion" id="carrusel-y-slide" data-reveal>
-        <h2 class="ua-seccion__titulo">Carrusel <span class="ua-suave">y</span> <span class="ua-remate">slide</span></h2>
-        <p class="ua-seccion__lead">Tarjetas que se recorren con flechas: de tres en tres cuando son muchas, de una en una cuando cada una necesita toda la pantalla.</p>
-      </section>
 
       <!-- Ficha 6 · Carrusel de tarjetas -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Carrusel</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> De cuatro a ocho ítems del mismo tipo que no caben a la vista sin aplastar la pantalla. El lector avanza a su ritmo. Nunca para un ciclo ni para una secuencia que debe verse completa.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <h3 class="ua-rotulo"><strong>Seis verbos que no pueden faltar en la discusión</strong></h3>
+      <section class="ua-seccion" id="carrusel-y-slide" data-reveal>
+        <h2 class="ua-seccion__titulo">Carrusel</h2>
         <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Haga clic en las flechas para desplazar la información.</p>
         <div class="ova-carrusel ua-carrusel-tarjetas">
           <div class="ova-carrusel__track-wrap"><div class="ova-carrusel__track">
@@ -381,89 +121,20 @@ Proponer por qué se obtuvo lo que se obtuvo…
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
-      </div>
-
-      <!-- Ficha 7 · Slide de navegación simple (el mismo carrusel, una tarjeta por pantalla) -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Slide</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarlo.</strong> Dos o tres pantallas que combinan un texto y una figura, y que se quieren ver de a una, como las láminas de una presentación. Es el mismo carrusel con una sola tarjeta a la vista.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <h3 class="ua-rotulo"><strong>El resumen: antes y después de revisarlo</strong></h3>
-        <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Haga clic en las flechas para desplazar la información.</p>
-        <div class="ova-carrusel ua-slide">
-          <div class="ova-carrusel__track-wrap"><div class="ova-carrusel__track">
-            <div class="ova-carrusel__slide">
-              <div class="ua-slide__texto">
-                <h4>Lámina 1 · Lo que el resumen debe contener</h4>
-                <p>Un resumen estructurado responde en menos de 250 palabras cinco preguntas: cuál era el problema, qué se hizo, con quién o con qué, qué se encontró y qué significa. Se escribe al final, cuando ya se sabe qué se encontró, y no se cita en él.</p>
-                <p>El lector que llega por un buscador solo ve el resumen. Si no encuentra ahí el hallazgo principal con su cifra, no descarga el artículo.</p>
-              </div>
-              <figure class="ova-figura ova-figura--plana">
-                <div class="ova-figura__hero">
-                  <img src="assets/img/curso/portada-persona.webp" alt="Mujer joven de camisa blanca lee en una tableta en un espacio con poca luz; la pantalla le ilumina el rostro.">
-                </div>
-                <figcaption class="ova-figura__leyenda"><b>Figura 1.</b> La lectura del resumen ocurre en pantalla y dura menos de un minuto.</figcaption>
-              </figure>
-            </div>
-            <div class="ova-carrusel__slide">
-              <div class="ua-slide__texto">
-                <h4>Lámina 2 · Lo que se revisa antes de enviarlo</h4>
-                <p>Se comprueba que cada cifra del resumen aparece igual en los resultados, que no hay abreviaturas sin desplegar y que las palabras clave no repiten las del título: son las que un buscador usará para encontrar el artículo.</p>
-                <p>Un resumen que promete lo que la discusión no sostiene es la primera razón de rechazo sin revisión.</p>
-              </div>
-              <figure class="ova-figura ova-figura--plana">
-                <div class="ova-figura__hero">
-                  <img src="assets/img/curso/foto-podcast.webp" alt="Estudiante con una carpeta abierta en un patio universitario; detrás, un grupo trabaja en una mesa con un computador portátil.">
-                </div>
-                <figcaption class="ova-figura__leyenda"><b>Figura 2.</b> La revisión final se hace con otra persona: quien escribió el resumen ya no ve sus propios saltos.</figcaption>
-              </figure>
-            </div>
-          </div></div>
-          <div class="ova-carrusel__nav"><div class="ova-carrusel__dots"></div><div class="ova-carrusel__arrows"><button class="ova-carrusel__arrow" data-ova-carrusel-prev aria-label="Lámina anterior"><iconify-icon icon="mdi:arrow-left"></iconify-icon></button><button class="ova-carrusel__arrow" data-ova-carrusel-next aria-label="Lámina siguiente"><iconify-icon icon="mdi:arrow-right"></iconify-icon></button></div></div>
-        </div>
-        <div class="ua-cat-acciones">
-          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t3-7"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
-        </div>
-        <div class="ova-modal" id="cat-t3-7"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Slide</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
-          <div class="ova-modal__body">
-            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
-            <div class="ua-cat-word"><span class="rojo">Slide</span>
-<b>Título:</b> El resumen: antes y después de revisarlo
-<b>Lámina 1</b>
-<b>Lo que el resumen debe contener</b>
-Un resumen estructurado responde en menos de 250 palabras…
-[Figura 1: lectura del resumen en pantalla · Leyenda: La lectura del resumen ocurre en pantalla…]
-<b>Lámina 2</b>
-<b>Lo que se revisa antes de enviarlo</b>
-Se comprueba que cada cifra del resumen…
-<span class="gris">Es el mismo componente del carrusel, con una tarjeta por pantalla: por eso el rótulo es «Slide» y las partes son «Lámina N». Cada lámina lleva título en negrilla, uno o dos párrafos y, si la hay, la figura entre corchetes con su leyenda. De dos a cuatro láminas; con más, se divide en dos bloques.</span></div>
-          </div>
-          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
-        </div></div>
-      </div>
-
-      <!-- ════ Sección 3.3 · Galería de imágenes ════ -->
-      <section class="ua-seccion" id="galeria" data-reveal>
-        <h2 class="ua-seccion__titulo">Galería <span class="ua-suave">de</span> <span class="ua-remate">imágenes</span></h2>
-        <p class="ua-seccion__lead">Varias imágenes del mismo asunto, con pie, que se recorren con flechas, puntos o un clic sobre la vecina.</p>
       </section>
 
-      <!-- Ficha 8 · Galería de imágenes -->
-      <div class="ua-cat-ficha" data-reveal>
-        <span class="ua-cat-rotulo">Galería</span>
-        <p class="ua-cat-cuando"><strong>Cuándo usarla.</strong> De tres a ocho imágenes que ilustran un mismo asunto y que el lector mira una por una: etapas de un proceso, piezas de un mismo documento, lugares. Cada imagen lleva un pie corto; el texto explicativo va fuera de la galería.</p>
-        <p class="ua-cat-ejemplo">Ejemplo vivo</p>
-        <h3 class="ua-rotulo"><strong>Cuatro escenas del trabajo de escritura</strong></h3>
+      <!-- Ficha 7 · Slide de navegación simple (el mismo carrusel, una tarjeta por pantalla) -->
+      <section class="ua-seccion ua-seccion--variante" id="carrusel-de-fotos" data-reveal>
+        <h2 class="ua-seccion__titulo">Carrusel de fotos</h2>
         <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Haga clic en las flechas o en una imagen para recorrer la galería.</p>
-        <div class="ua-galeria" aria-label="Galería: cuatro escenas del trabajo de escritura">
+        <div class="ua-galeria" aria-label="Carrusel de fotos: cuatro escenas del trabajo de escritura">
           <div class="ua-galeria__pista">
             <div class="ua-galeria__item" tabindex="0">
               <img src="assets/img/curso/foto-podcast.webp" alt="Estudiante de pie con una carpeta abierta en un patio universitario; al fondo, tres compañeros trabajan en una mesa.">
               <div class="ua-galeria__pie"><small>Escena 1</small><strong>Discutir el problema con los pares</strong></div>
             </div>
             <div class="ua-galeria__item" tabindex="0">
-              <div class="ua-pendiente"><div class="ua-pendiente__marco"><iconify-icon icon="mdi:image-outline"></iconify-icon></div><span class="ua-pendiente__tag">Foto pendiente</span><p class="ua-pendiente__desc">Primer plano de una matriz de lectura en una hoja de cálculo: columnas de autor, año, método y hallazgo, con filas resaltadas.</p></div>
+              <img src="assets/img/curso/galeria-matriz.webp" alt="Mujer con anteojos lee un libro junto a un portátil abierto, en una mesa de trabajo en casa.">
               <div class="ua-galeria__pie"><small>Escena 2</small><strong>Construir la matriz de lectura</strong></div>
             </div>
             <div class="ua-galeria__item" tabindex="0">
@@ -471,7 +142,7 @@ Se comprueba que cada cifra del resumen…
               <div class="ua-galeria__pie"><small>Escena 3</small><strong>Revisar el manuscrito en pantalla</strong></div>
             </div>
             <div class="ua-galeria__item" tabindex="0">
-              <div class="ua-pendiente"><div class="ua-pendiente__marco"><iconify-icon icon="mdi:image-outline"></iconify-icon></div><span class="ua-pendiente__tag">Foto pendiente</span><p class="ua-pendiente__desc">Pantalla de la plataforma de una revista con el estado del manuscrito: «En revisión», y la fecha de envío.</p></div>
+              <img src="assets/img/curso/galeria-revision.webp" alt="Mujer sentada en un escritorio de casa trabaja en un portátil, con una lámpara encendida.">
               <div class="ua-galeria__pie"><small>Escena 4</small><strong>Enviar y esperar la revisión</strong></div>
             </div>
           </div>
@@ -486,22 +157,320 @@ Se comprueba que cada cifra del resumen…
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t3-8"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
         </div>
         <div class="ova-modal" id="cat-t3-8"><div class="ova-modal__dialog">
-          <div class="ova-modal__head"><h3>Galería</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__head"><h3>Carrusel de fotos</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
           <div class="ova-modal__body">
             <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
-            <div class="ua-cat-word"><span class="rojo">Galería</span>
+            <div class="ua-cat-word"><span class="rojo">Carrusel de fotos</span>
 <b>Título:</b> Cuatro escenas del trabajo de escritura
 <b>Imagen 1</b>
-[Foto: estudiantes discutiendo alrededor de una mesa]
+Vincular Imagen-01
 <b>Pie:</b> Discutir el problema con los pares
 <b>Imagen 2</b>
-[Foto: matriz de lectura en una hoja de cálculo]
+Vincular Imagen-02
 <b>Pie:</b> Construir la matriz de lectura
 <span class="gris">Por imagen: la línea «Imagen N», la descripción entre corchetes (o el nombre del archivo si el diseñador ya la entregó) y la línea «Pie:» con el texto corto que va sobre la foto (hasta diez palabras). El texto que explique la serie va antes o después, como párrafo.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
-      </div>
+      </section>
+
+      <section class="ua-seccion ua-seccion--variante" id="slide" data-reveal>
+        <h2 class="ua-seccion__titulo">Slide</h2>
+        <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Haga clic en las flechas para desplazar la información.</p>
+        <div class="ova-carrusel ua-slide">
+          <div class="ova-carrusel__track-wrap"><div class="ova-carrusel__track">
+            <div class="ova-carrusel__slide">
+              <div class="ua-slide__texto">
+                <h4>Slide 1 · Elon Musk</h4>
+                <p>Dirige Tesla, SpaceX y xAI, la empresa que desarrolla el modelo Grok. Compró Twitter en 2022 y la convirtió en X.</p>
+                <p>Sus empresas abarcan autos eléctricos, cohetes reutilizables, satélites de internet e inteligencia artificial.</p>
+              </div>
+              <div class="ua-slide__retrato">
+                <span class="ua-slide__retrato-fondo" aria-hidden="true"></span>
+                <span class="ua-slide__retrato-marco"><img class="ua-slide__retrato-foto" src="assets/img/curso/retrato-musk.webp" alt="Elon Musk, de traje oscuro y camisa blanca, mira a la cámara con gesto serio."></span>
+              </div>
+            </div>
+            <div class="ova-carrusel__slide">
+              <div class="ua-slide__texto">
+                <h4>Slide 2 · Mark Zuckerberg</h4>
+                <p>Fundó Facebook en 2004 desde Harvard y hoy dirige Meta, dueña de Facebook, Instagram y WhatsApp.</p>
+                <p>Meta publica los modelos Llama con pesos abiertos, que cualquiera puede descargar y ejecutar en sus propios equipos.</p>
+              </div>
+              <div class="ua-slide__retrato">
+                <span class="ua-slide__retrato-fondo" aria-hidden="true"></span>
+                <span class="ua-slide__retrato-marco"><img class="ua-slide__retrato-foto" src="assets/img/curso/retrato-zuckerberg.webp" alt="Mark Zuckerberg, con suéter gris, habla en un escenario."></span>
+              </div>
+            </div>
+            <div class="ova-carrusel__slide">
+              <div class="ua-slide__texto">
+                <h4>Slide 3 · Dario Amodei</h4>
+                <p>Cofundó Anthropic en 2021 con su hermana Daniela y otros investigadores que venían de OpenAI, y es su director ejecutivo.</p>
+                <p>Anthropic desarrolla Claude y pone la seguridad de los modelos en el centro de su investigación.</p>
+              </div>
+              <div class="ua-slide__retrato">
+                <span class="ua-slide__retrato-fondo" aria-hidden="true"></span>
+                <span class="ua-slide__retrato-marco"><img class="ua-slide__retrato-foto" src="assets/img/curso/retrato-amodei.webp" alt="Dario Amodei, con anteojos y camisa azul, habla con la mano en alto."></span>
+              </div>
+            </div>
+            <div class="ova-carrusel__slide">
+              <div class="ua-slide__texto">
+                <h4>Slide 4 · Sam Altman</h4>
+                <p>Dirige OpenAI, la empresa de ChatGPT, desde 2019. Antes presidió la aceleradora de empresas emergentes Y Combinator.</p>
+                <p>Con el lanzamiento de ChatGPT en noviembre de 2022 la inteligencia artificial generativa llegó al público masivo.</p>
+              </div>
+              <div class="ua-slide__retrato">
+                <span class="ua-slide__retrato-fondo" aria-hidden="true"></span>
+                <span class="ua-slide__retrato-marco"><img class="ua-slide__retrato-foto" src="assets/img/curso/retrato-altman.webp" alt="Sam Altman, con camiseta oscura, habla en un escenario."></span>
+              </div>
+            </div>
+          </div></div>
+          <div class="ova-carrusel__nav"><div class="ova-carrusel__dots"></div><div class="ova-carrusel__arrows"><button class="ova-carrusel__arrow" data-ova-carrusel-prev aria-label="Slide anterior"><iconify-icon icon="mdi:arrow-left"></iconify-icon></button><button class="ova-carrusel__arrow" data-ova-carrusel-next aria-label="Slide siguiente"><iconify-icon icon="mdi:arrow-right"></iconify-icon></button></div></div>
+        </div>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t3-7"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t3-7"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Slide</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Slide</span>
+<b>Título:</b> Cuatro líderes de la tecnología
+<b>Slide 1</b>
+<b>Elon Musk</b>
+Dirige Tesla, SpaceX y xAI, la empresa que desarrolla el modelo Grok…
+<span class="rojo">Vincular Imagen-01</span> <span class="gris">(foto silueteada, PNG sin fondo)</span>
+<b>Slide 2</b>
+<b>Mark Zuckerberg</b>
+Fundó Facebook en 2004 desde Harvard…
+<span class="rojo">Vincular Imagen-02</span>
+<span class="gris">Es el mismo componente del carrusel, con una tarjeta por pantalla: por eso el rótulo es «Slide» y las partes son «Slide N». Cada slide lleva título en negrilla, uno o dos párrafos y la imagen con «Vincular Imagen-N»: una foto silueteada (PNG sin fondo) que el curso monta sobre el círculo; sin leyenda. De dos a cinco slides; con más, se divide en dos bloques. El fondo es de un solo color; para fondos con textura, «Slide - con fondo».</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        <h2 class="ua-seccion__titulo ua-titulo--variante">Slide - con fondo <span class="ua-sub__nota">(número + título + texto + imagen, sobre un fondo oscuro con textura)</span></h2>
+        <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Haga clic en las flechas para desplazar la información.</p>
+        <div class="ova-carrusel ua-slide ua-slide--fondo">
+          <div class="ova-carrusel__track-wrap"><div class="ova-carrusel__track">
+            <div class="ova-carrusel__slide ua-slide__lamina ua-slide__lamina--naranja">
+              <span class="ua-slide__num" aria-hidden="true">01</span>
+              <div class="ua-slide__texto">
+                <h4>Claude</h4>
+                <p>Modelo de Anthropic. Se le pide razonar paso a paso, leer documentos largos y escribir con un tono cuidado; responde mejor cuando el encargo trae el contexto y el formato esperado.</p>
+                <p>Se usa desde la aplicación web, la aplicación de escritorio y la API; en escritura académica sirve para contrastar un borrador y pedir objeciones.</p>
+              </div>
+              <div class="ua-slide__arte" aria-hidden="true"><span class="ua-slide__anillo"></span><span class="ua-slide__disco"><iconify-icon icon="simple-icons:anthropic"></iconify-icon></span></div>
+            </div>
+            <div class="ova-carrusel__slide ua-slide__lamina ua-slide__lamina--verde">
+              <span class="ua-slide__num" aria-hidden="true">02</span>
+              <div class="ua-slide__texto">
+                <h4>ChatGPT</h4>
+                <p>Asistente de OpenAI sobre la familia GPT. Es el más extendido: conversación, análisis de archivos, generación de imágenes y navegación en la misma ventana.</p>
+                <p>Permite crear asistentes propios con instrucciones fijas, útiles para repetir una misma revisión sobre muchos textos.</p>
+              </div>
+              <div class="ua-slide__arte" aria-hidden="true"><span class="ua-slide__anillo"></span><span class="ua-slide__disco"><iconify-icon icon="simple-icons:openai"></iconify-icon></span></div>
+            </div>
+            <div class="ova-carrusel__slide ua-slide__lamina ua-slide__lamina--azul">
+              <span class="ua-slide__num" aria-hidden="true">03</span>
+              <div class="ua-slide__texto">
+                <h4>Gemini</h4>
+                <p>Modelo de Google DeepMind integrado en el buscador, en Gmail, en Docs y en Android. Trabaja con texto, imagen, audio y video en una sola conversación.</p>
+                <p>Su ventaja en el aula es el acceso directo a los documentos de Google Drive del curso sin copiarlos.</p>
+              </div>
+              <div class="ua-slide__arte" aria-hidden="true"><span class="ua-slide__anillo"></span><span class="ua-slide__disco"><iconify-icon icon="simple-icons:googlegemini"></iconify-icon></span></div>
+            </div>
+            <div class="ova-carrusel__slide ua-slide__lamina ua-slide__lamina--gris">
+              <span class="ua-slide__num" aria-hidden="true">04</span>
+              <div class="ua-slide__texto">
+                <h4>Grok</h4>
+                <p>Modelo de xAI disponible dentro de X y como aplicación propia. Responde con información reciente de la red social y con un tono más informal.</p>
+                <p>Para un trabajo académico, sus respuestas se contrastan con una fuente verificable antes de citarlas.</p>
+              </div>
+              <div class="ua-slide__arte" aria-hidden="true"><span class="ua-slide__anillo"></span><span class="ua-slide__disco"><iconify-icon icon="simple-icons:x"></iconify-icon></span></div>
+            </div>
+            <div class="ova-carrusel__slide ua-slide__lamina ua-slide__lamina--ocre">
+              <span class="ua-slide__num" aria-hidden="true">05</span>
+              <div class="ua-slide__texto">
+                <h4>Llama</h4>
+                <p>Familia de modelos de Meta con pesos abiertos: se descargan y se ejecutan en servidores propios o en el computador, sin enviar datos a un tercero.</p>
+                <p>Es la opción habitual cuando la información del proyecto no puede salir de la institución.</p>
+              </div>
+              <div class="ua-slide__arte" aria-hidden="true"><span class="ua-slide__anillo"></span><span class="ua-slide__disco"><iconify-icon icon="simple-icons:meta"></iconify-icon></span></div>
+            </div>
+          </div></div>
+          <div class="ova-carrusel__nav"><div class="ova-carrusel__dots"></div><div class="ova-carrusel__arrows"><button class="ova-carrusel__arrow" data-ova-carrusel-prev aria-label="Slide anterior"><iconify-icon icon="mdi:arrow-left"></iconify-icon></button><button class="ova-carrusel__arrow" data-ova-carrusel-next aria-label="Slide siguiente"><iconify-icon icon="mdi:arrow-right"></iconify-icon></button></div></div>
+        </div>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t3-slide-fondo"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t3-slide-fondo"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Slide - con fondo</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Slide - con fondo</span>
+<b>Título:</b> Modelos de IA generativa
+<b>Slide 1</b> <span class="gris">· Nota para el agente: fondo naranja</span>
+<b>Claude</b>
+Modelo de Anthropic. Se le pide razonar paso a paso…
+<span class="rojo">Vincular Imagen-01</span>
+<b>Slide 2</b> <span class="gris">· Nota para el agente: fondo verde</span>
+<b>ChatGPT</b>
+Asistente de OpenAI sobre la familia GPT…
+<span class="rojo">Vincular Imagen-02</span>
+<span class="gris">Igual que el Slide: un slide por pantalla, con título en negrilla, uno o dos párrafos y la imagen con «Vincular Imagen-N». El número lo pone el componente. El fondo de cada slide se pide con la nota: naranja, verde, azul, gris u ocre (todos oscuros, cada uno con su textura; el texto va en claro); sin nota, se alternan. La imagen va a la derecha; si no llega, el curso pone un icono.</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </section>
+
+      <!-- ════ Sección · Pestañas ════ -->
+
+      <!-- Ficha 3 · Pestañas horizontales -->
+      <section class="ua-seccion" id="pestanas" data-reveal>
+        <h2 class="ua-seccion__titulo">Pestañas</h2>
+        <h3 class="ua-rotulo"><strong>Los estados de la materia</strong></h3>
+        <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Selecciona cada pestaña para conocer las características de los tres estados de la materia.</p>
+        <div class="ova-tabs ua-tabs-pildora">
+          <div class="ova-tabs__nav">
+            <button class="ova-tabs__btn is-active"><iconify-icon icon="mdi:cube-outline"></iconify-icon> Sólido</button>
+            <button class="ova-tabs__btn"><iconify-icon icon="mdi:water-outline"></iconify-icon> Líquido</button>
+            <button class="ova-tabs__btn"><iconify-icon icon="mdi:cloud-outline"></iconify-icon> Gaseoso</button>
+          </div>
+          <div class="ova-tabs__panels">
+            <div class="ova-tabs__panel is-active"><p>Los sólidos tienen forma y volumen definidos. Sus partículas están muy juntas y vibran alrededor de posiciones fijas. Por eso, mantienen su forma cuando los cambiamos de recipiente.</p><p><strong>Ejemplo cotidiano:</strong> Un cubo de hielo conserva su forma al colocarlo en un vaso o en un plato, mientras no se derrita.</p></div>
+            <div class="ova-tabs__panel"><p>Los líquidos tienen un volumen definido, pero adoptan la forma del recipiente que los contiene. Sus partículas están próximas y pueden moverse unas respecto a otras, lo que les permite fluir.</p><p><strong>Ejemplo cotidiano:</strong> Al pasar agua de una botella a un vaso, cambia su forma, pero la cantidad de agua sigue siendo la misma.</p></div>
+            <div class="ova-tabs__panel"><p>Los gases no tienen forma ni volumen definidos. Sus partículas están muy separadas y se mueven libremente, por lo que se expanden hasta ocupar el espacio disponible.</p><p><strong>Ejemplo cotidiano:</strong> Al inflar un globo, el aire que introduces ocupa su interior y hace que aumente de tamaño.</p></div>
+          </div>
+        </div>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t2-3p"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t2-3p"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Pestañas</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Pestañas</span>
+<span class="gris">Nota para el agente: con icono.</span>
+<b>Título:</b> Los estados de la materia
+<b>Instrucción:</b> Selecciona cada pestaña para conocer las características de los tres estados de la materia.
+Pestaña 1
+<b>Sólido</b>
+Los sólidos tienen forma y volumen definidos. Sus partículas están muy juntas […]
+<b>Ejemplo cotidiano:</b> Un cubo de hielo conserva su forma al colocarlo en un vaso […]
+Pestaña 2
+<b>Líquido</b>
+[…]
+<span class="gris">Por pestaña: la línea «Pestaña N», el rótulo de la pestaña en negrilla (hasta 4 palabras) y el contenido (hasta 140 palabras); una etiqueta en negrilla dentro del texto, como «Ejemplo cotidiano:», se conserva tal cual. «Título:» sale como rótulo del bloque e «Instrucción:» reemplaza el llamado a la acción fijo.</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+
+        <h2 class="ua-seccion__titulo ua-titulo--variante" id="pestanas-linea">Pestañas - línea</h2>
+        <h3 class="ua-rotulo"><strong>Navegadores de internet</strong></h3>
+        <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Selecciona cada pestaña para conocer algunos de los navegadores que puedes utilizar para acceder a internet y a tu curso virtual.</p>
+        <div class="ova-tabs">
+          <div class="ova-tabs__nav">
+            <button class="ova-tabs__btn is-active">Google Chrome</button>
+            <button class="ova-tabs__btn">Mozilla Firefox</button>
+            <button class="ova-tabs__btn">Microsoft Edge</button>
+            <button class="ova-tabs__btn">Safari</button>
+          </div>
+          <div class="ova-tabs__panels">
+            <div class="ova-tabs__panel is-active"><div class="ua-tab-media">
+              <div><p>Es un navegador desarrollado por Google. Permite visitar páginas web, guardar sitios favoritos y organizar varias páginas en pestañas. Al iniciar sesión, puedes sincronizar tus marcadores entre dispositivos.</p><p><strong>Ejemplo de uso:</strong> Abre tu curso en una pestaña y un material de consulta en otra para revisar ambos mientras realizas una actividad.</p></div>
+              <div class="ua-tab-media__figura" aria-hidden="true"><iconify-icon icon="logos:chrome"></iconify-icon></div>
+            </div></div>
+            <div class="ova-tabs__panel"><div class="ua-tab-media">
+              <div><p>Es un navegador desarrollado por Mozilla. Ofrece herramientas de privacidad y opciones para personalizar la navegación. Puedes organizar tus sitios favoritos y añadir extensiones según tus necesidades.</p><p><strong>Ejemplo de uso:</strong> Guarda la página de tu curso en los marcadores para acceder fácilmente en tu próxima sesión de estudio.</p></div>
+              <div class="ua-tab-media__figura" aria-hidden="true"><iconify-icon icon="logos:firefox"></iconify-icon></div>
+            </div></div>
+            <div class="ova-tabs__panel"><div class="ua-tab-media">
+              <div><p>Es un navegador desarrollado por Microsoft. Incluye herramientas para consultar documentos PDF y facilitar la lectura de contenidos web, como la lectura en voz alta en páginas compatibles.</p><p><strong>Ejemplo de uso:</strong> Abre una guía de estudio en PDF y utiliza el resaltador para identificar las ideas principales.</p></div>
+              <div class="ua-tab-media__figura" aria-hidden="true"><iconify-icon icon="logos:microsoft-edge"></iconify-icon></div>
+            </div></div>
+            <div class="ova-tabs__panel"><div class="ua-tab-media">
+              <div><p>Es el navegador de Apple, disponible en dispositivos como Mac, iPhone y iPad. Permite guardar páginas en una lista de lectura y utilizar una vista simplificada en sitios compatibles.</p><p><strong>Ejemplo de uso:</strong> Activa la vista de lector en un artículo compatible para concentrarte en el texto y reducir las distracciones visuales.</p></div>
+              <div class="ua-tab-media__figura" aria-hidden="true"><iconify-icon icon="logos:safari"></iconify-icon></div>
+            </div></div>
+          </div>
+        </div>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t2-3"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t2-3"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Pestañas - línea</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Pestañas - línea</span>
+<b>Título:</b> Navegadores de internet
+<b>Instrucción:</b> Selecciona cada pestaña para conocer algunos de los navegadores […]
+Pestaña 1
+<b>Google Chrome</b>
+Es un navegador desarrollado por Google. Permite visitar páginas web […]
+<b>Ejemplo de uso:</b> Abre tu curso en una pestaña y un material de consulta en otra […]
+<span class="rojo">Vincular Imagen-01</span>
+Pestaña 2
+<b>Mozilla Firefox</b>
+[…]
+<span class="rojo">Vincular Imagen-02</span>
+<span class="gris">Por pestaña: la línea «Pestaña N», el rótulo en negrilla (hasta 4 palabras), el contenido (hasta 140 palabras) con sus etiquetas en negrilla tal cual, y la imagen con «Vincular Imagen-N», que va al lado del texto. Si una pestaña no trae imagen, el agente pone un icono en su lugar. «Título:» sale como rótulo del bloque e «Instrucción:» reemplaza el llamado a la acción fijo.</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </section>
+
+      <!-- Ficha 5 · Pestañas verticales -->
+      <section class="ua-seccion ua-seccion--variante" id="pestanas-verticales" data-reveal>
+        <h2 class="ua-seccion__titulo">Pestañas verticales</h2>
+        <h3 class="ua-rotulo"><strong>Organiza tu sesión de estudio</strong></h3>
+        <p class="ua-cta"><span class="ua-cta__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Haz clic en cada pestaña para descubrir cómo prepararte, aprovechar el tiempo y repasar lo aprendido.</p>
+        <div class="ova-tabs ua-tabs-vertical">
+          <div class="ova-tabs__nav">
+            <button class="ova-tabs__btn is-active">Antes de estudiar</button>
+            <button class="ova-tabs__btn">Durante el estudio</button>
+            <button class="ova-tabs__btn">Después de estudiar</button>
+          </div>
+          <div class="ova-tabs__panels">
+            <div class="ova-tabs__panel is-active">
+              <h4><strong>Prepara tu espacio y define una meta</strong></h4>
+              <p>Elige un lugar cómodo, con buena iluminación y pocas distracciones. Ten a mano los materiales que necesitas y silencia las notificaciones del celular.</p>
+              <p>Define una meta concreta para la sesión. Por ejemplo: «Hoy estudiaré el ciclo del agua y explicaré sus etapas con mis propias palabras».</p>
+            </div>
+            <div class="ova-tabs__panel">
+              <h4><strong>Participa activamente en tu aprendizaje</strong></h4>
+              <p>Divide el contenido en partes pequeñas. Lee con atención, identifica las ideas principales y escribe notas con tus propias palabras. Alterna el estudio con pausas breves.</p>
+              <p>Comprueba tu comprensión haciendo preguntas. Por ejemplo: «¿Cómo le explicaría este concepto a alguien que no lo conoce?». Si encuentras una duda, anótala para resolverla.</p>
+            </div>
+            <div class="ova-tabs__panel">
+              <h4><strong>Repasa y comprueba lo aprendido</strong></h4>
+              <p>Cierra el material e intenta recordar las ideas principales. Puedes elaborar un resumen, dibujar un esquema o responder preguntas sin consultar tus apuntes.</p>
+              <p>Revisa tus respuestas y reconoce qué necesitas reforzar. Antes de terminar, define cuándo repasarás el tema y cuál será tu siguiente objetivo de aprendizaje.</p>
+            </div>
+          </div>
+        </div>
+        <div class="ua-cat-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t2-5"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t2-5"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Pestañas verticales</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ua-cat-modal__cab">Así se recibe en el Word</p>
+            <div class="ua-cat-word"><span class="rojo">Pestañas verticales</span>
+<b>Título:</b> Organiza tu sesión de estudio
+<b>Instrucción:</b> Haz clic en cada pestaña para descubrir cómo prepararte, aprovechar el tiempo y repasar lo aprendido.
+Pestaña 1
+<b>Antes de estudiar</b>
+<b>Título del contenido:</b> Prepara tu espacio y define una meta
+Elige un lugar cómodo, con buena iluminación y pocas distracciones […]
+Define una meta concreta para la sesión. Por ejemplo: […]
+Pestaña 2
+<b>Durante el estudio</b>
+<b>Título del contenido:</b> Participa activamente en tu aprendizaje
+[…]
+<span class="gris">Por pestaña: la línea «Pestaña N», el rótulo de la ficha en negrilla (hasta 4 palabras), «Título del contenido:» con el título que encabeza el panel, y uno o dos párrafos (hasta 140 palabras). «Título:» sale como rótulo del bloque e «Instrucción:» reemplaza el llamado a la acción fijo.</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </section>
 
 <!-- ova:extras -->
 <style>
@@ -519,12 +488,107 @@ Se comprueba que cada cifra del resumen…
     flex:0 0 100%; display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);
     gap:24px; align-items:center; padding:28px;
   }
+  .ua-slide:not(.ua-slide--fondo) .ova-carrusel__slide{ background:#E3E7EC; border-color:transparent; }
+  /* Retrato silueteado: círculo de color detrás y la foto (PNG sin fondo) que lo desborda por arriba. */
+  .ua-slide__retrato{ position:relative; justify-self:center; width:min(100%, 280px); aspect-ratio:1 / 1.08; }
+  .ua-slide__retrato-fondo{ position:absolute; left:6%; right:6%; bottom:0; aspect-ratio:1; border-radius:50%; background:#FFFFFF; box-shadow:0 18px 40px -18px rgba(14,42,68,.4); }
+  /* La foto desborda el círculo solo por arriba: la máscara va en el marco, cuya geometría es fija
+     (círculo de 88 % del ancho apoyado abajo), así que no depende del tamaño de cada foto. */
+  .ua-slide__retrato-marco{
+    position:absolute; inset:0; display:block;
+    -webkit-mask: radial-gradient(ellipse 44% 40.7% at 50% 59.3%, #000 99%, transparent 100%), linear-gradient(#000, #000) top / 100% 59.3% no-repeat;
+            mask: radial-gradient(ellipse 44% 40.7% at 50% 59.3%, #000 99%, transparent 100%), linear-gradient(#000, #000) top / 100% 59.3% no-repeat;
+  }
+  /* Las fotos vienen normalizadas (cara de 280 px en un lienzo de 900×720, centro de la cara en 450,330):
+     con 135 % de ancho la cara ocupa cerca de la mitad del círculo y la cabeza lo desborda por arriba. */
+  .ua-slide__retrato-foto{ position:absolute; left:50%; bottom:0; transform:translateX(-50%); width:135%; max-width:none; height:auto; display:block; }
+  .ua-slide__retrato-tag{ position:absolute; left:50%; bottom:10px; transform:translateX(-50%); white-space:nowrap; font-size:.72rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:var(--c-acento); background:rgba(255,255,255,.9); border:1px dashed var(--c-acento); border-radius:999px; padding:3px 10px; }
+  /* Slide (una tarjeta por vista): la navegación va dentro de la tarjeta, puntos centrados y las dos
+     flechas abajo a la derecha. Los carruseles de varias tarjetas la llevan fuera (regla en INSTITUCION.md §4). */
+  .ua-slide .ova-carrusel__slide{ padding-bottom:84px; }
+  .ua-slide .ova-carrusel__nav{ position:absolute; left:0; right:0; bottom:22px; margin:0; padding:0 28px; justify-content:center; pointer-events:none; }
+  .ua-slide .ova-carrusel__dots, .ua-slide .ova-carrusel__arrows{ pointer-events:auto; }
+  .ua-slide .ova-carrusel__arrows{ position:absolute; right:28px; bottom:0; }
+  .ua-slide .ova-carrusel__arrow{ background:#FFFFFF; color:var(--c-acento); box-shadow:0 6px 16px -8px rgba(14,42,68,.5); }
+  .ua-slide .ova-carrusel__dot{ background:rgba(14,42,68,.18); }
+  .ua-slide .ova-carrusel__dot.is-active{ background:var(--c-acento); }
   .ua-slide .ua-slide__texto h4{ margin:0 0 10px; color:var(--text-head); }
   .ua-slide .ua-slide__texto p{ margin:0 0 10px; line-height:1.6; }
   .ua-slide .ua-slide__texto p:last-child{ margin-bottom:0; }
   .ua-slide .ova-figura{ margin:0; }
   .ua-slide .ova-figura__hero img{ max-width:100%; max-height:none; }
-  @media (max-width: 760px){ .ua-slide .ova-carrusel__slide{ grid-template-columns:1fr; padding:20px; } }
+  @media (max-width: 760px){
+    .ua-slide .ova-carrusel__slide{ grid-template-columns:1fr; padding:20px; }
+    .ua-slide .ova-carrusel__slide{ padding-bottom:84px; }
+    .ua-slide__retrato{ order:-1; width:200px; }
+    .ua-slide .ova-carrusel__nav{ padding:0 20px; }
+    .ua-slide .ova-carrusel__arrows{ right:20px; }
+  }
+
+  /* Slide - con fondo: todos los fondos son oscuros y el texto claro. Cada fondo lleva una textura
+     distinta dibujada en CSS (sin imágenes), el número grande en marca de agua, el escalón de cuadros
+     en blanco y la imagen (o icono) en un disco a la derecha. */
+  .ua-slide--fondo .ova-carrusel__slide{
+    position:relative; overflow:hidden; isolation:isolate; border:0;
+    grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr); gap:28px; padding:44px 40px 84px; min-height:340px;
+    color:#FFFFFF; --f-disco:#FFFFFF; --f-anillo:rgba(255,255,255,.75);
+    --f-pix:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 102 102'%3E%3Crect x='0' y='0' width='34' height='34' fill='white' fill-opacity='.55'/%3E%3Crect x='0' y='34' width='34' height='34' fill='white' fill-opacity='.9'/%3E%3Crect x='34' y='34' width='34' height='34' fill='white' fill-opacity='.35'/%3E%3Crect x='0' y='68' width='34' height='34' fill='white' fill-opacity='.35'/%3E%3Crect x='34' y='68' width='34' height='34' fill='white' fill-opacity='.9'/%3E%3Crect x='68' y='68' width='34' height='34' fill='white' fill-opacity='.55'/%3E%3C/svg%3E");
+  }
+  .ua-slide--fondo .ova-carrusel__slide::before{ content:''; position:absolute; inset:0; z-index:-1; background:var(--f-textura); pointer-events:none; }
+  .ua-slide--fondo .ova-carrusel__slide::after{
+    content:''; position:absolute; right:22px; bottom:0; width:72px; aspect-ratio:1; z-index:-1;
+    background:var(--f-pix) center / contain no-repeat; transform:scaleX(-1); pointer-events:none;
+  }
+  .ua-slide__num{
+    position:absolute; left:18px; top:-18px; z-index:-1; font-family:var(--font-display); font-weight:800;
+    font-size:clamp(120px, 16vw, 190px); line-height:1; letter-spacing:-.04em; color:#FFFFFF; opacity:.08; pointer-events:none;
+  }
+  .ua-slide--fondo .ua-slide__texto{ position:relative; }
+  .ua-slide--fondo .ua-slide__texto h4{ color:#FFFFFF; font-size:1.5rem; font-weight:800; margin:0 0 12px; }
+  .ua-slide--fondo .ua-slide__texto p{ color:rgba(255,255,255,.88); }
+  .ua-slide__arte{ position:relative; justify-self:center; width:min(100%, 240px); aspect-ratio:1; display:grid; place-items:center; }
+  .ua-slide__anillo{ position:absolute; inset:0; border-radius:50%; border:2px solid var(--f-anillo); opacity:.7; }
+  .ua-slide__anillo::after{ content:''; position:absolute; right:6px; top:14px; width:18px; height:18px; border-radius:50%; background:var(--f-anillo); }
+  .ua-slide__disco{
+    width:76%; aspect-ratio:1; border-radius:50%; background:var(--f-disco); color:var(--f-icono);
+    display:grid; place-items:center; box-shadow:0 18px 40px -18px rgba(0,0,0,.55);
+  }
+  .ua-slide__disco iconify-icon{ font-size:88px; }
+  /* La navegación ocupa la esquina inferior derecha: el escalón de cubos pasa a la izquierda. */
+  .ua-slide--fondo .ova-carrusel__slide::after{ right:auto; left:22px; transform:none; }
+  .ua-slide--fondo .ova-carrusel__dot{ background:rgba(255,255,255,.45); }
+  .ua-slide--fondo .ova-carrusel__dot.is-active{ background:#FFFFFF; }
+  .ua-slide--fondo .ova-carrusel__nav{ z-index:1; }
+  /* naranja · círculos suaves */
+  .ua-slide--fondo .ua-slide__lamina--naranja{ background:linear-gradient(135deg, #B4502E, #8C3A1C); --f-icono:#B4502E;
+    --f-textura:radial-gradient(circle at 18% 28%, rgba(255,255,255,.10) 0 150px, transparent 151px), radial-gradient(circle at 78% 90%, rgba(255,255,255,.08) 0 240px, transparent 241px), radial-gradient(circle at 60% 10%, rgba(255,255,255,.06) 0 90px, transparent 91px); }
+  /* verde · trama de puntos */
+  .ua-slide--fondo .ua-slide__lamina--verde{ background:linear-gradient(135deg, #0F4A46, #0A302E); --f-icono:#0F4A46;
+    --f-textura:radial-gradient(rgba(255,255,255,.16) 1.4px, transparent 1.7px) 0 0 / 18px 18px; }
+  /* azul · líneas diagonales */
+  .ua-slide--fondo .ua-slide__lamina--azul{ background:linear-gradient(135deg, #1C4578, #0E2A44); --f-icono:#1C4578;
+    --f-textura:repeating-linear-gradient(135deg, rgba(255,255,255,.07) 0 2px, transparent 2px 16px); }
+  /* gris · cuadrícula fina */
+  .ua-slide--fondo .ua-slide__lamina--gris{ background:linear-gradient(135deg, #343C48, #1F252E); --f-icono:#1F252E;
+    --f-textura:linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px) 0 0 / 28px 28px, linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px) 0 0 / 28px 28px; }
+  /* ocre · anillos concéntricos */
+  .ua-slide--fondo .ua-slide__lamina--ocre{ background:linear-gradient(135deg, #7A4F0E, #4E3208); --f-icono:#7A4F0E;
+    --f-textura:repeating-radial-gradient(circle at 88% 55%, rgba(255,255,255,.07) 0 2px, transparent 2px 28px); }
+  @media (max-width: 760px){
+    .ua-slide--fondo .ova-carrusel__slide{ grid-template-columns:1fr; padding:28px 22px 84px; min-height:0; }
+    .ua-slide__arte{ order:-1; width:150px; }
+    .ua-slide__disco iconify-icon{ font-size:56px; }
+    .ua-slide__num{ font-size:110px; left:auto; right:14px; top:-10px; }
+    .ua-slide--fondo .ua-slide__texto h4{ font-size:1.25rem; }
+  }
+
+  /* Hueco de figura dentro del carrusel de fotos: ocupa el lugar de la imagen. */
+  .ua-galeria__item > .ua-pendiente{ position:absolute; inset:0; margin:0; border-radius:0; }
+
+  /* Imagen lateral de una pestaña cuando no llega imagen: ficha clara con el logotipo a color (colección «logos» de Iconify). */
+  .ua-tab-media__figura{ align-self:stretch; min-height:180px; border-radius:var(--r-md); background:var(--c-hielo-2); border:1px solid var(--border-c); display:grid; place-items:center; color:var(--c-acento); }
+  .ua-tab-media__figura iconify-icon{ font-size:96px; }
+  @media (max-width: 720px){ .ua-tab-media__figura{ min-height:120px; } .ua-tab-media__figura iconify-icon{ font-size:64px; } }
 
   /* Tarjeta con ventana: el llamado y el botón cierran el cuerpo de la tarjeta. */
   .ua-tarjeta__cuerpo .ua-cta{ margin:14px 0 10px; }
@@ -537,8 +601,10 @@ Se comprueba que cada cifra del resumen…
 </style>
 <script>
   /* El slide usa el carrusel del motor, que a 1440 px cuenta tres tarjetas visibles. Con una
-     tarjeta por pantalla, aquí se recalcula la navegación: una lámina por paso. Los botones se
-     clonan para soltar los oyentes del motor. */
+     tarjeta por pantalla, aquí se recalcula la navegación: un slide por paso. En la SPA el motor
+     vuelve a armar el carrusel después de este script y pisa los puntos, así que los puntos se
+     vigilan y se rehacen, y las flechas se atienden en fase de captura para que el oyente del
+     motor no sume un segundo paso. */
   (function () {
     'use strict';
     function armar(c) {
@@ -549,28 +615,35 @@ Se comprueba que cada cifra del resumen…
       var dots = c.querySelector('.ova-carrusel__dots');
       if (!track || !slides.length) return;
       var idx = 0;
+      var pintar = function () {
+        if (dots) [].forEach.call(dots.children, function (d, k) { d.classList.toggle('is-active', k === idx); });
+      };
       var go = function (i) {
         idx = Math.max(0, Math.min(slides.length - 1, i));
         track.style.transform = 'translateX(' + (-idx * (slides[0].offsetWidth + 16)) + 'px)';
-        if (dots) [].forEach.call(dots.children, function (d, k) { d.classList.toggle('is-active', k === idx); });
+        pintar();
       };
-      var cambiar = function (sel, paso) {
+      var capturar = function (sel, paso) {
         var b = c.querySelector(sel); if (!b) return;
-        var n = b.cloneNode(true); b.replaceWith(n);
-        n.addEventListener('click', function () { go(idx + paso); });
+        b.addEventListener('click', function (e) { e.stopImmediatePropagation(); go(idx + paso); }, true);
       };
-      cambiar('[data-ova-carrusel-prev]', -1);
-      cambiar('[data-ova-carrusel-next]', 1);
-      if (dots) {
+      capturar('[data-ova-carrusel-prev]', -1);
+      capturar('[data-ova-carrusel-next]', 1);
+      var rehacer = function () {
+        if (!dots) return;
         dots.innerHTML = '';
         [].forEach.call(slides, function (_, i) {
           var d = document.createElement('button');
-          d.type = 'button'; d.className = 'ova-carrusel__dot' + (i === 0 ? ' is-active' : '');
-          d.setAttribute('aria-label', 'Lámina ' + (i + 1) + ' de ' + slides.length);
-          d.addEventListener('click', function () { go(i); });
+          d.type = 'button'; d.className = 'ova-carrusel__dot' + (i === idx ? ' is-active' : '');
+          d.setAttribute('aria-label', 'Slide ' + (i + 1) + ' de ' + slides.length);
+          d.addEventListener('click', function (e) { e.stopPropagation(); go(i); });
           dots.appendChild(d);
         });
-      }
+      };
+      rehacer();
+      if (dots) new MutationObserver(function () {
+        if (dots.children.length !== slides.length || !dots.querySelector('[aria-label^="Slide "]')) rehacer();
+      }).observe(dots, { childList: true });
       window.addEventListener('resize', function () { go(idx); });
     }
     var iniciar = function () {

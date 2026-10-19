@@ -269,7 +269,8 @@
     const ir = (i) => { i = Math.max(0, Math.min(items.length - 1, i)); items[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' }); marcar(i); };
     g.querySelector('[data-ua-galeria-prev]')?.addEventListener('click', () => ir(actual - 1));
     g.querySelector('[data-ua-galeria-next]')?.addEventListener('click', () => ir(actual + 1));
-    g.addEventListener('keydown', e => { if (e.key === 'ArrowRight') { e.preventDefault(); ir(actual + 1); } if (e.key === 'ArrowLeft') { e.preventDefault(); ir(actual - 1); } });
+    // stopPropagation: el motor escucha ← → en document para cambiar de pantalla; dentro de la galería no debe hacerlo.
+    g.addEventListener('keydown', e => { if (e.key === 'ArrowRight') { e.preventDefault(); e.stopPropagation(); ir(actual + 1); } if (e.key === 'ArrowLeft') { e.preventDefault(); e.stopPropagation(); ir(actual - 1); } });
     items.forEach((it, i) => it.addEventListener('click', () => ir(i)));
     if ('IntersectionObserver' in window) {
       const io = new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting && e.intersectionRatio > .6) marcar(items.indexOf(e.target)); }); }, { root: pista, threshold: [.6] });
@@ -342,6 +343,213 @@
     const todos = () => document.querySelectorAll('.ua-podcast audio[data-ua-plyr]').forEach(armar);
     todos();
     new MutationObserver(todos).observe(document.body, { childList: true, subtree: true });
+  };
+  document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', iniciar) : iniciar();
+})();
+
+/* =========================================================
+   BLOQUE DE CÓDIGO NUMERADO (.ua-codigo) · plantilla base, 2026-10-18
+   Envuelve cada línea del <code> en .ua-codigo__linea (el número lo pone
+   el CSS). data-resaltar="5,8" en la figura marca esas líneas. Si una
+   etiqueta cruza de una línea a otra, el bloque se deja sin numerar.
+   ========================================================= */
+(function () {
+  'use strict';
+  function armar(fig) {
+    const code = fig.querySelector('pre > code');
+    if (!code || code.dataset.uaLineas) return;
+    code.dataset.uaLineas = '1';
+    const lineas = code.innerHTML.replace(/\n$/, '').split('\n');
+    const abre = l => (l.match(/<span\b/g) || []).length, cierra = l => (l.match(/<\/span>/g) || []).length;
+    if (lineas.some(l => abre(l) !== cierra(l))) return;
+    const resaltar = new Set((fig.dataset.resaltar || '').split(',').map(n => parseInt(n, 10)).filter(Boolean));
+    code.innerHTML = lineas.map((l, i) =>
+      '<span class="ua-codigo__linea' + (resaltar.has(i + 1) ? ' is-resaltada' : '') + '">' + l + '</span>').join('');
+  }
+  const iniciar = () => {
+    document.querySelectorAll('.ua-codigo').forEach(armar);
+    new MutationObserver(() => document.querySelectorAll('.ua-codigo').forEach(armar)).observe(document.body, { childList: true, subtree: true });
+  };
+  document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', iniciar) : iniciar();
+})();
+
+/* =========================================================
+   PASOS HORIZONTALES (.ua-pasos-h sobre .ova-tabs) · 2026-10-18
+   El motor cambia de panel; aquí se marcan los pasos recorridos
+   (.is-hecho), las flechas avanzan o retroceden un paso y el pie
+   cuenta «Paso N de M».
+   ========================================================= */
+(function () {
+  'use strict';
+  function armar(t) {
+    if (t.dataset.uaPasos) return;
+    t.dataset.uaPasos = '1';
+    const btns = [...t.querySelectorAll('.ova-tabs__btn')];
+    const flechas = t.querySelectorAll('[data-ua-paso]');
+    const pintar = () => {
+      const i = btns.findIndex(b => b.classList.contains('is-active'));
+      btns.forEach((b, k) => b.classList.toggle('is-hecho', k < i));
+      flechas.forEach(f => { const d = +f.dataset.uaPaso; f.disabled = (d < 0 && i === 0) || (d > 0 && i === btns.length - 1); });
+      const cuenta = t.querySelector('.ua-pasos-h__cuenta');
+      if (cuenta) cuenta.textContent = `Paso ${i + 1} de ${btns.length}`;
+    };
+    btns.forEach(b => b.addEventListener('click', () => setTimeout(pintar)));
+    flechas.forEach(f => f.addEventListener('click', () => {
+      const i = btns.findIndex(b => b.classList.contains('is-active'));
+      btns[Math.max(0, Math.min(btns.length - 1, i + (+f.dataset.uaPaso)))]?.click();
+    }));
+    pintar();
+  }
+  const iniciar = () => {
+    document.querySelectorAll('.ua-pasos-h').forEach(armar);
+    new MutationObserver(() => document.querySelectorAll('.ua-pasos-h').forEach(armar)).observe(document.body, { childList: true, subtree: true });
+  };
+  document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', iniciar) : iniciar();
+})();
+
+/* =========================================================
+   CARRUSEL DEL MOTOR · teclado (← →) · 2026-10-18
+   Igual que el carrusel de fotos: el contenedor recibe el foco y las
+   flechas del teclado pulsan los botones anterior/siguiente, así valen
+   para cualquier variante (incluido el slide, que atiende sus botones).
+   ========================================================= */
+(function () {
+  'use strict';
+  function armar(c) {
+    if (c.dataset.uaTeclado) return;
+    c.dataset.uaTeclado = '1';
+    if (!c.hasAttribute('tabindex')) c.setAttribute('tabindex', '0');
+    c.addEventListener('keydown', e => {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      if (e.target.closest('input, textarea, select')) return;
+      e.preventDefault();
+      e.stopPropagation();   // que el motor no cambie de pantalla con la misma tecla
+      c.querySelector(e.key === 'ArrowRight' ? '[data-ova-carrusel-next]' : '[data-ova-carrusel-prev]')?.click();
+    });
+  }
+  const iniciar = () => {
+    document.querySelectorAll('.ova-carrusel').forEach(armar);
+    new MutationObserver(() => document.querySelectorAll('.ova-carrusel').forEach(armar)).observe(document.body, { childList: true, subtree: true });
+  };
+  document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', iniciar) : iniciar();
+})();
+
+/* =========================================================
+   Tarjetas que giran (.ua-giro): clic, toque o Enter/Espacio
+   (es un <button>) voltea la tarjeta; aria-pressed dice en qué
+   cara está. Delegado en document: sirve también en la SPA.
+   ========================================================= */
+(function () {
+  'use strict';
+  document.addEventListener('click', e => {
+    const t = e.target.closest('.ua-giro');
+    if (!t) return;
+    const girada = t.classList.toggle('is-girada');
+    t.setAttribute('aria-pressed', String(girada));
+  });
+})();
+
+/* =========================================================
+   Línea de tiempo tipo 3 (.ua-lti): tocar una fecha la activa,
+   llena la línea hasta ella y muestra su panel. Flechas ← → pasan
+   de fecha sin que el motor cambie de pantalla (captura en document).
+   ========================================================= */
+(function () {
+  'use strict';
+  function activar(hito) {
+    const eje = hito.closest('.ua-lti__eje');
+    const hitos = [...eje.querySelectorAll('.ua-lti__hito')];
+    const k = hitos.indexOf(hito);
+    hitos.forEach((h, i) => {
+      h.classList.toggle('is-activo', i === k);
+      h.classList.toggle('is-pasado', i < k);
+      h.setAttribute('aria-pressed', String(i === k));
+      const panel = document.getElementById(h.getAttribute('aria-controls'));
+      if (panel) panel.hidden = i !== k;
+    });
+    eje.style.setProperty('--activo', k);
+  }
+  document.addEventListener('click', e => {
+    const hito = e.target.closest('.ua-lti__hito');
+    if (hito) activar(hito);
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+    const hito = e.target.closest && e.target.closest('.ua-lti__hito');
+    if (!hito) return;
+    e.preventDefault();
+    e.stopPropagation();
+    const hitos = [...hito.parentElement.querySelectorAll('.ua-lti__hito')];
+    const sig = hitos[hitos.indexOf(hito) + (e.key === 'ArrowRight' ? 1 : -1)];
+    if (sig) { sig.focus(); activar(sig); }
+  }, true);
+})();
+
+/* =========================================================
+   Cifra destacada (data-ua-contar): el número sube de 0 a su valor
+   la primera vez que entra en pantalla (criterio del contador de UP).
+   Acepta enteros y decimales en formato español («47», «10.519»,
+   «51,7»); al terminar, el texto vuelve a ser el original. Con
+   «reducir movimiento» no se anima. La SPA se vigila con un observador.
+   ========================================================= */
+(function () {
+  'use strict';
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  const NUM = /^(\d{1,3}(?:\.\d{3})*|\d+)(,\d+)?$/;
+  const vistos = new WeakSet();
+  function contar(el) {
+    const original = el.textContent;
+    const m = original.trim().match(NUM);
+    if (!m) return;
+    const decimales = m[2] ? m[2].length - 1 : 0;
+    const fin = parseFloat(m[1].replace(/\./g, '') + (m[2] ? '.' + m[2].slice(1) : ''));
+    const miles = m[1].includes('.');
+    const fmt = v => {
+      let [e, d] = v.toFixed(decimales).split('.');
+      if (miles) e = e.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+      return e + (d ? ',' + d : '');
+    };
+    const dur = 1400, t0 = performance.now();
+    const paso = t => {
+      const p = Math.min(1, (t - t0) / dur);
+      el.textContent = p < 1 ? fmt(fin * (1 - Math.pow(1 - p, 3))) : original;
+      if (p < 1) requestAnimationFrame(paso);
+    };
+    el.textContent = fmt(0);
+    requestAnimationFrame(paso);
+  }
+  // La cuenta espera a que la sección termine de aparecer (el motor la funde en .8 s con
+  // data-reveal); si arrancara al entrar en pantalla, al recargar ya iría casi al final
+  // cuando la tarjeta se ve. Mientras espera, el número queda en 0.
+  function cuandoSeVea(el, fn) {
+    const r = el.closest('[data-reveal]');
+    if (!r) return fn();
+    const tras = () => parseFloat(getComputedStyle(r).opacity) >= .99 ? fn() : setTimeout(fn, 850);
+    if (r.classList.contains('is-visible')) return tras();
+    const mo = new MutationObserver(() => {
+      if (!r.classList.contains('is-visible')) return;
+      mo.disconnect();
+      tras();
+    });
+    mo.observe(r, { attributes: true, attributeFilter: ['class'] });
+  }
+  const io = new IntersectionObserver(entradas => entradas.forEach(e => {
+    if (!e.isIntersecting) return;
+    io.unobserve(e.target);
+    const el = e.target, original = el.textContent;
+    if (!original.trim().match(NUM)) return;
+    el.textContent = '0';
+    cuandoSeVea(el, () => { el.textContent = original; contar(el); });
+  }), { threshold: 0.6 });
+  const vigilar = () => document.querySelectorAll('[data-ua-contar]').forEach(el => {
+    if (vistos.has(el)) return;
+    vistos.add(el);
+    io.observe(el);
+  });
+  const iniciar = () => {
+    vigilar();
+    new MutationObserver(vigilar).observe(document.body, { childList: true, subtree: true });
   };
   document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', iniciar) : iniciar();
 })();
