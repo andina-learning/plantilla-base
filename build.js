@@ -234,8 +234,18 @@ limpiar(DIST);
 const fuentesHtml = leer(path.join(SKIN, 'fuentes.html')).trimEnd();
 const SKIN_CSS = fs.existsSync(path.join(SKIN, 'skin.css')) ? '\n<link rel="stylesheet" href="assets/css/skin.css" />' : '';
 const SKIN_JS  = fs.existsSync(path.join(SKIN, 'skin.js'))  ? '\n<script src="assets/js/skin.js"></script>'          : '';
+/* Catálogo de componentes (motor/catalogo/): se carga después del motor y antes de la piel,
+   así la piel lo viste. Es parte del motor: sin él, el curso no compila. */
+const CATALOGO = path.join(MOTOR, 'catalogo');
+for (const f of ['catalogo.css', 'catalogo.js']) {
+  if (!fs.existsSync(path.join(CATALOGO, f))) { console.error(`✖ Falta motor/catalogo/${f}`); process.exit(1); }
+}
+const CATALOGO_CSS = '\n<link rel="stylesheet" href="assets/css/catalogo.css" />';
+const CATALOGO_JS  = '\n<script src="assets/js/catalogo.js"></script>';
 function conSkin(molde) {
-  return molde.replaceAll('{{FUENTES}}', fuentesHtml).replaceAll('{{SKIN_CSS}}', SKIN_CSS).replaceAll('{{SKIN_JS}}', SKIN_JS);
+  return molde.replaceAll('{{FUENTES}}', fuentesHtml)
+    .replaceAll('{{CATALOGO_CSS}}', CATALOGO_CSS).replaceAll('{{CATALOGO_JS}}', CATALOGO_JS)
+    .replaceAll('{{SKIN_CSS}}', SKIN_CSS).replaceAll('{{SKIN_JS}}', SKIN_JS);
 }
 
 /* Paleta: la del curso gana; si no hay, la de la institución. */
@@ -325,6 +335,8 @@ for (const destino of [DIST_MULTI, DIST_SPA]) {
   );
   escribir(path.join(destino, 'assets', 'css', 'core.css'), leer(path.join(MOTOR, 'core.css')));
   escribir(path.join(destino, 'assets', 'js',  'core.js'),  leer(path.join(MOTOR, 'core.js')));
+  escribir(path.join(destino, 'assets', 'css', 'catalogo.css'), leer(path.join(CATALOGO, 'catalogo.css')));
+  escribir(path.join(destino, 'assets', 'js',  'catalogo.js'),  leer(path.join(CATALOGO, 'catalogo.js')));
   escribir(
     path.join(destino, 'assets', 'css', 'presets', `theme-${cfg.course.preset}.css`),
     leer(rutaPaleta)

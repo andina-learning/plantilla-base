@@ -706,6 +706,24 @@ body { font-family: var(--font-body); }
 .ova-screen .ua-respiro .ua-remate,
 .ua-respiro .ua-remate { color: #FFFFFF; }
 .ua-respiro p { padding-right: clamp(0px, 10vw, 140px); }
+/* El banner del catálogo (.ova-banner, KIT-001) con la greca, el escalón de cuadros y la negrilla
+   celeste de Andina; su estructura está en motor/catalogo/catalogo.css. */
+.ova-banner { --ova-banner-realce: var(--c-cielo); --ova-banner-claro: var(--c-hielo, #E8EDF5); }
+.ova-banner::before {
+  content: ''; position: absolute; inset: 0; background: #FFFFFF;
+  -webkit-mask: var(--ua-greca) 0 0 / 163px 209px repeat;
+          mask: var(--ua-greca) 0 0 / 163px 209px repeat;
+  opacity: .025; pointer-events: none; z-index: 0;
+}
+.ova-banner::after {
+  content: ''; position: absolute;
+  right: clamp(20px, 4vw, 56px); bottom: 0;
+  width: clamp(72px, 9vw, 120px); aspect-ratio: 1;
+  background: var(--ua-pixeles-claro) center / contain no-repeat;
+  transform: scaleX(-1); opacity: .85; pointer-events: none;
+}
+.ova-screen .ova-banner .ua-remate,
+.ova-banner .ua-remate { color: #FFFFFF; }
 
 /* --- Más aire entre las piezas de una pantalla densa --- */
 .ua-diagrama, .ua-caso, .ua-cifras, .ua-anatomia { margin-top: 56px; margin-bottom: 56px; }
@@ -1090,6 +1108,8 @@ body { font-family: var(--font-body); }
 .ua-descarga__info { flex: 1; min-width: 220px; }
 .ua-descarga__info b { display: block; font-size: 1.05rem; color: var(--text-head); }
 .ua-descarga__info span { font-size: .9rem; color: var(--text-mut); }
+/* La descarga del catálogo (.ova-descargable, KIT-001): estructura en motor/catalogo/catalogo.css. */
+.ova-descargable { --ova-descargable-fondo: var(--c-hielo); --ova-descargable-filo: var(--c-cielo); }
 
 /* 7 · Temario · marca por icono en las secciones estructurales -------------- */
 .ova-bloque__tag { display: inline-flex; align-items: center; gap: 8px; }
@@ -1399,6 +1419,8 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 ) {
   margin-block: 40px;
 }
+.ova-screen > .ova-pendiente { margin-block: 40px; }   /* la pieza del catálogo (KIT-001) */
+.ova-screen > .ova-apa-tabla { margin-block: 40px; }   /* la tabla APA del catálogo (KIT-001) */
 /* El primer bloque después de la cabecera no necesita el doble de aire */
 .ova-screen__head + * { margin-top: 0; }
 
@@ -1560,6 +1582,39 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
   .ua-foto-ancha::after { height: 220px; background-size: 44px 44px, 64px 64px; }
   .ua-foto-ancha::before { width: 70px; height: 60px; background-size: 40px 40px, auto; }
 }
+/* La misma foto como pieza del catálogo (.ova-foto-ancha, KIT-001): la estructura
+   está en motor/catalogo/catalogo.css; aquí, el marco de la marca. */
+.ova-foto-ancha { position: relative; margin: 56px 0; }
+.ova-foto-ancha img {
+  height: 340px; max-height: none;
+  border-radius: var(--r-xl);
+}
+.ova-foto-ancha::before {             /* mordida + sol */
+  content: '';
+  position: absolute;
+  left: -1px; top: -1px;
+  width: 92px; height: 78px;
+  background: var(--ua-sol) 18px 10px / 54px 54px no-repeat, var(--bg-app);
+  border-bottom-right-radius: var(--r-xl);
+  z-index: 1;
+}
+.ova-foto-ancha::after {              /* estrella + cuadros */
+  content: '';
+  position: absolute;
+  left: 0; right: 0; top: 0;
+  height: 340px;
+  background:
+    var(--ua-estrella) right 4% top -22px / 64px 64px no-repeat,
+    var(--ua-pixeles-claro) left 3% bottom -26px / 96px 96px no-repeat;
+  pointer-events: none;
+  z-index: 1;
+}
+.ova-foto-ancha figcaption { margin-top: 36px; padding-left: 4px; }
+@media (max-width: 720px) {
+  .ova-foto-ancha img { height: 220px; }
+  .ova-foto-ancha::after { height: 220px; background-size: 44px 44px, 64px 64px; }
+  .ova-foto-ancha::before { width: 70px; height: 60px; background-size: 40px 40px, auto; }
+}
 
 /* 3 · Ilustración explicativa · esquina de marca ----------------------------
    La ilustración de apertura lleva el mismo guiño que las fotos, en pequeño:
@@ -1579,6 +1634,20 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 /* Con pie, el escalón queda a la altura del pie: el texto le deja su sitio para que
    no lo pise cuando ocupa dos líneas (demo-unidad-3, «Volviendo al reto», 2026-10-10). */
 .ua-ilustracion:has(figcaption) figcaption { padding-right: 60px; }
+/* La misma esquina en la pieza del catálogo (.ova-ilustracion, KIT-001). */
+.ova-ilustracion { position: relative; overflow: visible; }
+.ova-ilustracion img { border-radius: var(--r-md); }
+.ova-ilustracion::after {
+  content: '';
+  position: absolute;
+  right: -10px; bottom: -14px;
+  width: 54px; height: 54px;
+  background: var(--ua-pixeles) center / contain no-repeat;
+  transform: scaleX(-1);
+  pointer-events: none;
+}
+.ova-ilustracion:has(figcaption)::after { bottom: auto; top: calc(100% - 66px); }
+.ova-ilustracion:has(figcaption) figcaption { padding-right: 60px; }
 
 /* 4 · Ciclo · la escalera de cuadros (SVG inline en la pantalla) ----------- */
 .ua-ciclo__escalera text { font-family: var(--font-display); }
@@ -1607,6 +1676,7 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 }
 .ova-sidebar :where(a, button):focus-visible,
 .ua-respiro :where(a, button):focus-visible { outline-color: var(--c-cielo); box-shadow: none; }
+.ova-banner :where(a, button):focus-visible { outline-color: var(--c-cielo); box-shadow: none; }   /* el banner del catálogo */
 
 /* 7 · Topbar con la greca apenas visible ----------------------------------------
    La trama andina en claro (p. 3) es el fondo institucional de las piezas: en
@@ -1684,6 +1754,8 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 .ua-campo { margin: 32px 0 0; }
 .ua-seccion__titulo + .ua-campo,
 .ua-seccion__titulo + .ua-campos { margin-top: 28px; }
+.ua-seccion__titulo + .ova-campo,
+.ua-seccion__titulo + .ova-campos { margin-top: 28px; }   /* los campos del catálogo (KIT-001) */
 .ua-campos {
   display: grid;
   gap: 32px;
@@ -1835,6 +1907,11 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 .ova-screen > .ua-rotulo + .ua-cta { margin-top: 8px; }
 .ua-cta + :is(.ova-acordeon, .ova-carrusel, .ova-tabs, .ova-timeline-h, .ova-hotspots,
   .ova-video, .ova-audio, .ova-beforeafter, .ua-descarga) { margin-top: 22px; }
+/* El llamado del catálogo (.ova-llamado, KIT-001) con las piezas y el marco de Andina;
+   su estructura y la manito están en motor/catalogo/catalogo.css. */
+.ova-screen > .ua-rotulo + .ova-llamado { margin-top: 8px; }
+.ova-screen > .ova-rotulo + .ova-llamado { margin-top: 8px; }   /* el rótulo del catálogo */
+.ova-llamado + .ua-descarga { margin-top: 22px; }
 .ua-cta__mano {
   position: relative;
   flex: none;
@@ -1877,6 +1954,9 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 .ova-audio.ua-indicio .ova-audio__play,
 .ova-beforeafter.ua-indicio .ova-beforeafter__handle,
 .ua-descarga.ua-indicio .ova-btn { animation: ua-halo 1.1s ease-out .6s 2; }
+/* La descarga del catálogo: catalogo.js le pone .is-indicio; el halo del botón es de la piel. */
+.ova-descargable.is-indicio .ova-btn { animation: ua-halo 1.1s ease-out .6s 2; }
+@media (prefers-reduced-motion: reduce) { .ova-descargable.is-indicio .ova-btn { animation: none !important; } }
 .ova-hotspot__pulse { animation: none; }
 .ova-hotspots.ua-indicio .ova-hotspot__pulse { animation: ova-pulse 1.4s ease-out .6s 2; }
 @media (prefers-reduced-motion: reduce) {
@@ -1944,6 +2024,8 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 .ua-codigo .s { color: #B8650F; }                     /* cadena */
 .ua-codigo .n { color: #1C4578; }                     /* número */
 .ua-codigo .c { color: var(--text-mut); font-style: italic; }   /* comentario */
+/* El bloque de código del catálogo (.ova-codigo, KIT-001): el fondo, el azul de los números y el resalte celeste. */
+.ova-codigo { --ova-codigo-fondo: #F6F8FB; --ova-codigo-numero: #1C4578; --ova-codigo-resalte: var(--c-cielo); }
 
 /* --- Tarjetas: cuadrícula de 3 (auto), una columna en móvil --- */
 .ua-tarjetas { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin: 28px 0; }
@@ -2380,6 +2462,7 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 .ua-tab-media { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: start; }
 .ua-tab-media > :first-child > h4:first-child { margin-top: 0; }
 @media (max-width: 720px) { .ua-tab-media { grid-template-columns: 1fr; } }
+.ova-tabs__icono { --ova-ficha: var(--c-hielo-2); }   /* la ficha del icono de las pestañas del catálogo (KIT-001) */
 
 /* --- Pestañas con icono: icono arriba y rótulo debajo; las inactivas en gris,
    la activa en blanco con barra azul arriba, unida al panel. Una tarjeta. --- */
@@ -2449,6 +2532,7 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
   .ova-tabs.ua-tabs-vertical .ova-tabs__btn:not(.is-active):hover { transform: none; }
   .ova-tabs.ua-tabs-vertical .ova-tabs__panel { padding: 22px 20px; }
 }
+.ova-tabs--vertical { --ova-ficha: var(--c-hielo-2, #F3F6FA); --ova-franja: var(--c-hielo, #E8EDF5); }   /* las del catálogo (KIT-001) */
 
 /* --- Galería de imágenes: carrusel con una imagen protagonista y las vecinas asomando (skin.js) --- */
 .ua-galeria { position: relative; margin: 28px 0; }
@@ -2482,6 +2566,8 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 .ua-galeria__punto.is-active { width: 22px; border-radius: 4px; background: var(--c-acento); }
 .ua-galeria__ayuda { margin: 10px 0 0; text-align: center; font-size: .85rem; color: var(--text-mut); }
 @media (max-width: 640px) { .ua-galeria__pista { padding-inline: 7%; } }
+/* El carrusel de fotos del catálogo (.ova-galeria, KIT-001): el hielo de fondo, «Escena N» en celeste y el velo abismo. */
+.ova-galeria { --ova-galeria-fondo: var(--c-hielo); --ova-galeria-pie: var(--c-cielo); --ova-galeria-velo: linear-gradient(to top, rgba(19,43,65,.9), rgba(19,43,65,0)); }
 
 /* --- Pódcast: cabecera con portada, título y conductor; reproductor Plyr; transcripción desplegable --- */
 .ua-podcast {
@@ -2529,6 +2615,13 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 .ua-podcast__texto { max-height: 420px; overflow-y: auto; padding: 8px 2px 4px; }
 .ua-podcast__texto p { margin: 0 0 12px; font-size: .95rem; line-height: 1.65; }
 @media (max-width: 560px) { .ua-podcast__cabecera { grid-template-columns: 1fr; } .ua-podcast__portada { width: 100%; height: 160px; aspect-ratio: auto; } .ua-podcast .plyr__time--duration { display: none; } }
+/* El pódcast del catálogo (.ova-episodio, KIT-001): estructura y reproductor en
+   motor/catalogo/catalogo.css; la piel pone el degradado de la portada por defecto
+   y el aro del botón de reproducir. */
+.ova-episodio {
+  --ova-episodio-portada: radial-gradient(120% 90% at 30% 20%, #1f4f7a 0%, var(--c-acento) 45%, var(--c-deep) 100%);
+  --ova-episodio-aro: rgba(14,42,68,.08);
+}
 
 /* --- Recursos y enlaces externos: la lista del motor (.ova-descargas) con icono por tipo de archivo --- */
 .ua-recursos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin: 24px 0; }
@@ -2558,6 +2651,7 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 .ua-recurso__info strong { display: block; font-size: .95rem; line-height: 1.35; }
 .ua-recurso__info span { font-size: .8rem; color: var(--text-mut); }
 .ua-recurso__ir { color: var(--c-acento); font-size: 1.2rem; }
+.ova-recurso { --ova-recurso-fondo: var(--c-hielo-2); }   /* los recursos del catálogo (KIT-001) */
 
 @keyframes ua-globo { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .ua-termino:hover::after, .ua-termino:focus-visible::after, .ua-termino:hover::before, .ua-termino:focus-visible::before { animation: none; } }
@@ -2584,6 +2678,7 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 .ua-sub--3 { font-size: 1.1rem;  font-weight: 700; margin: 28px 0 12px; }
 .ua-sub + :is(p, ul, ol, div, figure, table, blockquote), .ua-seccion__titulo + p { margin-top: 0; }
 .ua-sub + .ua-numerada > .ua-numerada__item:first-child { border-top: 0; padding-top: 0; }
+.ua-sub + .ova-numerada--icono > .ova-numerada__item:first-child { border-top: 0; padding-top: 0; }
 .ua-bloque > .ua-sub:first-child { margin-top: 0; }
 .ua-bloque > :last-child { margin-bottom: 0; }
 .ua-bloque + .ua-bloque { margin-top: 40px; padding-top: 40px; border-top: 1px solid var(--border-c); }
@@ -2600,6 +2695,14 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 .ua-sub--vineta.ua-sub--2::before {
   content: ''; position: absolute; left: 0; top: .42em; width: 9px; height: 9px;
   background: var(--c-cielo);
+}
+/* Los subtítulos del catálogo (.ova-subtitulo, KIT-001) con la viñeta de Andina: el pixel de la
+   marca en el nivel 1 y el cuadro celeste en el nivel 2. */
+.ova-subtitulo--vineta {
+  --ova-subtitulo-vineta-1:
+    linear-gradient(var(--c-cielo), var(--c-cielo)) 0 0 / 9px 9px no-repeat,
+    linear-gradient(var(--c-acento), var(--c-acento)) 7px 7px / 9px 9px no-repeat;
+  --ova-subtitulo-vineta-2: var(--c-cielo);
 }
 
 /* ═══ Listas numeradas ═════════════════════════════════════════════════════
@@ -2635,6 +2738,7 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
   width: 7px; height: 7px; border-radius: 50%; background: var(--c-acento);
 }
 .ua-vinetas--cuadro li::before { border-radius: 1px; width: 8px; height: 8px; top: .68em; background: var(--c-cielo); }
+.ova-vinetas--cuadro { --ova-vineta-cuadro: var(--c-cielo); }   /* las viñetas del catálogo (KIT-001) */
 
 /* ═══ Bloque destacado ═════════════════════════════════════════════════════
    Fondo de color + icono en círculo + título + texto. Tipo 1: colores de la
@@ -2660,6 +2764,11 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 .ua-destacado--alerta     { --tono: var(--ua-tono-alerta); }
 .ua-destacado--error      { --tono: var(--ua-tono-error); }
 .ua-destacado--reflexion  { --tono: var(--ua-tono-reflexion); }
+/* El bloque destacado del catálogo (.ova-destacado, KIT-001) con los tonos y el fondo oscuro de Andina. */
+:root {
+  --ova-tono-importante: var(--ua-tono-importante); --ova-tono-exito: var(--ua-tono-exito);
+  --ova-tono-alerta: var(--ua-tono-alerta); --ova-tono-error: var(--ua-tono-error); --ova-tono-reflexion: var(--ua-tono-reflexion);
+}
 .ua-destacado__icono {
   display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
   background: var(--tono); color: #fff; font-size: 22px;
@@ -2687,11 +2796,17 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 .ua-destacados--oscuro.ua-destacados--marca .ua-destacado { background: var(--ua-osc-accion); }
 .ua-destacados--oscuro.ua-destacados--marca .ua-destacado__icono { background: var(--c-cielo); color: var(--ua-osc-tinta); }
 .ua-destacados--oscuro.ua-destacados--marca .ua-destacado__titulo { color: var(--ua-osc-accion-rotulo); }
+.ova-destacados--oscuro {
+  --ova-oscuro-tarjeta: var(--ua-osc-tarjeta); --ova-oscuro-texto: var(--ua-osc-texto); --ova-oscuro-suave: var(--ua-osc-suave);
+  --ova-oscuro-accion: var(--ua-osc-accion); --ova-oscuro-rotulo: var(--ua-osc-accion-rotulo); --ova-oscuro-tinta: var(--ua-osc-tinta);
+  --ova-oscuro-icono: var(--c-cielo);
+}
 .ua-destacado--sin-icono {
   grid-template-columns: minmax(0, 1fr); border-left: 4px solid var(--c-cielo);
   background: var(--c-hielo, #E8EDF5); border-radius: 0 14px 14px 0; padding: 22px 28px;
 }
 .ua-destacado--sin-icono .ua-destacado__titulo { color: var(--c-acento); }
+.ova-destacado--sin-icono { --ova-destacado-filo: var(--c-cielo); --ova-destacado-suave: var(--c-hielo, #E8EDF5); }
 @media (max-width: 720px) {
   .ua-destacado { grid-template-columns: 36px minmax(0, 1fr); column-gap: 14px; padding: 16px 18px; }
   .ua-destacado__icono { width: 36px; height: 36px; font-size: 18px; }
@@ -2774,6 +2889,31 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 .ua-sub + .ua-cita1 { margin-top: 40px; }
 .ua-cita1 + .ua-sub { margin-top: 0; }
 .ua-bloque > .ua-cita1:last-child { margin-bottom: 64px; }
+/* Las citas del catálogo (.ova-cita, KIT-001) con el celeste de Andina y sus píxeles de remate. */
+.ova-cita {
+  --ova-cita-claro: color-mix(in srgb, var(--c-cielo) 18%, var(--bg-surface));
+  --ova-cita-bloque: color-mix(in srgb, var(--c-cielo) 22%, var(--bg-surface));
+  --ova-cita-luz: var(--c-cielo);
+  --ua-cita-px1: var(--c-cielo); --ua-cita-px2: var(--c-acento);
+}
+.ova-cita--neutra { --ua-cita-px1: #B9C3CF; --ua-cita-px2: var(--text-head); }
+.ova-cita--oscura { --ua-cita-px1: var(--c-cielo); --ua-cita-px2: #fff; }
+.ova-cita--tipo2::after {
+  content: ''; position: absolute; right: 28px; bottom: 28px; width: 40px; height: 40px;
+  background:
+    linear-gradient(var(--ua-cita-px1), var(--ua-cita-px1)) 0 0 / 22px 22px no-repeat,
+    linear-gradient(var(--ua-cita-px2), var(--ua-cita-px2)) 18px 18px / 22px 22px no-repeat;
+}
+.ova-cita--tipo3::before {
+  content: ''; position: absolute; right: 18px; bottom: calc(62% - 26px); width: 52px; height: 52px; z-index: 0;
+  background:
+    linear-gradient(var(--c-cielo), var(--c-cielo)) 0 0 / 29px 29px no-repeat,
+    linear-gradient(var(--c-acento), var(--c-acento)) 23px 23px / 29px 29px no-repeat;
+}
+@media (max-width: 720px) { .ova-cita--tipo3::before { right: 12px; bottom: calc(45% - 20px); transform: scale(.75); } }
+.ua-sub + .ova-cita--tipo1 { margin-top: 40px; }
+.ova-cita--tipo1 + .ua-sub { margin-top: 0; }
+.ua-bloque > .ova-cita--tipo1:last-child { margin-bottom: 64px; }
 
 /* Bloque destacado en columnas: dos por fila (icono al lado) o tres por fila
    (icono arriba). En celular, uno por fila. */
@@ -2793,6 +2933,8 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 .ua-respiro--claro::after { background-image: var(--ua-pixeles); opacity: .9; }
 .ova-screen .ua-respiro--claro strong,
 .ua-respiro--claro strong { color: var(--c-acento); }
+.ova-banner--claro::before { background: var(--c-acento); opacity: .035; }   /* el banner claro del catálogo */
+.ova-banner--claro::after { background-image: var(--ua-pixeles); opacity: .9; }
 
 /* Bloque de código con números de línea (skin.js envuelve cada línea). El
    número no se selecciona al copiar. data-resaltar="5,8" marca esas líneas. */
@@ -3228,6 +3370,7 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
    varios temas. */
 .ua-tabla-apa { margin: 44px 0 0; }
 .ua-bloque > .ua-tabla-apa:first-of-type, .ua-sub + .ua-tabla-apa { margin-top: 0; }
+.ua-bloque > .ova-apa-tabla:first-of-type, .ua-sub + .ova-apa-tabla { margin-top: 0; }   /* la tabla APA del catálogo (KIT-001) */
 .ua-tabla-apa figcaption { margin-bottom: 12px; }
 .ua-tabla-apa__num { display: block; font-weight: 700; color: var(--text-head); font-size: .95rem; margin-bottom: 2px; }
 .ua-tabla-apa__titulo { display: block; font-style: italic; line-height: 1.5; }
@@ -3262,6 +3405,11 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 .ua-destacados--color .ua-destacado--error  { --ua-fondo: #FCE7E5; }
 .ua-destacados--color .ua-destacado--reflexion { --ua-fondo: #F6EEDA; }
 .ua-destacados--color .ua-destacado--importante { --ua-fondo: #E3ECF6; }
+.ova-destacados--color .ova-destacado--alerta { --ova-fondo: #FFF3D1; }
+.ova-destacados--color .ova-destacado--exito  { --ova-fondo: #E4F4EC; }
+.ova-destacados--color .ova-destacado--error  { --ova-fondo: #FCE7E5; }
+.ova-destacados--color .ova-destacado--reflexion { --ova-fondo: #F6EEDA; }
+.ova-destacados--color .ova-destacado--importante { --ova-fondo: #E3ECF6; }
 .ua-destacado--sin-icono { margin-top: 0; }
 
 /* Nota entre paréntesis en un subtítulo; nivel 4 para los acomodos dentro de un nivel 3 */
@@ -3289,6 +3437,8 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 .ua-destacado--boton .ua-destacado__boton { white-space: nowrap; }
 .ova-btn.ua-btn--cian { background: var(--c-cielo); color: var(--ua-osc-tinta, #0B1F31); border-color: var(--c-cielo); }
 .ova-btn.ua-btn--cian:hover { background: #E8EEF4; border-color: #E8EEF4; color: var(--ua-osc-tinta, #0B1F31); }
+/* El botón de la descarga con icono del catálogo sobre fondo oscuro: el mismo cian. */
+.ova-destacados--oscuro { --ova-oscuro-boton: var(--c-cielo); --ova-oscuro-boton-tinta: var(--ua-osc-tinta, #0B1F31); --ova-oscuro-boton-hover: #E8EEF4; }
 @media (max-width: 720px) {
   .ua-destacado--boton { grid-template-columns: 36px minmax(0, 1fr); align-items: start; }
   .ua-destacado--boton .ua-destacado__boton { grid-column: 2; justify-self: start; margin-top: 12px; }
@@ -3301,6 +3451,7 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 /* La foto a franja lleva arriba la «mordida» con el sol: bajo un título o
    subtítulo basta el aire normal del título, no sus 56 px propios. */
 :is(.ua-seccion__titulo, .ua-sub) + .ua-foto-ancha { margin-top: 20px; }
+:is(.ua-seccion__titulo, .ua-sub) + .ova-foto-ancha { margin-top: 20px; }
 
 /* Descarga - con imagen: la imagen a la izquierda (un tercio) y el bloque de
    descarga al lado; en celular, la imagen arriba. */
@@ -3328,6 +3479,7 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
   padding: 40px 48px; border-radius: 22px;
   background: color-mix(in srgb, var(--c-cielo) 20%, var(--bg-surface));
 }
+.ova-descargable--imagen { --ova-descargable-imagen-fondo: color-mix(in srgb, var(--c-cielo) 20%, var(--bg-surface)); }   /* la del catálogo (KIT-001) */
 .ua-descarga-ilus__img { display: block; width: 100%; max-height: 300px; object-fit: contain; }
 .ua-descarga-ilus__titulo { margin: 0 0 12px; font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; line-height: 1.3; color: var(--text-head); }
 .ua-descarga-ilus__cuerpo p { margin: 0 0 22px; }
@@ -3348,7 +3500,10 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 .ua-sub--4 { margin-bottom: 20px; }
 .ua-seccion__titulo + *, .ua-sub + *, .ua-sub + .ua-sub, .ua-sub + .ua-rotulo, .ua-sub + .ua-bloque,
 .ua-seccion__titulo + .ua-bloque, .ua-seccion__titulo + .ua-cta, .ua-seccion__titulo + .ua-foto-ancha { margin-top: 0; }
+.ua-seccion__titulo + .ova-llamado, .ua-seccion__titulo + .ova-foto-ancha { margin-top: 0; }
 .ua-sub + .ua-cita1, .ua-seccion__titulo + .ua-cita1 { margin-top: 40px; }
+.ua-sub + .ova-rotulo { margin-top: 0; }
+.ua-sub + .ova-cita--tipo1, .ua-seccion__titulo + .ova-cita--tipo1 { margin-top: 40px; }   /* las del catálogo (KIT-001) */
 
 /* Créditos · fila ancha para los créditos de fotografías (texto largo, sin peso de nombre). */
 .ua-creditos__rol--ancho { grid-column: 1 / -1; }
@@ -3381,14 +3536,14 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 /* ═══ Carrusel del motor · navegación como la del carrusel de fotos (2026-10-18) ═══
    Flecha redonda · puntos · flecha redonda, centrados bajo la pista. El motor pone los puntos a la
    izquierda y las flechas cuadradas a la derecha; aquí se reordenan con flex. Regla (INSTITUCION.md §4):
-   varias tarjetas por vista → navegación fuera y centrada; una tarjeta por vista (Slide, .ua-slide)
+   varias tarjetas por vista → navegación fuera y centrada; una tarjeta por vista (Slide, .ua-slide y .ova-carrusel--slide)
    → navegación dentro de la tarjeta, que define el propio slide.
    El teclado (← →) lo añade skin.js. */
-.ova-carrusel:not(.ua-slide) .ova-carrusel__nav { justify-content: center; gap: 14px; margin-top: 16px; }
-.ova-carrusel:not(.ua-slide) .ova-carrusel__arrows { display: contents; }
-.ova-carrusel:not(.ua-slide) [data-ova-carrusel-prev] { order: -1; }
-.ova-carrusel:not(.ua-slide) .ova-carrusel__dots { order: 0; gap: 8px; }
-.ova-carrusel:not(.ua-slide) [data-ova-carrusel-next] { order: 1; }
+.ova-carrusel:not(.ua-slide, .ova-carrusel--slide) .ova-carrusel__nav { justify-content: center; gap: 14px; margin-top: 16px; }
+.ova-carrusel:not(.ua-slide, .ova-carrusel--slide) .ova-carrusel__arrows { display: contents; }
+.ova-carrusel:not(.ua-slide, .ova-carrusel--slide) [data-ova-carrusel-prev] { order: -1; }
+.ova-carrusel:not(.ua-slide, .ova-carrusel--slide) .ova-carrusel__dots { order: 0; gap: 8px; }
+.ova-carrusel:not(.ua-slide, .ova-carrusel--slide) [data-ova-carrusel-next] { order: 1; }
 .ova-carrusel .ova-carrusel__arrow {
   width: 40px; height: 40px; border-radius: 50%; font-size: 1.2rem;
   border: 1px solid var(--border-c); background: var(--bg-surface); color: var(--c-acento);
@@ -3397,4 +3552,101 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 .ova-carrusel .ova-carrusel__arrow:focus-visible { outline: 3px solid var(--c-info); outline-offset: 2px; }
 .ova-carrusel .ova-carrusel__dot.is-active { width: 22px; border-radius: 4px; }
 .ova-carrusel:focus-visible { outline: 3px solid var(--c-info); outline-offset: 4px; border-radius: var(--r-md); }
+/* El Slide del catálogo (.ova-carrusel--slide, KIT-001) con el gris claro, las sombras en abismo y, con
+   fondo, el escalón de cuadros blancos a la izquierda y las cinco láminas de Andina (color, icono y
+   textura dibujada en CSS). La estructura está en motor/core.css (@catalogo-variantes). */
+.ova-carrusel--slide { --ova-ficha: #E3E7EC; }
+.ova-carrusel--slide .ova-carrusel__arrow { background: #FFFFFF; box-shadow: 0 6px 16px -8px rgba(14,42,68,.5); }
+.ova-carrusel--slide:not(.ova-carrusel--fondo) .ova-carrusel__dot:not(.is-active) { background: rgba(14,42,68,.18); }
+.ova-carrusel__retrato-fondo { box-shadow: 0 18px 40px -18px rgba(14,42,68,.4); }
+.ova-carrusel--fondo .ova-carrusel__slide::after {
+  content: ''; position: absolute; left: 22px; bottom: 0; width: 72px; aspect-ratio: 1; z-index: -1; pointer-events: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 102 102'%3E%3Crect x='0' y='0' width='34' height='34' fill='white' fill-opacity='.55'/%3E%3Crect x='0' y='34' width='34' height='34' fill='white' fill-opacity='.9'/%3E%3Crect x='34' y='34' width='34' height='34' fill='white' fill-opacity='.35'/%3E%3Crect x='0' y='68' width='34' height='34' fill='white' fill-opacity='.35'/%3E%3Crect x='34' y='68' width='34' height='34' fill='white' fill-opacity='.9'/%3E%3Crect x='68' y='68' width='34' height='34' fill='white' fill-opacity='.55'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+/* naranja · círculos suaves */
+.ova-carrusel--fondo .ova-carrusel__lamina--naranja { background: linear-gradient(135deg, #B4502E, #8C3A1C); --ova-icono: #B4502E;
+  --ova-textura: radial-gradient(circle at 18% 28%, rgba(255,255,255,.10) 0 150px, transparent 151px), radial-gradient(circle at 78% 90%, rgba(255,255,255,.08) 0 240px, transparent 241px), radial-gradient(circle at 60% 10%, rgba(255,255,255,.06) 0 90px, transparent 91px); }
+/* verde · trama de puntos */
+.ova-carrusel--fondo .ova-carrusel__lamina--verde { background: linear-gradient(135deg, #0F4A46, #0A302E); --ova-icono: #0F4A46;
+  --ova-textura: radial-gradient(rgba(255,255,255,.16) 1.4px, transparent 1.7px) 0 0 / 18px 18px; }
+/* azul · líneas diagonales */
+.ova-carrusel--fondo .ova-carrusel__lamina--azul { background: linear-gradient(135deg, #1C4578, #0E2A44); --ova-icono: #1C4578;
+  --ova-textura: repeating-linear-gradient(135deg, rgba(255,255,255,.07) 0 2px, transparent 2px 16px); }
+/* gris · cuadrícula fina */
+.ova-carrusel--fondo .ova-carrusel__lamina--gris { background: linear-gradient(135deg, #343C48, #1F252E); --ova-icono: #1F252E;
+  --ova-textura: linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px) 0 0 / 28px 28px, linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px) 0 0 / 28px 28px; }
+/* ocre · anillos concéntricos */
+.ova-carrusel--fondo .ova-carrusel__lamina--ocre { background: linear-gradient(135deg, #7A4F0E, #4E3208); --ova-icono: #7A4F0E;
+  --ova-textura: repeating-radial-gradient(circle at 88% 55%, rgba(255,255,255,.07) 0 2px, transparent 2px 28px); }
 
+
+/* --- Pasos y líneas de tiempo del catálogo (KIT-001 T9): la estructura está en motor/catalogo/catalogo.css
+   y en las variantes de core.css; aquí, los colores de Andina y la estrella del recorrido. --- */
+.ova-acordeon--numerado, .ova-stepper--lista, .ova-ruta, .ova-hitos, .ova-cronograma, .ova-cronologia { --ova-realce: var(--c-cielo); }
+.ova-tabs--pasos { --ova-realce: var(--c-cielo); --ova-franja: var(--c-hielo); --ova-ficha: var(--c-hielo-2, #F3F6FA); --ova-hondo: var(--c-azul-hondo, #1C4578); }
+.ova-ruta--iconos { --ova-ruta-tenue: #C3CCD8; }
+.ova-trayecto, .ova-hitos, .ova-cronograma { --ova-meta: var(--c-sol); --ova-meta-tinta: var(--c-deep); }
+.ova-cronograma { --ova-ficha: var(--c-hielo-2, #F3F6FA); --ova-franja: var(--c-hielo); }
+.ova-cronologia { --ova-franja: var(--c-hielo); }
+/* inicio y meta del recorrido: la estrella de Andina en lugar del círculo */
+.ova-trayecto__parada--inicio .ova-trayecto__marca,
+.ova-trayecto__parada--meta .ova-trayecto__marca {
+  border-radius: 0; box-shadow: none;
+  -webkit-mask: var(--ua-estrella) center / contain no-repeat; mask: var(--ua-estrella) center / contain no-repeat;
+}
+/* la negrita del cuerpo va en el color de los títulos (.ova-screen p strong), también la de la situación del slider */
+.ova-tabs--pasos .ova-tabs__situacion strong { color: var(--text-head); }
+/* el número del listado vertical va en acento, no con el degradado de los números de paso de Andina (arriba, :root:not(…) .ova-step__num span) */
+:root .ova-stepper.ova-stepper--lista .ova-step__num span { color: var(--c-acento); -webkit-text-fill-color: var(--c-acento); }
+:root .ova-stepper.ova-stepper--lista .ova-step:hover .ova-step__num span { color: #fff; -webkit-text-fill-color: #fff; }
+
+/* --- Tarjetas del catálogo (KIT-001 T10): la estructura está en motor/catalogo/catalogo.css;
+   aquí, los colores de Andina y la greca y el escalón del frente de las que giran. --- */
+.ova-tarjetas, .ova-mosaico, .ova-giros { --ova-realce: var(--c-cielo); }
+.ova-tarjetas { --ova-ficha: var(--c-hielo); --ova-clara-1: var(--c-hielo); --ova-clara-2: #D6EAF8; --ova-clara-3: #BFE3F6; }
+.ova-giros { --ova-hondo: var(--c-azul-hondo); }
+.ova-mosaico { --ova-mosaico-velo: linear-gradient(180deg, rgba(19,43,65,0) 38%, rgba(19,43,65,.62) 62%, rgba(19,43,65,.94) 100%); }
+.ova-giro__frente::before {   /* la greca, apenas */
+  content: ''; position: absolute; inset: 0; z-index: -1; background: #fff; opacity: .05;
+  -webkit-mask: var(--ua-greca) 0 0 / 163px 209px repeat; mask: var(--ua-greca) 0 0 / 163px 209px repeat;
+}
+.ova-giro__frente::after {    /* el escalón de cuadros en la esquina */
+  content: ''; position: absolute; right: 0; bottom: 0; z-index: -1; width: 66px; aspect-ratio: 1;
+  background: var(--ua-pixeles-claro) center / contain no-repeat; opacity: .35; transform: scaleX(-1);
+}
+
+/* --- Infografías del catálogo (KIT-001 T11): la estructura está en motor/catalogo/catalogo.css;
+   aquí, la versión de Andina de cada una (catalogo.json → versiones): celeste en las franjas y en
+   las oscuras, la greca apenas sobre el abismo y la escalera de cuadros pixelados con los azules y
+   el sol de la marca. Los puntos de la figura son los de .ova-hotspot__dot (arriba). --- */
+.ova-cifra--clara { --ova-realce: var(--c-cielo); --ova-ficha: var(--c-hielo); }
+.ova-cifra--oscura {
+  --ova-realce: var(--c-cielo);
+  --ova-cifra-fondo:
+    radial-gradient(circle at 100% 0, rgba(63, 192, 240, .2) 0, rgba(63, 192, 240, 0) 45%),
+    linear-gradient(160deg, var(--c-deep) 0%, #0B1E31 100%);
+}
+.ova-indicador--claro {
+  --ova-realce: var(--c-cielo);
+  --ova-indicador-fondo: linear-gradient(135deg, var(--bg-surface) 0%, var(--c-hielo-2) 100%);
+}
+.ova-indicador--oscuro {
+  --ova-realce: var(--c-cielo);
+  --ova-indicador-fondo:
+    radial-gradient(circle at 88% 12%, rgba(63, 192, 240, .22) 0, rgba(63, 192, 240, 0) 42%),
+    linear-gradient(140deg, #0B1E31 0%, var(--c-deep) 45%, var(--c-azul-hondo) 100%);
+}
+.ova-cifra--oscura::before, .ova-indicador--oscuro::before {   /* la greca, apenas */
+  content: ''; position: absolute; inset: 0; z-index: -1; background: #fff; opacity: .04;
+  -webkit-mask: var(--ua-greca) 0 0 / 163px 209px repeat; mask: var(--ua-greca) 0 0 / 163px 209px repeat;
+}
+.ova-ciclo--escalonado, .ova-escalones {
+  --ova-escalon-1: #C5DCEB; --ova-escalon-2: #3A93D0; --ova-escalon-3: var(--c-acento); --ova-escalon-4: var(--c-sol);
+  --ova-escalon-tinta-1: var(--c-acento); --ova-escalon-tinta-2: #fff; --ova-escalon-tinta-3: #fff; --ova-escalon-tinta-4: var(--c-deep);
+  --ova-escalon-pila: #E3EDF5; --ova-escalon-pila-4: #F7D58F; --ova-escalon-borde-1: #9DC3DD;
+}
+/* el color de cada paso del proceso escalonado: el de su peldaño; el dorado, más oscuro en el texto */
+.ova-ciclo--escalonado .ova-ciclo__paso:nth-child(-n+2) { --ova-tinte: var(--c-info); }
+.ova-ciclo--escalonado .ova-ciclo__paso:nth-child(4) { --ova-tinte: var(--c-sol); }
+.ova-ciclo--escalonado .ova-ciclo__paso:nth-child(4) .ova-ciclo__num { color: #8A6100; }
+.ova-ciclo--escalonado .ova-ciclo__paso:nth-child(4) .ova-ciclo__titulo iconify-icon { color: #A06A00; }

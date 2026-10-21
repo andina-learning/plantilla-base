@@ -495,6 +495,13 @@
   }
 
   // Carrusel
+  // Slides por vista: 3 desde 900 px, 2 desde 600 y 1 debajo. Un carrusel puede bajar ese número
+  // con data-ova-visibles (el Slide muestra uno por vista: data-ova-visibles="1"); nunca lo sube.
+  function carruselVisibles(declarados, ancho) {
+    const porAncho = ancho < 600 ? 1 : ancho < 900 ? 2 : 3;
+    const n = parseInt(declarados, 10);
+    return n > 0 ? Math.min(n, porAncho) : porAncho;
+  }
   function setupCarrusel(root = document) {
     root.querySelectorAll('.ova-carrusel').forEach(carr => {
       const track = carr.querySelector('.ova-carrusel__track');
@@ -504,7 +511,7 @@
       const next = carr.querySelector('[data-ova-carrusel-next]');
       if (!track || !slides.length) return;
       let idx = 0;
-      const visible = () => window.innerWidth < 600 ? 1 : window.innerWidth < 900 ? 2 : 3;
+      const visible = () => carruselVisibles(carr.dataset.ovaVisibles, window.innerWidth);
       const max = () => Math.max(0, slides.length - visible());
       const go = (i) => {
         idx = Math.max(0, Math.min(max(), i));

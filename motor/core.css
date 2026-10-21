@@ -1381,6 +1381,9 @@ code {
 }
 @media (max-width: 900px) { .ova-carrusel__slide { flex: 0 0 calc((100% - 16px) / 2); } }
 @media (max-width: 600px) { .ova-carrusel__slide { flex: 0 0 100%; } }
+/* data-ova-visibles baja los slides por vista (core.js · carruselVisibles) */
+.ova-carrusel[data-ova-visibles="1"] .ova-carrusel__slide { flex-basis: 100%; }
+@media (min-width: 601px) { .ova-carrusel[data-ova-visibles="2"] .ova-carrusel__slide { flex-basis: calc((100% - 16px) / 2); } }
 .ova-carrusel__nav {
   display: flex; align-items: center; justify-content: space-between;
   margin-top: 20px;
@@ -2486,3 +2489,326 @@ body.ova-portada-full .ova-main{ width:100%; max-width:none; margin:0; padding:0
   position:absolute; left:0; right:0; bottom:0; padding:10px 14px;
   font-size:.78rem; line-height:1.35; background:linear-gradient(transparent, rgba(0,0,0,.75));
 }
+
+/* @catalogo-variantes ======================================
+   VARIANTES DE PIEZAS DEL MOTOR que usa el catálogo (KIT-001,
+   choques.md §2). Cada selector lleva su modificador o un elemento
+   nuevo: quien no lo escriba en su HTML no ve ningún cambio. La
+   estructura vive aquí; la piel da el color con estas variables:
+     --ova-realce  número o paso activo, hilo     (def. --c-info)
+     --ova-ficha   fichas claras, operación       (def. --bg-muted)
+     --ova-franja  franja de situación, hover     (def. --bg-muted)
+     --ova-hondo   hover de las flechas           (def. --acento-deep)
+   El catálogo y las pieles pueden afinar estas clases (no son
+   reservadas: scripts/catalogo.js salta esta sección).
+   ========================================================= */
+
+/* Pestañas · píldoras: barra gris y la activa como píldora blanca, aunque la piel cambie la base */
+.ova-tabs.ova-tabs--pildoras { padding: 0; overflow: hidden; }
+.ova-tabs.ova-tabs--pildoras .ova-tabs__nav { background: var(--bg-muted); border-bottom: 1px solid var(--border-c); padding: 6px; gap: 4px; }
+.ova-tabs.ova-tabs--pildoras .ova-tabs__btn { margin: 0; padding: 10px 16px; border-radius: var(--r-md); font-weight: 600; color: var(--text-mut); }
+.ova-tabs.ova-tabs--pildoras .ova-tabs__btn::before,
+.ova-tabs.ova-tabs--pildoras .ova-tabs__btn::after { display: none; }
+.ova-tabs.ova-tabs--pildoras .ova-tabs__btn iconify-icon { font-size: 1.15rem; }
+.ova-tabs.ova-tabs--pildoras .ova-tabs__btn:not(.is-active):hover { color: var(--c-acento); background: color-mix(in srgb, var(--bg-surface) 65%, transparent); box-shadow: none; }
+.ova-tabs.ova-tabs--pildoras .ova-tabs__btn.is-active { background: var(--bg-surface); color: var(--c-acento); box-shadow: var(--shadow-sm); }
+.ova-tabs.ova-tabs--pildoras .ova-tabs__panel { padding: 26px 28px 28px; }
+@media (max-width: 720px) { .ova-tabs.ova-tabs--pildoras .ova-tabs__panel { padding: 20px 18px; } }
+
+/* Pestañas · panel con texto e imagen al lado (en cualquier variante) */
+.ova-tabs__media { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+.ova-tabs__media > :first-child > h4:first-child { margin-top: 0; }
+@media (max-width: 720px) { .ova-tabs__media { grid-template-columns: 1fr; } }
+
+/* Pestañas · verticales: columna de fichas a la izquierda y el panel como tarjeta aparte;
+   la activa, en acento con una punta hacia el panel. En móvil, fichas en fila. */
+.ova-tabs.ova-tabs--vertical {
+  display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 18px; align-items: start;
+  background: none; border: 0; border-radius: 0; padding: 0; overflow: visible;
+}
+.ova-tabs.ova-tabs--vertical .ova-tabs__nav {
+  flex-direction: column; overflow: visible; gap: 10px; padding: 0;
+  background: none; border: 0;
+}
+.ova-tabs.ova-tabs--vertical .ova-tabs__btn {
+  flex: none; position: relative; width: 100%; margin: 0;
+  justify-content: flex-start; text-align: left;
+  padding: 14px 18px; border-radius: 12px;
+  background: var(--ova-ficha, var(--bg-muted)); border: 1px solid var(--border-c);
+  color: var(--text-head); font-weight: 600; font-size: .95rem; line-height: 1.35; white-space: normal;
+  transition: background-color .2s, border-color .2s, color .2s, transform .2s;
+}
+.ova-tabs.ova-tabs--vertical .ova-tabs__btn::before { display: none; }
+.ova-tabs.ova-tabs--vertical .ova-tabs__btn::after {
+  content: ''; position: absolute; display: block; left: auto; right: -9px; top: 50%; bottom: auto; width: 0; height: 0; transform: translateY(-50%);
+  border: 9px solid transparent; border-left-color: var(--c-acento); border-right: 0; opacity: 0; transition: opacity .2s;
+}
+.ova-tabs.ova-tabs--vertical .ova-tabs__btn:not(.is-active):hover {
+  background: var(--ova-franja, var(--bg-muted)); border-color: color-mix(in srgb, var(--c-acento) 45%, var(--border-c));
+  color: var(--c-acento); box-shadow: none; transform: translateX(3px);
+}
+.ova-tabs.ova-tabs--vertical .ova-tabs__btn.is-active {
+  background: var(--c-acento); border-color: var(--c-acento); color: #FFFFFF; font-weight: 700; box-shadow: var(--shadow-sm);
+}
+.ova-tabs.ova-tabs--vertical .ova-tabs__btn.is-active::after { opacity: 1; }
+.ova-tabs.ova-tabs--vertical .ova-tabs__panels {
+  background: var(--bg-surface); border: 1px solid var(--border-c); border-radius: var(--r-lg); min-height: 100%;
+}
+.ova-tabs.ova-tabs--vertical .ova-tabs__panel { padding: 26px 30px 28px; }
+@media (max-width: 720px) {
+  .ova-tabs.ova-tabs--vertical { grid-template-columns: 1fr; gap: 14px; }
+  .ova-tabs.ova-tabs--vertical .ova-tabs__nav { flex-direction: row; flex-wrap: wrap; gap: 8px; }
+  .ova-tabs.ova-tabs--vertical .ova-tabs__btn { width: auto; flex: 0 1 auto; padding: 10px 14px; font-size: .9rem; }
+  .ova-tabs.ova-tabs--vertical .ova-tabs__btn::after { display: none; }
+  .ova-tabs.ova-tabs--vertical .ova-tabs__btn:not(.is-active):hover { transform: none; }
+  .ova-tabs.ova-tabs--vertical .ova-tabs__panel { padding: 22px 20px; }
+}
+
+/* Pestañas · slider de pasos: una tarjeta con la situación (opcional) arriba, los círculos
+   numerados unidos por una línea (los recorridos, .is-hecho, en acento; el actual en realce),
+   el panel y al pie la cuenta y las flechas. Flechas, cuenta e .is-hecho los pone catalogo.js. */
+.ova-tabs.ova-tabs--pasos {
+  position: relative; background: var(--bg-surface); border: 1px solid var(--border-c); border-radius: var(--r-lg);
+  box-shadow: 0 22px 44px -30px color-mix(in srgb, var(--c-deep) 38%, transparent); padding: 0; overflow: hidden;
+}
+.ova-tabs--pasos .ova-tabs__situacion {
+  margin: 0; padding: 18px 32px; background: var(--ova-franja, var(--bg-muted)); border-bottom: 1px solid var(--border-c); color: var(--text-head);
+}
+.ova-tabs--pasos .ova-tabs__situacion strong { color: var(--c-acento); }
+.ova-tabs--pasos .ova-tabs__marco { padding: 30px 32px 22px; }
+.ova-tabs.ova-tabs--pasos .ova-tabs__nav { border: 0; padding: 0; gap: 0; overflow: visible; background: none; align-items: flex-start; }
+.ova-tabs.ova-tabs--pasos .ova-tabs__btn {
+  flex: 1; flex-direction: column; justify-content: flex-start; gap: 10px; position: relative; margin: 0; padding: 0 6px;
+  background: none; box-shadow: none; white-space: normal; font-size: .9rem; color: var(--text-mut); transition: color .2s;
+}
+.ova-tabs.ova-tabs--pasos .ova-tabs__btn:hover { color: var(--text-head); background: none; }
+.ova-tabs.ova-tabs--pasos .ova-tabs__btn::before,
+.ova-tabs.ova-tabs--pasos .ova-tabs__btn::after,
+.ova-tabs.ova-tabs--pasos .ova-tabs__btn.is-active::after { display: none; }
+.ova-tabs.ova-tabs--pasos .ova-tabs__btn + .ova-tabs__btn::before {
+  display: block; content: ''; position: absolute; top: 19px; bottom: auto; left: auto;
+  right: calc(50% + 26px); width: calc(100% - 52px); height: 3px; border-radius: 2px; background: var(--border-c); transition: background .3s;
+}
+.ova-tabs.ova-tabs--pasos .ova-tabs__btn.is-hecho + .ova-tabs__btn::before { background: var(--c-acento); }
+.ova-tabs--pasos .ova-tabs__num {
+  display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
+  border: 2px solid var(--border-c); background: var(--bg-surface); color: var(--text-head);
+  font-family: var(--font-display); font-weight: 700; transition: background .2s, border-color .2s, box-shadow .2s;
+}
+.ova-tabs--pasos .ova-tabs__btn:hover .ova-tabs__num { border-color: var(--c-acento); }
+.ova-tabs--pasos .ova-tabs__btn.is-hecho .ova-tabs__num { background: var(--c-acento); border-color: var(--c-acento); color: #fff; }
+.ova-tabs.ova-tabs--pasos .ova-tabs__btn.is-active { color: var(--text-head); font-weight: 700; box-shadow: none; }
+.ova-tabs--pasos .ova-tabs__btn.is-active .ova-tabs__num {
+  background: var(--ova-realce, var(--c-info)); border-color: var(--ova-realce, var(--c-info)); color: var(--c-deep);
+  box-shadow: 0 0 0 6px color-mix(in srgb, var(--ova-realce, var(--c-info)) 24%, transparent);
+}
+.ova-tabs.ova-tabs--pasos .ova-tabs__panels { margin-top: 26px; padding-top: 26px; border-top: 1px solid var(--border-c); }
+.ova-tabs.ova-tabs--pasos .ova-tabs__panel { padding: 0; }
+.ova-tabs.ova-tabs--pasos .ova-tabs__panel h4 { margin: 0 0 10px; font-size: 1.2rem; }
+.ova-tabs--pasos .ova-tabs__media { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 32px; }
+.ova-tabs--pasos .ova-tabs__operacion {
+  display: inline-block; margin: 6px 0 0; padding: 10px 20px; border-radius: 12px;
+  background: var(--ova-ficha, var(--bg-muted)); border-left: 4px solid var(--ova-realce, var(--c-info));
+  font-family: var(--font-display); font-size: 1.35rem; font-weight: 800; color: var(--c-acento); letter-spacing: .01em;
+}
+.ova-tabs--pasos .ova-tabs__figura { margin: 0; }
+.ova-tabs--pasos .ova-tabs__figura img { display: block; width: 100%; height: auto; border-radius: 14px; }
+.ova-tabs--pasos .ova-tabs__pie {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--border-c);
+}
+.ova-tabs--pasos .ova-tabs__cuenta { font-size: .9rem; font-weight: 600; color: var(--text-mut); }
+.ova-tabs--pasos .ova-tabs__flechas { display: flex; gap: 10px; }
+.ova-tabs--pasos .ova-tabs__flecha {
+  display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; cursor: pointer;
+  border: 1.5px solid var(--c-acento); background: var(--bg-surface); color: var(--c-acento); font-size: 1.25rem;
+  transition: background .2s, color .2s, transform .2s;
+}
+.ova-tabs--pasos .ova-tabs__flecha[data-ova-paso="1"] { background: var(--c-acento); color: #fff; }
+.ova-tabs--pasos .ova-tabs__flecha:hover:not(:disabled) {
+  transform: translateY(-1px); background: var(--ova-hondo, var(--acento-deep)); border-color: var(--ova-hondo, var(--acento-deep)); color: #fff;
+}
+.ova-tabs--pasos .ova-tabs__flecha:focus-visible { outline: 3px solid var(--ova-realce, var(--c-info)); outline-offset: 2px; }
+.ova-tabs--pasos .ova-tabs__flecha:disabled { opacity: .3; cursor: default; }
+@media (max-width: 720px) {
+  .ova-tabs--pasos .ova-tabs__situacion { padding: 16px 18px; }
+  .ova-tabs--pasos .ova-tabs__marco { padding: 22px 18px 18px; }
+  .ova-tabs.ova-tabs--pasos .ova-tabs__btn > span:last-child { display: none; }
+  .ova-tabs--pasos .ova-tabs__media { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .ova-tabs--pasos .ova-tabs__operacion { font-size: 1.2rem; }
+}
+
+/* Stepper · listado de pasos vertical: círculos claros con borde de realce unidos por un hilo
+   que va de un círculo al siguiente; tarjetas compactas. Sin ova-step__tag. */
+.ova-stepper.ova-stepper--lista::before { display: none; }
+.ova-stepper--lista .ova-step:not(:last-child)::before {
+  content: ''; position: absolute; left: 23px; top: 38px; bottom: -52px; width: 2px; border-radius: 2px;
+  background: linear-gradient(180deg, var(--ova-realce, var(--c-info)), var(--c-acento));
+}
+.ova-stepper--lista .ova-step { grid-template-columns: 48px minmax(0, 1fr); gap: 22px; margin-bottom: 14px; }
+.ova-stepper--lista .ova-step:last-child { margin-bottom: 0; }
+.ova-stepper--lista .ova-step__num {
+  width: 48px; height: 48px; margin-top: 14px; border-radius: 50%;
+  background: var(--bg-surface); border: 2px solid var(--ova-realce, var(--c-info));
+  font-size: 1rem; font-weight: 800;
+  box-shadow: 0 0 0 6px var(--bg-app); transition: background .25s, border-color .25s;
+}
+.ova-stepper--lista .ova-step__num span {
+  background: none; color: var(--c-acento); -webkit-text-fill-color: var(--c-acento); transition: color .25s;
+}
+.ova-stepper--lista .ova-step:hover .ova-step__num { background: var(--c-acento); border-color: var(--c-acento); }
+.ova-stepper--lista .ova-step:hover .ova-step__num span { color: #fff; -webkit-text-fill-color: #fff; }
+.ova-stepper--lista .ova-step__card {
+  padding: 22px 28px; border-radius: var(--r-lg); border: 1px solid var(--border-c);
+  box-shadow: 0 1px 2px color-mix(in srgb, var(--c-deep) 4%, transparent);
+}
+.ova-stepper--lista .ova-step:hover .ova-step__card {
+  transform: translateX(3px); border-color: color-mix(in srgb, var(--ova-realce, var(--c-info)) 55%, var(--border-c));
+  box-shadow: 0 16px 32px -22px color-mix(in srgb, var(--c-deep) 35%, transparent);
+}
+.ova-stepper--lista .ova-step__card h3 { margin: 0 0 6px; font-size: 1.15rem; line-height: 1.35; }
+.ova-stepper--lista .ova-step__card p { margin: 0; }
+@media (max-width: 720px) {
+  .ova-stepper--lista .ova-step:not(:last-child)::before { left: 19px; top: 32px; bottom: -46px; }
+  .ova-stepper--lista .ova-step { grid-template-columns: 40px minmax(0, 1fr); gap: 14px; }
+  .ova-stepper--lista .ova-step__num { width: 40px; height: 40px; margin-top: 12px; font-size: .9rem; box-shadow: 0 0 0 4px var(--bg-app); }
+  .ova-stepper--lista .ova-step__card { padding: 18px 18px; }
+}
+
+/* Acordeón · numerado: el número (ova-acordeon__num) en una caja aparte a la izquierda, unidas
+   por una línea punteada; cerrados, franjas grises; el abierto, panel blanco con borde de acento. */
+.ova-acordeon.ova-acordeon--numerado { gap: 0; }
+.ova-acordeon--numerado .ova-acordeon__item {
+  position: relative; padding: 0 0 14px 62px;
+  background: none; border: 0; border-radius: 0; box-shadow: none; overflow: visible;
+}
+.ova-acordeon--numerado .ova-acordeon__item:not(:last-child)::before {
+  content: ''; position: absolute; left: 20px; top: 50px; bottom: 6px; width: 4px;
+  background: radial-gradient(circle, color-mix(in srgb, var(--ova-realce, var(--c-info)) 55%, transparent) 1.6px, transparent 1.8px) 0 0 / 4px 8px repeat-y;
+}
+.ova-acordeon--numerado .ova-acordeon__head {
+  min-height: 44px; padding: 10px 18px 10px 20px; border-radius: var(--r-md);
+  background: color-mix(in srgb, var(--c-deep) 7%, var(--bg-surface));
+  font-weight: 500; font-size: 1rem; transition: background .2s;
+}
+.ova-acordeon--numerado .ova-acordeon__head strong { font-weight: 500; }
+.ova-acordeon--numerado .ova-acordeon__head:hover { background: color-mix(in srgb, var(--c-deep) 11%, var(--bg-surface)); }
+.ova-acordeon--numerado .ova-acordeon__num {
+  position: absolute; left: 0; top: 0; margin: 0;
+  display: grid; place-items: center; width: 44px; height: 44px; border-radius: 8px;
+  background: color-mix(in srgb, var(--c-deep) 7%, var(--bg-surface)); color: var(--text-head);
+  font-family: var(--font-display); font-size: .98rem; font-weight: 600;
+}
+.ova-acordeon--numerado .ova-acordeon__item.is-open .ova-acordeon__num { background: var(--ova-realce, var(--c-info)); color: var(--c-deep); font-weight: 800; }
+.ova-acordeon--numerado .ova-acordeon__item.is-open .ova-acordeon__head {
+  background: var(--bg-surface); border: 1px solid var(--c-acento); border-bottom: 0;
+  border-radius: var(--r-md) var(--r-md) 0 0; padding-top: 16px;
+}
+.ova-acordeon--numerado .ova-acordeon__item.is-open .ova-acordeon__head strong { font-weight: 700; }
+.ova-acordeon--numerado .ova-acordeon__body { background: var(--bg-surface); border-radius: 0 0 var(--r-md) var(--r-md); }
+.ova-acordeon--numerado .ova-acordeon__item.is-open .ova-acordeon__body { border: 1px solid var(--c-acento); border-top: 0; }
+.ova-acordeon--numerado .ova-acordeon__body-inner { padding: 0 20px 20px; }
+.ova-acordeon--numerado .ova-acordeon__chev { font-size: 1.1rem; }
+@media (max-width: 720px) {
+  .ova-acordeon--numerado .ova-acordeon__item { padding-left: 50px; }
+  .ova-acordeon--numerado .ova-acordeon__num { width: 38px; height: 38px; }
+  .ova-acordeon--numerado .ova-acordeon__item:not(:last-child)::before { left: 17px; top: 44px; }
+}
+
+/* Comparativo · error y acierto: la primera tarjeta es el error y la segunda el acierto;
+   el glifo lo pone la variante, sin estilos en línea en la etiqueta. */
+.ova-vs--error-acierto > .ova-vs__card:first-child { border-top-color: var(--danger); }
+.ova-vs--error-acierto > .ova-vs__card--alt { border-top-color: var(--success); }
+.ova-vs--error-acierto > .ova-vs__card:first-child .ova-vs__card-tag {
+  background: color-mix(in srgb, var(--danger) 12%, transparent); color: var(--danger);
+}
+.ova-vs--error-acierto > .ova-vs__card--alt .ova-vs__card-tag {
+  background: color-mix(in srgb, var(--success) 12%, transparent); color: var(--success);
+}
+.ova-vs--error-acierto > .ova-vs__card:first-child .ova-vs__card-tag::before { content: '✕  '; }
+.ova-vs--error-acierto > .ova-vs__card--alt .ova-vs__card-tag::before { content: '✓  '; }
+
+/* Puntos interactivos · sobre una figura: centrada; en móvil conserva 720 px y se desliza
+   dentro de su caja, con aire abajo para el globo. Los globos los ubica catalogo.js. */
+.ova-hotspots.ova-hotspots--figura { margin-inline: auto; }
+@media (max-width: 720px) {
+  .ova-hotspots.ova-hotspots--figura { overflow-x: auto; padding-bottom: 40px; }
+  .ova-hotspots--figura .ova-hotspots__img { min-width: 720px; }
+}
+
+/* Carrusel · tarjetas: icono, título y texto en cada slide */
+.ova-carrusel--tarjetas .ova-carrusel__slide > iconify-icon { font-size: 2.4rem; color: var(--c-acento); display: block; }
+.ova-carrusel--tarjetas .ova-carrusel__slide h4 { margin: 12px 0 6px; color: var(--text-head); }
+.ova-carrusel--tarjetas .ova-carrusel__slide p { margin: 0; color: var(--text-mut); font-size: .95rem; line-height: 1.6; }
+
+/* Carrusel · slide: una tarjeta por vista (va con data-ova-visibles="1"), texto y figura o
+   retrato; la navegación dentro de la tarjeta, puntos al centro y flechas abajo a la derecha. */
+.ova-carrusel--slide .ova-carrusel__slide {
+  flex: 0 0 100%; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+  gap: 24px; align-items: center; padding: 28px 28px 84px;
+}
+.ova-carrusel--slide:not(.ova-carrusel--fondo) .ova-carrusel__slide { background: var(--ova-ficha, var(--bg-muted)); border-color: transparent; }
+.ova-carrusel--slide .ova-carrusel__nav { position: absolute; left: 0; right: 0; bottom: 22px; margin: 0; padding: 0 28px; justify-content: center; pointer-events: none; }
+.ova-carrusel--slide .ova-carrusel__dots,
+.ova-carrusel--slide .ova-carrusel__arrows { pointer-events: auto; }
+.ova-carrusel--slide .ova-carrusel__arrows { position: absolute; right: 28px; bottom: 0; }
+.ova-carrusel--slide .ova-carrusel__arrow { background: #FFFFFF; color: var(--c-acento); box-shadow: 0 6px 16px -8px color-mix(in srgb, var(--c-deep) 50%, transparent); }
+.ova-carrusel--slide .ova-carrusel__dot { background: color-mix(in srgb, var(--c-deep) 18%, transparent); }
+.ova-carrusel--slide .ova-carrusel__dot.is-active { background: var(--c-acento); }
+.ova-carrusel--slide .ova-carrusel__texto h4 { margin: 0 0 10px; color: var(--text-head); }
+.ova-carrusel--slide .ova-carrusel__texto p { margin: 0 0 10px; line-height: 1.6; }
+.ova-carrusel--slide .ova-carrusel__texto p:last-child { margin-bottom: 0; }
+.ova-carrusel--slide .ova-figura { margin: 0; }
+.ova-carrusel--slide .ova-figura__hero img { max-width: 100%; max-height: none; }
+/* Retrato silueteado: círculo detrás y la foto (PNG sin fondo) que lo desborda solo por arriba.
+   La máscara va en el marco, de geometría fija (círculo de 88 % del ancho apoyado abajo). */
+.ova-carrusel__retrato { position: relative; justify-self: center; width: min(100%, 280px); aspect-ratio: 1 / 1.08; }
+.ova-carrusel__retrato-fondo { position: absolute; left: 6%; right: 6%; bottom: 0; aspect-ratio: 1; border-radius: 50%; background: #FFFFFF; box-shadow: 0 18px 40px -18px color-mix(in srgb, var(--c-deep) 40%, transparent); }
+.ova-carrusel__retrato-marco {
+  position: absolute; inset: 0; display: block;
+  -webkit-mask: radial-gradient(ellipse 44% 40.7% at 50% 59.3%, #000 99%, transparent 100%), linear-gradient(#000, #000) top / 100% 59.3% no-repeat;
+          mask: radial-gradient(ellipse 44% 40.7% at 50% 59.3%, #000 99%, transparent 100%), linear-gradient(#000, #000) top / 100% 59.3% no-repeat;
+}
+.ova-carrusel__retrato-foto { position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 135%; max-width: none; height: auto; display: block; }
+@media (max-width: 760px) {
+  .ova-carrusel--slide .ova-carrusel__slide { grid-template-columns: 1fr; padding: 20px 20px 84px; }
+  .ova-carrusel__retrato { order: -1; width: 200px; }
+  .ova-carrusel--slide .ova-carrusel__nav { padding: 0 20px; }
+  .ova-carrusel--slide .ova-carrusel__arrows { right: 20px; }
+}
+
+/* Carrusel · slide con fondo (va con --slide): fondo oscuro y texto claro, número grande en
+   marca de agua, textura (--ova-textura) y la imagen o el icono en un disco a la derecha.
+   El color de cada lámina (fondo, --ova-icono, --ova-textura) lo pone la piel. */
+.ova-carrusel--fondo .ova-carrusel__slide {
+  position: relative; overflow: hidden; isolation: isolate; border: 0;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 28px; padding: 44px 40px 84px; min-height: 340px;
+  background: var(--grad-brand); color: #FFFFFF;
+}
+.ova-carrusel--fondo .ova-carrusel__slide::before { content: ''; position: absolute; inset: 0; z-index: -1; background: var(--ova-textura, none); pointer-events: none; }
+.ova-carrusel--fondo .ova-carrusel__num {
+  position: absolute; left: 18px; top: -18px; z-index: -1; font-family: var(--font-display); font-weight: 800;
+  font-size: clamp(120px, 16vw, 190px); line-height: 1; letter-spacing: -.04em; color: #FFFFFF; opacity: .08; pointer-events: none;
+}
+.ova-carrusel--fondo .ova-carrusel__texto { position: relative; }
+.ova-carrusel--fondo .ova-carrusel__texto h4 { color: #FFFFFF; font-size: 1.5rem; font-weight: 800; margin: 0 0 12px; }
+.ova-carrusel--fondo .ova-carrusel__texto p { color: rgba(255, 255, 255, .88); }
+.ova-carrusel--fondo .ova-carrusel__arte { position: relative; justify-self: center; width: min(100%, 240px); aspect-ratio: 1; display: grid; place-items: center; }
+.ova-carrusel--fondo .ova-carrusel__anillo { position: absolute; inset: 0; border-radius: 50%; border: 2px solid rgba(255, 255, 255, .75); opacity: .7; }
+.ova-carrusel--fondo .ova-carrusel__anillo::after { content: ''; position: absolute; right: 6px; top: 14px; width: 18px; height: 18px; border-radius: 50%; background: rgba(255, 255, 255, .75); }
+.ova-carrusel--fondo .ova-carrusel__disco {
+  width: 76%; aspect-ratio: 1; border-radius: 50%; background: #FFFFFF; color: var(--ova-icono, var(--c-acento));
+  display: grid; place-items: center; box-shadow: 0 18px 40px -18px rgba(0, 0, 0, .55);
+}
+.ova-carrusel--fondo .ova-carrusel__disco iconify-icon { font-size: 88px; }
+.ova-carrusel--fondo .ova-carrusel__dot { background: rgba(255, 255, 255, .45); }
+.ova-carrusel--fondo .ova-carrusel__dot.is-active { background: #FFFFFF; }
+.ova-carrusel--fondo .ova-carrusel__nav { z-index: 1; }
+@media (max-width: 760px) {
+  .ova-carrusel--fondo .ova-carrusel__slide { grid-template-columns: 1fr; padding: 28px 22px 84px; min-height: 0; }
+  .ova-carrusel--fondo .ova-carrusel__arte { order: -1; width: 150px; }
+  .ova-carrusel--fondo .ova-carrusel__disco iconify-icon { font-size: 56px; }
+  .ova-carrusel--fondo .ova-carrusel__num { font-size: 110px; left: auto; right: 14px; top: -10px; }
+  .ova-carrusel--fondo .ova-carrusel__texto h4 { font-size: 1.25rem; }
+}
+/* @fin-catalogo-variantes */

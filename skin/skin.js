@@ -139,6 +139,8 @@
   'use strict';
 
   const MARGEN = 8;   // aire mínimo hasta el borde de la imagen, de la caja o de la ventana
+  // Los puntos del catálogo (.ova-hotspots--figura, KIT-001) los abre catalogo.js.
+  const PUNTO = '.ova-hotspots:not(.ova-hotspots--figura) .ova-hotspot';
 
   // El primer ancestro que recorta en horizontal: lo que quede fuera de él no se ve.
   function recortador(el) {
@@ -175,16 +177,16 @@
   }
 
   document.addEventListener('pointerover', e => {
-    const punto = e.target.closest && e.target.closest('.ova-hotspot');
+    const punto = e.target.closest && e.target.closest(PUNTO);
     if (punto && !punto.contains(e.relatedTarget)) abrir(punto);
   });
   document.addEventListener('pointerout', e => {
-    const punto = e.target.closest && e.target.closest('.ova-hotspot');
+    const punto = e.target.closest && e.target.closest(PUNTO);
     if (punto && e.pointerType === 'mouse' && !punto.contains(e.relatedTarget)) cerrar(punto);
   });
   document.addEventListener('click', e => {
-    const punto = e.target.closest && e.target.closest('.ova-hotspot');
-    document.querySelectorAll('.ova-hotspot.is-open').forEach(otro => { if (otro !== punto) cerrar(otro); });
+    const punto = e.target.closest && e.target.closest(PUNTO);
+    document.querySelectorAll(PUNTO + '.is-open').forEach(otro => { if (otro !== punto) cerrar(otro); });
     if (punto) abrir(punto);
   });
 })();
