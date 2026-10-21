@@ -2948,9 +2948,6 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 .ua-codigo__linea.is-resaltada { background: color-mix(in srgb, var(--c-cielo) 16%, transparent); box-shadow: inset 3px 0 0 var(--c-cielo); }
 .ua-codigo__linea.is-resaltada::before { color: var(--c-acento); font-weight: 700; }
 
-/* Acordeón: el motor limita la franja abierta a 600 px y una foto con su
-   leyenda se cortaba. En Andina el tope es holgado. */
-.ova-acordeon__item.is-open .ova-acordeon__body { max-height: 2400px; }
 /* El cuerpo del ítem ocupa todo el ancho y arranca alineado con el título de la franja
    (el motor lo sangra a 72 px; en Andina la franja no lleva número). 2026-10-18. */
 .ova-acordeon__body-inner { padding: 0 24px 22px 24px; }
