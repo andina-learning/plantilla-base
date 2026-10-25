@@ -653,17 +653,67 @@
     });
   }
 
-  // Modal
+  // Modal. La ventana es un diálogo con su título como nombre; al abrir, el foco pasa a ella y no
+  // sale mientras está abierta; al cerrar, vuelve al botón que la abrió (KIT-006, D2).
+  function prepararModal(modal) {
+    const dialogo = modal.querySelector('.ova-modal__dialog') || modal;
+    dialogo.setAttribute('role', 'dialog');
+    dialogo.setAttribute('aria-modal', 'true');
+    dialogo.setAttribute('tabindex', '-1');
+    const titulo = dialogo.querySelector('h2, h3, h4');
+    if (titulo) {
+      if (!titulo.id) titulo.id = (modal.id || 'ova-modal') + '-titulo';
+      dialogo.setAttribute('aria-labelledby', titulo.id);
+    }
+    return dialogo;
+  }
+
+  function enfocables(modal) {
+    const sel = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), iframe, [tabindex]';
+    return Array.from(modal.querySelectorAll(sel)).filter(e => e.getAttribute('tabindex') !== '-1');
+  }
+
+  function abrirModal(modal, origen) {
+    const dialogo = prepararModal(modal);
+    modal._ovaOrigen = origen || document.activeElement;
+    modal.classList.add('is-open');
+    dialogo.focus();
+  }
+
+  function cerrarModal(modal) {
+    modal.classList.remove('is-open');
+    const origen = modal._ovaOrigen;
+    modal._ovaOrigen = null;
+    if (origen && origen.focus) origen.focus();
+  }
+
+  function atraparFoco(modal, e) {
+    const lista = enfocables(modal);
+    if (!lista.length) { e.preventDefault(); return; }
+    const primero = lista[0], ultimo = lista[lista.length - 1];
+    const activo = document.activeElement;
+    const fuera = !lista.includes(activo);
+    if (e.shiftKey && (activo === primero || fuera)) { e.preventDefault(); ultimo.focus(); }
+    else if (!e.shiftKey && (activo === ultimo || fuera)) { e.preventDefault(); primero.focus(); }
+  }
+
   function setupModal() {
     document.addEventListener('click', e => {
       const open = e.target.closest('[data-ova-modal-open]');
-      if (open) { document.getElementById(open.dataset.ovaModalOpen)?.classList.add('is-open'); return; }
+      if (open) {
+        const modal = document.getElementById(open.dataset.ovaModalOpen);
+        if (modal) abrirModal(modal, open);
+        return;
+      }
       const close = e.target.closest('[data-ova-modal-close]');
-      if (close) { close.closest('.ova-modal')?.classList.remove('is-open'); return; }
-      if (e.target.classList.contains('ova-modal')) e.target.classList.remove('is-open');
+      if (close) { const modal = close.closest('.ova-modal'); if (modal) cerrarModal(modal); return; }
+      if (e.target.classList.contains('ova-modal')) cerrarModal(e.target);
     });
     document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') document.querySelectorAll('.ova-modal.is-open').forEach(m => m.classList.remove('is-open'));
+      const abiertas = document.querySelectorAll('.ova-modal.is-open');
+      if (!abiertas.length) return;
+      if (e.key === 'Escape') abiertas.forEach(cerrarModal);
+      else if (e.key === 'Tab') atraparFoco(abiertas[abiertas.length - 1], e);
     });
   }
 

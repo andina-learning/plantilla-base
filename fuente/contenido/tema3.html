@@ -9,6 +9,7 @@
         <li>Acordeón</li>
         <li>Carrusel, Carrusel de fotos, Slide, Slide - con fondo</li>
         <li>Pestañas, Pestañas - línea, Pestañas verticales</li>
+        <li>Botón de ventana modal</li>
       </ul>
 
       <!-- Generado en el kit OVA por scripts/generar-plantilla.js desde motor/catalogo: en el kit no se edita a mano (se cambia el catálogo y se regenera). -->
@@ -550,6 +551,70 @@ Cierre el material e intente recordar las ideas principales. Puede elaborar un r
 Revise sus respuestas y reconozca qué necesita reforzar. Antes de terminar, defina cuándo repasará el tema y cuál será su siguiente objetivo de aprendizaje.
 <span class="ova-catalogo__gris">Por pestaña: la línea «Pestaña N», el rótulo de la ficha en negrilla (hasta 4 palabras), «Título del contenido:» con el título que encabeza el panel, y uno o dos párrafos (hasta 140 palabras). «Título:» sale como rótulo del bloque.</span>
 <span class="ova-catalogo__gris">«Instrucción:» es opcional. Si el Word la trae, va literal; si no, va el llamado base del componente, el de esta ventana.</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </section>
+
+      <section class="ua-seccion" id="ventana-modal" data-reveal>
+        <h2 class="ua-seccion__titulo">Botón de ventana modal</h2>
+        <div class="ova-ventana">
+          <button class="ova-btn ova-btn--outline ova-ventana__boton" data-ova-modal-open="ventana-ejemplo"><iconify-icon icon="mdi:card-text-outline"></iconify-icon> Volviendo al reto de la unidad</button>
+          <div class="ova-modal" id="ventana-ejemplo"><div class="ova-modal__dialog">
+            <div class="ova-modal__head"><h3>Volviendo al reto de la unidad</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+            <div class="ova-modal__body">
+              <p>En la empresa del caso, cada área guardaba sus propios datos de clientes. Con un responsable por conjunto de datos, las cifras de ventas y de cartera <strong>coinciden en todos los informes</strong>.</p>
+            </div>
+            <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+          </div></div>
+        </div>
+        <div class="ova-catalogo__acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t3-boton-ventana-modal"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t3-boton-ventana-modal"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Botón de ventana modal</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Así se recibe en el Word</p>
+            <div class="ova-catalogo__word"><span class="ova-catalogo__rojo">Botón de ventana modal</span>
+<b>Título del botón:</b> Volviendo al reto de la unidad
+<b>Texto de la ventana:</b> En la empresa del caso, cada área guardaba sus propios datos de clientes. Con un responsable por conjunto de datos, las cifras de ventas y de cartera <b>coinciden en todos los informes</b>.
+<span class="ova-catalogo__gris">«Título de la ventana:» es opcional: si no viene, como en este ejemplo, la ventana lleva el título del botón. El texto admite varios párrafos y viñetas, con su negrilla. «Imagen sugerida:» es opcional y la produce el diseñador: va arriba del texto y la ventana se ensancha; si no llega, la ventana va sin imagen y el texto ocupa todo el ancho. El icono del botón lo pone el componente. En los Word anteriores, este componente se llamaba «Ventana de detalle» o «Modal»: se reconocen igual.</span></div>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </section>
+
+      <section class="ua-seccion ua-seccion--variante" id="ejemplo-boton-ventana-modal" data-reveal>
+        <h2 class="ua-seccion__titulo">Ejemplo de uso del botón de ventana modal - con imagen</h2>
+        <div class="ova-ventana">
+          <button class="ova-btn ova-btn--outline ova-ventana__boton" data-ova-modal-open="ventana-ejemplo-imagen"><iconify-icon icon="mdi:card-text-outline"></iconify-icon> Conozca cómo funciona un panel solar</button>
+          <div class="ova-modal" id="ventana-ejemplo-imagen"><div class="ova-modal__dialog">
+            <div class="ova-modal__head"><h3>Del sol a la red eléctrica</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+            <div class="ova-modal__body">
+              <figure class="ova-ventana__figura"><img src="assets/img/curso/foto-energia-solar-ancha.webp" alt="Planta de paneles solares al aire libre en un día soleado." /></figure><p>Cada panel está formado por celdas de silicio que convierten la luz del sol en <strong>corriente continua</strong>.</p>
+        <ul>
+          <li>El inversor transforma esa corriente en alterna, la que usan los aparatos de la casa.</li>
+          <li>Lo que no se consume en el momento pasa a una batería o a la red eléctrica.</li>
+        </ul>
+            </div>
+            <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+          </div></div>
+        </div>
+        <div class="ova-catalogo__acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t3-boton-ventana-modal-imagen"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+        </div>
+        <div class="ova-modal" id="cat-t3-boton-ventana-modal-imagen"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Botón de ventana modal</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Así se recibe en el Word</p>
+            <div class="ova-catalogo__word"><span class="ova-catalogo__rojo">Botón de ventana modal</span>
+<b>Título del botón:</b> Conozca cómo funciona un panel solar
+<b>Título de la ventana:</b> Del sol a la red eléctrica
+<b>Texto de la ventana:</b> Cada panel está formado por celdas de silicio que convierten la luz del sol en <b>corriente continua</b>.
+• El inversor transforma esa corriente en alterna, la que usan los aparatos de la casa.
+• Lo que no se consume en el momento pasa a una batería o a la red eléctrica.
+<b>Imagen sugerida:</b> Planta de paneles solares al aire libre en un día soleado.
+<span class="ova-catalogo__gris">Con «Título de la ventana:», la ventana lleva ese título y no el del botón. La imagen va arriba del texto, a todo el ancho de la ventana, que se abre a 900 px.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>

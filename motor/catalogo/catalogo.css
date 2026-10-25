@@ -1458,3 +1458,15 @@
    solo suma el contexto opcional de la pregunta.
    ========================================================= */
 .ova-quiz__contexto { margin: 0 0 18px; max-width: 66ch; }
+
+/* =========================================================
+   Botón de ventana modal (KIT-006): el botón de contorno al inicio del texto y su
+   ventana. Con «Imagen sugerida», la imagen va arriba del texto, a todo el ancho, y la
+   ventana se abre a 900 px; sin ella, la ventana del motor (560 px).
+   ========================================================= */
+.ova-ventana { margin: 8px 0 40px; }
+.ova-ventana__boton { text-align: left; }
+.ova-ventana__figura { margin: 0 0 20px; border-radius: var(--r-md); overflow: hidden; }
+.ova-ventana__figura img { display: block; width: 100%; height: auto; }
+.ova-modal__dialog:has(.ova-ventana__figura) { max-width: min(900px, 94vw); }
+.ova-ventana .ova-modal__body > :last-child { margin-bottom: 0; }

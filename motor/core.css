@@ -2509,6 +2509,28 @@ body.ova-portada-full .ova-main{ width:100%; max-width:none; margin:0; padding:0
   font-size:.78rem; line-height:1.35; background:linear-gradient(transparent, rgba(0,0,0,.75));
 }
 
+/* =========================================================
+   HUECO DE LA MAQUETA VACÍA · [data-ova-hueco="qué va aquí"]
+   Texto o pieza del curso que falta llenar desde el DI. Recuadro
+   punteado con el rótulo del atributo; toma el color del texto que
+   lo rodea, así se lee sobre fondo claro u oscuro. verificar-di.py
+   no lo cuenta como contenido y la entrega final lo bloquea.
+   ========================================================= */
+[data-ova-hueco]{
+  border:2px dashed color-mix(in srgb, currentColor 45%, transparent);
+  border-radius:var(--r-sm);
+  background:color-mix(in srgb, currentColor 6%, transparent);
+  padding:.5em .75em; min-height:2.6em;
+}
+[data-ova-hueco]::before{
+  content:"Hueco · " attr(data-ova-hueco);
+  display:block; margin-bottom:.25em;
+  font-family:var(--font-body); font-size:.78rem; font-weight:600; line-height:1.4;
+  letter-spacing:.02em; text-transform:none; opacity:.75;
+}
+:is(span, a, strong, em, b, i)[data-ova-hueco]{ display:inline-block; min-height:0; padding:.1em .5em; }
+:is(span, a, strong, em, b, i)[data-ova-hueco]::before{ display:inline; margin:0 .4em 0 0; }
+
 /* @catalogo-variantes ======================================
    VARIANTES DE PIEZAS DEL MOTOR que usa el catálogo (KIT-001,
    choques.md §2). Cada selector lleva su modificador o un elemento
