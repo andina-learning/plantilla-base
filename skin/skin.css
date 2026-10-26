@@ -1018,8 +1018,9 @@ body { font-family: var(--font-body); }
 /* 5 · Evaluación · alineada a la izquierda como el resto del curso ---------
    El motor centra el contenido de cada actividad; con bloques de ancho
    limitado eso los descuadra hacia la derecha. */
-.ua-eval__cuerpo { text-align: left; max-width: 74ch; }
+.ua-eval__cuerpo { text-align: left; }   /* sin tope: la columna de lectura es la de la pantalla (9a1e2, 2026-10-25) */
 .ua-eval__cuerpo h2 { margin: 0 0 14px; }
+.ua-eval__cuerpo [data-evalquiz-restart] { margin-top: 22px; }   /* el cierre, sin style en línea (2026-10-25) */
 .ova-quiz__question { font-size: 1.12rem; font-weight: 600; color: var(--text-head); margin: 0 0 18px; }
 /* La retroalimentación cambia de plano: el motor le da el mismo fondo beige
    que a las opciones y se lee como una respuesta más. Aquí habla el curso,
@@ -1215,36 +1216,9 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
    pasó adentro de la tarjeta de cada pregunta (ajuste del cliente: el head
    partía la pregunta en dos y la etiqueta "Actividad" competía con el tema). */
 .ova-evalquiz__nav {
-  /* En el flujo y en la misma columna que la tarjeta (74ch, como .ua-eval__cuerpo):
-     fijarla al centro del viewport la descuadraba respecto a la pregunta. */
-  position: static;
-  transform: none;
-  width: 100%;
-  max-width: 74ch;
-  margin: 20px 0 0;
-  align-items: center;
-  gap: 18px;
-  padding: 10px 10px 10px 20px;
-}
-.ova-evalquiz__nav .ova-evalquiz__progress-bar {
-  flex: 1;
-  height: 6px;
-  margin-bottom: 0;
-  min-width: 80px;
-}
-.ova-evalquiz__nav .ova-evalquiz__counter {
-  white-space: nowrap;
-  font-family: var(--font-mono);
-  font-size: .72rem;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-.ova-evalquiz__btn--prev { padding: 12px 14px; }
-@media (max-width: 720px) {
-  .ova-evalquiz__nav { gap: 12px; padding-left: 14px; }
-  .ova-evalquiz__nav .ova-evalquiz__progress-bar { min-width: 48px; }
-  .ova-evalquiz__nav .ova-evalquiz__btn { flex: 0 0 auto; }
+  /* La estructura de la barra es del motor (KIT-007, D14). Lo propio de Andina: toda la columna,
+     como .ua-eval__cuerpo, sin el tope de 74ch del motor. */
+  max-width: none;
 }
 
 /* El tema como eyebrow dentro de la tarjeta, y el caso pegado a su pregunta:
@@ -1259,13 +1233,12 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
   color: var(--c-acento);
   margin: 0 0 16px;
 }
-.ua-eval__contexto { margin: 0 0 18px; max-width: 66ch; }
+.ua-eval__contexto { margin: 0 0 18px; }
 
 .ua-eval__lead {
   font-size: 1.18rem;
   font-weight: 300;
   line-height: 1.6;
-  max-width: 56ch;
   margin: 6px 0 34px;
 }
 .ua-eval__datos {
@@ -1421,6 +1394,11 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 }
 .ova-screen > .ova-pendiente { margin-block: 40px; }   /* la pieza del catálogo (KIT-001) */
 .ova-screen > .ova-apa-tabla { margin-block: 40px; }   /* la tabla APA del catálogo (KIT-001) */
+/* La regla general de aire entre bloques está en el motor (core.css, 2026-10-25). Aquí, lo de
+   las piezas propias de Andina: su llamado (.ua-cta) va a 22 px de la pieza y su fuente
+   (.ua-fuente) a 12 px de la pieza que cita. */
+.ova-screen > .ua-cta + * { margin-top: 22px; }
+.ova-screen > :has(+ .ua-fuente) { margin-bottom: 12px; }
 /* El primer bloque después de la cabecera no necesita el doble de aire */
 .ova-screen__head + * { margin-top: 0; }
 
@@ -1648,6 +1626,19 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 }
 .ova-ilustracion:has(figcaption)::after { bottom: auto; top: calc(100% - 66px); }
 .ova-ilustracion:has(figcaption) figcaption { padding-right: 60px; }
+/* Dentro de un componente (acordeón, ventana) la ilustración no lleva escalón: la caja ya la
+   enmarca y, a 390, el escalón pesaba media figura (2026-10-25). */
+:is(.ova-acordeon, .ova-modal) .ova-ilustracion::after { display: none; }
+:is(.ova-acordeon, .ova-modal) .ova-ilustracion figcaption { padding-right: 0; }
+
+/* La ilustración ampliable en el celular está en el catálogo (catalogo.css/js, 2026-10-25).
+   Aquí solo el escalón de cuadros de Andina, a la mitad en el celular: a 54 px pisaba el último
+   rótulo. */
+@media (max-width: 720px) {
+  .ova-ilustracion::after { width: 32px; height: 32px; right: -6px; bottom: -8px; }
+  .ova-ilustracion:has(figcaption)::after { top: calc(100% - 40px); }
+  .ova-ilustracion:has(figcaption) figcaption { padding-right: 38px; }
+}
 
 /* 4 · Ciclo · la escalera de cuadros (SVG inline en la pantalla) ----------- */
 .ua-ciclo__escalera text { font-family: var(--font-display); }
@@ -1911,6 +1902,9 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
    su estructura y la manito están en motor/catalogo/catalogo.css. */
 .ova-screen > .ua-rotulo + .ova-llamado { margin-top: 8px; }
 .ova-screen > .ova-rotulo + .ova-llamado { margin-top: 8px; }   /* el rótulo del catálogo */
+.ua-eval__cuerpo > .ova-rotulo + .ova-llamado { margin-top: 8px; }   /* y dentro de la evaluación (KIT-007, D15) */
+.ua-seccion > .ova-rotulo + .ova-llamado { margin-top: 8px; }   /* y en una sección, como el tema 7 de la plantilla-base */
+.ua-seccion > .ova-llamado + * { margin-top: 22px; }
 .ova-llamado + .ua-descarga { margin-top: 22px; }
 .ua-cta__mano {
   position: relative;
@@ -3477,6 +3471,8 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
   background: color-mix(in srgb, var(--c-cielo) 20%, var(--bg-surface));
 }
 .ova-descargable--imagen { --ova-descargable-imagen-fondo: color-mix(in srgb, var(--c-cielo) 20%, var(--bg-surface)); }   /* la del catálogo (KIT-001) */
+.ova-eval-intro { --ova-eval-intro-fondo: color-mix(in srgb, var(--c-cielo) 20%, var(--bg-surface)); }   /* la presentación de la evaluación, con el mismo fondo (KIT-007) */
+.ova-eval-intro__texto { font-weight: 300; }   /* el peso del lead (§1.2): 300 con la negrilla del banco a 600 */
 .ua-descarga-ilus__img { display: block; width: 100%; max-height: 300px; object-fit: contain; }
 .ua-descarga-ilus__titulo { margin: 0 0 12px; font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; line-height: 1.3; color: var(--text-head); }
 .ua-descarga-ilus__cuerpo p { margin: 0 0 22px; }

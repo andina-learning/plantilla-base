@@ -475,3 +475,70 @@
   };
   document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', iniciar) : iniciar();
 })();
+
+/* =========================================================
+   ILUSTRACIÓN AMPLIABLE EN EL CELULAR (.ova-ilustracion, 2026-10-25)
+   En pantallas de hasta 720 px los rótulos de una ilustración quedan ilegibles: el SVG escala
+   con el ancho. Cada ilustración lleva una lupa (oculta en escritorio por catalogo.css); al
+   tocarla, o al tocar la imagen, se abre la ventana del motor (.ova-modal, con su foco, Esc y
+   cerrar) con la ilustración a 1000 px, centrada, que se recorre con el dedo.
+   ========================================================= */
+(() => {
+  'use strict';
+
+  const MOVIL = window.matchMedia('(max-width: 720px)');
+  const ID = 'ova-ampliada';
+  let lienzo = null;
+
+  function ventana() {
+    if (lienzo) return lienzo;
+    const modal = document.createElement('div');
+    modal.className = 'ova-modal ova-ampliada';
+    modal.id = ID;
+    modal.innerHTML =
+      '<div class="ova-modal__dialog" aria-label="Ilustración ampliada">' +
+        '<div class="ova-modal__head"><span></span>' +
+          '<button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar">' +
+          '<iconify-icon icon="mdi:close"></iconify-icon></button></div>' +
+        '<div class="ova-modal__body"><div class="ova-ampliada__lienzo"></div></div>' +
+      '</div>';
+    document.body.appendChild(modal);
+    lienzo = modal.querySelector('.ova-ampliada__lienzo');
+    return lienzo;
+  }
+
+  const vistas = new WeakSet();
+  function preparar() {
+    document.querySelectorAll('.ova-ilustracion').forEach(fig => {
+      if (vistas.has(fig) || fig.closest('.ova-modal')) return;
+      const img = fig.querySelector('img');
+      if (!img) return;
+      vistas.add(fig);
+      const boton = document.createElement('button');
+      boton.type = 'button';
+      boton.className = 'ova-ampliar';
+      boton.dataset.ovaModalOpen = ID;
+      boton.setAttribute('aria-label', 'Ampliar la ilustración');
+      boton.innerHTML = '<iconify-icon icon="mdi:magnify-plus-outline"></iconify-icon>';
+      // Llena la ventana antes de que el motor la abra (el clic sube después hasta document)
+      boton.addEventListener('click', () => {
+        const copia = img.cloneNode();
+        copia.removeAttribute('loading');
+        const l = ventana();
+        l.replaceChildren(copia);
+        const centrar = () => { l.scrollLeft = (l.scrollWidth - l.clientWidth) / 2; };
+        requestAnimationFrame(() => requestAnimationFrame(centrar));
+        copia.addEventListener('load', centrar, { once: true });
+      });
+      img.addEventListener('click', () => { if (MOVIL.matches) boton.click(); });
+      fig.appendChild(boton);
+    });
+  }
+
+  const iniciar = () => {
+    ventana();
+    preparar();
+    new MutationObserver(preparar).observe(document.body, { childList: true, subtree: true });
+  };
+  document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', iniciar) : iniciar();
+})();

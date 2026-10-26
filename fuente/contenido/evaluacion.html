@@ -8,37 +8,27 @@
            columna «Respuesta» del apareamiento es clave del docente y no se muestra. -->
       <div class="ova-evalquiz" data-ova-evalquiz data-label-item="Pregunta" data-label-items="preguntas" data-reveal>
         <div class="ova-evalquiz__slide is-active" data-slide="intro">
-          <div class="ua-eval__cuerpo">
-            <p class="ua-eval__lead">Tres preguntas de selección y un apareamiento sobre la estructura, las citas
-              y la redacción de un <strong>artículo académico</strong>.</p>
-
-            <div class="ua-eval__datos">
-              <div class="ua-eval__dato">
-                <span class="v">4</span>
-                <span class="l">preguntas, la última de apareamiento</span>
-              </div>
-              <div class="ua-eval__dato">
-                <span class="v">5</span>
-                <span class="l">temas cubiertos</span>
-              </div>
-              <div class="ua-eval__dato">
-                <span class="v"><iconify-icon icon="mdi:message-reply-text-outline"></iconify-icon></span>
-                <span class="l">retroalimentación en cada respuesta, acierte o no</span>
+          <!-- Presentación de la evaluación (catálogo): el texto de «Presentación:» del banco. Sin «Vincular
+               Imagen-N», la ilustración por defecto de la semilla; con ella, esa imagen. -->
+          <div class="ova-eval-intro">
+            <div class="ova-eval-intro__tarjeta">
+              <img class="ova-eval-intro__img" src="assets/img/curso/presentacion-evaluacion.svg" alt="" />
+              <div class="ova-eval-intro__cuerpo">
+                <p class="ova-eval-intro__texto">Tres preguntas de selección y un apareamiento sobre la estructura, las citas
+                  y la redacción de un <strong>artículo académico</strong>.</p>
+                <button class="ova-evalquiz__btn ova-evalquiz__btn--primary" data-evalquiz-go="1">Comenzar <iconify-icon icon="mdi:arrow-right"></iconify-icon></button>
               </div>
             </div>
-
-            <button class="ova-evalquiz__btn ova-evalquiz__btn--primary" data-evalquiz-go="1">
-              Comenzar <iconify-icon icon="mdi:arrow-right"></iconify-icon>
-            </button>
-            <p class="ua-eval__ayuda">También puede moverse con las flechas del teclado.</p>
           </div>
         </div>
 
+        <!-- Pregunta (catálogo) -->
         <div class="ova-evalquiz__slide" data-slide="r1" data-section="Estructura del artículo" data-section-color="acento">
           <div class="ua-eval__cuerpo">
+            <h3 class="ova-rotulo"><strong>Estructura del artículo</strong></h3>
+            <p class="ova-llamado"><span class="ova-llamado__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Seleccione la opción correcta.</p>
             <div class="ova-quiz">
-              <span class="ua-eval__tema">Estructura del artículo</span>
-              <p class="ua-eval__contexto">Una estudiante de maestría entrega el borrador de su artículo. En la sección de resultados presenta las tablas y, debajo de cada una, explica por qué los datos confirman su hipótesis y qué implican para la práctica profesional.</p>
+              <p class="ova-quiz__contexto">Una estudiante de maestría entrega el borrador de su artículo. En la sección de resultados presenta las tablas y, debajo de cada una, explica por qué los datos confirman su hipótesis y qué implican para la práctica profesional.</p>
               <h3 class="ova-quiz__question">¿Qué problema de estructura tiene el borrador?</h3>
               <div class="ova-quiz__opts">
             <button class="ova-quiz__opt" data-correct="false">
@@ -61,11 +51,13 @@
           </div>
         </div>
 
+        <!-- Pregunta (catálogo) -->
         <div class="ova-evalquiz__slide" data-slide="r2" data-section="Citas y referencias" data-section-color="info">
           <div class="ua-eval__cuerpo">
+            <h3 class="ova-rotulo"><strong>Citas y referencias</strong></h3>
+            <p class="ova-llamado"><span class="ova-llamado__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Seleccione la opción correcta.</p>
             <div class="ova-quiz">
-              <span class="ua-eval__tema">Citas y referencias</span>
-              <p class="ua-eval__contexto">Un autor escribe: «Como se ha demostrado ampliamente, la retroalimentación formativa mejora el aprendizaje». No agrega ninguna cita.</p>
+              <p class="ova-quiz__contexto">Un autor escribe: «Como se ha demostrado ampliamente, la retroalimentación formativa mejora el aprendizaje». No agrega ninguna cita.</p>
               <h3 class="ova-quiz__question">¿Qué debe hacer con esa afirmación?</h3>
               <div class="ova-quiz__opts">
             <button class="ova-quiz__opt" data-correct="false">
@@ -88,10 +80,12 @@
           </div>
         </div>
 
+        <!-- Pregunta (catálogo) -->
         <div class="ova-evalquiz__slide" data-slide="r3" data-section="Redacción" data-section-color="acento">
           <div class="ua-eval__cuerpo">
+            <h3 class="ova-rotulo"><strong>Redacción</strong></h3>
+            <p class="ova-llamado"><span class="ova-llamado__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Seleccione la opción correcta.</p>
             <div class="ova-quiz">
-              <span class="ua-eval__tema">Redacción</span>
               <h3 class="ova-quiz__question">¿Cuál de estas oraciones cumple mejor con la claridad que exige un texto académico?</h3>
               <div class="ova-quiz__opts">
             <button class="ova-quiz__opt" data-correct="false">
@@ -114,11 +108,12 @@
           </div>
         </div>
 
+        <!-- Relacionar (catálogo): la instrucción del banco va como llamado -->
         <div class="ova-evalquiz__slide" data-slide="apareamiento" data-section="Conceptos de la unidad" data-section-color="acento">
           <div class="ua-eval__cuerpo">
-            <span class="ua-eval__tema">Conceptos de la unidad</span>
+            <h3 class="ova-rotulo"><strong>Conceptos de la unidad</strong></h3>
+            <p class="ova-llamado"><span class="ova-llamado__mano" aria-hidden="true"><iconify-icon icon="mdi:cursor-pointer"></iconify-icon></span>Primero la sección, después la pregunta.</p>
             <h3 class="ova-quiz__question">Relacione cada sección del artículo con la pregunta que responde.</h3>
-            <p style="color:var(--text-mut);margin:0 0 20px;">Primero la sección, después la pregunta.</p>
             <div class="ova-empar">
               <div class="ova-empar__col">
               <button class="ova-empar__item" data-ova-match="B">Introducción</button>

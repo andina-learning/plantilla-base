@@ -573,33 +573,94 @@
     el.addEventListener('dragstart', e => { if (id !== null) e.preventDefault(); });
   }
 
-  // Drag & Drop
+  // Clasificar. Arrastre, o tocar el elemento y después la categoría (también Enter o Espacio,
+  // sobre botones): WCAG 2.2 AA 2.5.7 y 2.1.1 (KIT-007, D9). El marcado viejo (elementos en
+  // <div>, categorías sin botón) se completa aquí para que el teclado lo alcance.
   function setupDnD(root = document) {
-    let dragged = null;
-    root.querySelectorAll('.ova-dnd__item').forEach(item => {
-      item.draggable = true;
-      item.addEventListener('dragstart', () => { dragged = item; item.classList.add('is-dragging'); });
-      item.addEventListener('dragend', () => { item.classList.remove('is-dragging'); dragged = null; });
-    });
-    root.querySelectorAll('.ova-dnd__zone').forEach(zone => {
-      zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('is-over'); });
-      zone.addEventListener('dragleave', () => zone.classList.remove('is-over'));
-      zone.addEventListener('drop', e => {
-        e.preventDefault();
-        zone.classList.remove('is-over');
-        if (!dragged) return;
-        const correct = dragged.dataset.ovaCorrect === zone.dataset.ovaTarget;
-        dragged.classList.add(correct ? 'is-correct' : 'is-wrong');
-        zone.querySelector('.ova-dnd__items')?.appendChild(dragged);
+    root.querySelectorAll('.ova-dnd').forEach(dnd => {
+      let dragged = null, elegido = null;
+      const elegir = item => {
+        if (elegido) elegido.classList.remove('is-selected'), elegido.setAttribute('aria-pressed', 'false');
+        elegido = item === elegido ? null : item;
+        if (elegido) elegido.classList.add('is-selected'), elegido.setAttribute('aria-pressed', 'true');
+      };
+      const poner = (item, zone) => {
+        item.classList.remove('is-correct', 'is-wrong', 'is-selected');
+        item.setAttribute('aria-pressed', 'false');
+        item.classList.add(item.dataset.ovaCorrect === zone.dataset.ovaTarget ? 'is-correct' : 'is-wrong');
+        zone.querySelector('.ova-dnd__items')?.appendChild(item);
+      };
+      dnd.querySelectorAll('.ova-dnd__item').forEach(item => {
+        if (item.tagName !== 'BUTTON') {
+          item.setAttribute('role', 'button');
+          item.tabIndex = 0;
+          item.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); item.click(); } });
+        }
+        item.setAttribute('aria-pressed', 'false');
+        item.draggable = true;
+        item.addEventListener('click', () => elegir(item));
+        item.addEventListener('dragstart', () => { dragged = item; item.classList.add('is-dragging'); });
+        item.addEventListener('dragend', () => { item.classList.remove('is-dragging'); dragged = null; });
+      });
+      dnd.querySelectorAll('.ova-dnd__zone').forEach(zone => {
+        const h = zone.querySelector('h4');
+        if (h && !h.querySelector('button')) {
+          const b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'ova-dnd__target';
+          while (h.firstChild) b.appendChild(h.firstChild);
+          h.appendChild(b);
+        }
+        zone.addEventListener('click', e => {
+          if (!elegido || e.target.closest('.ova-dnd__item')) return;
+          const item = elegido; elegido = null;
+          poner(item, zone);
+        });
+        zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('is-over'); });
+        zone.addEventListener('dragleave', () => zone.classList.remove('is-over'));
+        zone.addEventListener('drop', e => {
+          e.preventDefault();
+          zone.classList.remove('is-over');
+          if (!dragged) return;
+          if (dragged === elegido) elegido = null;
+          poner(dragged, zone);
+        });
       });
     });
   }
 
-  // Ordenar
+  // Ordenar. Arrastre, o los botones ↑/↓ de cada elemento (toque y teclado); la nueva posición
+  // se anuncia a quien usa lector de pantalla (KIT-007, D8).
   function setupOrden(root = document) {
     root.querySelectorAll('.ova-orden').forEach(list => {
       let dragged = null;
+      const aviso = document.createElement('p');
+      aviso.className = 'ova-sr';
+      aviso.setAttribute('aria-live', 'polite');
+      list.after(aviso);
+      const mover = (item, paso, boton) => {
+        const hermano = paso < 0 ? item.previousElementSibling : item.nextElementSibling;
+        if (!hermano) return;
+        list.insertBefore(item, paso < 0 ? hermano : hermano.nextSibling);
+        item.classList.remove('is-correct', 'is-wrong');
+        renumber(list);
+        const items = [...list.querySelectorAll('.ova-orden__item')];
+        aviso.textContent = `Posición ${items.indexOf(item) + 1} de ${items.length}`;
+        (boton.disabled ? item.querySelector('.ova-orden__mover button:not(:disabled)') : boton)?.focus();
+      };
       list.querySelectorAll('.ova-orden__item').forEach(item => {
+        const caja = document.createElement('span');
+        caja.className = 'ova-orden__mover';
+        [['Subir', 'mdi:arrow-up', -1], ['Bajar', 'mdi:arrow-down', 1]].forEach(([nombre, icono, paso]) => {
+          const b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'ova-orden__btn';
+          b.setAttribute('aria-label', nombre);
+          b.innerHTML = `<iconify-icon icon="${icono}" aria-hidden="true"></iconify-icon>`;
+          b.addEventListener('click', () => mover(item, paso, b));
+          caja.appendChild(b);
+        });
+        item.appendChild(caja);
         item.draggable = true;
         item.addEventListener('dragstart', () => { dragged = item; item.classList.add('is-dragging'); });
         item.addEventListener('dragend',   () => { item.classList.remove('is-dragging'); dragged = null; renumber(list); });
@@ -609,10 +670,14 @@
           item.parentNode.insertBefore(dragged, after ? item.nextSibling : item);
         });
       });
+      renumber(list);
     });
     document.querySelectorAll('[data-ova-orden-check]').forEach(btn => {
       btn.addEventListener('click', () => {
-        const list = btn.previousElementSibling?.matches('.ova-orden') ? btn.previousElementSibling : btn.parentElement.querySelector('.ova-orden');
+        // El aviso de la posición (.ova-sr) queda entre la lista y su botón
+        let prev = btn.previousElementSibling;
+        if (prev?.matches('.ova-sr')) prev = prev.previousElementSibling;
+        const list = prev?.matches('.ova-orden') ? prev : btn.parentElement.querySelector('.ova-orden');
         if (!list) return;
         list.querySelectorAll('.ova-orden__item').forEach((item, i) => {
           item.classList.remove('is-correct', 'is-wrong');
@@ -622,9 +687,13 @@
     });
   }
   function renumber(list) {
-    list.querySelectorAll('.ova-orden__item').forEach((item, i) => {
+    const items = list.querySelectorAll('.ova-orden__item');
+    items.forEach((item, i) => {
       const num = item.querySelector('.ova-orden__num');
       if (num) num.textContent = i + 1;
+      const [sube, baja] = item.querySelectorAll('.ova-orden__btn');
+      if (sube) sube.disabled = i === 0;
+      if (baja) baja.disabled = i === items.length - 1;
     });
   }
 
@@ -913,6 +982,7 @@
     const labelItems = root.dataset.labelItems || 'actividades';
 
     let current = 0;
+    let iniciado = false;
 
     function update(){
       slides.forEach((s, i) => s.classList.toggle('is-active', i === current));
@@ -940,7 +1010,9 @@
         // Slides 1..9 (índices 1..9, son las actividades 1 a 9)
         const activityNum = current;
         const total_activities = total - 2; // descartando intro y cierre
-        counter.textContent = `${labelItem} ${activityNum} de ${total_activities}`;
+        // En ≤ 480 px se ve «N / M»; el lector de pantalla oye siempre la frase completa (KIT-007, D10)
+        counter.innerHTML = `<span class="ova-evalquiz__counter-largo">${labelItem} ${activityNum} de ${total_activities}</span>` +
+          `<span class="ova-evalquiz__counter-corto" aria-hidden="true">${activityNum} / ${total_activities}</span>`;
         if (sectionLabel) sectionLabel.textContent = slide.dataset.section || '—';
         // Color global del head según sección
         root.dataset.color = slide.dataset.sectionColor || 'acento';
@@ -949,8 +1021,8 @@
       // Si es intro o cierre, ocultar nav (intro tiene su propio botón Comenzar)
       nav.style.display = (isIntro || isCierre) ? 'none' : 'flex';
 
-      // Estado de botones
-      btnPrev.disabled = current <= 1; // no puede volver a intro
+      // Estado de botones: desde la actividad 1, «Anterior» vuelve a la presentación (2026-10-26)
+      btnPrev.disabled = current <= 0;
       // En la última actividad antes de cierre, el botón siguiente dice "Finalizar"
       if (current === total - 2) { // penúltimo (última actividad)
         btnNext.innerHTML = 'Finalizar <iconify-icon icon="mdi:flag-checkered"></iconify-icon>';
@@ -958,8 +1030,19 @@
         btnNext.innerHTML = 'Siguiente <iconify-icon icon="mdi:arrow-right"></iconify-icon>';
       }
 
-      // Scroll al top (para que el usuario vea la actividad desde arriba)
-      (head || root).scrollIntoView({behavior: 'smooth', block: 'start'});
+      // Que la actividad se vea desde arriba, sin quedar bajo la barra superior fija y sin saltos:
+      // solo se desplaza si el inicio del quiz quedó fuera de la vista (al avanzar desde abajo).
+      // Al cargar y al pulsar «Comenzar» el quiz ya está a la vista y la página no se mueve (2026-10-26).
+      if (iniciado) {
+        const barra = document.querySelector('.ova-topbar');
+        const margen = (barra ? barra.getBoundingClientRect().height : 0) + 24;
+        const arriba = (head || root).getBoundingClientRect().top;
+        if (arriba < margen) {
+          const reducir = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          window.scrollBy({ top: arriba - margen, behavior: reducir ? 'auto' : 'smooth' });
+        }
+      }
+      iniciado = true;
     }
 
     function goTo(idx){
