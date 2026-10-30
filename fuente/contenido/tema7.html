@@ -34,6 +34,7 @@
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t7-pregunta"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t7-pregunta"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t7-pregunta"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Pregunta</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -55,6 +56,28 @@
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t7-pregunta"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Pregunta</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;Dónde va la limitación del estudio&lt;/strong&gt;&lt;/h3&gt;
+&lt;p class=&quot;ova-llamado&quot;&gt;&lt;span class=&quot;ova-llamado__mano&quot; aria-hidden=&quot;true&quot;&gt;&lt;iconify-icon icon=&quot;mdi:cursor-pointer&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;Seleccione la opción correcta.&lt;/p&gt;
+&lt;div class=&quot;ova-quiz&quot;&gt;
+  &lt;p class=&quot;ova-quiz__contexto&quot;&gt;Un investigador encuestó a 42 docentes de una sola universidad y sabe que ese número no le permite generalizar los resultados a otras instituciones. Quiere decirlo con claridad en el artículo.&lt;/p&gt;
+  &lt;h3 class=&quot;ova-quiz__question&quot;&gt;¿En qué sección del artículo debe presentar esa limitación?&lt;/h3&gt;
+  &lt;div class=&quot;ova-quiz__opts&quot;&gt;
+    &lt;button class=&quot;ova-quiz__opt&quot; data-correct=&quot;false&quot;&gt;&lt;strong&gt;A.&lt;/strong&gt; En la introducción, para que el lector la conozca desde el principio.&lt;/button&gt;
+&lt;button class=&quot;ova-quiz__opt&quot; data-correct=&quot;false&quot;&gt;&lt;strong&gt;B.&lt;/strong&gt; En el método, junto con la descripción de la muestra.&lt;/button&gt;
+&lt;button class=&quot;ova-quiz__opt&quot; data-correct=&quot;true&quot;&gt;&lt;strong&gt;C.&lt;/strong&gt; En la discusión, después de interpretar los resultados.&lt;/button&gt;
+&lt;button class=&quot;ova-quiz__opt&quot; data-correct=&quot;false&quot;&gt;&lt;strong&gt;D.&lt;/strong&gt; En el resumen, para no ocupar espacio en el cuerpo del texto.&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ova-quiz__feedback&quot;
+       data-correct=&quot;Las limitaciones se presentan en la discusión: ahí el autor ya interpretó los hallazgos y puede decir hasta dónde llegan y qué no permiten afirmar. Los estándares de reporte de APA 7 (JARS) las ubican en esa sección, junto con las implicaciones y las líneas de investigación futura. El método describe la muestra tal como fue; juzgar su alcance es tarea de la discusión.&quot;
+       data-wrong=&quot;El método solo describe cómo se hizo el estudio y a quiénes se encuestó; no valora si eso alcanza o no. La introducción plantea el problema y el resumen condensa el artículo entero. El lugar de las limitaciones es la discusión, después de interpretar los resultados: ahí el autor dice hasta dónde llegan sus hallazgos y qué no permiten afirmar (APA 7, estándares JARS).&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
       </section>
 
       <section class="ua-seccion ua-seccion--variante" id="verdadero-o-falso" data-reveal>
@@ -73,6 +96,7 @@
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t7-vf"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t7-vf"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t7-vf"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Verdadero o falso</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -90,6 +114,25 @@
 <span class="ova-catalogo__gris">«Instrucción:» es opcional. Si el Word la trae, va literal; si no, va el llamado de esta ventana, propuesto y pendiente de validación.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t7-vf"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Verdadero o falso</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;Reutilizar lo propio&lt;/strong&gt;&lt;/h3&gt;
+&lt;p class=&quot;ova-llamado&quot;&gt;&lt;span class=&quot;ova-llamado__mano&quot; aria-hidden=&quot;true&quot;&gt;&lt;iconify-icon icon=&quot;mdi:cursor-pointer&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;Seleccione si la afirmación es verdadera o falsa.&lt;/p&gt;
+&lt;div class=&quot;ova-quiz&quot;&gt;
+  &lt;h3 class=&quot;ova-quiz__question&quot;&gt;Copiar varios párrafos de un artículo propio ya publicado en un artículo nuevo, sin citarlo, no es un problema ético porque el autor es el mismo.&lt;/h3&gt;
+  &lt;div class=&quot;ova-quiz__opts&quot;&gt;
+    &lt;button class=&quot;ova-quiz__opt&quot; data-correct=&quot;false&quot;&gt;&lt;strong&gt;A.&lt;/strong&gt; Verdadero&lt;/button&gt;
+&lt;button class=&quot;ova-quiz__opt&quot; data-correct=&quot;true&quot;&gt;&lt;strong&gt;B.&lt;/strong&gt; Falso&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ova-quiz__feedback&quot;
+       data-correct=&quot;Es falso. Presentar como nuevo un texto que ya se publicó es autoplagio, aunque el autor sea el mismo: el lector y la revista asumen que reciben trabajo original. APA 7 (sección 1.17) admite reutilizar pasajes breves, por ejemplo la descripción de un instrumento, siempre que se cite la publicación anterior y se respeten los derechos de la editorial que la publicó.&quot;
+       data-wrong=&quot;La afirmación es falsa. Que el autor sea el mismo no cambia lo que el lector y la revista asumen: que el artículo es trabajo original. Publicar de nuevo texto ya publicado sin decirlo es autoplagio. APA 7 (sección 1.17) permite reutilizar pasajes breves, como la descripción de un instrumento, pero siempre citando la publicación anterior y con permiso de la editorial si hace falta.&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
       </section>
 
@@ -113,6 +156,7 @@
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t7-relacionar"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t7-relacionar"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t7-relacionar"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Relacionar</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -130,6 +174,29 @@ Cita de cita — (Swales, 1990, como se citó en Cassany, 2007)
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t7-relacionar"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Relacionar</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;Cuatro formas de citar en APA 7&lt;/strong&gt;&lt;/h3&gt;
+&lt;p class=&quot;ova-llamado&quot;&gt;&lt;span class=&quot;ova-llamado__mano&quot; aria-hidden=&quot;true&quot;&gt;&lt;iconify-icon icon=&quot;mdi:cursor-pointer&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;Haga clic en un elemento y después en el que le corresponde.&lt;/p&gt;
+&lt;div class=&quot;ova-empar&quot;&gt;
+  &lt;div class=&quot;ova-empar__col&quot;&gt;
+    &lt;button class=&quot;ova-empar__item&quot; data-ova-match=&quot;A&quot;&gt;Cita textual corta&lt;/button&gt;
+&lt;button class=&quot;ova-empar__item&quot; data-ova-match=&quot;B&quot;&gt;Cita textual larga&lt;/button&gt;
+&lt;button class=&quot;ova-empar__item&quot; data-ova-match=&quot;C&quot;&gt;Paráfrasis&lt;/button&gt;
+&lt;button class=&quot;ova-empar__item&quot; data-ova-match=&quot;D&quot;&gt;Cita de cita&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ova-empar__col&quot;&gt;
+    &lt;button class=&quot;ova-empar__item&quot; data-ova-match=&quot;C&quot;&gt;Cassany (2007) sostiene que escribir obliga a ordenar el pensamiento antes de comunicarlo.&lt;/button&gt;
+&lt;button class=&quot;ova-empar__item&quot; data-ova-match=&quot;A&quot;&gt;«Escribir es una forma de pensar» (Cassany, 2007, p. 23).&lt;/button&gt;
+&lt;button class=&quot;ova-empar__item&quot; data-ova-match=&quot;D&quot;&gt;(Swales, 1990, como se citó en Cassany, 2007)&lt;/button&gt;
+&lt;button class=&quot;ova-empar__item&quot; data-ova-match=&quot;B&quot;&gt;Un pasaje de 40 palabras o más, en bloque aparte con sangría de 1,27 cm, sin comillas y con la cita al final, después del punto.&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
       </section>
 
       <section class="ua-seccion" id="ordenar-y-clasificar" data-reveal>
@@ -146,6 +213,7 @@ Cita de cita — (Swales, 1990, como se citó en Cassany, 2007)
         <button class="ova-btn ova-btn--primary" data-ova-orden-check><iconify-icon icon="mdi:check-bold"></iconify-icon> Verificar orden</button>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t7-ordenar"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t7-ordenar"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t7-ordenar"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Ordenar</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -163,6 +231,23 @@ Cita de cita — (Swales, 1990, como se citó en Cassany, 2007)
 <span class="ova-catalogo__gris">«Instrucción:» es opcional. Si el Word la trae, va literal; si no, va el llamado de esta ventana, propuesto y pendiente de validación.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t7-ordenar"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Ordenar</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;El camino de un manuscrito hasta su publicación&lt;/strong&gt;&lt;/h3&gt;
+&lt;p class=&quot;ova-llamado&quot;&gt;&lt;span class=&quot;ova-llamado__mano&quot; aria-hidden=&quot;true&quot;&gt;&lt;iconify-icon icon=&quot;mdi:cursor-pointer&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;Ordene los elementos y después seleccione «Verificar orden».&lt;/p&gt;
+&lt;ul class=&quot;ova-orden&quot;&gt;
+  &lt;li class=&quot;ova-orden__item&quot; data-ova-order=&quot;3&quot;&gt;&lt;span class=&quot;ova-orden__num&quot;&gt;1&lt;/span&gt; La revista envía el manuscrito a evaluadores anónimos (revisión por pares).&lt;/li&gt;
+&lt;li class=&quot;ova-orden__item&quot; data-ova-order=&quot;1&quot;&gt;&lt;span class=&quot;ova-orden__num&quot;&gt;2&lt;/span&gt; El autor elige la revista y lee sus normas para autores.&lt;/li&gt;
+&lt;li class=&quot;ova-orden__item&quot; data-ova-order=&quot;5&quot;&gt;&lt;span class=&quot;ova-orden__num&quot;&gt;3&lt;/span&gt; El editor acepta el artículo, el autor corrige las pruebas de imprenta y la revista lo publica.&lt;/li&gt;
+&lt;li class=&quot;ova-orden__item&quot; data-ova-order=&quot;2&quot;&gt;&lt;span class=&quot;ova-orden__num&quot;&gt;4&lt;/span&gt; El autor ajusta el manuscrito a esas normas y lo envía por la plataforma de la revista.&lt;/li&gt;
+&lt;li class=&quot;ova-orden__item&quot; data-ova-order=&quot;4&quot;&gt;&lt;span class=&quot;ova-orden__num&quot;&gt;5&lt;/span&gt; El autor responde punto por punto a los evaluadores y entrega la versión corregida.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;button class=&quot;ova-btn ova-btn--primary&quot; data-ova-orden-check&gt;&lt;iconify-icon icon=&quot;mdi:check-bold&quot;&gt;&lt;/iconify-icon&gt; Verificar orden&lt;/button&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
       </section>
 
@@ -187,6 +272,7 @@ Cita de cita — (Swales, 1990, como se citó en Cassany, 2007)
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t7-clasificar"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t7-clasificar"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t7-clasificar"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Clasificar</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -201,6 +287,30 @@ Cita de cita — (Swales, 1990, como se citó en Cassany, 2007)
 <span class="ova-catalogo__gris">«Instrucción:» es opcional. Si el Word la trae, va literal; si no, va el llamado de esta ventana, propuesto y pendiente de validación.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t7-clasificar"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Clasificar</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;¿Resultados o discusión?&lt;/strong&gt;&lt;/h3&gt;
+&lt;p class=&quot;ova-llamado&quot;&gt;&lt;span class=&quot;ova-llamado__mano&quot; aria-hidden=&quot;true&quot;&gt;&lt;iconify-icon icon=&quot;mdi:cursor-pointer&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;Lleve cada elemento a la categoría que le corresponde.&lt;/p&gt;
+&lt;div class=&quot;ova-dnd&quot;&gt;
+  &lt;div class=&quot;ova-dnd__bank&quot;&gt;
+    &lt;div class=&quot;ova-dnd__bank-title&quot;&gt;Banco&lt;/div&gt;
+    &lt;button type=&quot;button&quot; class=&quot;ova-dnd__item&quot; data-ova-correct=&quot;resultados&quot;&gt;La tabla con las medias y las desviaciones de cada grupo&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;ova-dnd__item&quot; data-ova-correct=&quot;discusion&quot;&gt;Por qué los hallazgos contradicen un estudio anterior&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;ova-dnd__item&quot; data-ova-correct=&quot;resultados&quot;&gt;El valor p de la prueba estadística aplicada&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;ova-dnd__item&quot; data-ova-correct=&quot;discusion&quot;&gt;Las limitaciones del tamaño de la muestra&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;ova-dnd__item&quot; data-ova-correct=&quot;resultados&quot;&gt;Cuántos participantes completaron el estudio&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;ova-dnd__item&quot; data-ova-correct=&quot;discusion&quot;&gt;Las implicaciones para la práctica profesional&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ova-dnd__zones&quot;&gt;
+    &lt;div class=&quot;ova-dnd__zone&quot; data-ova-target=&quot;resultados&quot;&gt;&lt;h4&gt;&lt;button type=&quot;button&quot; class=&quot;ova-dnd__target&quot;&gt;&lt;iconify-icon icon=&quot;mdi:chart-box-outline&quot; style=&quot;color:var(--c-acento);&quot;&gt;&lt;/iconify-icon&gt; Va en Resultados&lt;/button&gt;&lt;/h4&gt;&lt;div class=&quot;ova-dnd__items&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;ova-dnd__zone&quot; data-ova-target=&quot;discusion&quot;&gt;&lt;h4&gt;&lt;button type=&quot;button&quot; class=&quot;ova-dnd__target&quot;&gt;&lt;iconify-icon icon=&quot;mdi:comment-text-multiple-outline&quot; style=&quot;color:var(--c-info);&quot;&gt;&lt;/iconify-icon&gt; Va en Discusión&lt;/button&gt;&lt;/h4&gt;&lt;div class=&quot;ova-dnd__items&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
       </section>
 
@@ -220,6 +330,7 @@ Cita de cita — (Swales, 1990, como se citó en Cassany, 2007)
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t7-verificacion"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t7-verificacion"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t7-verificacion"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Lista de verificación</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -239,6 +350,25 @@ Cita de cita — (Swales, 1990, como se citó en Cassany, 2007)
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t7-verificacion"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Lista de verificación</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;p class=&quot;ova-llamado&quot;&gt;&lt;span class=&quot;ova-llamado__mano&quot; aria-hidden=&quot;true&quot;&gt;&lt;iconify-icon icon=&quot;mdi:cursor-pointer&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;Marque cada punto que ya haya revisado.&lt;/p&gt;
+&lt;div class=&quot;ova-checklist&quot;&gt;
+  &lt;div class=&quot;ova-checklist__head&quot;&gt;&lt;h3 style=&quot;margin:0; font-size:1.1rem;&quot;&gt;Revisión final del manuscrito&lt;/h3&gt;&lt;div class=&quot;ova-checklist__count&quot;&gt;&lt;strong&gt;0&lt;/strong&gt; / 6&lt;/div&gt;&lt;/div&gt;
+  &lt;ul class=&quot;ova-checklist__list&quot;&gt;
+    &lt;li class=&quot;ova-checklist__item&quot;&gt;&lt;span class=&quot;ova-checklist__box&quot;&gt;&lt;iconify-icon icon=&quot;mdi:check&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;&lt;span class=&quot;ova-checklist__text&quot;&gt;El título describe el estudio en 12 palabras o menos y el resumen no supera las 250.&lt;/span&gt;&lt;/li&gt;
+&lt;li class=&quot;ova-checklist__item&quot;&gt;&lt;span class=&quot;ova-checklist__box&quot;&gt;&lt;iconify-icon icon=&quot;mdi:check&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;&lt;span class=&quot;ova-checklist__text&quot;&gt;Toda afirmación tomada de otro autor tiene su cita en el texto, con autor y año.&lt;/span&gt;&lt;/li&gt;
+&lt;li class=&quot;ova-checklist__item&quot;&gt;&lt;span class=&quot;ova-checklist__box&quot;&gt;&lt;iconify-icon icon=&quot;mdi:check&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;&lt;span class=&quot;ova-checklist__text&quot;&gt;Cada cita del texto aparece en la lista de referencias, y cada referencia se cita en el texto.&lt;/span&gt;&lt;/li&gt;
+&lt;li class=&quot;ova-checklist__item&quot;&gt;&lt;span class=&quot;ova-checklist__box&quot;&gt;&lt;iconify-icon icon=&quot;mdi:check&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;&lt;span class=&quot;ova-checklist__text&quot;&gt;Las tablas y las figuras están numeradas, tienen título y se mencionan en el texto antes de aparecer.&lt;/span&gt;&lt;/li&gt;
+&lt;li class=&quot;ova-checklist__item&quot;&gt;&lt;span class=&quot;ova-checklist__box&quot;&gt;&lt;iconify-icon icon=&quot;mdi:check&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;&lt;span class=&quot;ova-checklist__text&quot;&gt;Los resultados solo presentan lo que se encontró; la interpretación quedó en la discusión.&lt;/span&gt;&lt;/li&gt;
+&lt;li class=&quot;ova-checklist__item&quot;&gt;&lt;span class=&quot;ova-checklist__box&quot;&gt;&lt;iconify-icon icon=&quot;mdi:check&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;&lt;span class=&quot;ova-checklist__text&quot;&gt;El manuscrito cumple las normas para autores de la revista: extensión, formato de referencias y anonimato.&lt;/span&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
       </section>
 
       <section class="ua-seccion ua-seccion--variante" id="para-reflexionar" data-reveal>
@@ -252,6 +382,7 @@ Cita de cita — (Swales, 1990, como se citó en Cassany, 2007)
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t7-para-reflexionar"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t7-para-reflexionar"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t7-para-reflexionar"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Para reflexionar</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -262,6 +393,20 @@ Piense en el último texto académico que escribió. Si un lector que no conoce 
 <span class="ova-catalogo__gris">El nombre del componente en rojo y, debajo, la pregunta abierta, de hasta 80 palabras. Sin opciones, sin respuesta correcta y sin retroalimentación: el estudiante no escribe nada en pantalla. Si el docente quiere recoger la respuesta, eso se hace en el foro o en la tarea de la plataforma, no en el curso.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t7-para-reflexionar"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Para reflexionar</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;div class=&quot;ova-callout ova-callout--reflexion&quot; data-reveal&gt;
+  &lt;div class=&quot;ova-callout__ico&quot;&gt;&lt;iconify-icon icon=&quot;mdi:comment-question-outline&quot;&gt;&lt;/iconify-icon&gt;&lt;/div&gt;
+  &lt;div&gt;
+    &lt;span class=&quot;ova-callout__tag&quot;&gt;Para reflexionar&lt;/span&gt;
+    &lt;p style=&quot;margin:8px 0 0;&quot;&gt;Piense en el último texto académico que escribió. Si un lector que no conoce su campo leyera solo la introducción, ¿podría decir con sus palabras qué problema estudió usted y por qué valía la pena estudiarlo? Si la respuesta es no, ¿qué párrafo tendría que reescribir primero?&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
       </section>
 
@@ -278,6 +423,7 @@ Piense en el último texto académico que escribió. Si un lector que no conoce 
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t7-presentacion-evaluacion"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t7-presentacion-evaluacion"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t7-presentacion-evaluacion"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Presentación de la evaluación</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -289,6 +435,22 @@ Piense en el último texto académico que escribió. Si un lector que no conoce 
 <span class="ova-catalogo__gris">Va en el banco de preguntas, no en el DI: «Presentación:» con el texto que abre la evaluación. Debajo, opcional, «Vincular Imagen-N» para cambiar la ilustración; la imagen va en la carpeta de insumos con ese nombre. Sin esa línea va la ilustración por defecto de la institución (presentacion-evaluacion.svg, de su semilla). «Comenzar» y la ayuda de las flechas los pone el componente.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t7-presentacion-evaluacion"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Presentación de la evaluación</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;div class=&quot;ova-eval-intro&quot;&gt;
+  &lt;div class=&quot;ova-eval-intro__tarjeta&quot;&gt;
+    &lt;img class=&quot;ova-eval-intro__img&quot; src=&quot;assets/img/curso/presentacion-evaluacion.svg&quot; alt=&quot;&quot; /&gt;
+    &lt;div class=&quot;ova-eval-intro__cuerpo&quot;&gt;
+      &lt;p class=&quot;ova-eval-intro__texto&quot;&gt;Resuelva las siguientes actividades para comprobar lo aprendido en la unidad.&lt;/p&gt;
+      &lt;button class=&quot;ova-evalquiz__btn ova-evalquiz__btn--primary&quot; data-evalquiz-go=&quot;1&quot;&gt;Comenzar &lt;iconify-icon icon=&quot;mdi:arrow-right&quot;&gt;&lt;/iconify-icon&gt;&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
       </section>
 
@@ -304,6 +466,7 @@ Piense en el último texto académico que escribió. Si un lector que no conoce 
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t7-presentacion-evaluacion-sin-imagen"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t7-presentacion-evaluacion-sin-imagen"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t7-presentacion-evaluacion-sin-imagen"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Presentación de la evaluación - sin imagen</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -314,5 +477,20 @@ Piense en el último texto académico que escribió. Si un lector que no conoce 
 <span class="ova-catalogo__gris">El banco lleva solo «Presentación:» con su texto, como en la versión con imagen. Esta variante no muestra ilustración aunque la institución tenga una por defecto.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t7-presentacion-evaluacion-sin-imagen"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Presentación de la evaluación - sin imagen</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;div class=&quot;ova-eval-intro&quot;&gt;
+  &lt;div class=&quot;ova-eval-intro__tarjeta&quot;&gt;
+    &lt;div class=&quot;ova-eval-intro__cuerpo&quot;&gt;
+      &lt;p class=&quot;ova-eval-intro__texto&quot;&gt;Resuelva las siguientes actividades para comprobar lo aprendido en la unidad.&lt;/p&gt;
+      &lt;button class=&quot;ova-evalquiz__btn ova-evalquiz__btn--primary&quot; data-evalquiz-go=&quot;1&quot;&gt;Comenzar &lt;iconify-icon icon=&quot;mdi:arrow-right&quot;&gt;&lt;/iconify-icon&gt;&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
       </section>

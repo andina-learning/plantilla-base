@@ -39,6 +39,7 @@
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-tarjetas-icono"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t5-tarjetas-icono"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t5-tarjetas-icono"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Tarjetas con icono - izquierda</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -58,6 +59,37 @@ Se elimina lo que no aporta información: muletillas, adjetivos de relleno y la 
 <span class="ova-catalogo__gris">El nombre del componente en rojo; debajo el título del bloque si lo tiene; cada tarjeta en tres líneas: «Tarjeta N», el nombre en negrilla y su texto (hasta 40 palabras). El icono lo propone el equipo de producción; si el instruccional quiere uno en particular, lo anota entre corchetes: [icono: bombillo].</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t5-tarjetas-icono"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Tarjetas con icono - izquierda</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;Tres cualidades de la prosa académica&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class=&quot;ova-tarjetas&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta__cuerpo&quot;&gt;
+    &lt;div class=&quot;ova-tarjeta__avatar ova-tarjeta__avatar--icono&quot;&gt;&lt;iconify-icon icon=&quot;mdi:lightbulb-outline&quot;&gt;&lt;/iconify-icon&gt;&lt;/div&gt;
+    &lt;h4&gt;Claridad&lt;/h4&gt;
+    &lt;p&gt;Cada oración tiene un sujeto reconocible y un verbo que actúa. Si el lector debe releer para saber quién hace qué, la oración se reescribe.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-tarjeta&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta__cuerpo&quot;&gt;
+    &lt;div class=&quot;ova-tarjeta__avatar ova-tarjeta__avatar--icono&quot;&gt;&lt;iconify-icon icon=&quot;mdi:target&quot;&gt;&lt;/iconify-icon&gt;&lt;/div&gt;
+    &lt;h4&gt;Precisión&lt;/h4&gt;
+    &lt;p&gt;Se nombra lo que se midió y cómo: «una muestra de 42 docentes», no «varios docentes». Los términos técnicos se usan siempre con el mismo sentido.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-tarjeta&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta__cuerpo&quot;&gt;
+    &lt;div class=&quot;ova-tarjeta__avatar ova-tarjeta__avatar--icono&quot;&gt;&lt;iconify-icon icon=&quot;mdi:content-cut&quot;&gt;&lt;/iconify-icon&gt;&lt;/div&gt;
+    &lt;h4&gt;Concisión&lt;/h4&gt;
+    &lt;p&gt;Se elimina lo que no aporta información: muletillas, adjetivos de relleno y la repetición de lo que la tabla ya muestra.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
       </section>
 
@@ -88,6 +120,7 @@ Se elimina lo que no aporta información: muletillas, adjetivos de relleno y la 
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-tarjetas-cifras"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t5-tarjetas-cifras"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t5-tarjetas-cifras"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Tarjetas con icono - izquierda</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -109,6 +142,36 @@ Un formato vertical permite comparar empresas de tamaños muy distintos.
 <span class="ova-catalogo__gris">Es el mismo componente con una cifra en lugar del icono. La línea «Cifra:» lleva el número y, si la tiene, su unidad (%, pp, años), que sale más pequeña junto al número.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t5-tarjetas-cifras"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Tarjetas con icono - izquierda</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;div class=&quot;ova-tarjetas&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta__cuerpo&quot;&gt;
+    &lt;div class=&quot;ova-tarjeta__cifra&quot;&gt;60&lt;span&gt;%&lt;/span&gt;&lt;/div&gt;
+    &lt;h4&gt;Costo de ventas típico&lt;/h4&gt;
+    &lt;p&gt;En manufactura discreta, el rango 55-65% es la banda usual.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-tarjeta&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta__cuerpo&quot;&gt;
+    &lt;div class=&quot;ova-tarjeta__cifra&quot;&gt;1&lt;span&gt;pp&lt;/span&gt;&lt;/div&gt;
+    &lt;h4&gt;Cada punto porcentual&lt;/h4&gt;
+    &lt;p&gt;Que baje el costo de ventas mueve un punto entero al margen operativo.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-tarjeta&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta__cuerpo&quot;&gt;
+    &lt;div class=&quot;ova-tarjeta__cifra&quot;&gt;×3&lt;/div&gt;
+    &lt;h4&gt;Comparabilidad&lt;/h4&gt;
+    &lt;p&gt;Un formato vertical permite comparar empresas de tamaños muy distintos.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
       </section>
 
@@ -147,6 +210,7 @@ Un formato vertical permite comparar empresas de tamaños muy distintos.
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-tarjetas-centradas"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t5-tarjetas-centradas"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t5-tarjetas-centradas"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Tarjetas con icono - centrado</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -169,6 +233,44 @@ Llega por el título y el resumen, y decide en un minuto si sigue. Escribir para
 <span class="ova-catalogo__gris">Igual que las tarjetas con icono - izquierda, con el icono, el nombre y el texto centrados. Para destacar una tarjeta (icono sobre azul), anota [destacada] después de su nombre. Con cuatro tarjetas van dos por fila.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t5-tarjetas-centradas"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Tarjetas con icono - centrado</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;Quiénes intervienen en la publicación de un artículo&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class=&quot;ova-tarjetas ova-tarjetas--centradas&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta__avatar ova-tarjeta__avatar--destacado&quot;&gt;&lt;iconify-icon icon=&quot;mdi:account-edit-outline&quot;&gt;&lt;/iconify-icon&gt;&lt;/div&gt;
+  &lt;div class=&quot;ova-tarjeta__cuerpo&quot;&gt;
+    &lt;h4&gt;Autor&lt;/h4&gt;
+    &lt;p&gt;Diseña el estudio, redacta el manuscrito y responde por cada dato y cada cita. Declara los conflictos de interés y la contribución de cada coautor.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-tarjeta&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta__avatar&quot;&gt;&lt;iconify-icon icon=&quot;mdi:account-tie-outline&quot;&gt;&lt;/iconify-icon&gt;&lt;/div&gt;
+  &lt;div class=&quot;ova-tarjeta__cuerpo&quot;&gt;
+    &lt;h4&gt;Editor&lt;/h4&gt;
+    &lt;p&gt;Decide si el manuscrito entra al proceso, elige a los revisores y toma la decisión final: aceptar, pedir cambios o rechazar.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-tarjeta&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta__avatar&quot;&gt;&lt;iconify-icon icon=&quot;mdi:account-search-outline&quot;&gt;&lt;/iconify-icon&gt;&lt;/div&gt;
+  &lt;div class=&quot;ova-tarjeta__cuerpo&quot;&gt;
+    &lt;h4&gt;Revisor par&lt;/h4&gt;
+    &lt;p&gt;Evalúa el rigor del método, la solidez de los resultados y la pertinencia de las conclusiones. No corrige el estilo: señala lo que no se sostiene.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-tarjeta&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta__avatar&quot;&gt;&lt;iconify-icon icon=&quot;mdi:account-outline&quot;&gt;&lt;/iconify-icon&gt;&lt;/div&gt;
+  &lt;div class=&quot;ova-tarjeta__cuerpo&quot;&gt;
+    &lt;h4&gt;Lector&lt;/h4&gt;
+    &lt;p&gt;Llega por el título y el resumen, y decide en un minuto si sigue. Escribir para él es escribir para alguien que tiene poco tiempo y muchas opciones.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
       </section>
 
@@ -195,6 +297,7 @@ Llega por el título y el resumen, y decide en un minuto si sigue. Escribir para
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-tarjetas-retrato"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t5-tarjetas-retrato"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t5-tarjetas-retrato"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Tarjetas con icono - centrado</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -215,6 +318,32 @@ Novelista y periodista. Desde La casa de los espíritus, su primera novela, une 
 <span class="ova-catalogo__gris">Es el mismo componente, Tarjetas con icono - centrado, con una foto vinculada en lugar del icono. Cada tarjeta lleva el nombre en negrilla, la línea «Rol:» si la tiene, la foto y un texto de extensión parecida en todas, para que las tarjetas queden del mismo alto. La foto se recorta en círculo centrada en la cara; conviene un retrato de frente, con la cabeza completa.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t5-tarjetas-retrato"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Tarjetas con icono - centrado</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;Dos voces de la literatura en español&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class=&quot;ova-tarjetas ova-tarjetas--centradas&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta__avatar ova-tarjeta__avatar--foto&quot;&gt;&lt;img src=&quot;assets/img/curso/avatar-borges.webp&quot; alt=&quot;Retrato de Jorge Luis Borges en 1951.&quot; /&gt;&lt;/div&gt;
+  &lt;div class=&quot;ova-tarjeta__cuerpo&quot;&gt;
+    &lt;h4&gt;Jorge Luis Borges&lt;/h4&gt;
+    &lt;span class=&quot;ova-tarjeta__rol&quot;&gt;Escritor argentino · 1899-1986&lt;/span&gt;
+    &lt;p&gt;Cuentista, poeta y ensayista. En Ficciones y El Aleph convirtió laberintos, espejos y bibliotecas infinitas en preguntas sobre el tiempo y la identidad.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-tarjeta&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta__avatar ova-tarjeta__avatar--foto&quot;&gt;&lt;img src=&quot;assets/img/curso/avatar-allende.webp&quot; alt=&quot;Retrato de Isabel Allende en 2008.&quot; /&gt;&lt;/div&gt;
+  &lt;div class=&quot;ova-tarjeta__cuerpo&quot;&gt;
+    &lt;h4&gt;Isabel Allende&lt;/h4&gt;
+    &lt;span class=&quot;ova-tarjeta__rol&quot;&gt;Escritora chilena · 1942&lt;/span&gt;
+    &lt;p&gt;Novelista y periodista. Desde La casa de los espíritus, su primera novela, une la saga de una familia con la memoria política de Chile.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
       </section>
 
@@ -246,6 +375,7 @@ Novelista y periodista. Desde La casa de los espíritus, su primera novela, une 
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-conectadas-clara"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t5-conectadas-clara"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t5-conectadas-clara"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Tarjetas conectadas - clara</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -265,6 +395,37 @@ Descripción del ítem 3: un texto breve que explica el concepto y lo relaciona 
 <span class="ova-catalogo__gris">Tres tarjetas, cada una en tres líneas: «Tarjeta N», el nombre del ítem en negrilla y su descripción. El icono lo propone el equipo de producción; si el instruccional quiere uno en particular, lo anota entre corchetes: [icono: bandera].</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t5-conectadas-clara"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Tarjetas conectadas - clara</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;Título del tema&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class=&quot;ova-tarjetas ova-tarjetas--conectadas ova-tarjetas--claras&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta__cuerpo&quot;&gt;
+    &lt;div class=&quot;ova-tarjeta__avatar ova-tarjeta__avatar--icono&quot;&gt;&lt;iconify-icon icon=&quot;mdi:lightbulb-outline&quot;&gt;&lt;/iconify-icon&gt;&lt;/div&gt;
+    &lt;h4&gt;Ítem 1&lt;/h4&gt;
+    &lt;p&gt;Descripción del ítem 1: un texto breve que explica el concepto y lo relaciona con los otros dos.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-tarjeta&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta__cuerpo&quot;&gt;
+    &lt;div class=&quot;ova-tarjeta__avatar ova-tarjeta__avatar--icono&quot;&gt;&lt;iconify-icon icon=&quot;mdi:format-list-text&quot;&gt;&lt;/iconify-icon&gt;&lt;/div&gt;
+    &lt;h4&gt;Ítem 2&lt;/h4&gt;
+    &lt;p&gt;Descripción del ítem 2: un texto breve que explica el concepto y lo relaciona con los otros dos.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-tarjeta&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta__cuerpo&quot;&gt;
+    &lt;div class=&quot;ova-tarjeta__avatar ova-tarjeta__avatar--icono&quot;&gt;&lt;iconify-icon icon=&quot;mdi:flag-checkered&quot;&gt;&lt;/iconify-icon&gt;&lt;/div&gt;
+    &lt;h4&gt;Ítem 3&lt;/h4&gt;
+    &lt;p&gt;Descripción del ítem 3: un texto breve que explica el concepto y lo relaciona con los otros dos.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
       </section>
 
@@ -296,6 +457,7 @@ Descripción del ítem 3: un texto breve que explica el concepto y lo relaciona 
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-conectadas-oscura"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t5-conectadas-oscura"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t5-conectadas-oscura"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Tarjetas conectadas - oscura</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -315,6 +477,37 @@ Descripción del ítem 3: un texto breve que explica el concepto y lo relaciona 
 <span class="ova-catalogo__gris">Tres tarjetas, cada una en tres líneas: «Tarjeta N», el nombre del ítem en negrilla y su descripción. El icono lo propone el equipo de producción; si el instruccional quiere uno en particular, lo anota entre corchetes: [icono: bandera].</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t5-conectadas-oscura"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Tarjetas conectadas - oscura</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;Título del tema&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class=&quot;ova-tarjetas ova-tarjetas--conectadas&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta__cuerpo&quot;&gt;
+    &lt;div class=&quot;ova-tarjeta__avatar ova-tarjeta__avatar--icono&quot;&gt;&lt;iconify-icon icon=&quot;mdi:lightbulb-outline&quot;&gt;&lt;/iconify-icon&gt;&lt;/div&gt;
+    &lt;h4&gt;Ítem 1&lt;/h4&gt;
+    &lt;p&gt;Descripción del ítem 1: un texto breve que explica el concepto y lo relaciona con los otros dos.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-tarjeta&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta__cuerpo&quot;&gt;
+    &lt;div class=&quot;ova-tarjeta__avatar ova-tarjeta__avatar--icono&quot;&gt;&lt;iconify-icon icon=&quot;mdi:format-list-text&quot;&gt;&lt;/iconify-icon&gt;&lt;/div&gt;
+    &lt;h4&gt;Ítem 2&lt;/h4&gt;
+    &lt;p&gt;Descripción del ítem 2: un texto breve que explica el concepto y lo relaciona con los otros dos.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-tarjeta&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta__cuerpo&quot;&gt;
+    &lt;div class=&quot;ova-tarjeta__avatar ova-tarjeta__avatar--icono&quot;&gt;&lt;iconify-icon icon=&quot;mdi:flag-checkered&quot;&gt;&lt;/iconify-icon&gt;&lt;/div&gt;
+    &lt;h4&gt;Ítem 3&lt;/h4&gt;
+    &lt;p&gt;Descripción del ítem 3: un texto breve que explica el concepto y lo relaciona con los otros dos.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
       </section>
 
@@ -350,6 +543,7 @@ Descripción del ítem 3: un texto breve que explica el concepto y lo relaciona 
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-conectadas-imagen"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t5-conectadas-imagen"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t5-conectadas-imagen"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Tarjetas conectadas - oscura</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -372,6 +566,40 @@ Separe los residuos aprovechables para que puedan transformarse en nuevos materi
 <b>Imagen sugerida:</b> Papel y cartón organizados junto al símbolo de reciclaje.</div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t5-conectadas-imagen"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Tarjetas conectadas - oscura</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;Las 3R del cuidado del ambiente&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class=&quot;ova-tarjetas ova-tarjetas--conectadas&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta__cuerpo&quot;&gt;
+    &lt;img class=&quot;ova-tarjeta__figura&quot; src=&quot;assets/img/curso/tarjeta-3r-reduce.svg&quot; alt=&quot;Bolsa de tela con alimentos.&quot; /&gt;
+    &lt;h4&gt;Reduzca&lt;/h4&gt;
+    &lt;p&gt;Disminuya la cantidad de residuos que genera. Antes de comprar, piense si realmente necesita el producto y elija opciones con menos empaques.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Ejemplo:&lt;/strong&gt; Lleve una bolsa reutilizable para evitar bolsas desechables.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-tarjeta&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta__cuerpo&quot;&gt;
+    &lt;img class=&quot;ova-tarjeta__figura&quot; src=&quot;assets/img/curso/tarjeta-3r-reutiliza.svg&quot; alt=&quot;Frasco de vidrio reutilizado como portalápices.&quot; /&gt;
+    &lt;h4&gt;Reutilice&lt;/h4&gt;
+    &lt;p&gt;Aproveche los objetos varias veces antes de desecharlos. Puede conservar su función original o darles un nuevo uso.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Ejemplo:&lt;/strong&gt; Convierta un frasco de vidrio vacío en un recipiente para guardar lápices.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-tarjeta&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta__cuerpo&quot;&gt;
+    &lt;img class=&quot;ova-tarjeta__figura&quot; src=&quot;assets/img/curso/tarjeta-3r-recicla.svg&quot; alt=&quot;Papel y cartón organizados junto al símbolo de reciclaje.&quot; /&gt;
+    &lt;h4&gt;Recicle&lt;/h4&gt;
+    &lt;p&gt;Separe los residuos aprovechables para que puedan transformarse en nuevos materiales. Siga las indicaciones de recolección de su localidad.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Ejemplo:&lt;/strong&gt; Separe el papel y el cartón limpios y secos para entregarlos a la recolección de reciclaje.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
       </section>
 
@@ -403,6 +631,7 @@ Separe los residuos aprovechables para que puedan transformarse en nuevos materi
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-tarjetas-foto"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t5-tarjetas-foto"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t5-tarjetas-foto"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Tarjetas con foto</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -421,6 +650,37 @@ Separe los residuos aprovechables para que puedan transformarse en nuevos materi
 <b>Texto al pie:</b> «El movimiento del agua permite producir electricidad».</div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t5-tarjetas-foto"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Tarjetas con foto</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;Fuentes de energía renovable&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class=&quot;ova-mosaico&quot;&gt;
+  &lt;figure class=&quot;ova-mosaico__tarjeta&quot;&gt;
+  &lt;img src=&quot;assets/img/curso/foto-energia-solar.webp&quot; alt=&quot;Paneles solares al aire libre en un día soleado.&quot; /&gt;
+  &lt;figcaption&gt;
+    &lt;h4&gt;Energía solar&lt;/h4&gt;
+    &lt;p&gt;«La luz del sol se transforma en electricidad».&lt;/p&gt;
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure class=&quot;ova-mosaico__tarjeta&quot;&gt;
+  &lt;img src=&quot;assets/img/curso/foto-energia-eolica.webp&quot; alt=&quot;Aerogeneradores en un paisaje abierto.&quot; /&gt;
+  &lt;figcaption&gt;
+    &lt;h4&gt;Energía eólica&lt;/h4&gt;
+    &lt;p&gt;«La fuerza del viento genera electricidad».&lt;/p&gt;
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure class=&quot;ova-mosaico__tarjeta&quot;&gt;
+  &lt;img src=&quot;assets/img/curso/foto-energia-hidro.webp&quot; alt=&quot;Una central hidroeléctrica con agua fluyendo por la represa.&quot; /&gt;
+  &lt;figcaption&gt;
+    &lt;h4&gt;Energía hidroeléctrica&lt;/h4&gt;
+    &lt;p&gt;«El movimiento del agua permite producir electricidad».&lt;/p&gt;
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
       </section>
 
@@ -452,6 +712,7 @@ Separe los residuos aprovechables para que puedan transformarse en nuevos materi
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-tarjetas-foto-descripcion"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t5-tarjetas-foto-descripcion"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t5-tarjetas-foto-descripcion"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Tarjetas con foto y descripción</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -470,6 +731,37 @@ Separe los residuos aprovechables para que puedan transformarse en nuevos materi
 <b>Descripción:</b> La energía hidroeléctrica aprovecha el movimiento del agua para generar electricidad. Al pasar por las turbinas, el agua las hace girar y acciona un generador. Su producción depende del caudal y del desnivel disponible.</div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t5-tarjetas-foto-descripcion"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Tarjetas con foto y descripción</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;Fuentes de energía renovable&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class=&quot;ova-tarjetas ova-tarjetas--foto&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta&quot;&gt;
+  &lt;img src=&quot;assets/img/curso/foto-energia-solar-ancha.webp&quot; alt=&quot;Planta de paneles solares al aire libre en un día soleado.&quot; /&gt;
+  &lt;div class=&quot;ova-tarjeta__cuerpo&quot;&gt;
+    &lt;h4&gt;Energía solar&lt;/h4&gt;
+    &lt;p&gt;Los paneles solares fotovoltaicos convierten la luz del sol en electricidad. Esta energía puede utilizarse para iluminar espacios y alimentar aparatos eléctricos. Su producción depende de la radiación solar disponible.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-tarjeta&quot;&gt;
+  &lt;img src=&quot;assets/img/curso/foto-energia-eolica-ancha.webp&quot; alt=&quot;Aerogeneradores en un campo abierto, con sus aspas visibles.&quot; /&gt;
+  &lt;div class=&quot;ova-tarjeta__cuerpo&quot;&gt;
+    &lt;h4&gt;Energía eólica&lt;/h4&gt;
+    &lt;p&gt;La energía eólica aprovecha la fuerza del viento para producir electricidad. El viento mueve las aspas de los aerogeneradores, que accionan un generador eléctrico. Por eso, se instalan en lugares con vientos frecuentes y adecuados.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-tarjeta&quot;&gt;
+  &lt;img src=&quot;assets/img/curso/foto-energia-hidro-ancha.webp&quot; alt=&quot;Vista de una represa y su central hidroeléctrica, con el agua y la infraestructura visibles.&quot; /&gt;
+  &lt;div class=&quot;ova-tarjeta__cuerpo&quot;&gt;
+    &lt;h4&gt;Energía hidroeléctrica&lt;/h4&gt;
+    &lt;p&gt;La energía hidroeléctrica aprovecha el movimiento del agua para generar electricidad. Al pasar por las turbinas, el agua las hace girar y acciona un generador. Su producción depende del caudal y del desnivel disponible.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
       </section>
 
@@ -518,6 +810,7 @@ Separe los residuos aprovechables para que puedan transformarse en nuevos materi
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-tarjetas-giran"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t5-tarjetas-giran"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t5-tarjetas-giran"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Tarjetas que giran</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -544,6 +837,54 @@ Separe los residuos aprovechables para que puedan transformarse en nuevos materi
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t5-tarjetas-giran"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Tarjetas que giran</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;p class=&quot;ova-etiqueta&quot;&gt;&lt;iconify-icon icon=&quot;mdi:rotate-3d-variant&quot;&gt;&lt;/iconify-icon&gt; Las tres lentes&lt;/p&gt;
+&lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;Las tres lentes, en un vistazo&lt;/strong&gt;&lt;/h3&gt;
+&lt;p class=&quot;ova-llamado&quot;&gt;&lt;span class=&quot;ova-llamado__mano&quot; aria-hidden=&quot;true&quot;&gt;&lt;iconify-icon icon=&quot;mdi:cursor-pointer&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;Seleccione cada una de las tarjetas para conocer su contenido.&lt;/p&gt;
+&lt;div class=&quot;ova-giros&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;ova-giro&quot; aria-pressed=&quot;false&quot;&gt;
+  &lt;span class=&quot;ova-giro__cara ova-giro__frente&quot;&gt;
+    &lt;span class=&quot;ova-giro__num&quot;&gt;01&lt;/span&gt;
+    &lt;span class=&quot;ova-giro__titulo&quot;&gt;Análisis vertical&lt;/span&gt;
+    &lt;span class=&quot;ova-giro__pista&quot;&gt;&lt;iconify-icon icon=&quot;mdi:rotate-3d-variant&quot;&gt;&lt;/iconify-icon&gt; Toque para girar&lt;/span&gt;
+  &lt;/span&gt;
+  &lt;span class=&quot;ova-giro__cara ova-giro__dorso&quot;&gt;
+    &lt;span class=&quot;ova-giro__etiqueta&quot;&gt;Responde a&lt;/span&gt;
+    &lt;span class=&quot;ova-giro__pregunta&quot;&gt;¿Cómo está compuesta hoy la empresa?&lt;/span&gt;
+    &lt;span class=&quot;ova-giro__texto&quot;&gt;Lee un solo periodo. Cada partida como porcentaje de un total de referencia. Revela concentraciones y pesos anormales.&lt;/span&gt;
+  &lt;/span&gt;
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;ova-giro&quot; aria-pressed=&quot;false&quot;&gt;
+  &lt;span class=&quot;ova-giro__cara ova-giro__frente&quot;&gt;
+    &lt;span class=&quot;ova-giro__num&quot;&gt;02&lt;/span&gt;
+    &lt;span class=&quot;ova-giro__titulo&quot;&gt;Análisis horizontal&lt;/span&gt;
+    &lt;span class=&quot;ova-giro__pista&quot;&gt;&lt;iconify-icon icon=&quot;mdi:rotate-3d-variant&quot;&gt;&lt;/iconify-icon&gt; Toque para girar&lt;/span&gt;
+  &lt;/span&gt;
+  &lt;span class=&quot;ova-giro__cara ova-giro__dorso&quot;&gt;
+    &lt;span class=&quot;ova-giro__etiqueta&quot;&gt;Responde a&lt;/span&gt;
+    &lt;span class=&quot;ova-giro__pregunta&quot;&gt;¿Hacia dónde se mueve la empresa?&lt;/span&gt;
+    &lt;span class=&quot;ova-giro__texto&quot;&gt;Compara la misma partida entre periodos. Variación absoluta, relativa o índice. Muestra tendencias y quiebres.&lt;/span&gt;
+  &lt;/span&gt;
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;ova-giro&quot; aria-pressed=&quot;false&quot;&gt;
+  &lt;span class=&quot;ova-giro__cara ova-giro__frente&quot;&gt;
+    &lt;span class=&quot;ova-giro__num&quot;&gt;03&lt;/span&gt;
+    &lt;span class=&quot;ova-giro__titulo&quot;&gt;Integración&lt;/span&gt;
+    &lt;span class=&quot;ova-giro__pista&quot;&gt;&lt;iconify-icon icon=&quot;mdi:rotate-3d-variant&quot;&gt;&lt;/iconify-icon&gt; Toque para girar&lt;/span&gt;
+  &lt;/span&gt;
+  &lt;span class=&quot;ova-giro__cara ova-giro__dorso&quot;&gt;
+    &lt;span class=&quot;ova-giro__etiqueta&quot;&gt;Responde a&lt;/span&gt;
+    &lt;span class=&quot;ova-giro__pregunta&quot;&gt;¿Qué diagnóstico se sostiene?&lt;/span&gt;
+    &lt;span class=&quot;ova-giro__texto&quot;&gt;Combina composición y trayectoria contra el sector. Es donde aparece la interpretación defendible que exige un analista.&lt;/span&gt;
+  &lt;/span&gt;
+&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
       </section>
 
       <section class="ua-seccion ua-seccion--variante" id="tarjeta-con-boton" data-reveal>
@@ -561,6 +902,7 @@ Separe los residuos aprovechables para que puedan transformarse en nuevos materi
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t5-tarjeta-boton"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t5-tarjeta-boton"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t5-tarjeta-boton"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Tarjeta con botón</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -576,5 +918,23 @@ Separe los residuos aprovechables para que puedan transformarse en nuevos materi
 <span class="ova-catalogo__gris">«Instrucción:» es opcional. Si el Word la trae, va literal; si no, va el llamado base del componente, el de esta ventana.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t5-tarjeta-boton"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Tarjeta con botón</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;div class=&quot;ova-tarjetas&quot;&gt;
+  &lt;div class=&quot;ova-tarjeta ova-tarjeta--boton&quot;&gt;
+    &lt;div class=&quot;ova-tarjeta__cuerpo&quot;&gt;
+      &lt;div class=&quot;ova-tarjeta__avatar ova-tarjeta__avatar--icono&quot;&gt;&lt;iconify-icon icon=&quot;mdi:map-marker-path&quot;&gt;&lt;/iconify-icon&gt;&lt;/div&gt;
+      &lt;h4&gt;Encuentre la ruta a su destino&lt;/h4&gt;
+      &lt;p&gt;Utilice Google Maps para buscar un lugar y consultar cómo llegar. Como práctica, encuentre la ruta desde su casa hasta una biblioteca o un parque cercano.&lt;/p&gt;
+      &lt;p class=&quot;ova-llamado&quot;&gt;&lt;span class=&quot;ova-llamado__mano&quot; aria-hidden=&quot;true&quot;&gt;&lt;iconify-icon icon=&quot;mdi:cursor-pointer&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;Haga clic en el botón para abrir y explorar su contenido.&lt;/p&gt;
+      &lt;a class=&quot;ova-btn ova-btn--outline&quot; href=&quot;https://www.google.com/maps&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;iconify-icon icon=&quot;mdi:open-in-new&quot;&gt;&lt;/iconify-icon&gt; Abrir Google Maps&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
       </section>

@@ -60,6 +60,7 @@
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t3-acordeon"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t3-acordeon"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t3-acordeon"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Acordeón</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -90,6 +91,55 @@ Responde <b>¿qué significan los hallazgos?</b> Los contrasta con la literatura
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t3-acordeon"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Acordeón</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;Las cuatro secciones IMRyD y la pregunta que responde cada una&lt;/strong&gt;&lt;/h3&gt;
+&lt;p class=&quot;ova-llamado&quot;&gt;&lt;span class=&quot;ova-llamado__mano&quot; aria-hidden=&quot;true&quot;&gt;&lt;iconify-icon icon=&quot;mdi:cursor-pointer&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;Despliegue cada sección para conocer su contenido.&lt;/p&gt;
+&lt;div class=&quot;ova-acordeon&quot;&gt;
+  &lt;div class=&quot;ova-acordeon__item is-open&quot;&gt;
+  &lt;button class=&quot;ova-acordeon__head&quot;&gt;&lt;span&gt;&lt;strong&gt;Introducción&lt;/strong&gt;&lt;/span&gt;&lt;iconify-icon class=&quot;ova-acordeon__chev&quot; icon=&quot;mdi:chevron-down&quot;&gt;&lt;/iconify-icon&gt;&lt;/button&gt;
+  &lt;div class=&quot;ova-acordeon__body&quot;&gt;&lt;div class=&quot;ova-acordeon__body-inner&quot;&gt;Responde &lt;strong&gt;¿qué problema se estudió y por qué importa?&lt;/strong&gt; Presenta el contexto, el vacío que la literatura no ha resuelto y la pregunta u objetivo del trabajo. Va de lo general a lo particular y termina en lo que el artículo se propone.&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-acordeon__item&quot;&gt;
+  &lt;button class=&quot;ova-acordeon__head&quot;&gt;&lt;span&gt;&lt;strong&gt;Ítem con foto&lt;/strong&gt;&lt;/span&gt;&lt;iconify-icon class=&quot;ova-acordeon__chev&quot; icon=&quot;mdi:chevron-down&quot;&gt;&lt;/iconify-icon&gt;&lt;/button&gt;
+  &lt;div class=&quot;ova-acordeon__body&quot;&gt;&lt;div class=&quot;ova-acordeon__body-inner&quot;&gt;
+    &lt;p&gt;Responde &lt;strong&gt;¿cómo se estudió?&lt;/strong&gt; Describe el diseño, los participantes o materiales, los instrumentos, el procedimiento y el análisis con el detalle suficiente para que otro investigador pueda repetir el estudio.&lt;/p&gt;
+    &lt;figure class=&quot;ova-figura ova-figura--plana&quot;&gt;
+      &lt;div class=&quot;ova-figura__hero&quot;&gt;
+        &lt;img src=&quot;assets/img/curso/foto-podcast.webp&quot; alt=&quot;Imagen de ejemplo.&quot; /&gt;
+      &lt;/div&gt;
+      &lt;figcaption class=&quot;ova-figura__leyenda&quot;&gt;&lt;b&gt;Figura 1.&lt;/b&gt; Leyenda de ejemplo: lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/figcaption&gt;
+    &lt;/figure&gt;
+  &lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-acordeon__item&quot;&gt;
+  &lt;button class=&quot;ova-acordeon__head&quot;&gt;&lt;span&gt;&lt;strong&gt;Ítem con foto lateral&lt;/strong&gt;&lt;/span&gt;&lt;iconify-icon class=&quot;ova-acordeon__chev&quot; icon=&quot;mdi:chevron-down&quot;&gt;&lt;/iconify-icon&gt;&lt;/button&gt;
+  &lt;div class=&quot;ova-acordeon__body&quot;&gt;&lt;div class=&quot;ova-acordeon__body-inner&quot;&gt;
+    &lt;div class=&quot;ova-acordeon__media&quot;&gt;
+      &lt;div&gt;
+        &lt;p&gt;Responde &lt;strong&gt;¿qué se encontró?&lt;/strong&gt; Presenta los hallazgos en el orden de los objetivos, con tablas y figuras que no repiten el texto.&lt;/p&gt;
+        &lt;p&gt;Aquí no se interpreta: se informa.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;figure class=&quot;ova-figura ova-figura--plana&quot;&gt;
+        &lt;div class=&quot;ova-figura__hero&quot;&gt;
+          &lt;!-- foto-lectura.webp: licencia sin documentar. No reutilizar en otras pantallas; si no se confirma, se cambia por otra foto o por la pieza «Figura pendiente» del catálogo. --&gt;
+          &lt;img src=&quot;assets/img/curso/foto-lectura.webp&quot; alt=&quot;Imagen de ejemplo.&quot; /&gt;
+        &lt;/div&gt;
+        &lt;figcaption class=&quot;ova-figura__leyenda&quot;&gt;&lt;b&gt;Figura 2.&lt;/b&gt; Leyenda de ejemplo.&lt;/figcaption&gt;
+      &lt;/figure&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-acordeon__item&quot;&gt;
+  &lt;button class=&quot;ova-acordeon__head&quot;&gt;&lt;span&gt;&lt;strong&gt;Discusión&lt;/strong&gt;&lt;/span&gt;&lt;iconify-icon class=&quot;ova-acordeon__chev&quot; icon=&quot;mdi:chevron-down&quot;&gt;&lt;/iconify-icon&gt;&lt;/button&gt;
+  &lt;div class=&quot;ova-acordeon__body&quot;&gt;&lt;div class=&quot;ova-acordeon__body-inner&quot;&gt;Responde &lt;strong&gt;¿qué significan los hallazgos?&lt;/strong&gt; Los contrasta con la literatura, reconoce las limitaciones del estudio y señala sus implicaciones. Va de lo particular a lo general: el camino inverso de la introducción.&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
       </section>
 
       <section class="ua-seccion" id="carrusel-y-slide" data-reveal>
@@ -109,6 +159,7 @@ Responde <b>¿qué significan los hallazgos?</b> Los contrasta con la literatura
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t3-carrusel"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t3-carrusel"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t3-carrusel"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Carrusel</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -139,6 +190,26 @@ Decir qué cambia en la práctica, la política o la teoría si el hallazgo se c
 <span class="ova-catalogo__gris">«Instrucción:» es opcional. Si el Word la trae, va literal; si no, va el llamado base del componente, el de esta ventana.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t3-carrusel"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Carrusel</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;Seis verbos que no pueden faltar en la discusión&lt;/strong&gt;&lt;/h3&gt;
+&lt;p class=&quot;ova-llamado&quot;&gt;&lt;span class=&quot;ova-llamado__mano&quot; aria-hidden=&quot;true&quot;&gt;&lt;iconify-icon icon=&quot;mdi:cursor-pointer&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;Avance por cada apartado con los botones anterior o siguiente, para conocer el contenido.&lt;/p&gt;
+&lt;div class=&quot;ova-carrusel ova-carrusel--tarjetas&quot;&gt;
+  &lt;div class=&quot;ova-carrusel__track-wrap&quot;&gt;&lt;div class=&quot;ova-carrusel__track&quot;&gt;
+    &lt;div class=&quot;ova-carrusel__slide&quot;&gt;&lt;iconify-icon icon=&quot;mdi:compare-horizontal&quot;&gt;&lt;/iconify-icon&gt;&lt;h4&gt;Comparar&lt;/h4&gt;&lt;p&gt;Poner los resultados frente a los de otros estudios: en qué coinciden, en qué se apartan y con qué magnitud.&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;ova-carrusel__slide&quot;&gt;&lt;iconify-icon icon=&quot;mdi:message-text-outline&quot;&gt;&lt;/iconify-icon&gt;&lt;h4&gt;Explicar&lt;/h4&gt;&lt;p&gt;Proponer por qué se obtuvo lo que se obtuvo, con una razón que el método permita sostener.&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;ova-carrusel__slide&quot;&gt;&lt;iconify-icon icon=&quot;mdi:fence&quot;&gt;&lt;/iconify-icon&gt;&lt;h4&gt;Limitar&lt;/h4&gt;&lt;p&gt;Decir hasta dónde llegan los resultados: tamaño de la muestra, contexto, instrumentos. Una limitación declarada no es una debilidad.&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;ova-carrusel__slide&quot;&gt;&lt;iconify-icon icon=&quot;mdi:lightbulb-on-outline&quot;&gt;&lt;/iconify-icon&gt;&lt;h4&gt;Proponer&lt;/h4&gt;&lt;p&gt;Señalar qué estudio seguiría a este y qué pregunta queda abierta. Es lo que otro investigador buscará primero.&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;ova-carrusel__slide&quot;&gt;&lt;iconify-icon icon=&quot;mdi:check-decagram-outline&quot;&gt;&lt;/iconify-icon&gt;&lt;h4&gt;Reconocer&lt;/h4&gt;&lt;p&gt;Admitir los resultados que contradicen la hipótesis y los datos que no se explican. Esconderlos se nota en la revisión.&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;ova-carrusel__slide&quot;&gt;&lt;iconify-icon icon=&quot;mdi:arrow-top-right-thin&quot;&gt;&lt;/iconify-icon&gt;&lt;h4&gt;Proyectar&lt;/h4&gt;&lt;p&gt;Decir qué cambia en la práctica, la política o la teoría si el hallazgo se confirma, sin prometer más de lo que el dato permite.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&quot;ova-carrusel__nav&quot;&gt;&lt;div class=&quot;ova-carrusel__dots&quot;&gt;&lt;/div&gt;&lt;div class=&quot;ova-carrusel__arrows&quot;&gt;&lt;button class=&quot;ova-carrusel__arrow&quot; data-ova-carrusel-prev aria-label=&quot;Anterior&quot;&gt;&lt;iconify-icon icon=&quot;mdi:arrow-left&quot;&gt;&lt;/iconify-icon&gt;&lt;/button&gt;&lt;button class=&quot;ova-carrusel__arrow&quot; data-ova-carrusel-next aria-label=&quot;Siguiente&quot;&gt;&lt;iconify-icon icon=&quot;mdi:arrow-right&quot;&gt;&lt;/iconify-icon&gt;&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
       </section>
 
@@ -174,6 +245,7 @@ Decir qué cambia en la práctica, la política o la teoría si el hallazgo se c
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t3-galeria"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t3-galeria"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t3-galeria"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Carrusel de fotos</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -198,6 +270,41 @@ Decir qué cambia en la práctica, la política o la teoría si el hallazgo se c
 <span class="ova-catalogo__gris">«Instrucción:» es opcional. Si el Word la trae, va literal; si no, va el llamado base del componente, el de esta ventana.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t3-galeria"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Carrusel de fotos</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;Cuatro escenas del trabajo de escritura&lt;/strong&gt;&lt;/h3&gt;
+&lt;p class=&quot;ova-llamado&quot;&gt;&lt;span class=&quot;ova-llamado__mano&quot; aria-hidden=&quot;true&quot;&gt;&lt;iconify-icon icon=&quot;mdi:cursor-pointer&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;Avance por cada apartado con los botones anterior o siguiente, para conocer el contenido.&lt;/p&gt;
+&lt;div class=&quot;ova-galeria&quot; aria-label=&quot;Carrusel de fotos: cuatro escenas del trabajo de escritura&quot;&gt;
+  &lt;div class=&quot;ova-galeria__pista&quot;&gt;
+    &lt;div class=&quot;ova-galeria__item&quot; tabindex=&quot;0&quot;&gt;
+  &lt;img src=&quot;assets/img/curso/foto-podcast.webp&quot; alt=&quot;Estudiante de pie con una carpeta abierta en un patio universitario; al fondo, tres compañeros trabajan en una mesa.&quot;&gt;
+  &lt;div class=&quot;ova-galeria__pie&quot;&gt;&lt;small&gt;Escena 1&lt;/small&gt;&lt;strong&gt;Discutir el problema con los pares&lt;/strong&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-galeria__item&quot; tabindex=&quot;0&quot;&gt;
+  &lt;img src=&quot;assets/img/curso/galeria-matriz.webp&quot; alt=&quot;Mujer con anteojos lee un libro junto a un portátil abierto, en una mesa de trabajo en casa.&quot;&gt;
+  &lt;div class=&quot;ova-galeria__pie&quot;&gt;&lt;small&gt;Escena 2&lt;/small&gt;&lt;strong&gt;Construir la matriz de lectura&lt;/strong&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-galeria__item&quot; tabindex=&quot;0&quot;&gt;
+  &lt;img src=&quot;assets/img/curso/portada-persona.webp&quot; alt=&quot;Mujer joven de camisa blanca sostiene una tableta en un espacio de trabajo con poca luz; la pantalla le ilumina el rostro.&quot;&gt;
+  &lt;div class=&quot;ova-galeria__pie&quot;&gt;&lt;small&gt;Escena 3&lt;/small&gt;&lt;strong&gt;Revisar el manuscrito en pantalla&lt;/strong&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-galeria__item&quot; tabindex=&quot;0&quot;&gt;
+  &lt;img src=&quot;assets/img/curso/galeria-revision.webp&quot; alt=&quot;Mujer sentada en un escritorio de casa trabaja en un portátil, con una lámpara encendida.&quot;&gt;
+  &lt;div class=&quot;ova-galeria__pie&quot;&gt;&lt;small&gt;Escena 4&lt;/small&gt;&lt;strong&gt;Enviar y esperar la revisión&lt;/strong&gt;&lt;/div&gt;
+&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ova-galeria__nav&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;ova-galeria__btn&quot; data-ova-galeria-prev aria-label=&quot;Imagen anterior&quot;&gt;&lt;iconify-icon icon=&quot;mdi:arrow-left&quot;&gt;&lt;/iconify-icon&gt;&lt;/button&gt;
+    &lt;div class=&quot;ova-galeria__puntos&quot;&gt;&lt;/div&gt;
+    &lt;button type=&quot;button&quot; class=&quot;ova-galeria__btn&quot; data-ova-galeria-next aria-label=&quot;Imagen siguiente&quot;&gt;&lt;iconify-icon icon=&quot;mdi:arrow-right&quot;&gt;&lt;/iconify-icon&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;p class=&quot;ova-galeria__ayuda&quot;&gt;También puede usar las flechas del teclado.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
       </section>
 
@@ -256,6 +363,7 @@ Decir qué cambia en la práctica, la política o la teoría si el hallazgo se c
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t3-slide"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t3-slide"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t3-slide"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Slide</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -288,6 +396,64 @@ Con el lanzamiento de ChatGPT en noviembre de 2022 la inteligencia artificial ge
 <span class="ova-catalogo__gris">«Instrucción:» es opcional. Si el Word la trae, va literal; si no, va el llamado base del componente, el de esta ventana.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t3-slide"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Slide</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;Cuatro líderes de la tecnología&lt;/strong&gt;&lt;/h3&gt;
+&lt;p class=&quot;ova-llamado&quot;&gt;&lt;span class=&quot;ova-llamado__mano&quot; aria-hidden=&quot;true&quot;&gt;&lt;iconify-icon icon=&quot;mdi:cursor-pointer&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;Avance por cada apartado con los botones anterior o siguiente, para conocer el contenido.&lt;/p&gt;
+&lt;div class=&quot;ova-carrusel ova-carrusel--slide&quot; data-ova-visibles=&quot;1&quot;&gt;
+  &lt;div class=&quot;ova-carrusel__track-wrap&quot;&gt;&lt;div class=&quot;ova-carrusel__track&quot;&gt;
+    &lt;div class=&quot;ova-carrusel__slide&quot;&gt;
+  &lt;div class=&quot;ova-carrusel__texto&quot;&gt;
+    &lt;h4&gt;Slide 1 · Elon Musk&lt;/h4&gt;
+    &lt;p&gt;Dirige Tesla, SpaceX y xAI, la empresa que desarrolla el modelo Grok. Compró Twitter en 2022 y la convirtió en X.&lt;/p&gt;
+    &lt;p&gt;Sus empresas abarcan autos eléctricos, cohetes reutilizables, satélites de internet e inteligencia artificial.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ova-carrusel__retrato&quot;&gt;
+    &lt;span class=&quot;ova-carrusel__retrato-fondo&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;ova-carrusel__retrato-marco&quot;&gt;&lt;img class=&quot;ova-carrusel__retrato-foto&quot; src=&quot;assets/img/curso/retrato-musk.webp&quot; alt=&quot;Elon Musk, de traje oscuro y camisa blanca, mira a la cámara con gesto serio.&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-carrusel__slide&quot;&gt;
+  &lt;div class=&quot;ova-carrusel__texto&quot;&gt;
+    &lt;h4&gt;Slide 2 · Mark Zuckerberg&lt;/h4&gt;
+    &lt;p&gt;Fundó Facebook en 2004 desde Harvard y hoy dirige Meta, dueña de Facebook, Instagram y WhatsApp.&lt;/p&gt;
+    &lt;p&gt;Meta publica los modelos Llama con pesos abiertos, que cualquiera puede descargar y ejecutar en sus propios equipos.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ova-carrusel__retrato&quot;&gt;
+    &lt;span class=&quot;ova-carrusel__retrato-fondo&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;ova-carrusel__retrato-marco&quot;&gt;&lt;img class=&quot;ova-carrusel__retrato-foto&quot; src=&quot;assets/img/curso/retrato-zuckerberg.webp&quot; alt=&quot;Mark Zuckerberg, con suéter gris, habla en un escenario.&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-carrusel__slide&quot;&gt;
+  &lt;div class=&quot;ova-carrusel__texto&quot;&gt;
+    &lt;h4&gt;Slide 3 · Dario Amodei&lt;/h4&gt;
+    &lt;p&gt;Cofundó Anthropic en 2021 con su hermana Daniela y otros investigadores que venían de OpenAI, y es su director ejecutivo.&lt;/p&gt;
+    &lt;p&gt;Anthropic desarrolla Claude y pone la seguridad de los modelos en el centro de su investigación.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ova-carrusel__retrato&quot;&gt;
+    &lt;span class=&quot;ova-carrusel__retrato-fondo&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;ova-carrusel__retrato-marco&quot;&gt;&lt;img class=&quot;ova-carrusel__retrato-foto&quot; src=&quot;assets/img/curso/retrato-amodei.webp&quot; alt=&quot;Dario Amodei, con anteojos y camisa azul, habla con la mano en alto.&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-carrusel__slide&quot;&gt;
+  &lt;div class=&quot;ova-carrusel__texto&quot;&gt;
+    &lt;h4&gt;Slide 4 · Sam Altman&lt;/h4&gt;
+    &lt;p&gt;Dirige OpenAI, la empresa de ChatGPT, desde 2019. Antes presidió la aceleradora de empresas emergentes Y Combinator.&lt;/p&gt;
+    &lt;p&gt;Con el lanzamiento de ChatGPT en noviembre de 2022 la inteligencia artificial generativa llegó al público masivo.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ova-carrusel__retrato&quot;&gt;
+    &lt;span class=&quot;ova-carrusel__retrato-fondo&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;ova-carrusel__retrato-marco&quot;&gt;&lt;img class=&quot;ova-carrusel__retrato-foto&quot; src=&quot;assets/img/curso/retrato-altman.webp&quot; alt=&quot;Sam Altman, con camiseta oscura, habla en un escenario.&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+  &lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&quot;ova-carrusel__nav&quot;&gt;&lt;div class=&quot;ova-carrusel__dots&quot;&gt;&lt;/div&gt;&lt;div class=&quot;ova-carrusel__arrows&quot;&gt;&lt;button class=&quot;ova-carrusel__arrow&quot; data-ova-carrusel-prev aria-label=&quot;Slide anterior&quot;&gt;&lt;iconify-icon icon=&quot;mdi:arrow-left&quot;&gt;&lt;/iconify-icon&gt;&lt;/button&gt;&lt;button class=&quot;ova-carrusel__arrow&quot; data-ova-carrusel-next aria-label=&quot;Slide siguiente&quot;&gt;&lt;iconify-icon icon=&quot;mdi:arrow-right&quot;&gt;&lt;/iconify-icon&gt;&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
 
         <h2 class="ua-seccion__titulo ua-titulo--variante">Slide - con fondo <span class="ua-sub__nota">(número + título + texto + imagen, sobre un fondo oscuro con textura)</span></h2>
@@ -345,6 +511,7 @@ Con el lanzamiento de ChatGPT en noviembre de 2022 la inteligencia artificial ge
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t3-slide-fondo"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t3-slide-fondo"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t3-slide-fondo"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Slide - con fondo</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -383,6 +550,65 @@ Es la opción habitual cuando la información del proyecto no puede salir de la 
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t3-slide-fondo"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Slide - con fondo</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;Modelos de IA generativa&lt;/strong&gt;&lt;/h3&gt;
+&lt;p class=&quot;ova-llamado&quot;&gt;&lt;span class=&quot;ova-llamado__mano&quot; aria-hidden=&quot;true&quot;&gt;&lt;iconify-icon icon=&quot;mdi:cursor-pointer&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;Avance por cada apartado con los botones anterior o siguiente, para conocer el contenido.&lt;/p&gt;
+&lt;div class=&quot;ova-carrusel ova-carrusel--slide ova-carrusel--fondo&quot; data-ova-visibles=&quot;1&quot;&gt;
+  &lt;div class=&quot;ova-carrusel__track-wrap&quot;&gt;&lt;div class=&quot;ova-carrusel__track&quot;&gt;
+    &lt;div class=&quot;ova-carrusel__slide ova-carrusel__lamina ova-carrusel__lamina--naranja&quot;&gt;
+  &lt;span class=&quot;ova-carrusel__num&quot; aria-hidden=&quot;true&quot;&gt;01&lt;/span&gt;
+  &lt;div class=&quot;ova-carrusel__texto&quot;&gt;
+    &lt;h4&gt;Claude&lt;/h4&gt;
+    &lt;p&gt;Modelo de Anthropic. Se le pide razonar paso a paso, leer documentos largos y escribir con un tono cuidado; responde mejor cuando el encargo trae el contexto y el formato esperado.&lt;/p&gt;
+    &lt;p&gt;Se usa desde la aplicación web, la aplicación de escritorio y la API; en escritura académica sirve para contrastar un borrador y pedir objeciones.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ova-carrusel__arte&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;ova-carrusel__anillo&quot;&gt;&lt;/span&gt;&lt;span class=&quot;ova-carrusel__disco&quot;&gt;&lt;iconify-icon icon=&quot;simple-icons:anthropic&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-carrusel__slide ova-carrusel__lamina ova-carrusel__lamina--verde&quot;&gt;
+  &lt;span class=&quot;ova-carrusel__num&quot; aria-hidden=&quot;true&quot;&gt;02&lt;/span&gt;
+  &lt;div class=&quot;ova-carrusel__texto&quot;&gt;
+    &lt;h4&gt;ChatGPT&lt;/h4&gt;
+    &lt;p&gt;Asistente de OpenAI sobre la familia GPT. Es el más extendido: conversación, análisis de archivos, generación de imágenes y navegación en la misma ventana.&lt;/p&gt;
+    &lt;p&gt;Permite crear asistentes propios con instrucciones fijas, útiles para repetir una misma revisión sobre muchos textos.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ova-carrusel__arte&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;ova-carrusel__anillo&quot;&gt;&lt;/span&gt;&lt;span class=&quot;ova-carrusel__disco&quot;&gt;&lt;iconify-icon icon=&quot;simple-icons:openai&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-carrusel__slide ova-carrusel__lamina ova-carrusel__lamina--azul&quot;&gt;
+  &lt;span class=&quot;ova-carrusel__num&quot; aria-hidden=&quot;true&quot;&gt;03&lt;/span&gt;
+  &lt;div class=&quot;ova-carrusel__texto&quot;&gt;
+    &lt;h4&gt;Gemini&lt;/h4&gt;
+    &lt;p&gt;Modelo de Google DeepMind integrado en el buscador, en Gmail, en Docs y en Android. Trabaja con texto, imagen, audio y video en una sola conversación.&lt;/p&gt;
+    &lt;p&gt;Su ventaja en el aula es el acceso directo a los documentos de Google Drive del curso sin copiarlos.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ova-carrusel__arte&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;ova-carrusel__anillo&quot;&gt;&lt;/span&gt;&lt;span class=&quot;ova-carrusel__disco&quot;&gt;&lt;iconify-icon icon=&quot;simple-icons:googlegemini&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-carrusel__slide ova-carrusel__lamina ova-carrusel__lamina--gris&quot;&gt;
+  &lt;span class=&quot;ova-carrusel__num&quot; aria-hidden=&quot;true&quot;&gt;04&lt;/span&gt;
+  &lt;div class=&quot;ova-carrusel__texto&quot;&gt;
+    &lt;h4&gt;Grok&lt;/h4&gt;
+    &lt;p&gt;Modelo de xAI disponible dentro de X y como aplicación propia. Responde con información reciente de la red social y con un tono más informal.&lt;/p&gt;
+    &lt;p&gt;Para un trabajo académico, sus respuestas se contrastan con una fuente verificable antes de citarlas.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ova-carrusel__arte&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;ova-carrusel__anillo&quot;&gt;&lt;/span&gt;&lt;span class=&quot;ova-carrusel__disco&quot;&gt;&lt;iconify-icon icon=&quot;simple-icons:x&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-carrusel__slide ova-carrusel__lamina ova-carrusel__lamina--ocre&quot;&gt;
+  &lt;span class=&quot;ova-carrusel__num&quot; aria-hidden=&quot;true&quot;&gt;05&lt;/span&gt;
+  &lt;div class=&quot;ova-carrusel__texto&quot;&gt;
+    &lt;h4&gt;Llama&lt;/h4&gt;
+    &lt;p&gt;Familia de modelos de Meta con pesos abiertos: se descargan y se ejecutan en servidores propios o en el computador, sin enviar datos a un tercero.&lt;/p&gt;
+    &lt;p&gt;Es la opción habitual cuando la información del proyecto no puede salir de la institución.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ova-carrusel__arte&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;ova-carrusel__anillo&quot;&gt;&lt;/span&gt;&lt;span class=&quot;ova-carrusel__disco&quot;&gt;&lt;iconify-icon icon=&quot;simple-icons:meta&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+  &lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&quot;ova-carrusel__nav&quot;&gt;&lt;div class=&quot;ova-carrusel__dots&quot;&gt;&lt;/div&gt;&lt;div class=&quot;ova-carrusel__arrows&quot;&gt;&lt;button class=&quot;ova-carrusel__arrow&quot; data-ova-carrusel-prev aria-label=&quot;Slide anterior&quot;&gt;&lt;iconify-icon icon=&quot;mdi:arrow-left&quot;&gt;&lt;/iconify-icon&gt;&lt;/button&gt;&lt;button class=&quot;ova-carrusel__arrow&quot; data-ova-carrusel-next aria-label=&quot;Slide siguiente&quot;&gt;&lt;iconify-icon icon=&quot;mdi:arrow-right&quot;&gt;&lt;/iconify-icon&gt;&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
       </section>
 
       <section class="ua-seccion" id="pestanas" data-reveal>
@@ -403,6 +629,7 @@ Es la opción habitual cuando la información del proyecto no puede salir de la 
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t3-pestanas"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t3-pestanas"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t3-pestanas"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Pestañas</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -428,6 +655,27 @@ Los gases no tienen forma ni volumen definidos. Sus partículas están muy separ
 <span class="ova-catalogo__gris">«Instrucción:» es opcional. Si el Word la trae, va literal; si no, va el llamado base del componente, el de esta ventana.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t3-pestanas"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Pestañas</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;Los estados de la materia&lt;/strong&gt;&lt;/h3&gt;
+&lt;p class=&quot;ova-llamado&quot;&gt;&lt;span class=&quot;ova-llamado__mano&quot; aria-hidden=&quot;true&quot;&gt;&lt;iconify-icon icon=&quot;mdi:cursor-pointer&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;Seleccione cada pestaña para conocer el contenido.&lt;/p&gt;
+&lt;div class=&quot;ova-tabs ova-tabs--pildoras&quot;&gt;
+  &lt;div class=&quot;ova-tabs__nav&quot;&gt;
+    &lt;button class=&quot;ova-tabs__btn is-active&quot;&gt;&lt;iconify-icon icon=&quot;mdi:cube-outline&quot;&gt;&lt;/iconify-icon&gt; &lt;strong&gt;Sólido&lt;/strong&gt;&lt;/button&gt;
+&lt;button class=&quot;ova-tabs__btn&quot;&gt;&lt;iconify-icon icon=&quot;mdi:water-outline&quot;&gt;&lt;/iconify-icon&gt; &lt;strong&gt;Líquido&lt;/strong&gt;&lt;/button&gt;
+&lt;button class=&quot;ova-tabs__btn&quot;&gt;&lt;iconify-icon icon=&quot;mdi:cloud-outline&quot;&gt;&lt;/iconify-icon&gt; &lt;strong&gt;Gaseoso&lt;/strong&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ova-tabs__panels&quot;&gt;
+    &lt;div class=&quot;ova-tabs__panel is-active&quot;&gt;&lt;p&gt;Los sólidos tienen forma y volumen definidos. Sus partículas están muy juntas y vibran alrededor de posiciones fijas. Por eso, mantienen su forma cuando los cambiamos de recipiente.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Ejemplo cotidiano:&lt;/strong&gt; Un cubo de hielo conserva su forma al colocarlo en un vaso o en un plato, mientras no se derrita.&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;ova-tabs__panel&quot;&gt;&lt;p&gt;Los líquidos tienen un volumen definido, pero adoptan la forma del recipiente que los contiene. Sus partículas están próximas y pueden moverse unas respecto a otras, lo que les permite fluir.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Ejemplo cotidiano:&lt;/strong&gt; Al pasar agua de una botella a un vaso, cambia su forma, pero la cantidad de agua sigue siendo la misma.&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;ova-tabs__panel&quot;&gt;&lt;p&gt;Los gases no tienen forma ni volumen definidos. Sus partículas están muy separadas y se mueven libremente, por lo que se expanden hasta ocupar el espacio disponible.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Ejemplo cotidiano:&lt;/strong&gt; Al inflar un globo, el aire que se introduce ocupa su interior y hace que aumente de tamaño.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
 
         <h2 class="ua-seccion__titulo ua-titulo--variante" id="pestanas-linea">Pestañas - línea</h2>
@@ -461,6 +709,7 @@ Los gases no tienen forma ni volumen definidos. Sus partículas están muy separ
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t3-pestanas-linea"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t3-pestanas-linea"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t3-pestanas-linea"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Pestañas - línea</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -494,6 +743,41 @@ Es el navegador de Apple, disponible en dispositivos como Mac, iPhone y iPad. Pe
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t3-pestanas-linea"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Pestañas - línea</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;Navegadores de internet&lt;/strong&gt;&lt;/h3&gt;
+&lt;p class=&quot;ova-llamado&quot;&gt;&lt;span class=&quot;ova-llamado__mano&quot; aria-hidden=&quot;true&quot;&gt;&lt;iconify-icon icon=&quot;mdi:cursor-pointer&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;Seleccione cada pestaña para conocer el contenido.&lt;/p&gt;
+&lt;div class=&quot;ova-tabs&quot;&gt;
+  &lt;div class=&quot;ova-tabs__nav&quot;&gt;
+    &lt;button class=&quot;ova-tabs__btn is-active&quot;&gt;&lt;strong&gt;Google Chrome&lt;/strong&gt;&lt;/button&gt;
+&lt;button class=&quot;ova-tabs__btn&quot;&gt;&lt;strong&gt;Mozilla Firefox&lt;/strong&gt;&lt;/button&gt;
+&lt;button class=&quot;ova-tabs__btn&quot;&gt;&lt;strong&gt;Microsoft Edge&lt;/strong&gt;&lt;/button&gt;
+&lt;button class=&quot;ova-tabs__btn&quot;&gt;&lt;strong&gt;Safari&lt;/strong&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ova-tabs__panels&quot;&gt;
+    &lt;div class=&quot;ova-tabs__panel is-active&quot;&gt;&lt;div class=&quot;ova-tabs__media&quot;&gt;
+  &lt;div&gt;&lt;p&gt;Es un navegador desarrollado por Google. Permite visitar páginas web, guardar sitios favoritos y organizar varias páginas en pestañas. Al iniciar sesión, puede sincronizar sus marcadores entre dispositivos.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Ejemplo de uso:&lt;/strong&gt; Abra su curso en una pestaña y un material de consulta en otra para revisar ambos mientras realiza una actividad.&lt;/p&gt;&lt;/div&gt;
+  &lt;div class=&quot;ova-tabs__icono&quot; aria-hidden=&quot;true&quot;&gt;&lt;iconify-icon icon=&quot;logos:chrome&quot;&gt;&lt;/iconify-icon&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;ova-tabs__panel&quot;&gt;&lt;div class=&quot;ova-tabs__media&quot;&gt;
+  &lt;div&gt;&lt;p&gt;Es un navegador desarrollado por Mozilla. Ofrece herramientas de privacidad y opciones para personalizar la navegación. Puede organizar sus sitios favoritos y añadir extensiones según sus necesidades.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Ejemplo de uso:&lt;/strong&gt; Guarde la página de su curso en los marcadores para acceder fácilmente en su próxima sesión de estudio.&lt;/p&gt;&lt;/div&gt;
+  &lt;div class=&quot;ova-tabs__icono&quot; aria-hidden=&quot;true&quot;&gt;&lt;iconify-icon icon=&quot;logos:firefox&quot;&gt;&lt;/iconify-icon&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;ova-tabs__panel&quot;&gt;&lt;div class=&quot;ova-tabs__media&quot;&gt;
+  &lt;div&gt;&lt;p&gt;Es un navegador desarrollado por Microsoft. Incluye herramientas para consultar documentos PDF y facilitar la lectura de contenidos web, como la lectura en voz alta en páginas compatibles.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Ejemplo de uso:&lt;/strong&gt; Abra una guía de estudio en PDF y utilice el resaltador para identificar las ideas principales.&lt;/p&gt;&lt;/div&gt;
+  &lt;div class=&quot;ova-tabs__icono&quot; aria-hidden=&quot;true&quot;&gt;&lt;iconify-icon icon=&quot;logos:microsoft-edge&quot;&gt;&lt;/iconify-icon&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;ova-tabs__panel&quot;&gt;&lt;div class=&quot;ova-tabs__media&quot;&gt;
+  &lt;div&gt;&lt;p&gt;Es el navegador de Apple, disponible en dispositivos como Mac, iPhone y iPad. Permite guardar páginas en una lista de lectura y utilizar una vista simplificada en sitios compatibles.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Ejemplo de uso:&lt;/strong&gt; Active la vista de lector en un artículo compatible para concentrarse en el texto y reducir las distracciones visuales.&lt;/p&gt;&lt;/div&gt;
+  &lt;div class=&quot;ova-tabs__icono&quot; aria-hidden=&quot;true&quot;&gt;&lt;iconify-icon icon=&quot;logos:safari&quot;&gt;&lt;/iconify-icon&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
       </section>
 
       <section class="ua-seccion ua-seccion--variante" id="pestanas-verticales" data-reveal>
@@ -526,6 +810,7 @@ Es el navegador de Apple, disponible en dispositivos como Mac, iPhone y iPad. Pe
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t3-pestanas-verticales"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t3-pestanas-verticales"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t3-pestanas-verticales"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Pestañas verticales</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -554,6 +839,39 @@ Revise sus respuestas y reconozca qué necesita reforzar. Antes de terminar, def
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t3-pestanas-verticales"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Pestañas verticales</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;Organice su sesión de estudio&lt;/strong&gt;&lt;/h3&gt;
+&lt;p class=&quot;ova-llamado&quot;&gt;&lt;span class=&quot;ova-llamado__mano&quot; aria-hidden=&quot;true&quot;&gt;&lt;iconify-icon icon=&quot;mdi:cursor-pointer&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;Seleccione cada pestaña para conocer el contenido.&lt;/p&gt;
+&lt;div class=&quot;ova-tabs ova-tabs--vertical&quot;&gt;
+  &lt;div class=&quot;ova-tabs__nav&quot;&gt;
+    &lt;button class=&quot;ova-tabs__btn is-active&quot;&gt;&lt;strong&gt;Antes de estudiar&lt;/strong&gt;&lt;/button&gt;
+&lt;button class=&quot;ova-tabs__btn&quot;&gt;&lt;strong&gt;Durante el estudio&lt;/strong&gt;&lt;/button&gt;
+&lt;button class=&quot;ova-tabs__btn&quot;&gt;&lt;strong&gt;Después de estudiar&lt;/strong&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ova-tabs__panels&quot;&gt;
+    &lt;div class=&quot;ova-tabs__panel is-active&quot;&gt;
+  &lt;h4&gt;&lt;strong&gt;Prepare su espacio y defina una meta&lt;/strong&gt;&lt;/h4&gt;
+  &lt;p&gt;Elija un lugar cómodo, con buena iluminación y pocas distracciones. Tenga a mano los materiales que necesita y silencie las notificaciones del celular.&lt;/p&gt;
+  &lt;p&gt;Defina una meta concreta para la sesión. Por ejemplo: «Hoy estudiaré el ciclo del agua y explicaré sus etapas con mis propias palabras».&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-tabs__panel&quot;&gt;
+  &lt;h4&gt;&lt;strong&gt;Participe activamente en su aprendizaje&lt;/strong&gt;&lt;/h4&gt;
+  &lt;p&gt;Divida el contenido en partes pequeñas. Lea con atención, identifique las ideas principales y escriba notas con sus propias palabras. Alterne el estudio con pausas breves.&lt;/p&gt;
+  &lt;p&gt;Compruebe su comprensión haciendo preguntas. Por ejemplo: «¿Cómo le explicaría este concepto a alguien que no lo conoce?». Si encuentra una duda, anótela para resolverla.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-tabs__panel&quot;&gt;
+  &lt;h4&gt;&lt;strong&gt;Repase y compruebe lo aprendido&lt;/strong&gt;&lt;/h4&gt;
+  &lt;p&gt;Cierre el material e intente recordar las ideas principales. Puede elaborar un resumen, dibujar un esquema o responder preguntas sin consultar sus apuntes.&lt;/p&gt;
+  &lt;p&gt;Revise sus respuestas y reconozca qué necesita reforzar. Antes de terminar, defina cuándo repasará el tema y cuál será su siguiente objetivo de aprendizaje.&lt;/p&gt;
+&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
       </section>
 
       <section class="ua-seccion" id="ventana-modal" data-reveal>
@@ -570,6 +888,7 @@ Revise sus respuestas y reconozca qué necesita reforzar. Antes de terminar, def
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t3-boton-ventana-modal"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t3-boton-ventana-modal"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t3-boton-ventana-modal"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Botón de ventana modal</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -581,6 +900,23 @@ Revise sus respuestas y reconozca qué necesita reforzar. Antes de terminar, def
 <span class="ova-catalogo__gris">«Título de la ventana:» es opcional: si no viene, como en este ejemplo, la ventana lleva el título del botón. El texto admite varios párrafos y viñetas, con su negrilla. «Imagen sugerida:» es opcional y la produce el diseñador: va arriba del texto y la ventana se ensancha; si no llega, la ventana va sin imagen y el texto ocupa todo el ancho. El icono del botón lo pone el componente. En los Word anteriores, este componente se llamaba «Ventana de detalle» o «Modal»: se reconocen igual.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t3-boton-ventana-modal"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Botón de ventana modal</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;div class=&quot;ova-ventana&quot;&gt;
+  &lt;button class=&quot;ova-btn ova-btn--outline ova-ventana__boton&quot; data-ova-modal-open=&quot;ventana-ejemplo&quot;&gt;&lt;iconify-icon icon=&quot;mdi:card-text-outline&quot;&gt;&lt;/iconify-icon&gt; Volviendo al reto de la unidad&lt;/button&gt;
+  &lt;div class=&quot;ova-modal&quot; id=&quot;ventana-ejemplo&quot;&gt;&lt;div class=&quot;ova-modal__dialog&quot;&gt;
+    &lt;div class=&quot;ova-modal__head&quot;&gt;&lt;h3&gt;Volviendo al reto de la unidad&lt;/h3&gt;&lt;button class=&quot;ova-modal__close&quot; data-ova-modal-close aria-label=&quot;Cerrar&quot;&gt;&lt;iconify-icon icon=&quot;mdi:close&quot;&gt;&lt;/iconify-icon&gt;&lt;/button&gt;&lt;/div&gt;
+    &lt;div class=&quot;ova-modal__body&quot;&gt;
+      &lt;p&gt;En la empresa del caso, cada área guardaba sus propios datos de clientes. Con un responsable por conjunto de datos, las cifras de ventas y de cartera &lt;strong&gt;coinciden en todos los informes&lt;/strong&gt;.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;ova-modal__foot&quot;&gt;&lt;button class=&quot;ova-btn ova-btn--outline&quot; data-ova-modal-close&gt;Cerrar&lt;/button&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
       </section>
 
@@ -602,6 +938,7 @@ Revise sus respuestas y reconozca qué necesita reforzar. Antes de terminar, def
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t3-boton-ventana-modal-imagen"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t3-boton-ventana-modal-imagen"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t3-boton-ventana-modal-imagen"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Botón de ventana modal</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -617,5 +954,26 @@ Revise sus respuestas y reconozca qué necesita reforzar. Antes de terminar, def
 <span class="ova-catalogo__gris">Con «Título de la ventana:», la ventana lleva ese título y no el del botón. La imagen va arriba del texto, a todo el ancho de la ventana, que se abre a 900 px.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t3-boton-ventana-modal-imagen"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Botón de ventana modal</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;div class=&quot;ova-ventana&quot;&gt;
+  &lt;button class=&quot;ova-btn ova-btn--outline ova-ventana__boton&quot; data-ova-modal-open=&quot;ventana-ejemplo-imagen&quot;&gt;&lt;iconify-icon icon=&quot;mdi:card-text-outline&quot;&gt;&lt;/iconify-icon&gt; Conozca cómo funciona un panel solar&lt;/button&gt;
+  &lt;div class=&quot;ova-modal&quot; id=&quot;ventana-ejemplo-imagen&quot;&gt;&lt;div class=&quot;ova-modal__dialog&quot;&gt;
+    &lt;div class=&quot;ova-modal__head&quot;&gt;&lt;h3&gt;Del sol a la red eléctrica&lt;/h3&gt;&lt;button class=&quot;ova-modal__close&quot; data-ova-modal-close aria-label=&quot;Cerrar&quot;&gt;&lt;iconify-icon icon=&quot;mdi:close&quot;&gt;&lt;/iconify-icon&gt;&lt;/button&gt;&lt;/div&gt;
+    &lt;div class=&quot;ova-modal__body&quot;&gt;
+      &lt;figure class=&quot;ova-ventana__figura&quot;&gt;&lt;img src=&quot;assets/img/curso/foto-energia-solar-ancha.webp&quot; alt=&quot;Planta de paneles solares al aire libre en un día soleado.&quot; /&gt;&lt;/figure&gt;&lt;p&gt;Cada panel está formado por celdas de silicio que convierten la luz del sol en &lt;strong&gt;corriente continua&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;El inversor transforma esa corriente en alterna, la que usan los aparatos de la casa.&lt;/li&gt;
+  &lt;li&gt;Lo que no se consume en el momento pasa a una batería o a la red eléctrica.&lt;/li&gt;
+&lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;ova-modal__foot&quot;&gt;&lt;button class=&quot;ova-btn ova-btn--outline&quot; data-ova-modal-close&gt;Cerrar&lt;/button&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
       </section>

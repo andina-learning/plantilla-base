@@ -42,6 +42,7 @@
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t4-acordeon-numerado"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t4-acordeon-numerado"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t4-acordeon-numerado"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Acordeón numerado</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -69,6 +70,37 @@ Cargue la versión corregida, la versión con cambios marcados y la carta de res
 <span class="ova-catalogo__gris">«Instrucción:» es opcional. Si el Word la trae, va literal; si no, va el llamado base del componente, el de esta ventana.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t4-acordeon-numerado"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Acordeón numerado</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;Cómo responder a los revisores&lt;/strong&gt;&lt;/h3&gt;
+&lt;p class=&quot;ova-llamado&quot;&gt;&lt;span class=&quot;ova-llamado__mano&quot; aria-hidden=&quot;true&quot;&gt;&lt;iconify-icon icon=&quot;mdi:cursor-pointer&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;Despliegue cada paso para conocer su contenido.&lt;/p&gt;
+&lt;div class=&quot;ova-acordeon ova-acordeon--numerado&quot;&gt;
+  &lt;div class=&quot;ova-acordeon__item is-open&quot;&gt;
+  &lt;button class=&quot;ova-acordeon__head&quot;&gt;&lt;span&gt;&lt;span class=&quot;ova-acordeon__num&quot;&gt;1&lt;/span&gt; &lt;strong&gt;Leer el dictamen completo&lt;/strong&gt;&lt;/span&gt;&lt;iconify-icon class=&quot;ova-acordeon__chev&quot; icon=&quot;mdi:chevron-down&quot;&gt;&lt;/iconify-icon&gt;&lt;/button&gt;
+  &lt;div class=&quot;ova-acordeon__body&quot;&gt;&lt;div class=&quot;ova-acordeon__body-inner&quot;&gt;&lt;p&gt;Lea todos los comentarios antes de cambiar una sola línea. Identifique qué pide cada revisor y qué pide el editor.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-acordeon__item&quot;&gt;
+  &lt;button class=&quot;ova-acordeon__head&quot;&gt;&lt;span&gt;&lt;span class=&quot;ova-acordeon__num&quot;&gt;2&lt;/span&gt; &lt;strong&gt;Clasificar los comentarios&lt;/strong&gt;&lt;/span&gt;&lt;iconify-icon class=&quot;ova-acordeon__chev&quot; icon=&quot;mdi:chevron-down&quot;&gt;&lt;/iconify-icon&gt;&lt;/button&gt;
+  &lt;div class=&quot;ova-acordeon__body&quot;&gt;&lt;div class=&quot;ova-acordeon__body-inner&quot;&gt;&lt;p&gt;Separe los cambios de forma (redacción, formato, citas) de los de fondo (método, análisis, conclusiones).&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-acordeon__item&quot;&gt;
+  &lt;button class=&quot;ova-acordeon__head&quot;&gt;&lt;span&gt;&lt;span class=&quot;ova-acordeon__num&quot;&gt;3&lt;/span&gt; &lt;strong&gt;Hacer los cambios en el manuscrito&lt;/strong&gt;&lt;/span&gt;&lt;iconify-icon class=&quot;ova-acordeon__chev&quot; icon=&quot;mdi:chevron-down&quot;&gt;&lt;/iconify-icon&gt;&lt;/button&gt;
+  &lt;div class=&quot;ova-acordeon__body&quot;&gt;&lt;div class=&quot;ova-acordeon__body-inner&quot;&gt;&lt;p&gt;Corrija el texto y marque cada cambio para que el editor lo encuentre sin esfuerzo.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-acordeon__item&quot;&gt;
+  &lt;button class=&quot;ova-acordeon__head&quot;&gt;&lt;span&gt;&lt;span class=&quot;ova-acordeon__num&quot;&gt;4&lt;/span&gt; &lt;strong&gt;Escribir la carta de respuesta&lt;/strong&gt;&lt;/span&gt;&lt;iconify-icon class=&quot;ova-acordeon__chev&quot; icon=&quot;mdi:chevron-down&quot;&gt;&lt;/iconify-icon&gt;&lt;/button&gt;
+  &lt;div class=&quot;ova-acordeon__body&quot;&gt;&lt;div class=&quot;ova-acordeon__body-inner&quot;&gt;&lt;p&gt;Responda cada comentario en orden: qué cambió, dónde está el cambio y, si no lo acepta, por qué.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-acordeon__item&quot;&gt;
+  &lt;button class=&quot;ova-acordeon__head&quot;&gt;&lt;span&gt;&lt;span class=&quot;ova-acordeon__num&quot;&gt;5&lt;/span&gt; &lt;strong&gt;Reenviar el manuscrito&lt;/strong&gt;&lt;/span&gt;&lt;iconify-icon class=&quot;ova-acordeon__chev&quot; icon=&quot;mdi:chevron-down&quot;&gt;&lt;/iconify-icon&gt;&lt;/button&gt;
+  &lt;div class=&quot;ova-acordeon__body&quot;&gt;&lt;div class=&quot;ova-acordeon__body-inner&quot;&gt;&lt;p&gt;Cargue la versión corregida, la versión con cambios marcados y la carta de respuesta en la plataforma de la revista.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
       </section>
 
@@ -102,6 +134,7 @@ Cargue la versión corregida, la versión con cambios marcados y la carta de res
           </ol>
           <div class="ova-catalogo__acciones">
             <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t4-ruta-numerada"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+            <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t4-ruta-numerada"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
           </div>
           <div class="ova-modal" id="cat-t4-ruta-numerada"><div class="ova-modal__dialog">
             <div class="ova-modal__head"><h3>Ruta en zigzag - numerada</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -127,6 +160,36 @@ Completar la entrega.
 <span class="ova-catalogo__gris">Por paso: la línea «Paso N», el título en negrilla y la descripción. El número lo pone el componente. Si los pasos traen imagen, la ruta alterna texto e imagen.</span></div>
             </div>
             <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+          </div></div>
+          <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t4-ruta-numerada"><div class="ova-modal__dialog">
+            <div class="ova-modal__head"><h3>Ruta en zigzag - numerada</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+            <div class="ova-modal__body">
+              <p class="ova-catalogo__cab">Código del componente</p>
+              <pre class="ova-catalogo__codigo"><code>&lt;h4 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;Proceso de compra en una tienda online&lt;/strong&gt;&lt;/h4&gt;
+&lt;ol class=&quot;ova-ruta ova-ruta--texto&quot;&gt;
+  &lt;li class=&quot;ova-ruta__paso&quot;&gt;
+  &lt;span class=&quot;ova-ruta__num&quot; aria-hidden=&quot;true&quot;&gt;1&lt;/span&gt;
+  &lt;div class=&quot;ova-ruta__texto&quot;&gt;&lt;h4&gt;Elegir productos&lt;/h4&gt;&lt;p&gt;Agregarlos al carrito.&lt;/p&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;ova-ruta__paso&quot;&gt;
+  &lt;span class=&quot;ova-ruta__num&quot; aria-hidden=&quot;true&quot;&gt;2&lt;/span&gt;
+  &lt;div class=&quot;ova-ruta__texto&quot;&gt;&lt;h4&gt;Ingresar datos de entrega&lt;/h4&gt;&lt;p&gt;Indicar dirección y contacto.&lt;/p&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;ova-ruta__paso&quot;&gt;
+  &lt;span class=&quot;ova-ruta__num&quot; aria-hidden=&quot;true&quot;&gt;3&lt;/span&gt;
+  &lt;div class=&quot;ova-ruta__texto&quot;&gt;&lt;h4&gt;Seleccionar el pago&lt;/h4&gt;&lt;p&gt;Elegir el medio de pago.&lt;/p&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;ova-ruta__paso&quot;&gt;
+  &lt;span class=&quot;ova-ruta__num&quot; aria-hidden=&quot;true&quot;&gt;4&lt;/span&gt;
+  &lt;div class=&quot;ova-ruta__texto&quot;&gt;&lt;h4&gt;Confirmar la compra&lt;/h4&gt;&lt;p&gt;Revisar los datos y realizar el pedido.&lt;/p&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;ova-ruta__paso&quot;&gt;
+  &lt;span class=&quot;ova-ruta__num&quot; aria-hidden=&quot;true&quot;&gt;5&lt;/span&gt;
+  &lt;div class=&quot;ova-ruta__texto&quot;&gt;&lt;h4&gt;Recibir el pedido&lt;/h4&gt;&lt;p&gt;Completar la entrega.&lt;/p&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+            </div>
+            <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
           </div></div>
         </div>
 
@@ -157,6 +220,7 @@ Completar la entrega.
           </ol>
           <div class="ova-catalogo__acciones">
             <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t4-ruta-iconos"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+            <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t4-ruta-iconos"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
           </div>
           <div class="ova-modal" id="cat-t4-ruta-iconos"><div class="ova-modal__dialog">
             <div class="ova-modal__head"><h3>Ruta en zigzag - con iconos</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -183,6 +247,36 @@ Completar la entrega.
             </div>
             <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
           </div></div>
+          <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t4-ruta-iconos"><div class="ova-modal__dialog">
+            <div class="ova-modal__head"><h3>Ruta en zigzag - con iconos</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+            <div class="ova-modal__body">
+              <p class="ova-catalogo__cab">Código del componente</p>
+              <pre class="ova-catalogo__codigo"><code>&lt;h4 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;Proceso de compra en una tienda online&lt;/strong&gt;&lt;/h4&gt;
+&lt;ol class=&quot;ova-ruta ova-ruta--texto ova-ruta--iconos&quot;&gt;
+  &lt;li class=&quot;ova-ruta__paso&quot;&gt;
+  &lt;span class=&quot;ova-ruta__num&quot; aria-hidden=&quot;true&quot;&gt;&lt;iconify-icon icon=&quot;mdi:cart-plus&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;
+  &lt;div class=&quot;ova-ruta__texto&quot;&gt;&lt;h4&gt;Elegir productos&lt;/h4&gt;&lt;p&gt;Agregarlos al carrito.&lt;/p&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;ova-ruta__paso&quot;&gt;
+  &lt;span class=&quot;ova-ruta__num&quot; aria-hidden=&quot;true&quot;&gt;&lt;iconify-icon icon=&quot;mdi:map-marker-outline&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;
+  &lt;div class=&quot;ova-ruta__texto&quot;&gt;&lt;h4&gt;Ingresar datos de entrega&lt;/h4&gt;&lt;p&gt;Indicar dirección y contacto.&lt;/p&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;ova-ruta__paso&quot;&gt;
+  &lt;span class=&quot;ova-ruta__num&quot; aria-hidden=&quot;true&quot;&gt;&lt;iconify-icon icon=&quot;mdi:credit-card-outline&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;
+  &lt;div class=&quot;ova-ruta__texto&quot;&gt;&lt;h4&gt;Seleccionar el pago&lt;/h4&gt;&lt;p&gt;Elegir el medio de pago.&lt;/p&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;ova-ruta__paso&quot;&gt;
+  &lt;span class=&quot;ova-ruta__num&quot; aria-hidden=&quot;true&quot;&gt;&lt;iconify-icon icon=&quot;mdi:clipboard-check-outline&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;
+  &lt;div class=&quot;ova-ruta__texto&quot;&gt;&lt;h4&gt;Confirmar la compra&lt;/h4&gt;&lt;p&gt;Revisar los datos y realizar el pedido.&lt;/p&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;ova-ruta__paso&quot;&gt;
+  &lt;span class=&quot;ova-ruta__num&quot; aria-hidden=&quot;true&quot;&gt;&lt;iconify-icon icon=&quot;mdi:package-variant-closed-check&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;
+  &lt;div class=&quot;ova-ruta__texto&quot;&gt;&lt;h4&gt;Recibir el pedido&lt;/h4&gt;&lt;p&gt;Completar la entrega.&lt;/p&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+            </div>
+            <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+          </div></div>
         </div>
       </section>
 
@@ -207,6 +301,7 @@ Completar la entrega.
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t4-ruta-meta"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t4-ruta-meta"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t4-ruta-meta"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Ruta de inicio a meta</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -224,6 +319,29 @@ Completar la entrega.
 <span class="ova-catalogo__gris">Un inicio, de 4 a 6 pasos de una frase corta y una meta. El número de cada paso y las estrellas del inicio y la meta los pone el componente.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t4-ruta-meta"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Ruta de inicio a meta</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;Así se ve su camino…&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class=&quot;ova-trayecto&quot;&gt;
+  &lt;ol class=&quot;ova-trayecto__fila&quot;&gt;
+  &lt;li class=&quot;ova-trayecto__parada ova-trayecto__parada--inicio&quot;&gt;&lt;span class=&quot;ova-trayecto__marca&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;span class=&quot;ova-trayecto__texto&quot;&gt;Aspirante interesado&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;ova-trayecto__parada&quot;&gt;&lt;span class=&quot;ova-trayecto__marca&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;ova-trayecto__texto&quot;&gt;Descubra la oferta académica&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;ova-trayecto__parada&quot;&gt;&lt;span class=&quot;ova-trayecto__marca&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;ova-trayecto__texto&quot;&gt;Agende una sesión informativa 1:1&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol class=&quot;ova-trayecto__fila&quot;&gt;
+  &lt;li class=&quot;ova-trayecto__parada&quot;&gt;&lt;span class=&quot;ova-trayecto__marca&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;ova-trayecto__texto&quot;&gt;Realice su examen y entrevista&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;ova-trayecto__parada&quot;&gt;&lt;span class=&quot;ova-trayecto__marca&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;ova-trayecto__texto&quot;&gt;Recibe su carta de aceptación e inscripción&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;ova-trayecto__parada&quot;&gt;&lt;span class=&quot;ova-trayecto__marca&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;ova-trayecto__texto&quot;&gt;Inicia su programa en el aula virtual&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol class=&quot;ova-trayecto__fila&quot;&gt;
+  &lt;li class=&quot;ova-trayecto__parada ova-trayecto__parada--meta&quot;&gt;&lt;span class=&quot;ova-trayecto__marca&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;span class=&quot;ova-trayecto__texto&quot;&gt;Egresado / titulado&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
       </section>
 
@@ -291,6 +409,7 @@ Completar la entrega.
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t4-slider-pasos"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t4-slider-pasos"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t4-slider-pasos"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Slider de pasos</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -319,6 +438,73 @@ El 25 % de 40 es 10. Por lo tanto, 10 estudiantes participan en el taller. Para 
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t4-slider-pasos"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Slider de pasos</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;Calcule un porcentaje en 4 pasos&lt;/strong&gt;&lt;/h3&gt;
+&lt;p class=&quot;ova-llamado&quot;&gt;&lt;span class=&quot;ova-llamado__mano&quot; aria-hidden=&quot;true&quot;&gt;&lt;iconify-icon icon=&quot;mdi:cursor-pointer&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;Seleccione cada botón numerado para conocer su información.&lt;/p&gt;
+&lt;div class=&quot;ova-tabs ova-tabs--pasos&quot;&gt;
+  &lt;p class=&quot;ova-tabs__situacion&quot;&gt;&lt;strong&gt;Situación:&lt;/strong&gt; En un curso hay 40 estudiantes y el 25 % participa en un taller. ¿Cuántos estudiantes participan?&lt;/p&gt;
+  &lt;div class=&quot;ova-tabs__marco&quot;&gt;
+    &lt;div class=&quot;ova-tabs__nav&quot;&gt;
+      &lt;button class=&quot;ova-tabs__btn is-active&quot;&gt;&lt;span class=&quot;ova-tabs__num&quot;&gt;1&lt;/span&gt;&lt;span&gt;Identifique los datos&lt;/span&gt;&lt;/button&gt;
+&lt;button class=&quot;ova-tabs__btn&quot;&gt;&lt;span class=&quot;ova-tabs__num&quot;&gt;2&lt;/span&gt;&lt;span&gt;Convierta el porcentaje&lt;/span&gt;&lt;/button&gt;
+&lt;button class=&quot;ova-tabs__btn&quot;&gt;&lt;span class=&quot;ova-tabs__num&quot;&gt;3&lt;/span&gt;&lt;span&gt;Multiplique por el total&lt;/span&gt;&lt;/button&gt;
+&lt;button class=&quot;ova-tabs__btn&quot;&gt;&lt;span class=&quot;ova-tabs__num&quot;&gt;4&lt;/span&gt;&lt;span&gt;Interprete el resultado&lt;/span&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;ova-tabs__panels&quot;&gt;
+      &lt;div class=&quot;ova-tabs__panel is-active&quot;&gt;
+  &lt;div class=&quot;ova-tabs__media&quot;&gt;
+    &lt;div&gt;
+      &lt;h4&gt;&lt;strong&gt;Identifique los datos&lt;/strong&gt;&lt;/h4&gt;
+      &lt;p&gt;Para calcular un porcentaje, necesita conocer la cantidad total y el porcentaje que va a aplicar. En este caso, el total es 40 estudiantes y queremos calcular el 25 % de esa cantidad.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;figure class=&quot;ova-figura ova-tabs__figura&quot;&gt;&lt;img src=&quot;assets/img/curso/slider-porcentaje-1-datos.svg&quot; alt=&quot;Un grupo de estudiantes con dos rótulos: Total: 40 y Porcentaje: 25 %.&quot; /&gt;&lt;/figure&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-tabs__panel&quot;&gt;
+  &lt;div class=&quot;ova-tabs__media&quot;&gt;
+    &lt;div&gt;
+      &lt;h4&gt;&lt;strong&gt;Convierta el porcentaje&lt;/strong&gt;&lt;/h4&gt;
+      &lt;p&gt;Divida el porcentaje entre 100 para expresarlo como un número decimal. Así podrá utilizarlo en la operación.&lt;/p&gt;
+  &lt;p class=&quot;ova-tabs__operacion&quot;&gt;25 ÷ 100 = 0,25&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;figure class=&quot;ova-figura ova-tabs__figura&quot;&gt;&lt;img src=&quot;assets/img/curso/slider-porcentaje-2-convertir.svg&quot; alt=&quot;La transformación de 25 % a 25/100 y a 0,25.&quot; /&gt;&lt;/figure&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-tabs__panel&quot;&gt;
+  &lt;div class=&quot;ova-tabs__media&quot;&gt;
+    &lt;div&gt;
+      &lt;h4&gt;&lt;strong&gt;Multiplique por el total&lt;/strong&gt;&lt;/h4&gt;
+      &lt;p&gt;Multiplique los 40 estudiantes por el número decimal que obtuvo en el paso anterior.&lt;/p&gt;
+  &lt;p class=&quot;ova-tabs__operacion&quot;&gt;40 × 0,25 = 10&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;figure class=&quot;ova-figura ova-tabs__figura&quot;&gt;&lt;img src=&quot;assets/img/curso/slider-porcentaje-3-multiplicar.svg&quot; alt=&quot;La operación 40 × 0,25 = 10 con el resultado destacado.&quot; /&gt;&lt;/figure&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-tabs__panel&quot;&gt;
+  &lt;div class=&quot;ova-tabs__media&quot;&gt;
+    &lt;div&gt;
+      &lt;h4&gt;&lt;strong&gt;Interprete el resultado&lt;/strong&gt;&lt;/h4&gt;
+      &lt;p&gt;El 25 % de 40 es 10. Por lo tanto, 10 estudiantes participan en el taller. Para comprobarlo, recuerde que el 25 % equivale a una cuarta parte: 40 dividido entre 4 también es 10.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;figure class=&quot;ova-figura ova-tabs__figura&quot;&gt;&lt;img src=&quot;assets/img/curso/slider-porcentaje-4-interpretar.svg&quot; alt=&quot;Cuarenta figuras de estudiantes con diez resaltadas en otro color.&quot; /&gt;&lt;/figure&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;ova-tabs__pie&quot;&gt;
+      &lt;span class=&quot;ova-tabs__cuenta&quot; aria-live=&quot;polite&quot;&gt;&lt;/span&gt;
+      &lt;div class=&quot;ova-tabs__flechas&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;ova-tabs__flecha&quot; data-ova-paso=&quot;-1&quot; aria-label=&quot;Paso anterior&quot;&gt;&lt;iconify-icon icon=&quot;mdi:arrow-left&quot;&gt;&lt;/iconify-icon&gt;&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;ova-tabs__flecha&quot; data-ova-paso=&quot;1&quot; aria-label=&quot;Paso siguiente&quot;&gt;&lt;iconify-icon icon=&quot;mdi:arrow-right&quot;&gt;&lt;/iconify-icon&gt;&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
       </section>
 
       <section class="ua-seccion" id="listado-de-pasos-vertical" data-reveal>
@@ -332,6 +518,7 @@ El 25 % de 40 es 10. Por lo tanto, 10 estudiantes participan en el taller. Para 
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t4-pasos-lista"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t4-pasos-lista"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t4-pasos-lista"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Listado de pasos vertical</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -355,6 +542,20 @@ Solo al final, pula la redacción: oraciones cortas, voz activa, un término por
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t4-pasos-lista"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Listado de pasos vertical</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;El proceso de escritura en cuatro pasos&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class=&quot;ova-stepper ova-stepper--lista&quot;&gt;
+  &lt;div class=&quot;ova-step&quot;&gt;&lt;div class=&quot;ova-step__num&quot;&gt;&lt;span&gt;01&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;ova-step__card&quot;&gt;&lt;h3&gt;&lt;strong&gt;Planear&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;Formule la pregunta en una oración, defina la revista destino y arme un esquema con los títulos de las secciones y una línea sobre lo que dirá cada una. Sin esquema, el borrador se escribe dos veces.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;ova-step&quot;&gt;&lt;div class=&quot;ova-step__num&quot;&gt;&lt;span&gt;02&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;ova-step__card&quot;&gt;&lt;h3&gt;&lt;strong&gt;Redactar el borrador&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;Empiece por Métodos y Resultados, que son las secciones más concretas; siga con la Discusión y deje la Introducción y el resumen para el final, cuando ya sabe exactamente qué promete el artículo.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;ova-step&quot;&gt;&lt;div class=&quot;ova-step__num&quot;&gt;&lt;span&gt;03&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;ova-step__card&quot;&gt;&lt;h3&gt;&lt;strong&gt;Revisar el contenido&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;Deje reposar el texto al menos dos días y vuelva a leerlo como revisor: ¿cada sección responde su pregunta?, ¿los resultados sostienen las conclusiones?, ¿las tablas dicen algo que el texto no repite?&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;ova-step&quot;&gt;&lt;div class=&quot;ova-step__num&quot;&gt;&lt;span&gt;04&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;ova-step__card&quot;&gt;&lt;h3&gt;&lt;strong&gt;Corregir la forma&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;Solo al final, pula la redacción: oraciones cortas, voz activa, un término por concepto, citas y referencias en el estilo de la revista. Corregir la forma antes de cerrar el contenido es trabajo perdido.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
       </section>
 
       <section class="ua-seccion ua-seccion--variante" id="listado-de-pasos-con-tarjetas" data-reveal>
@@ -376,6 +577,7 @@ Solo al final, pula la redacción: oraciones cortas, voz activa, un término por
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t4-pasos-tarjetas"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t4-pasos-tarjetas"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t4-pasos-tarjetas"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Listado de pasos con tarjetas</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -395,6 +597,28 @@ Con el dictamen en mano, el autor corrige el manuscrito y escribe una carta de r
 <span class="ova-catalogo__gris">Por paso: la línea «Paso N», el título en negrilla (hasta 8 palabras) y el texto (hasta 80); la negrilla dentro del texto se conserva. El número lo pone el componente. El icono de cada paso lo propone producción a partir del título y el cliente lo valida como capa editorial.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t4-pasos-tarjetas"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Listado de pasos con tarjetas</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;Tres momentos de la revisión por pares&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class=&quot;ova-escenas&quot;&gt;
+  &lt;div class=&quot;ova-escena&quot;&gt;
+  &lt;div class=&quot;ova-escena__marca&quot;&gt;&lt;span class=&quot;ova-escena__num&quot;&gt;01&lt;/span&gt;&lt;span class=&quot;ova-escena__icono&quot;&gt;&lt;iconify-icon icon=&quot;mdi:filter-outline&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;h3 class=&quot;ova-escena__titulo&quot;&gt;El editor hace el cribado&lt;/h3&gt;&lt;p class=&quot;ova-escena__texto&quot;&gt;Antes de buscar revisores, el editor comprueba que el manuscrito entra en el alcance de la revista, cumple las normas y tiene un mínimo de calidad. Una parte importante de los rechazos ocurre aquí, en días, &lt;strong&gt;sin que el trabajo llegue a revisión&lt;/strong&gt;.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-escena&quot;&gt;
+  &lt;div class=&quot;ova-escena__marca&quot;&gt;&lt;span class=&quot;ova-escena__num&quot;&gt;02&lt;/span&gt;&lt;span class=&quot;ova-escena__icono&quot;&gt;&lt;iconify-icon icon=&quot;mdi:account-search-outline&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;h3 class=&quot;ova-escena__titulo&quot;&gt;Los revisores evalúan&lt;/h3&gt;&lt;p class=&quot;ova-escena__texto&quot;&gt;Dos o tres especialistas, que no reciben pago, leen el manuscrito y responden por escrito: ¿la pregunta es relevante?, ¿el método la responde?, ¿los datos sostienen las conclusiones?, ¿qué falta? Su informe recomienda una decisión, pero &lt;strong&gt;quien decide es el editor&lt;/strong&gt;.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-escena&quot;&gt;
+  &lt;div class=&quot;ova-escena__marca&quot;&gt;&lt;span class=&quot;ova-escena__num&quot;&gt;03&lt;/span&gt;&lt;span class=&quot;ova-escena__icono&quot;&gt;&lt;iconify-icon icon=&quot;mdi:reply-outline&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;h3 class=&quot;ova-escena__titulo&quot;&gt;El autor responde&lt;/h3&gt;&lt;p class=&quot;ova-escena__texto&quot;&gt;Con el dictamen en mano, el autor corrige el manuscrito y escribe una carta de respuesta punto por punto. Un comentario con el que no está de acuerdo se discute con argumentos y evidencia; &lt;strong&gt;ignorarlo no es una opción&lt;/strong&gt;.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
       </section>
 
@@ -437,6 +661,7 @@ Con el dictamen en mano, el autor corrige el manuscrito y escribe una carta de r
         </ol>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t4-linea-1"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t4-linea-1"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t4-linea-1"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Línea de tiempo tipo 1</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -466,6 +691,47 @@ Tras los bombardeos atómicos de Hiroshima y Nagasaki y la entrada soviética en
 <span class="ova-catalogo__gris">De 4 a 6 hitos. Por hito: la fecha y el título en negrilla, separados por un punto medio; el texto (hasta 50 palabras) y la imagen, como «Imagen sugerida:» para el diseñador o como «Vincular Imagen-N» si ya existe. «Introducción:» es opcional. El texto y la imagen se alternan a cada lado del eje; sin imágenes, use la tipo 2.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t4-linea-1"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Línea de tiempo tipo 1</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;La Segunda Guerra Mundial (1939–1945)&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Conozca seis acontecimientos clave que marcaron el desarrollo y el final de la Segunda Guerra Mundial.&lt;/p&gt;
+&lt;ol class=&quot;ova-hitos&quot;&gt;
+  &lt;li class=&quot;ova-hitos__hito&quot;&gt;
+  &lt;span class=&quot;ova-hitos__fecha&quot;&gt;1939&lt;/span&gt;
+  &lt;div class=&quot;ova-hitos__texto&quot;&gt;&lt;h3&gt;&lt;strong&gt;Comienza la guerra&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;El 1 de septiembre, Alemania invade Polonia. Dos días después, Reino Unido y Francia declaran la guerra a Alemania.&lt;/p&gt;&lt;/div&gt;
+  &lt;figure class=&quot;ova-hitos__imagen&quot;&gt;&lt;img src=&quot;assets/img/curso/linea-1939-polonia.webp&quot; alt=&quot;Mapa de 1939 con Alemania al oeste y Polonia al centro, con Varsovia y la frontera con la Unión Soviética.&quot; loading=&quot;lazy&quot; /&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li class=&quot;ova-hitos__hito&quot;&gt;
+  &lt;span class=&quot;ova-hitos__fecha&quot;&gt;1940&lt;/span&gt;
+  &lt;div class=&quot;ova-hitos__texto&quot;&gt;&lt;h3&gt;&lt;strong&gt;La batalla de Inglaterra&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;Entre julio y octubre, la aviación británica defiende al país de los ataques aéreos alemanes. Alemania no consigue la superioridad aérea necesaria para su proyectada invasión.&lt;/p&gt;&lt;/div&gt;
+  &lt;figure class=&quot;ova-hitos__imagen&quot;&gt;&lt;img src=&quot;assets/img/curso/linea-1940-inglaterra.webp&quot; alt=&quot;Dos aviones Spitfire británicos vuelan en formación sobre las nubes, en julio de 1940.&quot; loading=&quot;lazy&quot; /&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li class=&quot;ova-hitos__hito&quot;&gt;
+  &lt;span class=&quot;ova-hitos__fecha&quot;&gt;1941&lt;/span&gt;
+  &lt;div class=&quot;ova-hitos__texto&quot;&gt;&lt;h3&gt;&lt;strong&gt;El conflicto se amplía&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;Alemania invade la Unión Soviética en junio. En diciembre, Japón ataca Pearl Harbor y Estados Unidos entra en la guerra.&lt;/p&gt;&lt;/div&gt;
+  &lt;figure class=&quot;ova-hitos__imagen&quot;&gt;&lt;img src=&quot;assets/img/curso/linea-1941-pearl-harbor.webp&quot; alt=&quot;El acorazado USS Arizona en llamas tras el ataque japonés a Pearl Harbor.&quot; loading=&quot;lazy&quot; /&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li class=&quot;ova-hitos__hito&quot;&gt;
+  &lt;span class=&quot;ova-hitos__fecha&quot;&gt;1944&lt;/span&gt;
+  &lt;div class=&quot;ova-hitos__texto&quot;&gt;&lt;h3&gt;&lt;strong&gt;El desembarco de Normandía&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;El 6 de junio, las fuerzas aliadas desembarcan en Francia. La operación abre un nuevo frente y contribuye a la liberación de Europa occidental.&lt;/p&gt;&lt;/div&gt;
+  &lt;figure class=&quot;ova-hitos__imagen&quot;&gt;&lt;img src=&quot;assets/img/curso/linea-1944-normandia.webp&quot; alt=&quot;Soldados estadounidenses salen de una lancha de desembarco y avanzan por el agua hacia la playa de Normandía.&quot; loading=&quot;lazy&quot; /&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li class=&quot;ova-hitos__hito&quot;&gt;
+  &lt;span class=&quot;ova-hitos__fecha&quot;&gt;1945&lt;/span&gt;
+  &lt;div class=&quot;ova-hitos__texto&quot;&gt;&lt;h3&gt;&lt;strong&gt;Termina la guerra en Europa&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;Alemania se rinde y el 8 de mayo se celebra la victoria aliada en Europa. La guerra continúa en el Pacífico.&lt;/p&gt;&lt;/div&gt;
+  &lt;figure class=&quot;ova-hitos__imagen&quot;&gt;&lt;img src=&quot;assets/img/curso/linea-1945-victoria-europa.webp&quot; alt=&quot;Una multitud llena una avenida de Londres para celebrar el Día de la Victoria, el 8 de mayo de 1945.&quot; loading=&quot;lazy&quot; /&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li class=&quot;ova-hitos__hito&quot;&gt;
+  &lt;span class=&quot;ova-hitos__fecha&quot;&gt;1945&lt;/span&gt;
+  &lt;div class=&quot;ova-hitos__texto&quot;&gt;&lt;h3&gt;&lt;strong&gt;Termina la guerra mundial&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;Tras los bombardeos atómicos de Hiroshima y Nagasaki y la entrada soviética en la guerra contra Japón, este anuncia su rendición en agosto. La firma del 2 de septiembre pone fin al conflicto.&lt;/p&gt;&lt;/div&gt;
+  &lt;figure class=&quot;ova-hitos__imagen&quot;&gt;&lt;img src=&quot;assets/img/curso/linea-1945-rendicion-japon.webp&quot; alt=&quot;El representante japonés firma el acta de rendición sobre la cubierta del USS Missouri, rodeado de oficiales aliados.&quot; loading=&quot;lazy&quot; /&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
       </section>
 
@@ -501,6 +767,7 @@ Tras los bombardeos atómicos de Hiroshima y Nagasaki y la entrada soviética en
         </ol>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t4-linea-2"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t4-linea-2"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t4-linea-2"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Línea de tiempo tipo 2</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -529,6 +796,40 @@ Corrija, revise las citas y suba el documento a la plataforma.
 <span class="ova-catalogo__gris">De 5 a 10 hitos, sin imagen. Por hito: la fecha y su etapa en negrilla, separadas por un punto medio (la etapa es opcional); el título en negrilla (hasta 6 palabras) y una línea de texto (hasta 20 palabras). La fecha puede ser absoluta (2024, marzo) o relativa (Semana 1, Día 3).</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t4-linea-2"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Línea de tiempo tipo 2</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;Cronograma de su trabajo final&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol class=&quot;ova-cronograma&quot;&gt;
+  &lt;li class=&quot;ova-cronograma__hito&quot;&gt;
+  &lt;div class=&quot;ova-cronograma__fecha&quot;&gt;&lt;strong&gt;Semana 1&lt;/strong&gt;&lt;span&gt;Inicio&lt;/span&gt;&lt;/div&gt;
+  &lt;div class=&quot;ova-cronograma__cuerpo&quot;&gt;&lt;h3&gt;&lt;strong&gt;Elija el tema&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;Defina el tema y formule la pregunta que guiará su trabajo.&lt;/p&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;ova-cronograma__hito&quot;&gt;
+  &lt;div class=&quot;ova-cronograma__fecha&quot;&gt;&lt;strong&gt;Semana 2&lt;/strong&gt;&lt;span&gt;Búsqueda&lt;/span&gt;&lt;/div&gt;
+  &lt;div class=&quot;ova-cronograma__cuerpo&quot;&gt;&lt;h3&gt;&lt;strong&gt;Reúna las fuentes&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;Seleccione al menos cinco fuentes confiables y registre sus datos.&lt;/p&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;ova-cronograma__hito&quot;&gt;
+  &lt;div class=&quot;ova-cronograma__fecha&quot;&gt;&lt;strong&gt;Semana 4&lt;/strong&gt;&lt;span&gt;Planeación&lt;/span&gt;&lt;/div&gt;
+  &lt;div class=&quot;ova-cronograma__cuerpo&quot;&gt;&lt;h3&gt;&lt;strong&gt;Entregue el esquema&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;Envíe al tutor el índice con lo que dirá cada sección.&lt;/p&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;ova-cronograma__hito&quot;&gt;
+  &lt;div class=&quot;ova-cronograma__fecha&quot;&gt;&lt;strong&gt;Semana 6&lt;/strong&gt;&lt;span&gt;Escritura&lt;/span&gt;&lt;/div&gt;
+  &lt;div class=&quot;ova-cronograma__cuerpo&quot;&gt;&lt;h3&gt;&lt;strong&gt;Termine el primer borrador&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;Redacte el texto completo, aunque todavía no esté pulido.&lt;/p&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;ova-cronograma__hito&quot;&gt;
+  &lt;div class=&quot;ova-cronograma__fecha&quot;&gt;&lt;strong&gt;Semana 7&lt;/strong&gt;&lt;span&gt;Revisión&lt;/span&gt;&lt;/div&gt;
+  &lt;div class=&quot;ova-cronograma__cuerpo&quot;&gt;&lt;h3&gt;&lt;strong&gt;Reciba la retroalimentación&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;Lea los comentarios del tutor y decida qué va a cambiar.&lt;/p&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;ova-cronograma__hito&quot;&gt;
+  &lt;div class=&quot;ova-cronograma__fecha&quot;&gt;&lt;strong&gt;Semana 8&lt;/strong&gt;&lt;span&gt;Cierre&lt;/span&gt;&lt;/div&gt;
+  &lt;div class=&quot;ova-cronograma__cuerpo&quot;&gt;&lt;h3&gt;&lt;strong&gt;Entregue la versión final&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;Corrija, revise las citas y suba el documento a la plataforma.&lt;/p&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
       </section>
 
@@ -576,6 +877,7 @@ Corrija, revise las citas y suba el documento a la plataforma.
         </div>
         <div class="ova-catalogo__acciones">
           <button class="ova-btn ova-btn--outline" data-ova-modal-open="cat-t4-linea-3"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word</button>
+          <button class="ova-btn ova-btn--outline ova-catalogo__ver-codigo" data-ova-modal-open="cod-t4-linea-3"><iconify-icon icon="mdi:code-tags"></iconify-icon> Ver código</button>
         </div>
         <div class="ova-modal" id="cat-t4-linea-3"><div class="ova-modal__dialog">
           <div class="ova-modal__head"><h3>Línea de tiempo tipo 3</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
@@ -614,5 +916,51 @@ Se materializa el retorno de la reinversión. Ventas casi duplican la base y la 
 <span class="ova-catalogo__gris">«Instrucción:» es opcional. Si el Word la trae, va literal; si no, va el llamado de esta ventana, propuesto y pendiente de validación.</span></div>
           </div>
           <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+        <div class="ova-modal ova-catalogo__ventana-codigo" id="cod-t4-linea-3"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Línea de tiempo tipo 3</h3><button class="ova-modal__close" data-ova-modal-close aria-label="Cerrar"><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="ova-catalogo__cab">Código del componente</p>
+            <pre class="ova-catalogo__codigo"><code>&lt;div class=&quot;ova-cronologia&quot;&gt;
+  &lt;p class=&quot;ova-etiqueta&quot;&gt;&lt;iconify-icon icon=&quot;mdi:clock-outline&quot;&gt;&lt;/iconify-icon&gt; Línea del tiempo&lt;/p&gt;
+  &lt;h3 class=&quot;ova-rotulo&quot;&gt;&lt;strong&gt;Cinco años en la vida de la Empresa A&lt;/strong&gt;&lt;/h3&gt;
+  &lt;p class=&quot;ova-llamado&quot;&gt;&lt;span class=&quot;ova-llamado__mano&quot; aria-hidden=&quot;true&quot;&gt;&lt;iconify-icon icon=&quot;mdi:cursor-pointer&quot;&gt;&lt;/iconify-icon&gt;&lt;/span&gt;Seleccione cada fecha de la línea de tiempo para conocer su contenido.&lt;/p&gt;
+  &lt;div class=&quot;ova-cronologia__eje&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;ova-cronologia__hito is-activo&quot; aria-pressed=&quot;true&quot; aria-controls=&quot;cronologia-1&quot;&gt;&lt;span class=&quot;ova-cronologia__punto&quot;&gt;01&lt;/span&gt;&lt;span class=&quot;ova-cronologia__fecha&quot;&gt;2021&lt;/span&gt;&lt;span class=&quot;ova-cronologia__rotulo&quot;&gt;Año base&lt;/span&gt;&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;ova-cronologia__hito&quot; aria-pressed=&quot;false&quot; aria-controls=&quot;cronologia-2&quot;&gt;&lt;span class=&quot;ova-cronologia__punto&quot;&gt;02&lt;/span&gt;&lt;span class=&quot;ova-cronologia__fecha&quot;&gt;2022&lt;/span&gt;&lt;span class=&quot;ova-cronologia__rotulo&quot;&gt;Expansión&lt;/span&gt;&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;ova-cronologia__hito&quot; aria-pressed=&quot;false&quot; aria-controls=&quot;cronologia-3&quot;&gt;&lt;span class=&quot;ova-cronologia__punto&quot;&gt;03&lt;/span&gt;&lt;span class=&quot;ova-cronologia__fecha&quot;&gt;2023&lt;/span&gt;&lt;span class=&quot;ova-cronologia__rotulo&quot;&gt;Consolidación&lt;/span&gt;&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;ova-cronologia__hito&quot; aria-pressed=&quot;false&quot; aria-controls=&quot;cronologia-4&quot;&gt;&lt;span class=&quot;ova-cronologia__punto&quot;&gt;04&lt;/span&gt;&lt;span class=&quot;ova-cronologia__fecha&quot;&gt;2024&lt;/span&gt;&lt;span class=&quot;ova-cronologia__rotulo&quot;&gt;Reinversión&lt;/span&gt;&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;ova-cronologia__hito&quot; aria-pressed=&quot;false&quot; aria-controls=&quot;cronologia-5&quot;&gt;&lt;span class=&quot;ova-cronologia__punto&quot;&gt;05&lt;/span&gt;&lt;span class=&quot;ova-cronologia__fecha&quot;&gt;2025&lt;/span&gt;&lt;span class=&quot;ova-cronologia__rotulo&quot;&gt;Escala&lt;/span&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ova-cronologia__paneles&quot;&gt;
+    &lt;div class=&quot;ova-cronologia__panel&quot; id=&quot;cronologia-1&quot;&gt;
+  &lt;p class=&quot;ova-cronologia__anio&quot;&gt;2021&lt;/p&gt;
+  &lt;h4&gt;Año base — índice 100&lt;/h4&gt;
+  &lt;p&gt;La empresa cierra el ejercicio con ventas de referencia. A partir de aquí se fija el 100 y todo lo demás se lee como proporción. No hay lectura de crecimiento aún; solo se establece el punto de partida.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-cronologia__panel&quot; id=&quot;cronologia-2&quot; hidden&gt;
+  &lt;p class=&quot;ova-cronologia__anio&quot;&gt;2022&lt;/p&gt;
+  &lt;h4&gt;Expansión — índice 115&lt;/h4&gt;
+  &lt;p&gt;Primer año de crecimiento. Las ventas suben 15% respecto a la base. El análisis vertical aún no cambia mucho: la estructura de costos se mantiene estable mientras se prueba el modelo a mayor escala.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-cronologia__panel&quot; id=&quot;cronologia-3&quot; hidden&gt;
+  &lt;p class=&quot;ova-cronologia__anio&quot;&gt;2023&lt;/p&gt;
+  &lt;h4&gt;Consolidación — índice 140&lt;/h4&gt;
+  &lt;p&gt;Aparece el efecto de las economías de escala. Ventas crecen 22% adicional y el costo de ventas empieza a bajar como porcentaje del total. El margen bruto mejora sin necesidad de subir precios.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-cronologia__panel&quot; id=&quot;cronologia-4&quot; hidden&gt;
+  &lt;p class=&quot;ova-cronologia__anio&quot;&gt;2024&lt;/p&gt;
+  &lt;h4&gt;Reinversión — índice 160&lt;/h4&gt;
+  &lt;p&gt;La empresa reinvierte utilidades en nueva capacidad. El activo total crece pero la utilidad neta se mantiene. La lectura vertical del balance cambia radicalmente aunque el estado de resultados apenas se mueva.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ova-cronologia__panel&quot; id=&quot;cronologia-5&quot; hidden&gt;
+  &lt;p class=&quot;ova-cronologia__anio&quot;&gt;2025&lt;/p&gt;
+  &lt;h4&gt;Escala — índice 190&lt;/h4&gt;
+  &lt;p&gt;Se materializa el retorno de la reinversión. Ventas casi duplican la base y la estructura de márgenes se estabiliza en su mejor nivel de la serie. Es el punto donde vertical y horizontal cuentan la misma historia.&lt;/p&gt;
+&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn" data-ova-copiar><iconify-icon icon="mdi:content-copy"></iconify-icon> Copiar código</button><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
         </div></div>
       </section>
