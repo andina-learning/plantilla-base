@@ -133,7 +133,7 @@ module.exports = {
                    { titulo: 'Lista de verificación', ancla: 'lista-de-verificacion' },
                    { titulo: 'Para reflexionar', ancla: 'para-reflexionar' } ] },
 
-    { id: 'evaluacion',   titulo: 'Evaluación de la unidad', tipo: 'especial', icon: 'mdi:clipboard-check-outline' },
+    { id: 'evaluacion',   titulo: 'Actividad formativa', tipo: 'especial', icon: 'mdi:clipboard-check-outline' },
     { id: 'referencias',  titulo: 'Referencias',             tipo: 'especial', icon: 'mdi:bookmark-outline' },
     { id: 'creditos',     titulo: 'Créditos',                tipo: 'especial', icon: 'mdi:account-group-outline' },
   ],
