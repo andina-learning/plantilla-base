@@ -1415,6 +1415,10 @@ code {
   display: flex; align-items: center; justify-content: space-between;
   margin-top: 20px;
 }
+/* Todas las tarjetas a la vista (core.js pone data-ova-completo, KIT-012): sin navegación y la
+   pista centrada; cada tarjeta conserva el ancho que tendría con navegación. */
+.ova-carrusel[data-ova-completo] .ova-carrusel__nav { display: none; }
+.ova-carrusel[data-ova-completo] .ova-carrusel__track { justify-content: center; }
 .ova-carrusel__dots { display: flex; gap: 6px; }
 .ova-carrusel__dot {
   width: 8px; height: 8px;

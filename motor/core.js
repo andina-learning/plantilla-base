@@ -506,6 +506,10 @@
     const n = parseInt(declarados, 10);
     return n > 0 ? Math.min(n, porAncho) : porAncho;
   }
+  // Completo: todas las tarjetas caben a la vista; no hay a dónde desplazar (KIT-012, D6).
+  function carruselCompleto(total, visibles) {
+    return total <= visibles;
+  }
   function setupCarrusel(root = document) {
     root.querySelectorAll('.ova-carrusel').forEach(carr => {
       const track = carr.querySelector('.ova-carrusel__track');
@@ -523,15 +527,24 @@
         track.style.transform = `translateX(${-idx * slideW}px)`;
         dotsHost?.querySelectorAll('.ova-carrusel__dot').forEach((d, k) => d.classList.toggle('is-active', k === idx));
       };
-      if (dotsHost) {
-        dotsHost.innerHTML = Array.from({ length: max() + 1 }, (_, i) =>
-          `<button class="ova-carrusel__dot ${i === 0 ? 'is-active' : ''}" data-i="${i}"></button>`
-        ).join('');
-        dotsHost.addEventListener('click', e => {
-          const d = e.target.closest('.ova-carrusel__dot');
-          if (d) go(parseInt(d.dataset.i));
-        });
-      }
+      // Con todo a la vista, data-ova-completo esconde la navegación y centra la pista (core.css);
+      // los puntos se rehacen con el ancho actual. Se reevalúa al cambiar el ancho de la ventana.
+      const actualizar = () => {
+        const completo = carruselCompleto(slides.length, visible());
+        carr.toggleAttribute('data-ova-completo', completo);
+        if (dotsHost) {
+          dotsHost.innerHTML = completo ? '' : Array.from({ length: max() + 1 }, (_, i) =>
+            `<button class="ova-carrusel__dot ${i === 0 ? 'is-active' : ''}" data-i="${i}"></button>`
+          ).join('');
+        }
+        go(completo ? 0 : idx);
+      };
+      actualizar();
+      window.addEventListener('resize', actualizar);
+      dotsHost?.addEventListener('click', e => {
+        const d = e.target.closest('.ova-carrusel__dot');
+        if (d) go(parseInt(d.dataset.i));
+      });
       prev?.addEventListener('click', () => go(idx - 1));
       next?.addEventListener('click', () => go(idx + 1));
     });

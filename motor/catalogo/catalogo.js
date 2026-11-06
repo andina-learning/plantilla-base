@@ -619,3 +619,81 @@
     boton._ovaCopiado = setTimeout(() => { boton.innerHTML = original; }, 1800);
   });
 })();
+
+/* =========================================================
+   INDICIO DE DESPLAZAMIENTO (KIT-012, D4 · D7 · D11)
+   La ilustración ampliada (.ova-ampliada__lienzo), el bloque de código (.ova-codigo pre) y la
+   tabla APA (.ova-apa-tabla .ova-tabla) se desplazan en horizontal cuando no caben, y la barra
+   nativa del sistema no lo avisa (en iOS solo aparece al tocar). El motor pone encima de cada
+   contenedor que desborda un indicio propio: una barra fina proporcional (ancho visible sobre
+   total, en la posición desplazada) y un degradado en el borde por donde sigue el contenido, que
+   se apaga al llegar a ese extremo. Visible desde que la pieza se ve o se abre, sin interacción.
+   El color sale de --ova-indicio-barra y --ova-indicio-fondo (catalogo.css). La galería no entra:
+   conserva su propio indicio.
+   ========================================================= */
+(() => {
+  'use strict';
+
+  const SEL = '.ova-ampliada__lienzo, .ova-codigo pre, .ova-apa-tabla .ova-tabla';
+
+  // Proporción de la barra y extremos del recorrido (pura; tests/catalogo-indicio.test.js la extrae).
+  function indicioProporcion(scrollWidth, clientWidth, scrollLeft) {
+    const desborda = scrollWidth > clientWidth + 1;
+    return {
+      desborda,
+      ancho: desborda ? clientWidth / scrollWidth : 1,
+      inicio: desborda ? scrollLeft / scrollWidth : 0,
+      alInicio: scrollLeft <= 1,
+      alFin: scrollLeft + clientWidth >= scrollWidth - 1,
+    };
+  }
+
+  const indicios = new WeakMap();
+  const observadas = new WeakSet();
+
+  function indicioDe(el) {
+    let o = indicios.get(el);
+    if (o) return o;
+    o = document.createElement('div');
+    o.className = 'ova-indicio';
+    o.setAttribute('aria-hidden', 'true');
+    o.innerHTML = '<div class="ova-indicio__pista"><span class="ova-indicio__barra"></span></div>';
+    el.parentElement.appendChild(o);
+    indicios.set(el, o);
+    el.addEventListener('scroll', () => actualizar(el), { passive: true });
+    new ResizeObserver(() => actualizar(el)).observe(el);
+    return o;
+  }
+
+  function actualizar(el) {
+    if (!el.parentElement) return;
+    const o = indicioDe(el);
+    // Las imágenes que llegan después (la ampliada clona la suya al abrirse) cambian el ancho total.
+    el.querySelectorAll('img').forEach(img => {
+      if (observadas.has(img)) return;
+      observadas.add(img);
+      img.addEventListener('load', () => actualizar(el), { once: true });
+    });
+    if (!el.offsetParent) { o.removeAttribute('data-ova-desborda'); return; }
+    o.style.top = el.offsetTop + 'px';
+    o.style.left = el.offsetLeft + 'px';
+    o.style.width = el.offsetWidth + 'px';
+    o.style.height = el.offsetHeight + 'px';
+    const p = indicioProporcion(el.scrollWidth, el.clientWidth, el.scrollLeft);
+    o.toggleAttribute('data-ova-desborda', p.desborda);
+    o.toggleAttribute('data-ova-inicio', p.alInicio);
+    o.toggleAttribute('data-ova-fin', p.alFin);
+    const barra = o.querySelector('.ova-indicio__barra');
+    barra.style.width = (p.ancho * 100) + '%';
+    barra.style.left = (p.inicio * 100) + '%';
+  }
+
+  const todos = () => document.querySelectorAll(SEL).forEach(actualizar);
+  const iniciar = () => {
+    todos();
+    // Lo que aparece después (la ventana ampliada, su imagen) y lo que se abre (clase is-open).
+    new MutationObserver(todos).observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['class'] });
+    window.addEventListener('resize', todos);
+  };
+  document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', iniciar) : iniciar();
+})();
