@@ -847,6 +847,19 @@
 .ova-ruta__paso:nth-child(even)::after { border-top-left-radius: 0; border-top-right-radius: var(--ova-ruta-r); }
 .ova-ruta__paso:first-child::after { top: 50%; border-top-width: 0; border-radius: 0; }
 .ova-ruta__paso:last-child::after { bottom: 50%; }
+/* Con JS, la línea es un solo trazo SVG (catalogo.js, KIT-012-1): va del primer marcador al último por
+   donde van las dos piezas, con el mismo color, grosor y radio, y sin uniones. Las dos piezas quedan como
+   respaldo sin JS y se ocultan solo cuando la ruta lleva la marca de trazo dibujado. El lienzo va dentro
+   del primer paso y se sale de su caja para recorrer la ruta entera. La ruta con figura apilada en celular
+   no recibe trazo ni marca: conserva su línea recta. Al imprimir, la página se reacomoda al papel y el
+   trazo no se recalcula: se oculta y vuelven las dos piezas, que siguen al papel solas. */
+.ova-ruta__trazo { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.ova-ruta__trazo path { fill: none; stroke: var(--ova-ruta-c); stroke-width: 2px; }
+@media not print {
+  .ova-ruta[data-ova-ruta-trazo] > .ova-ruta__paso::before,
+  .ova-ruta[data-ova-ruta-trazo] > .ova-ruta__paso::after { display: none; }
+}
+@media print { .ova-ruta__trazo { display: none; } }
 .ova-ruta__paso:nth-child(even) > .ova-ruta__texto { order: 2; }
 .ova-ruta__num {
   position: absolute; top: 50%; left: var(--ova-ruta-x); transform: translate(-50%, -50%); z-index: 1;

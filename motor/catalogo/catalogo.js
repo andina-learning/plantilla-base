@@ -697,3 +697,135 @@
   };
   document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', iniciar) : iniciar();
 })();
+
+/* =========================================================
+   TRAZO DE LA RUTA (KIT-012-1, D5 · D8 · D9)
+   La línea de la ruta en zigzag (.ova-ruta) es un solo trazo SVG que va del primer marcador al
+   último: baja de cada marcador, gira, cruza al otro lado sobre el borde del paso, gira y baja al
+   marcador siguiente. Un trazo único no tiene uniones que se descuadren con el zoom o la escala de
+   la pantalla. Se calcula desde la posición de los marcadores y queda donde está la línea de dos
+   piezas de catalogo.css: mismo grosor, mismo radio y los bordes ajustados al píxel de pantalla,
+   como los ajusta el navegador en un borde. Esa línea de dos piezas es el respaldo sin JS: se
+   oculta solo cuando la ruta lleva data-ova-ruta-trazo, que se pone al dibujar. Una ruta apilada
+   en una sola vertical (con figura, en celular) no recibe trazo y conserva su línea recta.
+   ========================================================= */
+(() => {
+  'use strict';
+
+  const GROSOR = 2;   // el del borde de la línea de respaldo (catalogo.css)
+  const SVG = 'http://www.w3.org/2000/svg';
+
+  // El trazo de una ruta (pura; tests/catalogo-ruta.test.js la extrae). `marcadores` son los centros
+  // de los marcadores y `limites` el borde inferior de cada paso menos el último; `origen`, la esquina
+  // del lienzo. Todo en px del lienzo contados desde la esquina de la ventana (dibujar convierte las
+  // medidas de la ventana). `radio` es el exterior de la esquina; `escala`, los píxeles de pantalla por
+  // px del lienzo. Devuelve { d, grosor } en px del lienzo, o null si no hay zigzag que dibujar.
+  function rutaTrazo(marcadores, limites, radio, grosor, escala, origen) {
+    const n = marcadores.length;
+    if (n < 2 || limites.length < n - 1 || !(escala > 0)) return null;
+    const ajustar = v => Math.round(v * escala) / escala;
+    const g = Math.max(1, Math.floor(grosor * escala)) / escala;
+    const r = radio - g / 2;
+    if (!(r > 0)) return null;
+    const num = v => String(Math.round(v * 1000) / 1000);
+    // El navegador pinta el lienzo con su esquina ajustada al píxel de pantalla: el trazo cuenta desde ahí.
+    const ox = ajustar(origen.x), oy = ajustar(origen.y);
+    // El borde de la línea pasa por el centro del marcador y la línea queda hacia dentro de la ruta.
+    const xs = marcadores.map((m, i) => {
+      const otro = marcadores[i + 1 < n ? i + 1 : i - 1];
+      return ajustar(m.x) + (m.x < otro.x ? g / 2 : -g / 2) - ox;
+    });
+    let d = 'M' + num(xs[0]) + ' ' + num(marcadores[0].y - oy);
+    for (let i = 0; i < n - 1; i++) {
+      const s = xs[i + 1] > xs[i] ? 1 : -1;
+      const y = ajustar(limites[i]) - g / 2 - oy;
+      const caben = Math.abs(xs[i + 1] - xs[i]) >= 2 * r
+        && y - r >= marcadores[i].y - oy && y + r <= marcadores[i + 1].y - oy;
+      if (!caben) return null;
+      d += 'V' + num(y - r)
+        + 'A' + num(r) + ' ' + num(r) + ' 0 0 ' + (s > 0 ? 0 : 1) + ' ' + num(xs[i] + s * r) + ' ' + num(y)
+        + 'H' + num(xs[i + 1] - s * r)
+        + 'A' + num(r) + ' ' + num(r) + ' 0 0 ' + (s > 0 ? 1 : 0) + ' ' + num(xs[i + 1]) + ' ' + num(y + r);
+    }
+    return { d: d + 'V' + num(marcadores[n - 1].y - oy), grosor: g };
+  }
+
+  const lienzos = new WeakMap();
+
+  function quitar(ruta) {
+    const svg = lienzos.get(ruta);
+    if (svg) svg.remove();
+    ruta.removeAttribute('data-ova-ruta-trazo');
+  }
+
+  function dibujar(ruta) {
+    const pasos = [...ruta.querySelectorAll(':scope > .ova-ruta__paso')];
+    const nums = pasos.map(p => p.querySelector(':scope > .ova-ruta__num'));
+    if (!pasos.length || nums.includes(null)) return quitar(ruta);
+    let svg = lienzos.get(ruta);
+    if (!svg) {
+      svg = document.createElementNS(SVG, 'svg');
+      svg.setAttribute('class', 'ova-ruta__trazo');
+      svg.setAttribute('aria-hidden', 'true');
+      svg.appendChild(document.createElementNS(SVG, 'path'));
+      lienzos.set(ruta, svg);
+    }
+    // El lienzo va dentro del primer paso y ocupa su caja: de ahí cuenta el trazo. La lista conserva
+    // solo pasos como hijos (un hijo suelto les cambiaría el :nth-child o el :last-child de la línea de
+    // respaldo). Se monta antes de medir: de él sale el factor entre la ventana y el lienzo.
+    if (svg.parentNode !== pasos[0]) pasos[0].appendChild(svg);
+    // Las cajas se miden en px de la ventana y el trazo se escribe en px del lienzo. Con un ancestro
+    // ampliado (zoom o transform) no son lo mismo: `k` es cuántos px de la ventana ocupa un px del
+    // lienzo, y todas las medidas, el radio y el ajuste al píxel pasan por él.
+    const m = typeof svg.getScreenCTM === 'function' ? svg.getScreenCTM() : null;
+    const k = (m && Math.hypot(m.a, m.b)) || 1;
+    const escala = (window.devicePixelRatio || 1) * k;
+    const caja = pasos[0].getBoundingClientRect();
+    const marcadores = nums.map(n => {
+      const c = n.getBoundingClientRect();
+      return { x: (c.left + c.width / 2) / k, y: (c.top + c.height / 2) / k };
+    });
+    const limites = pasos.slice(0, -1).map(p => p.getBoundingClientRect().bottom / k);
+    const radio = parseFloat(getComputedStyle(ruta).getPropertyValue('--ova-ruta-r')) || 18;
+    const origen = { x: caja.left / k + pasos[0].clientLeft, y: caja.top / k + pasos[0].clientTop };
+    const trazo = rutaTrazo(marcadores, limites, radio, GROSOR, escala, origen);
+    if (!trazo) return quitar(ruta);
+    const linea = svg.firstChild;
+    linea.setAttribute('d', trazo.d);
+    linea.style.strokeWidth = trazo.grosor + 'px';
+    ruta.setAttribute('data-ova-ruta-trazo', '');
+  }
+
+  // Cada ruta se observa una vez: si cambia de tamaño (la ventana se estrecha, el celular gira, la
+  // pantalla que la contiene se muestra) el trazo se rehace con las medidas nuevas. Una ruta oculta
+  // mide cero: no recibe trazo, conserva el respaldo y se dibuja cuando se muestra.
+  const observadas = new WeakSet();
+  const vigia = typeof ResizeObserver === 'function'
+    ? new ResizeObserver(cambios => cambios.forEach(c => dibujar(c.target)))
+    : null;
+  const todas = () => document.querySelectorAll('.ova-ruta').forEach(ruta => {
+    if (vigia && !observadas.has(ruta)) { observadas.add(ruta); vigia.observe(ruta); }
+    dibujar(ruta);
+  });
+  // Las rutas que entran al documento después de cargar (dist/spa monta cada pantalla al mostrarla).
+  const nuevas = () => document.querySelectorAll('.ova-ruta').forEach(ruta => {
+    if (observadas.has(ruta) || lienzos.has(ruta)) return;
+    if (vigia) { observadas.add(ruta); vigia.observe(ruta); }
+    dibujar(ruta);
+  });
+  const iniciar = () => {
+    todas();
+    new MutationObserver(nuevas).observe(document.body, { childList: true, subtree: true });
+    // La ruta puede correrse sin cambiar de tamaño (contenedor centrado) y el zoom cambia la densidad
+    // de pantalla: el ajuste al píxel se rehace con la ventana.
+    window.addEventListener('resize', todas);
+    // Las fuentes y las imágenes que llegan después cambian el alto de los pasos.
+    window.addEventListener('load', todas);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(todas);
+    // La sección entra desplazada (data-reveal): al terminar de moverse, el ajuste al píxel es el definitivo.
+    document.addEventListener('transitionend', e => {
+      if (e.propertyName === 'transform' && e.target.querySelectorAll) e.target.querySelectorAll('.ova-ruta').forEach(dibujar);
+    });
+  };
+  document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', iniciar) : iniciar();
+})();
