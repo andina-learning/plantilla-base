@@ -1047,7 +1047,9 @@ body { font-family: var(--font-body); }
 /* La carita de marca: ojos en azul UAC y una boca celeste, el color del
    «Virtual» del logo (sonríe al acertar, se invierte al fallar). Entra con
    un pop. */
-.ova-quiz__feedback { position: relative; padding-right: 84px; }
+/* En la evaluación, el padding del motor (.ova-evalquiz .ova-quiz__feedback) pisaba este: la carita
+   caía sobre el texto (ronda del cliente 2026-11-12, AND-003, lámina 3). */
+:is(.ova-quiz__feedback, .ova-evalquiz .ova-quiz__feedback) { position: relative; padding-right: 84px; }
 .ova-quiz__feedback::after {
   content: '';
   position: absolute;
@@ -1065,7 +1067,7 @@ body { font-family: var(--font-body); }
 }
 @media (prefers-reduced-motion: reduce) { .ova-quiz__feedback::after { animation: none; } }
 @media (max-width: 500px) {
-  .ova-quiz__feedback { padding-right: 64px; }
+  :is(.ova-quiz__feedback, .ova-evalquiz .ova-quiz__feedback) { padding-right: 64px; }
   .ova-quiz__feedback::after { width: 36px; height: 36px; right: 14px; }
 }
 
@@ -3645,3 +3647,11 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 .ova-ciclo--escalonado .ova-ciclo__paso:nth-child(4) { --ova-tinte: var(--c-sol); }
 .ova-ciclo--escalonado .ova-ciclo__paso:nth-child(4) .ova-ciclo__num { color: #8A6100; }
 .ova-ciclo--escalonado .ova-ciclo__paso:nth-child(4) .ova-ciclo__titulo iconify-icon { color: #A06A00; }
+
+/* Tablas (ronda del cliente 2026-11-12, AND-003, lámina 2): la fila de encabezado y los rótulos de fila
+   de la tabla combinada en negrilla a 15 px y centrados; el cuerpo a 15 px y a la izquierda. Mismos valores
+   que UP, sin su tipografía ni su espaciado: el encabezado conserva Manrope y sus 0,04 em. */
+.ova-tabla th, .ova-tabla--combinada td[rowspan] {
+  font-weight: 700; font-size: .9375rem; text-align: center;
+}
+.ova-tabla td { font-size: .9375rem; }
