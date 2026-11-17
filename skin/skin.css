@@ -1044,6 +1044,12 @@ body { font-family: var(--font-body); }
 .ova-quiz__feedback.is-wrong { background: color-mix(in srgb, var(--danger) 8%, var(--bg-surface)); }
 .ova-quiz__feedback.is-wrong::before { color: #B3303C; }
 
+/* Relacionar (KIT-016): el texto de la marca del resultado («✓ Correcta», «✗ Revisar») va con los tonos de
+   la etiqueta de la retroalimentación de Pregunta: el verde y el rojo de la paleta no alcanzan el contraste
+   AA (4,5:1) en un texto de ese tamaño sobre el fondo de la tarjeta calificada. */
+.ova-empar__item.is-correct .ova-empar__marca { color: #1F7A4C; }
+.ova-empar__item.is-wrong .ova-empar__marca { color: #B3303C; }
+
 /* La carita de marca: ojos en azul UAC y una boca celeste, el color del
    «Virtual» del logo (sonríe al acertar, se invierte al fallar). Entra con
    un pop. */
@@ -3655,3 +3661,20 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
   font-weight: 700; font-size: .9375rem; text-align: center;
 }
 .ova-tabla td { font-size: .9375rem; }
+
+/* --- Menú lateral: relleno celeste en la barra de progreso y en la barra compacta (KIT-015, D8 y D10) ---
+   El relleno del motor es el degradado de marca (azul): sobre el azul hondo del menú daba 1,4:1 y con
+   poco avance no se distinguía. Con el celeste se lee de un vistazo. El brillo va en el mismo color para
+   que no quede un halo azul. Solo con el menú oscuro: en la versión clara el menú es blanco, el celeste
+   daría 2,1:1 y el relleno conserva el color del motor (decisión del arquitecto, 2026-11-14). */
+html:not([data-version="clara"]) .ova-sidebar__progress .bar-fill,
+html:not([data-version="clara"]) .ova-sidebar__compacta .bar-fill {
+  background: var(--c-cielo);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--c-cielo) 45%, transparent);
+}
+/* La pista (el tramo sin avance) va al 14 % del texto del menú, como en el mockup aprobado (KIT-015,
+   post-auditoría, P2-3): con el 6 % del motor casi no se distinguía del fondo y la barra no se leía de
+   lado a lado. Solo con el menú oscuro, igual que el relleno celeste. */
+html:not([data-version="clara"]) .ova-sidebar__progress .bar {
+  background: color-mix(in srgb, var(--sb-text) 14%, transparent);
+}

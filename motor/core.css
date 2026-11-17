@@ -228,10 +228,16 @@ code {
 [data-sidebar-collapsed="true"] .ova-sidebar__menu-item:not(:last-child)::after{
   display: none;
 }
-/* Progreso · solo el porcentaje como mini-dot */
+/* Progreso · solo «N/total», debajo del logo y con su filete antes de los iconos. Si la lista de iconos
+   se desplaza (ítem activo al final), queda fijo arriba y toma fondo: los iconos pasan por debajo */
 [data-sidebar-collapsed="true"] .ova-sidebar__progress{
-  padding: 14px 8px;
+  position: sticky; top: 0; z-index: 2;
+  padding: 12px 8px;
   text-align: center;
+  border-bottom: 1px solid var(--border-sb);
+}
+[data-sidebar-collapsed="true"] .ova-sidebar.is-desplazado .ova-sidebar__progress{
+  background: var(--bg-sidebar);
 }
 [data-sidebar-collapsed="true"] .ova-sidebar__progress::before{
   content: attr(data-progress);
@@ -308,9 +314,12 @@ code {
   background: var(--bg-sidebar);
   color: var(--sb-text);
   display: flex; flex-direction: column;
-  /* Todo el panel se desplaza junto (logo, título y lista), no solo la lista.
+  /* Todo el panel se desplaza junto (logo, título, progreso y lista), no solo la lista.
      Barra nativa (teclado y lectores de pantalla), fina y en el color del panel. */
   overflow-y: auto; overflow-x: hidden;
+  /* Lo que queda fijo arriba al desplazar (la barra compacta, «N/total» con el menú colapsado) no tapa el ítem
+     que recibe el foco del teclado: el navegador lo trae por debajo de este margen (KIT-015-1) */
+  scroll-padding-top: 64px;
   scrollbar-width: thin;
   scrollbar-color: color-mix(in srgb, var(--sb-text-mut) 35%, transparent) transparent;
   border-right: 1px solid var(--border-sb);
@@ -325,7 +334,7 @@ code {
   opacity: 0.6;
   pointer-events: none;
 }
-/* Barra compacta: aparece fija arriba cuando el título grande ya salió de la vista */
+/* Barra compacta: aparece fija arriba cuando la barra del bloque de progreso empieza a salir de la vista */
 .ova-sidebar > .ova-sidebar__compacta {   /* gana a `.ova-sidebar > *` (position: relative) */
   position: sticky; top: 0; z-index: 3;
   display: none;
@@ -414,7 +423,7 @@ code {
   text-transform: uppercase;
 }
 
-.ova-sidebar__course { padding: 22px 24px 18px; }
+.ova-sidebar__course { padding: 22px 24px 14px; }
 .ova-sidebar__course-tag {
   display: inline-block;
   font-family: var(--font-mono);
@@ -433,7 +442,6 @@ code {
   border-color: color-mix(in srgb, var(--c-acento) 30%, transparent);
 }
 .ova-sidebar__course h3 { color: var(--sb-text); font-size: 1.4rem; margin: 0 0 4px; line-height: 1.15; }
-.ova-sidebar__course p { color: var(--sb-text-mut); font-size: 0.82rem; margin: 0; }
 
 /* Sidebar menu (ruta de aprendizaje) */
 .ova-sidebar__menu {
@@ -503,8 +511,8 @@ code {
   color: var(--c-acento);
 }
 
-/* Progress + footer del sidebar */
-.ova-sidebar__progress { padding: 18px 24px; border-top: 1px solid var(--border-sb); }
+/* Progreso (debajo del título del curso, antes de la lista) + footer del sidebar */
+.ova-sidebar__progress { padding: 0 24px 20px; }
 .ova-sidebar__progress .label {
   display: flex; justify-content: space-between;
   margin-bottom: 8px;
@@ -1857,12 +1865,16 @@ code {
 .ova-orden__item.is-correct { border-color: var(--success); background: color-mix(in srgb, var(--success) 8%, transparent); }
 .ova-orden__item.is-wrong { border-color: var(--danger); background: color-mix(in srgb, var(--danger) 6%, transparent); }
 
-/* EMPAREJAR */
-/* Columnas desiguales: términos cortos a la izquierda, definiciones a la derecha, también en el celular */
-.ova-empar { display: grid; grid-template-columns: 2fr 3fr; gap: 32px; }
-@media (max-width: 600px) { .ova-empar { gap: 12px; } }
+/* RELACIONAR (.ova-empar) · KIT-016: se arma con letra y sin veredicto, y se comprueba una vez */
+/* Columnas desiguales: términos cortos a la izquierda, definiciones a la derecha, también en el celular.
+   La primera mide dos quintos del ancho de la pieza (descontada la separación) o, si es más ancha, su palabra más larga;
+   la segunda no baja nunca de dos quintos (KIT-016-1): lo que la primera no alcanza a ocupar ahí se parte dentro de su tarjeta */
+.ova-empar { display: grid; grid-template-columns: minmax(calc((100% - 32px) * .4), min-content) minmax(40%, 1fr); gap: 32px; }
+@media (max-width: 600px) { .ova-empar { grid-template-columns: minmax(calc((100% - 12px) * .4), min-content) minmax(40%, 1fr); gap: 12px; } }
 .ova-empar__col { display: grid; gap: 10px; grid-auto-rows: 1fr; }   /* mismo número de ítems y misma altura: las filas de las dos columnas coinciden */
+/* Cada tarjeta: la letra, su texto y, al comprobar, la marca del resultado debajo del texto */
 .ova-empar__item {
+  display: grid; grid-template-columns: auto 1fr; align-items: center; column-gap: 12px; row-gap: 6px;
   padding: 14px 18px;
   background: var(--bg-surface);
   border: 2px solid var(--border-c);
@@ -1874,11 +1886,74 @@ code {
   color: var(--text-pri);
   transition: all .2s;
 }
+/* Un término de largo corriente no se parte: su columna crece hasta su palabra más larga, pero solo dentro de lo que deja
+   el mínimo de la segunda. La palabra que no cabe ahí (una dirección web, un correo) se parte dentro de la tarjeta, sin guion,
+   en vez de salirse de ella o de quitarle ancho a la segunda columna */
+.ova-empar__texto { overflow-wrap: break-word; }
+.ova-empar__col + .ova-empar__col { min-width: 0; grid-template-columns: minmax(0, 1fr); }
+.ova-empar__col + .ova-empar__col .ova-empar__texto { min-width: 0; }
+/* La tarjeta del término y su texto pueden quedar más angostos que su palabra más larga sin que la columna pierda su ancho
+   natural: una pista en porcentaje cuenta como auto al calcular ese ancho y como ancho fijo al maquetar.
+   40px = la letra (28px) y su separación (12px); en el celular la letra va arriba (más abajo) */
+.ova-empar__col:first-child { grid-template-columns: 100%; }
+.ova-empar__col:first-child .ova-empar__item { grid-template-columns: auto calc(100% - 40px); }
+/* La letra: la del término y la que recibe la tarjeta que se le une. Todas con el color de la institución */
+.ova-empar__letra {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--grad-brand);
+  color: white;
+  display: grid; place-items: center;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: .8rem;
+}
+/* La tarjeta que aún no tiene término: un círculo punteado que se ve (3:1 o más contra la tarjeta, libre o
+   elegida). Sale del color del texto de la tarjeta, no del de su borde, para que alcance en cualquier piel */
+.ova-empar__letra:empty { background: none; border: 2px dashed color-mix(in srgb, var(--text-pri) 65%, transparent); }
 .ova-empar__item:hover { border-color: var(--c-acento); }
 .ova-empar__item.is-selected { border-color: var(--c-acento); background: var(--acento-soft); }
-.ova-empar__item.is-matched { border-color: var(--success); background: color-mix(in srgb, var(--success) 8%, transparent); cursor: default; opacity: 0.7; }
-.ova-empar__item.is-wrong { border-color: var(--danger); background: color-mix(in srgb, var(--danger) 6%, transparent); animation: ova-shake .3s; }
-@keyframes ova-shake { 0%,100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
+.ova-empar__item:focus-visible, .ova-empar__resultado:focus-visible { outline: 3px solid var(--c-acento); outline-offset: 2px; }
+/* Resultado de cada tarjeta, solo después de comprobar: color y texto */
+.ova-empar__marca { grid-column: 2; font-size: .8rem; font-weight: 700; }
+.ova-empar__marca:empty { display: none; }
+.ova-empar__item[aria-disabled="true"] { cursor: default; }
+.ova-empar__item.is-correct { border-color: var(--success); background: color-mix(in srgb, var(--success) 8%, transparent); }
+.ova-empar__item.is-wrong { border-color: var(--danger); background: color-mix(in srgb, var(--danger) 6%, transparent); }
+.ova-empar__item.is-correct .ova-empar__marca { color: var(--success); }
+.ova-empar__item.is-wrong .ova-empar__marca { color: var(--danger); }
+/* «Comprobar» con el aviso de un solo intento al lado, y el bloque de resultado que lo reemplaza */
+.ova-empar__pie { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
+.ova-empar__comprobar:disabled { opacity: .45; cursor: not-allowed; box-shadow: none; transform: none; }
+.ova-empar__aviso { margin: 0; flex: 1 1 220px; font-size: .88rem; color: var(--text-pri); }
+.ova-empar__resultado { grid-column: 1 / -1; padding: 16px 20px; background: var(--bg-surface); border: 2px solid var(--border-c); border-radius: var(--r-md); }
+.ova-empar__conteo { margin: 0; font-weight: 700; color: var(--text-head); }
+.ova-empar__frase { margin: 6px 0 0; }
+.ova-empar__pie[hidden], .ova-empar__resultado[hidden] { display: none; }
+/* El botón que abre la ventana de respuestas correctas, bajo el conteo y la frase */
+.ova-empar__ver { margin-top: 14px; }
+/* La ventana (un .ova-modal): cada término con su letra y, debajo, su pareja correcta */
+.ova-empar__respuestas { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.ova-empar__respuesta {
+  display: grid; grid-template-columns: auto 1fr; align-items: start; column-gap: 14px;
+  padding: 14px 18px;
+  border: 2px solid var(--border-c);
+  border-radius: var(--r-md);
+  font-size: .92rem;
+}
+.ova-empar__par { min-width: 0; overflow-wrap: anywhere; }
+.ova-empar__termino { margin: 0; font-weight: 700; color: var(--text-head); }
+.ova-empar__pareja { margin: 4px 0 0; color: var(--text-pri); }
+/* En el celular la columna de los términos es angosta: la letra va arriba y el texto usa todo el ancho */
+@media (max-width: 600px) {
+  .ova-empar__item { grid-template-columns: 1fr; align-content: center; row-gap: 8px; padding: 12px; }
+  .ova-empar__col:first-child .ova-empar__item { grid-template-columns: 100%; }
+  .ova-empar__letra { width: 24px; height: 24px; }
+  .ova-empar__marca { grid-column: 1; }
+  .ova-empar__pie, .ova-empar__resultado { margin-top: 8px; }
+  .ova-empar__ventana .ova-modal__body { padding: 20px 16px; }
+  .ova-empar__respuesta { padding: 12px; column-gap: 10px; }
+}
 
 /* MODAL */
 .ova-modal {

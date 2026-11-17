@@ -80,7 +80,13 @@
       <div class="ova-sidebar__course">
         ${C.course.code     ? `<span class="ova-sidebar__course-tag">${C.course.code}</span>` : ''}
         <h3>${C.course.name}</h3>
-        ${C.course.subtitle ? `<p>${C.course.subtitle}</p>` : ''}
+      </div>
+      <div class="ova-sidebar__progress" data-progress="${completed + 1}/${total}">
+        <div class="label">
+          <span>${textoProgreso.etiqueta}</span>
+          <strong>${cifraProgreso(textoProgreso.cifra, completed + 1, total)}</strong>
+        </div>
+        <div class="bar"><div class="bar-fill" style="width:${progress}%"></div></div>
       </div>
       <nav class="ova-sidebar__menu">
         ${(() => {
@@ -127,23 +133,24 @@
           return html;
         })()}
       </nav>
-      <div class="ova-sidebar__progress" data-progress="${completed + 1}/${total}">
-        <div class="label">
-          <span>${textoProgreso.etiqueta}</span>
-          <strong>${cifraProgreso(textoProgreso.cifra, completed + 1, total)}</strong>
-        </div>
-        <div class="bar"><div class="bar-fill" style="width:${progress}%"></div></div>
-      </div>
     `;
 
-    // El panel entero hace scroll: la barra compacta entra cuando el título grande sale de la vista
+    // El panel entero hace scroll: la barra compacta entra en cuanto la barra del bloque de progreso empieza
+    // a salir por arriba (y la tapa), así el menú nunca queda sin progreso a la vista, tampoco cuando no
+    // alcanza a desplazarse hasta sacar el bloque entero. Sin barra pintada (menú colapsado u oculto), no entra.
+    // `is-desplazado`: con el menú colapsado, «N/total» queda fijo arriba y toma fondo mientras los iconos
+    // pasan por debajo; arriba del todo no lo lleva.
     if (!el.dataset.ovaScrollBound) {
       el.dataset.ovaScrollBound = '1';
-      el.addEventListener('scroll', () => {
-        const curso = el.querySelector('.ova-sidebar__course');
-        const limite = curso ? curso.offsetTop + curso.offsetHeight : 120;
-        el.classList.toggle('is-scrolled', el.scrollTop > limite - 8);
-      }, { passive: true });
+      const alDesplazar = () => {
+        const barra = el.querySelector('.ova-sidebar__progress .bar');
+        const pintada = !!barra && barra.getClientRects().length > 0;
+        el.classList.toggle('is-scrolled', pintada && barra.getBoundingClientRect().top < el.getBoundingClientRect().top);
+        el.classList.toggle('is-desplazado', el.scrollTop > 0);
+      };
+      el.addEventListener('scroll', alDesplazar, { passive: true });
+      // Colapsar, expandir o cambiar el alto de la ventana cambia lo que queda a la vista sin que haya scroll
+      if (window.ResizeObserver) new ResizeObserver(alDesplazar).observe(el);
     }
     // Abre en la sección actual: si el ítem activo quedó fuera de la vista, se trae
     requestAnimationFrame(() => {
@@ -714,28 +721,165 @@
     });
   }
 
-  // Emparejar
+  // Relacionar (KIT-016): el estudiante arma todas las uniones sin veredicto, con la letra del término a la
+  // vista en la tarjeta que le unió, y comprueba una sola vez. El motor pone la letra, «Comprobar», el
+  // aviso, las marcas y el resultado sobre el marcado de siempre: dos .ova-empar__col con data-ova-match.
+  // Sus textos son capa editorial (los de los dos ejemplos del cliente) y van en tú o en usted según
+  // `textos.voz` de la configuración del curso; sin ese dato, en usted.
+  const VOZ = (C.textos || {}).voz === 'tú' ? 'tú' : 'usted';
+  const EMPAR = {
+    comprobar: 'Comprobar',
+    aviso: { 'tú': 'Al comprobar, ya no podrás cambiar tus respuestas.', usted: 'Al comprobar, ya no podrá cambiar sus respuestas.' },
+    acierto: '✓ Correcta',
+    error: '✗ Revisar',
+    conteo: (n, m) => `${n} de ${m} correctas.`,
+    todo: m => `¡Excelente! Las ${m} uniones son correctas.`,
+    frase: { 'tú': 'Revisa las uniones marcadas con ✗ y consulta las respuestas correctas.',
+             usted: 'Revise las uniones marcadas con ✗ y consulte las respuestas correctas.' },
+    ver: 'Ver respuestas correctas',
+    respuestas: 'Respuestas correctas',
+    cerrar: 'Cerrar',
+    // Solo para el lector de pantalla
+    unidaA: l => `Unida a la letra ${l}. `,
+    seUnio: (l, tarjeta) => `${l} unida con: ${tarjeta}`,
+    seSolto: l => `Unión de la letra ${l} deshecha.`,
+  };
+  let emparN = 0;
   function setupEmparejar(root = document) {
     root.querySelectorAll('.ova-empar').forEach(group => {
-      let selected = null;
-      group.querySelectorAll('.ova-empar__item').forEach(item => {
-        item.addEventListener('click', () => {
-          if (item.classList.contains('is-matched')) return;
-          if (!selected) { selected = item; item.classList.add('is-selected'); return; }
-          if (selected === item) { item.classList.remove('is-selected'); selected = null; return; }
-          if (selected.parentElement === item.parentElement) {
-            selected.classList.remove('is-selected'); selected = item; item.classList.add('is-selected'); return;
-          }
-          const match = selected.dataset.ovaMatch === item.dataset.ovaMatch;
-          group.dispatchEvent(new CustomEvent('ova:empar-intento', { bubbles: true, detail: { correcta: match } }));
-          if (match) { [selected, item].forEach(el => { el.classList.add('is-matched'); el.classList.remove('is-selected'); }); }
-          else {
-            [selected, item].forEach(el => el.classList.add('is-wrong'));
-            setTimeout(() => [selected, item].forEach(el => el?.classList.remove('is-wrong', 'is-selected')), 500);
-          }
-          selected = null;
-        });
+      const cols = group.querySelectorAll('.ova-empar__col');
+      if (cols.length < 2) return;
+      const terminos = [...cols[0].querySelectorAll('.ova-empar__item')];
+      const tarjetas = [...cols[1].querySelectorAll('.ova-empar__item')];
+      const todas = [...terminos, ...tarjetas];
+      const letraDe = new Map(terminos.map((t, i) => [t, String.fromCharCode(65 + i)]));
+      const union = new Map();   // término → la tarjeta que el estudiante le unió
+      let elegida = null, cerrada = false;
+      const crear = (tag, clase, texto = '') => { const e = document.createElement(tag); e.className = clase; e.textContent = texto; return e; };
+
+      // Cada tarjeta: letra (el término, la suya; la otra, la que reciba), su texto y la marca del resultado
+      todas.forEach(item => {
+        const texto = crear('span', 'ova-empar__texto');
+        while (item.firstChild) texto.appendChild(item.firstChild);
+        const letra = crear('span', 'ova-empar__letra', letraDe.get(item) || '');
+        item.append(letra, texto, crear('span', 'ova-empar__marca'));
+        if (!letraDe.has(item)) { letra.setAttribute('aria-hidden', 'true'); letra.after(crear('span', 'ova-sr ova-empar__union')); }
+        item.addEventListener('click', () => tocar(item));
       });
+      const textoDe = item => item.querySelector('.ova-empar__texto').textContent.trim();
+
+      const n = ++emparN, id = `ova-empar-aviso-${n}`;
+      const boton = crear('button', 'ova-btn ova-btn--primary ova-empar__comprobar', EMPAR.comprobar);
+      boton.type = 'button'; boton.setAttribute('aria-describedby', id);
+      const aviso = crear('p', 'ova-empar__aviso', EMPAR.aviso[VOZ]); aviso.id = id;
+      const pie = crear('div', 'ova-empar__pie'); pie.append(boton, aviso);
+      const resultado = crear('div', 'ova-empar__resultado'); resultado.hidden = true; resultado.tabIndex = -1;
+      const vivo = crear('p', 'ova-sr'); vivo.setAttribute('aria-live', 'polite');
+      group.append(pie, resultado, vivo);
+
+      function pintar() {
+        const terminoDe = new Map([...union].map(([t, c]) => [c, t]));
+        terminos.forEach(t => t.classList.toggle('is-unida', union.has(t)));
+        tarjetas.forEach(c => {
+          const letra = terminoDe.has(c) ? letraDe.get(terminoDe.get(c)) : '';
+          c.classList.toggle('is-unida', !!letra);
+          c.querySelector('.ova-empar__letra').textContent = letra;
+          c.querySelector('.ova-empar__union').textContent = letra ? EMPAR.unidaA(letra) : '';
+        });
+        todas.forEach(i => { i.classList.toggle('is-selected', i === elegida); i.setAttribute('aria-pressed', String(i === elegida)); });
+        boton.disabled = union.size < terminos.length;
+      }
+
+      // Sin veredicto. Sin nada elegido, tocar una tarjeta ya unida deshace su unión y tocar una libre la
+      // elige. Con una elegida, tocar una de la otra columna las une (sobre una ocupada, la reemplaza: la
+      // que tenía cada una queda libre) y tocar una de la misma columna solo cambia la elección, o la quita
+      // si es la elegida: ninguna unión se pierde por elegir.
+      function tocar(item) {
+        if (cerrada) return;
+        const esTermino = letraDe.has(item);
+        if (!elegida) {
+          const t = esTermino ? (union.has(item) ? item : null) : [...union.keys()].find(k => union.get(k) === item);
+          if (t) { union.delete(t); vivo.textContent = EMPAR.seSolto(letraDe.get(t)); }
+          else elegida = item;
+        } else if (letraDe.has(elegida) !== esTermino) {
+          const t = esTermino ? item : elegida, c = esTermino ? elegida : item;
+          for (const [otro, suya] of union) if (suya === c) union.delete(otro);
+          union.set(t, c);
+          elegida = null;
+          vivo.textContent = EMPAR.seUnio(letraDe.get(t), textoDe(c));
+        } else elegida = elegida === item ? null : item;
+        pintar();
+      }
+
+      // La ventana de respuestas correctas es el .ova-modal del motor, armado aquí la primera vez que se
+      // abre: cada término en orden de letra con su pareja correcta. La abre su botón sin
+      // data-ova-modal-open (no es un componente con ventana propia); cerrarla es cosa de setupModal.
+      // Cuelga de la raíz de la pantalla (el body, o la vista de la SPA, que se vacía al navegar) y no de
+      // la pieza: un ancestro con transform, como el bloque con data-reveal de la evaluación, encerraría
+      // una ventana fija en su propio cuadro.
+      let modal = null;
+      function ventana() {
+        if (modal) return modal;
+        const copia = (tag, clase, item) => { const e = crear(tag, clase); e.innerHTML = item.querySelector('.ova-empar__texto').innerHTML; return e; };
+        const lista = crear('ol', 'ova-empar__respuestas');
+        terminos.forEach(t => {
+          const pareja = tarjetas.find(c => c.dataset.ovaMatch === t.dataset.ovaMatch);
+          const par = crear('div', 'ova-empar__par');
+          par.append(copia('p', 'ova-empar__termino', t));
+          if (pareja) par.append(copia('p', 'ova-empar__pareja', pareja));
+          const fila = crear('li', 'ova-empar__respuesta');
+          fila.append(crear('span', 'ova-empar__letra', letraDe.get(t)), par);
+          lista.append(fila);
+        });
+        const cerrar = (clase, contenido) => { const b = crear('button', clase); b.type = 'button'; b.setAttribute('data-ova-modal-close', ''); b.innerHTML = contenido; return b; };
+        const x = cerrar('ova-modal__close', '<iconify-icon icon="mdi:close"></iconify-icon>'); x.setAttribute('aria-label', EMPAR.cerrar);
+        const cabeza = crear('div', 'ova-modal__head'); cabeza.append(crear('h3', '', EMPAR.respuestas), x);
+        const cuerpo = crear('div', 'ova-modal__body'); cuerpo.append(lista);
+        const pie = crear('div', 'ova-modal__foot'); pie.append(cerrar('ova-btn ova-btn--outline', EMPAR.cerrar));
+        const dialogo = crear('div', 'ova-modal__dialog'); dialogo.append(cabeza, cuerpo, pie);
+        modal = crear('div', 'ova-modal ova-empar__ventana'); modal.id = `ova-empar-respuestas-${n}`;
+        modal.append(dialogo);
+        (root.body || root).append(modal);
+        return modal;
+      }
+
+      // Un solo intento: califica cada unión, bloquea las tarjetas y deja el resultado a la vista.
+      boton.addEventListener('click', () => {
+        if (cerrada || union.size < terminos.length) return;
+        cerrada = true; elegida = null;
+        pintar();
+        let aciertos = 0;
+        for (const [t, c] of union) {
+          const ok = t.dataset.ovaMatch === c.dataset.ovaMatch;
+          if (ok) aciertos++;
+          [t, c].forEach(i => {
+            i.classList.add(ok ? 'is-correct' : 'is-wrong');
+            i.querySelector('.ova-empar__marca').textContent = ok ? EMPAR.acierto : EMPAR.error;
+          });
+        }
+        todas.forEach(i => { i.removeAttribute('aria-pressed'); i.setAttribute('aria-disabled', 'true'); });
+        const total = terminos.length, todo = aciertos === total;
+        resultado.append(crear('p', 'ova-empar__conteo', todo ? EMPAR.todo(total) : EMPAR.conteo(aciertos, total)));
+        // Bajo el conteo, la frase del Word («Acierto:» o «Error:», con sus negrillas) si la fuente la trae
+        // en data-ova-acierto o data-ova-error; si no, con errores la frase por defecto y con todo bien ninguna.
+        const propia = todo ? group.dataset.ovaAcierto : group.dataset.ovaError;
+        if (propia || !todo) {
+          const frase = crear('p', 'ova-empar__frase');
+          if (propia) frase.innerHTML = propia; else frase.textContent = EMPAR.frase[VOZ];
+          resultado.append(frase);
+        }
+        const ver = crear('button', 'ova-btn ova-btn--outline ova-empar__ver', EMPAR.ver); ver.type = 'button';
+        ver.addEventListener('click', () => abrirModal(ventana(), ver));
+        resultado.append(ver);
+        resultado.classList.add(todo ? 'is-ok' : 'is-error');
+        group.classList.add('is-comprobada');
+        pie.hidden = true; resultado.hidden = false;
+        resultado.focus();
+        // Un solo aviso por actividad, al comprobar: con él suenan las pieles (el motor no suena)
+        group.dispatchEvent(new CustomEvent('ova:empar-comprobado', { bubbles: true, detail: { aciertos, total } }));
+      });
+
+      pintar();
     });
   }
 

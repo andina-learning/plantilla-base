@@ -42,6 +42,9 @@ module.exports = {
      2026-10-28; KIT-009). `{n}` es la pantalla actual del menú y `{total}`, cuántas tiene. */
   textos: {
     progreso: { etiqueta: 'Temas completados:', cifra: '{n} de {total}' },
+    // Tratamiento (tú o usted) de los textos que escribe el motor, como los de Relacionar (KIT-016).
+    // Es la voz de instituciones/andina/catalogo.json; tests/voz-curso.test.js avisa si se separan.
+    voz: 'usted',
   },
 
   /* MENÚ · la estructura RED (la misma de Scala Learning):

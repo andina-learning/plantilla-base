@@ -3,7 +3,7 @@
    Tres señales sintetizadas con WebAudio (sin archivos que licenciar):
    acierto (dos notas ascendentes), error (dos notas descendentes) y
    avance de pregunta (un blip corto). El motor solo emite eventos
-   (ova:quiz-respuesta · ova:empar-intento · ova:evalquiz-avance); si esta
+   (ova:quiz-respuesta · ova:empar-comprobado · ova:evalquiz-avance); si esta
    capa no está cargada, el curso funciona igual en silencio.
    El AudioContext se crea en el primer evento —siempre nace de un
    click, así que el navegador no lo bloquea. */
@@ -51,8 +51,9 @@
   document.addEventListener('ova:quiz-respuesta', e => {
     (e.detail.correcta ? sonidos.acierto : sonidos.error)();
   });
-  document.addEventListener('ova:empar-intento', e => {
-    (e.detail.correcta ? sonidos.acierto : sonidos.error)();
+  /* Relacionar (KIT-016): en silencio mientras se arma; suena una vez, al comprobar */
+  document.addEventListener('ova:empar-comprobado', e => {
+    (e.detail.aciertos === e.detail.total ? sonidos.acierto : sonidos.error)();
   });
   document.addEventListener('ova:evalquiz-avance', () => sonidos.avance());
 })();
